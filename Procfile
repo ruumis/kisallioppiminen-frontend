@@ -1,1 +1,1 @@
-web: node index.js
+webpack --env.platform=web && webpack --env.platform=server && node ./dist/js/server
