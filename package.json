@@ -34,7 +34,7 @@
     "webpack-cli": "^3.2.1"
   },
   "scripts": {
-	  "build": "npm install && webpack --config ./webpack-prod.config.js --colors",
+	  "build": "npm run build && webpack --config ./webpack-prod.config.js --colors",
     "start": "webpack --env.platform=web && webpack --env.platform=server && node ./dist/js/server",
     "watch": "nodemon",
     "build-web": "webpack --env.platform=web",
