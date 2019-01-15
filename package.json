@@ -39,6 +39,6 @@
     "build-web": "webpack --env.platform=web",
     "build-server": "webpack --env.platform=server",
     "lint": "tslint -c tslint.json 'src/**/*.ts?(x)'",
-    "postinstall": "NODE_ENV=production webpack --env.platform=web --mode=production && webpack --env.platform=server --mode=production && node ./dist/js/server"
+	  "build": "rm -rf dist && webpack --config ./webpack-prod.config.js --colors"
   }
 }
