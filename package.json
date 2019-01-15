@@ -35,6 +35,7 @@
     "start": "webpack --env.platform=web && webpack --env.platform=server && node ./dist/js/server",
     "watch": "nodemon",
     "build-web": "webpack --env.platform=web",
-    "build-server": "webpack --env.platform=server"
+    "build-server": "webpack --env.platform=server",
+    "lint": "tslint -c tslint.json 'src/**/*.ts?(x)'"
   }
 }

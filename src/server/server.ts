@@ -9,7 +9,7 @@ const PORT = process.env.PORT || 3000
 const server = express()
 server.use(express.static('dist'))
 
-server.get('/', (req ,res) => {
+server.get('/', (req, res) => {
   const body = ReactServer.renderToString(createApp())
   const template = createTemplate({
     title: 'Kisällioppiminen.fi',

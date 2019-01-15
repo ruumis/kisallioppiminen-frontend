@@ -9,7 +9,6 @@ export const createTemplate = ({title, body, initialState}: {title: string, body
       <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
       <!-- Import materialize.css -->
       <link href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.0/css/materialize.min.css" rel="stylesheet">
-    
       <script src='https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML' async></script>
     </head>
     <body style="margin:0">
@@ -21,4 +20,4 @@ export const createTemplate = ({title, body, initialState}: {title: string, body
     <script src="/js/client.js" defer></script>
   </html>
   `
-} 
+}
