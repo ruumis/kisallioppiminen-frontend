@@ -39,6 +39,6 @@
     "build-web": "webpack --env.platform=web",
     "build-server": "webpack --env.platform=server",
     "lint": "tslint -c tslint.json 'src/**/*.ts?(x)'",
-	  "build": "rm -rf dist && webpack --config ./webpack-prod.config.js --colors"
+	  "build": "webpack --config ./webpack-prod.config.js --colors"
   }
 }
