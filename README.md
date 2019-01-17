@@ -1,5 +1,7 @@
 # Kisällioppiminen frontend
 
+[![Build Status](https://travis-ci.com/Matikkaprojekti/kisallioppiminen-frontend.svg?branch=master)](https://travis-ci.com/Matikkaprojekti/kisallioppiminen-frontend)
+
 ### Työympäristön luominen
 
 1. Kloonaa projekti `git clone https://github.com/Matikkaprojekti/kisallioppiminen-frontend.git`
