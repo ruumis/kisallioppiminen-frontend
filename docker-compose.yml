@@ -1,0 +1,9 @@
+version: '3.7'
+services:
+  web:
+    build:
+      context: .
+      shm_size: 1G
+    ports:
+      - "8080:3000"
+    command: yarn watch
