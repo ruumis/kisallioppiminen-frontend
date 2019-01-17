@@ -1,0 +1,11 @@
+import {coursePage} from './coursePage/coursePage'
+
+<<<<<<< HEAD
+export function createApp() {
+  return coursePage()
+}
+=======
+export function createApp(md : string) {
+  return coursePage(md)
+}
+>>>>>>> 52e93f0be4a893d069ca994202b422a316c6a3e5

@@ -1,0 +1,5 @@
+<<<<<<< HEAD
+web: node dist/js/server.js
+=======
+web: node index.js
+>>>>>>> 52e93f0be4a893d069ca994202b422a316c6a3e5
