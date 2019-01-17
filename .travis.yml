@@ -28,3 +28,6 @@ jobs:
 
 stages:
   - test
+
+notifications:
+  slack: ohtu-kisallioppiminen:GcdX0H0sF6ifhH4Pg240ie3x
