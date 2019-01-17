@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
-import { Instructions } from './Instructions';
+import { Instructions } from './Instructions'
 
-export class Course extends Component< { markdown : string }> {
+export class Course extends Component<{ markdown: string }> {
   constructor(props: any) {
     super(props)
 
@@ -9,9 +9,6 @@ export class Course extends Component< { markdown : string }> {
       markdown: '',
       instructions: ''
     }
-  }
-
-  componentDidMount() {
   }
 
   render() {
