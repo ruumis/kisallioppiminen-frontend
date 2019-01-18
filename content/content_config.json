@@ -1,0 +1,9 @@
+{
+  "header": "./content/may1-1.md",
+  "chapters": [
+    {
+      "number": 1,
+      "content": "./content/chapter1/content.md"
+    }
+  ]
+}

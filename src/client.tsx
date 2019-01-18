@@ -1,16 +1,12 @@
 import ReactDOM from 'react-dom'
 import {createApp} from './features/application'
 
-const initialStateElement = document.getElementById('initial-state')
-let app = null
+const initialStateElem = document.getElementById('intial-state')
 
-if (initialStateElement) {
-  app = createApp(initialStateElement.innerText)
-} else {
-  app = createApp('loading..')
+if (initialStateElem) {
+  const app = createApp(JSON.parse(initialStateElem.innerText))
+  ReactDOM.hydrate(
+    app,
+    document.getElementById('app')
+  )
 }
-
-ReactDOM.render(
-  app,
-  document.getElementById('app')
-)

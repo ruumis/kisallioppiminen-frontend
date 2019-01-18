@@ -1,7 +1,9 @@
 import React, { Component } from 'react'
-import { Instructions } from './Instructions'
+import {Instructions} from './Instructions'
+import {InitialState} from '../../../types/InitialState'
+import {CourseHeader} from './CourseHeader'
 
-export class Course extends Component<{ markdown: string }> {
+export class Course extends Component<{ initialState: InitialState }> {
   constructor(props: any) {
     super(props)
 
@@ -15,7 +17,8 @@ export class Course extends Component<{ markdown: string }> {
     return (
       <div className="container">
         <h3 style={{ textAlign: 'center' }}>Luvut ja laskutoimitukset</h3>
-        <Instructions instructions={''} markdown={this.props.markdown} />
+        <CourseHeader headerContent={this.props.initialState.courseHeaderMarkdown} />
+        {this.props.initialState.chapters.map(chapter => <Instructions content={chapter.content} />)}
       </div >
     )
   }
