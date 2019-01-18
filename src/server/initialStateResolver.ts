@@ -19,7 +19,7 @@ export function readContent(): InitialState {
 
 function getCourseHeader() {
   if (contentConfig.header) {
-      return fs.readFileSync(contentConfig.header, 'utf8')
+    return fs.readFileSync(contentConfig.header, 'utf8')
   }
   return ''
 }
