@@ -1,8 +1,7 @@
 import React from 'react'
-import { InitialState } from '../../types/InitialState'
-import './style.css'
+import './Navigation.css'
 
-export function Navigation(initialState: InitialState) {
+export function Navigation() {
   return (
     <nav className="navigator">
       <ul>

@@ -1,0 +1,21 @@
+ul {
+  margin-top: 0px;
+  margin-right: 5%;
+}
+
+li {
+  display: inline-block;
+  padding: 20px;
+}
+
+.navigator {
+  background-color: #c4da87;
+  text-align: right;
+}
+
+a {
+  color: white;
+  text-decoration: none;
+  text-shadow: 1px 1px 2px black;
+  text-transform: uppercase;
+}
