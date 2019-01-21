@@ -1,9 +1,12 @@
 import ReactDOM from 'react-dom'
 import {createApp} from './features/application'
 
-const app = createApp()
+const initialStateElem = document.getElementById('intial-state')
 
-ReactDOM.render(
-  app,
-  document.getElementById('app')
-)
+if (initialStateElem) {
+  const app = createApp(JSON.parse(initialStateElem.innerText))
+  ReactDOM.hydrate(
+    app,
+    document.getElementById('app')
+  )
+}
