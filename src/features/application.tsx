@@ -1,6 +1,6 @@
-import {coursePage} from './coursePage/coursePage'
-import {InitialState} from '../types/InitialState'
+import { InitialState } from '../types/InitialState'
+import { Navigation } from './frontpage/Navigation'
 
 export function createApp(initialState: InitialState) {
-  return coursePage(initialState)
+  return Navigation(initialState)
 }

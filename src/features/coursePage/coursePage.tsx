@@ -6,7 +6,6 @@ import { InitialState } from '../../types/InitialState'
 export function coursePage(initialState: InitialState) {
   return (
     <div className="App">
-      <h2>asdasd</h2>
       {/*
       Vanha Header ja testikurssi
       <Header />
