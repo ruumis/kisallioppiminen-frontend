@@ -2,7 +2,7 @@ import React from 'react'
 import './Hero.scss'
 export default function Hero() {
   return (
-    <header>
+    <header className="hero">
       <img
         className="logo"
         src="http://kisallioppiminen.fi/img/kisalli-logo.png"
