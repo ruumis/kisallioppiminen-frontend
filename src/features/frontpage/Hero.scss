@@ -1,0 +1,49 @@
+@-moz-keyframes spin {
+  100% {
+    -moz-transform: rotate(360deg);
+  }
+}
+@-webkit-keyframes spin {
+  100% {
+    -webkit-transform: rotate(360deg);
+  }
+}
+@keyframes spin {
+  100% {
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+
+span {
+  display: inline;
+  padding: 1px;
+}
+
+header {
+  background-color: #f6f6f6;
+  height: 160px;
+  box-shadow: 0px 4px 0px 0px #666666;
+}
+
+.logo {
+  position: absolute;
+  margin-top: -45px;
+  -webkit-animation: spin 260s linear infinite;
+  -moz-animation: spin 260s linear infinite;
+  animation: spin 260s linear infinite;
+}
+
+.content {
+  text-align: center;
+  font-size: 25px;
+  border-radius: 22px;
+  padding: 10px;
+  background: #666666;
+  color: white;
+  text-shadow: 1px 1px 2px black;
+  margin-left: 25%;
+  width: 50%;
+  position: absolute;
+  top: 200px;
+}

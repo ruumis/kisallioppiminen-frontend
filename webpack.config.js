@@ -35,7 +35,7 @@ module.exports = function(env, argv) {
   // server-specific configuration
   if (env.platform === 'server') {
     base.module.rules.push({
-      test: /\.css$/,
+      test: /\.scss$/,
       use: 'null-loader'
     })
     base.target = 'node';
@@ -44,8 +44,8 @@ module.exports = function(env, argv) {
   // client-specific configurations
   if (env.platform === 'web') {
     base.module.rules.push({
-      test: /\.css$/,
-      use: ['style-loader', 'css-loader']
+      test: /\.scss$/,
+      use: ['style-loader', 'css-loader', 'sass-loader']
     })
     base.entry = './src/client.tsx';
     base.output.filename = 'js/client.js';
