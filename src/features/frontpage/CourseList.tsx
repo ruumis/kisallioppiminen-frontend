@@ -1,6 +1,5 @@
 import React from 'react'
 import Course from './Course'
-import './CourseList.scss'
 
 export default function CourseList() {
   return (

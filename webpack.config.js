@@ -1,4 +1,5 @@
 const path = require('path')
+const ExtractTextPlugin = require('extract-text-webpack-plugin');
 
 module.exports = function(env, argv) {
   
@@ -30,23 +31,30 @@ module.exports = function(env, argv) {
         }
       ]
     },
+    plugins: [
+      new ExtractTextPlugin({
+        filename: 'css/style.css',
+        allChunks: true,
+      }),
+    ]
+  }
+
+  if (env.platform === 'styles') {
+    base.module.rules = [{
+      test: /\.(scss|sass)$/,
+      use: ExtractTextPlugin.extract(['css-loader', 'sass-loader'])
+    }]
+    base.entry = './styles/style.scss';
+    base.output.filename = 'css/style.css';
   }
   
   // server-specific configuration
   if (env.platform === 'server') {
-    base.module.rules.push({
-      test: /\.scss$/,
-      use: 'null-loader'
-    })
     base.target = 'node';
   }
 
   // client-specific configurations
   if (env.platform === 'web') {
-    base.module.rules.push({
-      test: /\.scss$/,
-      use: ['style-loader', 'css-loader', 'sass-loader']
-    })
     base.entry = './src/client.tsx';
     base.output.filename = 'js/client.js';
   }

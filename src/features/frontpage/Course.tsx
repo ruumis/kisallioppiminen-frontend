@@ -1,5 +1,4 @@
 import React, { Component } from 'react'
-import './Course.scss'
 
 export default class Course extends Component<any, any> {
   render() {
