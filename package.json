@@ -21,7 +21,8 @@
     "ts-loader": "^5.2.2",
     "typescript": "^3.2.2",
     "webpack": "^4.28.4",
-    "webpack-cli": "^3.2.1"
+    "webpack-cli": "^3.2.1",
+    "ts-node": "^8.0.1"
   },
   "devDependencies": {
     "@types/axios": "^0.14.0",
@@ -40,6 +41,7 @@
     "watch": "nodemon",
     "build-web": "webpack --env.platform=web",
     "build-server": "webpack --env.platform=server",
-    "lint": "tslint -c tslint.json 'src/**/*.ts?(x)'"
+    "lint": "tslint -c tslint.json 'src/**/*.ts?(x)'",
+    "build": "./node_modules/.bin/ts-node ./scripts/buildStaticSite.ts && webpack --env.platform=static"
   }
 }

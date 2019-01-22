@@ -43,5 +43,10 @@ module.exports = function(env, argv) {
     base.output.filename = 'js/client.js';
   }
 
+  if (env.platform === 'static') {
+    base.entry = './src/client.tsx';
+    base.output.filename = 'static/client.js'
+  }
+
   return base;
 }

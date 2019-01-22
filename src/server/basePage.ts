@@ -1,4 +1,4 @@
-export const createTemplate = ({title, body, initialState}: {title: string, body: string, initialState: string}) => {
+export const createTemplate = ({title, body, initialState, isStatic}: {title: string, body: string, initialState: string, isStatic?: boolean}) => {
   return `
   <!DOCTYPE html>
   <html>
@@ -17,7 +17,7 @@ export const createTemplate = ({title, body, initialState}: {title: string, body
       <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.0/js/materialize.min.js"></script>
       <div id="app">${body}</div>
     </body>
-    <script src="/js/client.js" defer></script>
+    <script src="${!isStatic ? '/js/client.js' : 'client.js'}" defer></script>
   </html>
   `
 }
