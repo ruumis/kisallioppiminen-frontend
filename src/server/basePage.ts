@@ -3,9 +3,9 @@ export const createTemplate = ({
   body,
   initialState
 }: {
-  title: string;
-  body: string;
-  initialState: string;
+  title: string
+  body: string
+  initialState: string
 }) => {
   return `
   <!DOCTYPE html>
