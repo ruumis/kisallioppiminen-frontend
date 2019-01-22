@@ -20,7 +20,7 @@ export const createTemplate = ({
     <body style="margin:0">
       <div id="app">${body}</div>
     </body>
-    <script src="/js/client.js" defer></script>
+    <script src="/js/client.js"></script>
   </html>
   `
 }

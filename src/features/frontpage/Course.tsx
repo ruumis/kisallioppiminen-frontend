@@ -3,10 +3,6 @@ import './Course.scss'
 
 export default class Course extends Component<any, any> {
   render() {
-    if (typeof window !== 'undefined') {
-      alert(this.props.name)
-      console.log('asdasdasd')
-    }
 
     console.log('RENDERING')
 

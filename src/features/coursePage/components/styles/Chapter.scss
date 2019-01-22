@@ -1,0 +1,31 @@
+.chapter {
+  border: 1px;
+  border-style: ridge;
+  border-bottom-style: hidden;
+  border-color: rgba(187, 186, 186, 0.685);
+  background-color: ghostwhite;
+  padding: 10px;
+  margin: 0 auto;
+  font-size: 24px;
+  width: 80%;
+  text-align: left;
+  color: #00747a;
+  text-transform: uppercase;
+}
+
+.chapter:hover {
+  background-color: rgb(196, 196, 196);
+  text-decoration-line: underline;
+}
+
+.chapter_content {
+  border: 1px;
+  border-color: rgba(187, 186, 186, 0.685);;
+  background-color: ghostwhite;
+  padding: 10px;
+  margin: 0 auto;
+  display: none;
+  overflow: hidden;
+  border-style: ridge;
+  width: 80%;
+}
