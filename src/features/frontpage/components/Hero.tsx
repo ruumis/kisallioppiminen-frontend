@@ -6,7 +6,6 @@ export default function Hero() {
       <img
         className="hero-logo"
         src="http://kisallioppiminen.fi/img/kisalli-logo.png"
-        width="300px"
         alt="Kisallioppiminen.fi Logo"
       />
 
