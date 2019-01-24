@@ -62,9 +62,9 @@ body {
 }
 
 .courseList {
-  margin-top: 50px;
   width: 80%;
   margin: 0 auto;
+  margin-top: 100px;
 }
 
 .hero {
@@ -82,11 +82,12 @@ body {
     width: 50%;
     position: absolute;
     top: 200px;
+  }
 
-    &-logo {
-      position: absolute;
-      margin-top: -45px;
-    }
+  &-logo {
+    position: absolute;
+    margin-top: -45px;
+    width: 300px;
   }
 }
 
@@ -111,11 +112,19 @@ body {
   padding: 20px;
   height: 200px;
   margin-top: 100px;
+  position: static;
+  bottom: 0;
 
-  &-facebook-icon {
-    height: 50px;
+  .fb_link {
     position: relative;
-    top: -20px;
-    left: 10px;
+    top: -32px;
+    left: 45px;
+  }
+
+  .link {
+    color: #4fab53;
+    text-transform: none;
+    text-shadow: none;
+    margin-left: 5px;
   }
 }

@@ -50,9 +50,9 @@ body {
     padding-bottom: 20px; }
 
 .courseList {
-  margin-top: 50px;
   width: 80%;
-  margin: 0 auto; }
+  margin: 0 auto;
+  margin-top: 100px; }
 
 .hero {
   margin-bottom: 50px; }
@@ -68,9 +68,10 @@ body {
     width: 50%;
     position: absolute;
     top: 200px; }
-    .hero-content-logo {
-      position: absolute;
-      margin-top: -45px; }
+  .hero-logo {
+    position: absolute;
+    margin-top: -45px;
+    width: 300px; }
 
 .navigator {
   background-color: #c4da87;
@@ -89,9 +90,15 @@ body {
   display: flex;
   padding: 20px;
   height: 200px;
-  margin-top: 100px; }
-  .footer-facebook-icon {
-    height: 50px;
+  margin-top: 100px;
+  position: static;
+  bottom: 0; }
+  .footer .fb_link {
     position: relative;
-    top: -20px;
-    left: 10px; }
+    top: -32px;
+    left: 45px; }
+  .footer .link {
+    color: #4fab53;
+    text-transform: none;
+    text-shadow: none;
+    margin-left: 5px; }
