@@ -1,18 +1,14 @@
 import React from 'react'
 import { InitialState } from '../../types/InitialState'
-import Navigation from '../frontpage/Navigation'
-import Hero from '../frontpage/Hero'
-import CourseList from '../frontpage/CourseList'
-import Footer from '../frontpage/Footer'
+import Hero from './components/Hero'
+import CourseList from './components/CourseList'
 
 export function frontPage(initialState: InitialState) {
   return (
     <div>
-      <Navigation />
       <Hero />
       {/* Saatavilla olevat kurssit: */}
       <CourseList />
-      <Footer />
     </div>
   )
 }

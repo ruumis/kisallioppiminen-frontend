@@ -8,12 +8,15 @@ interface ContentConfig {
 
 const contentConfig: ContentConfig = JSON.parse(fs.readFileSync('./content/content_config.json', 'utf8'))
 
-export function readContent(): InitialState {
+export function resolveInitialState(path: string): InitialState {
   const header = getCourseHeader()
   const chapters = getChapters()
   return {
     courseHeaderMarkdown: header || '',
-    chapters
+    chapters,
+    pageParams: {
+      path
+    }
   }
 }
 
