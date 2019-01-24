@@ -5,7 +5,7 @@ export default function Hero() {
     <header className="hero">
       <img
         className="hero-logo"
-        src="http://kisallioppiminen.fi/img/kisalli-logo.png"
+        src="/img/kisalli-logo.png"
         alt="Kisallioppiminen.fi Logo"
       />
 
