@@ -1,30 +1,39 @@
-import React, { Component } from 'react'
-import { Col, Card } from 'react-materialize'
+import React from 'react'
+import './styles/Exercise.scss'
 
-export class Exercise extends Component<{exercise: {question: string, options: string[]}}> {
-  render() {
+const Exercise = ({ header, text }: { header: any, text: any }) => {
 
-      let key = 1
 
-      return (
-        <div className="container">
-          <Col m={6} s={12}>
-            <Card
-                className="teal acent-2"
-                textClassName="white-text"
-                title="Tehtävä 1"
-                actions={[<a key={key++}
-                href="/">Näytä vastaus</a>]}>
-                  <p>{this.props.exercise.question}</p>
 
-                  {this.props.exercise.options.map((exercise) =>
-                      <span>{exercise}</span>
-                  )}
-            </Card>
-          </Col>
-        </div>
-      )
+  const toggleVisibility = () => {
+    let content = document.getElementById("ex1")
+    console.log('funktiota kutsuttiin')
+    if (content) {
+      console.log(content.style.display)
+      if (content.style.display === 'none' || content.style.display == '') {
+        content.style.display = 'block'
+      } else {
+        content.style.display = 'none'
+      }
+    }
   }
+
+
+
+  return (
+    <div onClick={a}>
+      <div className='exercise' onClick={toggleVisibility}>{header}</div>
+      <div id='ex1' className='ex_content'>
+        {text}
+      </div>
+    </div>
+  )
+
 }
+
+function a() {
+  console.log('sdfds')
+}
+
 
 export default Exercise

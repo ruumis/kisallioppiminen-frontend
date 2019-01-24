@@ -1,33 +1,35 @@
-import React, {Component } from 'react'
+import React from 'react'
 import './styles/Chapter.scss'
 
-export class Chapter extends Component {
-  
-  render() {
+const Chapter = ({ header, text }: { header: any, text: any }) => {
 
-    const toggleVisibility = () => {
-      let content = document.getElementById('testi')
-      console.log('funktiota kutsuttiin')
-      if (content) {
-        console.log(content.style.display)
-        if (content.style.display === 'none' || content.style.display == '') {
-          content.style.display = 'block'
-        }else {
-          content.style.display = 'none'
-        }
+
+
+  const toggleVisibility = () => {
+    let content = document.getElementById('testi')
+    console.log('funktiota kutsuttiin')
+    if (content) {
+      console.log(content.style.display)
+      if (content.style.display === 'none' || content.style.display == '') {
+        content.style.display = 'block'
+      } else {
+        content.style.display = 'none'
       }
     }
-
-
-    return (
-      <div onClick={a}>
-        <div className='chapter' onClick={toggleVisibility}>Tämä on luvun otsikko</div>
-        <div id='testi' className='chapter_content'>
-          <p>Tekstsssssiä</p>
-        </div>
-      </div>
-    )
   }
+
+  
+
+  return (
+    <div onClick={a}>
+      <div className='chapter' onClick={toggleVisibility}>{header}</div>
+      <div id='testi' className='chapter_content'>
+        {text}
+        <div className='close_chapter' onClick={toggleVisibility}>Sulje kappale</div>
+      </div>
+    </div>
+  )
+
 }
 
 function a() {

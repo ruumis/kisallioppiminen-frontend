@@ -1,26 +1,23 @@
-import React, {Component } from 'react'
+import React from 'react'
 import './styles/Definition.scss'
 
-export class Definition extends Component {
-  
-  render() {
+const Definition = ({ header, text }: { header: any, text: any }) => {
 
 
-    return (
-      <div>
-        <div className='header'>
-          <h3 className='head_cont'> otsake </h3>
-        </div>
-        
-        <div className='def_content'>
-          <p className='def_text'>
-            Teksti jeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee
-          </p>
-        </div>
-        
+  return (
+    <div>
+      <div className='header'>
+        <h3 className='head_cont'> {header} </h3>
       </div>
-    )
-  }
+
+      <div className='def_content'>
+        <p className='def_text'>
+          {text}
+          </p>
+      </div>
+
+    </div>
+  )
 }
 
 
