@@ -6,7 +6,7 @@ export class Header extends Component {
   render() {
     return (
       <div>
-        {'test document @ components/Header.tsx'}
+        {'test document'}
         <IdyllDocument
           markup={`# Hello world
 				 plaaplaa
