@@ -3,16 +3,18 @@ import {InitialState} from '../types/InitialState'
 import Footer from './components/Footer'
 import Navigation from './components/Navigation'
 import {routes} from '../routes'
+import {Provider} from 'react-redux'
+import {initStore} from '../reducers/store'
 
 export function createApp(initialState: InitialState) {
-
   return (
-    <div>
+    <Provider store={initStore(initialState)}>
       <Navigation />
       {resolvePageToRender(initialState)}
       <Footer />
-    </div>
+    </Provider>
   )
+
 }
 
 function resolvePageToRender(initialState: InitialState) {
