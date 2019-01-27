@@ -1,18 +1,23 @@
 import React, { Component } from 'react'
-import { Navbar, NavItem } from 'react-materialize'
+import IdyllDocument from 'idyll-document'
+import * as components from 'idyll-components'
 
 export class Header extends Component {
   render() {
     return (
       <div>
-        <Navbar className="teal acent-2" brand="logo" right>
-          <NavItem> Materiaalit </NavItem>
-          <NavItem> Blogi </NavItem>
-          <NavItem> Tietoa </NavItem>
-          <NavItem> Beta </NavItem>
-        </Navbar>
+        {'test document'}
+        <IdyllDocument
+          markup={`# Hello world
+				 plaaplaa
+
+				 ## H2
+				 ### H3` }
+          components={components}
+          datasets={{}} />
       </div>
     )
+
   }
 }
 
