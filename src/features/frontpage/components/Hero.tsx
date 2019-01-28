@@ -10,7 +10,7 @@ export default function Hero() {
       />
 
       <div className="hero-content">
-        <span className="location">Etusivu</span>
+        <span className="hero-location">Etusivu</span>
       </div>
     </header>
   )

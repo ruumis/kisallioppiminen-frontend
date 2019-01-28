@@ -4,7 +4,6 @@ import Course from './Course'
 export default function CourseList() {
   return (
     <div className="courseList">
-      <div style={{ margin: '0 auto' }}>
         <Course />
         <Course />
         <Course />
@@ -12,7 +11,6 @@ export default function CourseList() {
         <Course />
         <Course />
         <Course />
-      </div>
     </div>
   )
 }
