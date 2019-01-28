@@ -1,12 +1,4 @@
-export const createTemplate = ({
-  title,
-  body,
-  initialState
-}: {
-  title: string
-  body: string
-  initialState: string
-}) => {
+export const createTemplate = ({title, body, initialState, isStatic}: {title: string, body: string, initialState: string, isStatic?: boolean}) => {
   return `
   <!DOCTYPE html>
   <html>
@@ -20,7 +12,7 @@ export const createTemplate = ({
     <body style="margin:0">
       <div id="app">${body}</div>
     </body>
-    <script src="/js/client.js"></script>
+    <script src="${!isStatic ? '/js/client.js' : 'client.js'}" defer></script>
   </html>
   `
 }

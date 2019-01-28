@@ -13,7 +13,8 @@
     "jsx": "react",
     "outDir": "./dist/",
     "rootDirs": [
-      "./src"
+      "./src",
+      "./scripts"
     ],
     "lib": [
       "es6",
