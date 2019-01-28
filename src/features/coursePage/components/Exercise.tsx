@@ -1,7 +1,7 @@
 import React from 'react'
 import './styles/Exercise.scss'
 
-const Exercise = ({ header, text }: { header: any, text: any }) => {
+const Exercise = ({ header, text, answer }: { header: any, text: any, answer: any }) => {
 
   const toggleVisibility = (id: string) => {
     const content = document.getElementById(id)
@@ -23,7 +23,7 @@ const Exercise = ({ header, text }: { header: any, text: any }) => {
         <p>{text}</p>
         <br />
         <div className="ex_answer" onClick={() => toggleVisibility('answer')}>Vastaus</div>
-        <p id="answer" className="ex_hidden">Placeholder</p>
+        <p id="answer" className="ex_hidden">{answer}</p>
       </div>
     </div>
   )
