@@ -27,18 +27,26 @@ module.exports = function(env, argv) {
               loader: 'ts-loader',
             }
           ]
-        },
+        }
       ]
     },
   }
   
   // server-specific configuration
   if (env.platform === 'server') {
+    base.module.rules.push({
+      test: /\.scss$/,
+      use: 'null-loader'
+    })
     base.target = 'node';
   }
 
   // client-specific configurations
   if (env.platform === 'web') {
+    base.module.rules.push({
+      test: /\.scss$/,
+      use: ['style-loader', 'css-loader', 'sass-loader']
+    })
     base.entry = './src/client.tsx';
     base.output.filename = 'js/client.js';
   }

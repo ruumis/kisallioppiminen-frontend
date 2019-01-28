@@ -1,30 +1,32 @@
-import React, { Component } from 'react'
-import { Col, Card } from 'react-materialize'
+import React from 'react'
+import './styles/Exercise.scss'
 
-export class Exercise extends Component<{exercise: {question: string, options: string[]}}> {
-  render() {
+const Exercise = ({ header, text, answer }: { header: any, text: any, answer: any }) => {
 
-      let key = 1
-
-      return (
-        <div className="container">
-          <Col m={6} s={12}>
-            <Card
-                className="teal acent-2"
-                textClassName="white-text"
-                title="Tehtävä 1"
-                actions={[<a key={key++}
-                href="/">Näytä vastaus</a>]}>
-                  <p>{this.props.exercise.question}</p>
-
-                  {this.props.exercise.options.map((exercise) =>
-                      <span>{exercise}</span>
-                  )}
-            </Card>
-          </Col>
-        </div>
-      )
+  const toggleVisibility = (id: string) => {
+    const content = document.getElementById(id)
+    console.log('funktiota kutsuttiin')
+    if (content) {
+      console.log(content.style.display)
+      if (content.style.display === 'none' || content.style.display === '') {
+        content.style.display = 'block'
+      } else {
+        content.style.display = 'none'
+      }
+    }
   }
+
+  return (
+    <div>
+      <div className="exercise" onClick={() => toggleVisibility('ex1')}>{header}</div>
+      <div id="ex1" className="ex_content">
+        <p>{text}</p>
+        <br />
+        <div className="ex_answer" onClick={() => toggleVisibility('answer')}>Vastaus</div>
+        <p id="answer" className="ex_hidden">{answer}</p>
+      </div>
+    </div>
+  )
 }
 
 export default Exercise

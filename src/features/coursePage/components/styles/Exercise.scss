@@ -1,0 +1,47 @@
+.exercise {
+  border: 1px;
+  border-style: ridge;
+  border-color: #dddddd;
+  background-color: whitesmoke;
+  padding: 10px;
+  margin: 0 auto;
+  margin-top: 20px;
+  font-size: 24px;
+  width: 95%;
+  text-align: left;
+  color: #111;
+  text-transform: uppercase;
+}
+
+.exercise:hover {
+  background-color: rgb(196, 196, 196);
+  text-decoration-line: underline;
+}
+
+.ex_content {
+  border: 1px;
+  border-color: #dddddd;
+  border-top-style: hidden;
+  background-color: ghostwhite;
+  padding: 10px;
+  margin: 0 auto;
+  display: none;
+  overflow: hidden;
+  border-style: ridge;
+  width: 95%;
+}
+
+.ex_answer {
+  color: #00747a;
+  text-transform: uppercase;
+  display: inline;
+}
+
+.ex_answer:hover {
+  background-color: #d5eff0;
+  text-decoration-line: underline;
+}
+
+.ex_hidden {
+  display: none;
+}

@@ -1,0 +1,30 @@
+.course {
+  display: inline-block;
+  padding: 0px;
+  width: 250px;
+  margin: 10px;
+  background: beige;
+  text-align: left;
+}
+
+.course-title {
+  color: white;
+  background: #4fab53;
+  margin: 0px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  text-align: center;
+}
+
+.course-parts {
+  background: white;
+  margin-top: 0px;
+  margin-bottom: 0px;
+  color: #4fab53;
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+li {
+  list-style-type: none;
+}

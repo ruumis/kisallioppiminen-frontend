@@ -1,0 +1,33 @@
+span {
+  display: inline;
+  padding: 1px;
+}
+
+header {
+  background-color: #f6f6f6;
+  height: 160px;
+  box-shadow: 0px 4px 0px 0px #666666;
+}
+
+.logo {
+  position: absolute;
+  margin-top: -45px;
+}
+
+.content {
+  text-align: center;
+  font-size: 25px;
+  border-radius: 22px;
+  padding: 10px;
+  background: #4fab53;
+  color: white;
+  text-shadow: 1px 1px 2px black;
+  margin-left: 25%;
+  width: 50%;
+  position: absolute;
+  top: 200px;
+}
+
+.hero {
+  margin-bottom: 50px;
+}
