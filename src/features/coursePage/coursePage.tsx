@@ -1,16 +1,35 @@
 import React from 'react'
 import { InitialState } from '../../types/InitialState'
+import IdyllDocument from 'idyll-document'
+import * as components from 'idyll-components'
+import compiler, { Node } from 'idyll-compiler'
 import Chapter from './components/Chapter'
-import Theorem from './components/Theorem'
-import Exercise from './components/Exercise'
-import Answer from './components/Answer'
-import Definition from './components/Definition'
 
 export function coursePage(initialState: InitialState) {
+  const availableComponents = {
+    ...components,
+    Chapter
+  }
+
+  const courseToRender = resolveCourse(initialState)
+
+  // The nullcheck for the course before rendering the Idyll doc is shit
+  // at the moment. I think this might fuck up server side rendering for idyll docs?
   return (
-    <div className="app">
+    <div>
       <h1>Kurssisivu</h1>
-      {initialState.courseHeaderMarkdown}
+      {courseToRender && <IdyllDocument
+        ast={compiler(courseToRender.courseContent[0].content, {async: false}) as Node[]}
+        components={availableComponents}
+      />}
     </div>
   )
+}
+
+function resolveCourse({pageParams, courses}: InitialState) {
+  const {pathParams} = pageParams
+  if (pathParams.id) {
+    return courses.find(({id}) => id === pathParams.id)
+  }
+  return undefined
 }
