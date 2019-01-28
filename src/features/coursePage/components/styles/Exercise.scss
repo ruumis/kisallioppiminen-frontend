@@ -32,7 +32,14 @@
 }
 
 .ex_answer {
-  color: #111;
+  color: #00747a;
+  text-transform: uppercase;
+  display: inline;
+}
+
+.ex_answer:hover {
+  background-color: rgb(196, 196, 196);
+  text-decoration-line: underline;
 }
 
 .ex_hidden {

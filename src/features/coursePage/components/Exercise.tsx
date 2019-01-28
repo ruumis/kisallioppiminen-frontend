@@ -3,8 +3,8 @@ import './styles/Exercise.scss'
 
 const Exercise = ({ header, text }: { header: any, text: any }) => {
 
-  const toggleVisibility = () => {
-    const content = document.getElementById('ex1')
+  const toggleVisibility = (id: string) => {
+    const content = document.getElementById(id)
     console.log('funktiota kutsuttiin')
     if (content) {
       console.log(content.style.display)
@@ -18,9 +18,12 @@ const Exercise = ({ header, text }: { header: any, text: any }) => {
 
   return (
     <div>
-      <div className="exercise" onClick={toggleVisibility}>{header}</div>
+      <div className="exercise" onClick={() => toggleVisibility('ex1')}>{header}</div>
       <div id="ex1" className="ex_content">
-        {text}
+        <p>{text}</p>
+        <br />
+        <div className="ex_answer" onClick={() => toggleVisibility('answer')}>Vastaus</div>
+        <p id="answer" className="ex_hidden">Placeholder</p>
       </div>
     </div>
   )
