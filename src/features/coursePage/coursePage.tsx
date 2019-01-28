@@ -8,7 +8,8 @@ import Theorem from './components/Theorem'
 import Exercise from './components/Exercise'
 
 export function coursePage(initialState: InitialState) {
-  const text = [<Definition header="Määritelmä" text="Lukumäärien ilmaisemiseen käytettäviä lukuja 0, 1, 2, 3, 4, … kutsutaan luonnollisiksi luvuiksi. Luonnollisten lukujen joukkoa merkitään kirjaimella N." />,
+  const text = [<Definition header="Määritelmä" text="Lukumäärien ilmaisemiseen käytettäviä lukuja 0, 1, 2, 3, 4, … kutsutaan luonnollisiksi luvuiksi.
+   Luonnollisten lukujen joukkoa merkitään kirjaimella N." />,
   <Theorem header="Teoreema" text="Oletetaan, että a≥0 ja b≥0. Lukujen a ja b neliöjuurten tulo on luvun ab neliöjuuri" />,
   <Exercise header="Tehtävä 1: Luonnollisten lukujen yhteen- ja kertolasku " text="Tee piirros, joka havainnollistaa laskutoimitusta 2+4." />]
 
