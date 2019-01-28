@@ -1,5 +1,5 @@
 {
-  "name": "kisallioppiminen-frontend"
+  "name": "kisallioppiminen-frontend",
   "dependencies": {
     "@types/body-parser": "^1.17.0",
     "@types/classnames": "^2.2.6",
