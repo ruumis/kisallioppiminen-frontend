@@ -11,8 +11,7 @@ export function coursePage(initialState: InitialState) {
   const text = [
   <Definition
     header="Määritelmä"
-    text="Lukumäärien ilmaisemiseen käytettäviä lukuja 0, 1, 2, 3, 4, … kutsutaan luonnollisiksi luvuiksi.
-   Luonnollisten lukujen joukkoa merkitään kirjaimella N."
+    text="Lukumäärien ilmaisemiseen käytettäviä lukuja 0, 1, 2, 3, 4, … kutsutaan luonnollisiksi luvuiksi. Luonnollisten lukujen joukkoa merkitään kirjaimella N."
    />,
   <Theorem
     header="Teoreema"
