@@ -1,6 +1,6 @@
 export interface InitialState {
-  courseHeaderMarkdown: string,
-  chapters: Chapter[],
+  courseHeaderMarkdown: string
+  chapters: Chapter[]
   pageParams: PageParams
 }
 

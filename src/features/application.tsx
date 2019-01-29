@@ -9,7 +9,7 @@ import Link from './components/Link'
 import { changePage } from '../reducers/actions/pageStateActions'
 
 export function createApp(initialState: InitialState) {
-  const mapStateToProps = (state: {pageState: InitialState}) => ({
+  const mapStateToProps = (state: { pageState: InitialState }) => ({
     initialState: state.pageState
   })
   const mapDispatchToProps = {
@@ -17,7 +17,7 @@ export function createApp(initialState: InitialState) {
   }
 
   const app = (props: { initialState: InitialState }) => {
-    const {initialState: state} = props
+    const { initialState: state } = props
     return (
       <React.Fragment>
         <Navigation />

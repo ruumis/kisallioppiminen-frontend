@@ -1,24 +1,24 @@
-import {InitialState} from '../types/InitialState'
+import { InitialState } from '../types/InitialState'
 
-export const pageStateReducer = (state: InitialState | null = null, action: {type: string, data: any}) => {
+export const pageStateReducer = (state: InitialState | null = null, action: { type: string; data: any }) => {
   console.log(state, action)
   switch (action.type) {
     case 'CHANGE_PAGE':
-        if (typeof window !== 'undefined') {
-          const {data} = action
-          window.history.pushState({}, 'Kisällioppiminen', data)
-          if (state) {
-            const {pageParams} = state
-            state = {
-              ...state,
-              pageParams: {
-                ...pageParams,
-                path: data
-              }
+      if (typeof window !== 'undefined') {
+        const { data } = action
+        window.history.pushState({}, 'Kisällioppiminen', data)
+        if (state) {
+          const { pageParams } = state
+          state = {
+            ...state,
+            pageParams: {
+              ...pageParams,
+              path: data
             }
           }
         }
-        break
+      }
+      break
   }
 
   return state

@@ -7,11 +7,7 @@ export class CourseHeader extends Component<{ headerContent: string }> {
     return (
       <div className="container">
         <Col m={6} s={12}>
-          <Card
-            className="teal acent-2"
-            textClassName="white-text"
-            title="Osa 1"
-          >
+          <Card className="teal acent-2" textClassName="white-text" title="Osa 1">
             <ReactMarkdown source={this.props.headerContent} />
           </Card>
         </Col>

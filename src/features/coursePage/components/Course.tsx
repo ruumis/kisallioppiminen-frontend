@@ -17,9 +17,7 @@ export class Course extends Component<{ initialState: InitialState }> {
     return (
       <div className="container">
         <h3 style={{ textAlign: 'center' }}>Luvut ja laskutoimitukset</h3>
-        <CourseHeader
-          headerContent={this.props.initialState.courseHeaderMarkdown}
-        />
+        <CourseHeader headerContent={this.props.initialState.courseHeaderMarkdown} />
         {this.props.initialState.chapters.map(chapter => (
           <Instructions content={chapter.content} />
         ))}

@@ -1,9 +1,9 @@
 import express from 'express'
 import ReactServer from 'react-dom/server'
 
-import {createApp} from '../features/application'
-import {createTemplate} from './basePage'
-import {resolveInitialState} from './initialStateResolver'
+import { createApp } from '../features/application'
+import { createTemplate } from './basePage'
+import { resolveInitialState } from './initialStateResolver'
 
 const PORT = process.env.PORT || 3000
 

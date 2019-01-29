@@ -1,5 +1,5 @@
-import {combineReducers, createStore} from 'redux'
-import {pageStateReducer} from './pageStateReducer'
+import { combineReducers, createStore } from 'redux'
+import { pageStateReducer } from './pageStateReducer'
 import { InitialState } from '../types/InitialState'
 
 const reducer = combineReducers({
@@ -8,5 +8,5 @@ const reducer = combineReducers({
 
 export const initStore = (initalState: InitialState) => {
   console.log(initalState)
-  return createStore(reducer, {pageState: initalState})
+  return createStore(reducer, { pageState: initalState })
 }
