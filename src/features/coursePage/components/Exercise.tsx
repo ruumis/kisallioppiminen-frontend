@@ -1,17 +1,7 @@
 import React from 'react'
 import './styles/Exercise.scss'
 
-const Exercise = ({
-  header,
-  text,
-  answer,
-  open
-}: {
-  header: any
-  text: any
-  answer: any
-  open: boolean
-}) => {
+const Exercise = ({ header, text, answer, open }: { header: any; text: any; answer: any; open: boolean }) => {
   const toggleVisibility = (id: string) => {
     const content = document.getElementById(id)
     console.log('funktiota kutsuttiin')

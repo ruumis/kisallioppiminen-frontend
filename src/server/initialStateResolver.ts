@@ -1,9 +1,9 @@
 import fs from 'fs'
-import {InitialState, Chapter} from '../types/InitialState'
+import { InitialState, Chapter } from '../types/InitialState'
 
 interface ContentConfig {
-  header: string,
-  chapters: Array<{number: number, content: string}>
+  header: string
+  chapters: Array<{ number: number; content: string }>
 }
 
 const contentConfig: ContentConfig = JSON.parse(fs.readFileSync('./content/content_config.json', 'utf8'))
@@ -27,7 +27,7 @@ function getCourseHeader() {
 function getChapters(): Chapter[] {
   const arr: Chapter[] = []
   contentConfig.chapters.forEach(chapter => {
-    arr.push({content: fs.readFileSync(chapter.content, 'utf8')})
+    arr.push({ content: fs.readFileSync(chapter.content, 'utf8') })
   })
   return arr
 }

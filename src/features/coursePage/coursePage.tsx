@@ -14,11 +14,7 @@ export function coursePage(initialState: InitialState) {
       header="Määritelmä"
       text="Lukumäärien ilmaisemiseen käytettäviä lukuja 0, 1, 2, 3, 4, … kutsutaan luonnollisiksi luvuiksi. Luonnollisten lukujen joukkoa merkitään kirjaimella N."
     />,
-    <Theorem
-      header="Teoreema"
-      text="Oletetaan, että a≥0 ja b≥0. Lukujen a ja b neliöjuurten tulo on luvun ab neliöjuuri"
-      rationalization="perustelu"
-    />,
+    <Theorem header="Teoreema" text="Oletetaan, että a≥0 ja b≥0. Lukujen a ja b neliöjuurten tulo on luvun ab neliöjuuri" rationalization="perustelu" />,
     <Exercise
       header="Tehtävä 1: Luonnollisten lukujen yhteen- ja kertolasku"
       text="Tee piirros, joka havainnollistaa laskutoimitusta 2+4."
@@ -37,20 +33,9 @@ export function coursePage(initialState: InitialState) {
     <div>
       <Navigation />
       <Hero />
-      <Section
-        header="Luvut ja Laskutoimitukset"
-        renderSection={() => console.log('nice')}
-        selected={false}
-      />
-      <Section
-        header="Luvut ja Laskutoimitukset"
-        renderSection={() => console.log('nice')}
-        selected={true}
-      />
-      <Chapter
-        header="Luonnolliset luvut ja kokonaisluvut (1.1 - 1.8)"
-        text={text}
-      />
+      <Section header="Luvut ja Laskutoimitukset" renderSection={() => console.log('nice')} selected={false} />
+      <Section header="Luvut ja Laskutoimitukset" renderSection={() => console.log('nice')} selected={true} />
+      <Chapter header="Luonnolliset luvut ja kokonaisluvut (1.1 - 1.8)" text={text} />
     </div>
   )
 }
