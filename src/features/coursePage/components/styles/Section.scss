@@ -1,0 +1,13 @@
+.section {
+  background-color: #a8bb73;
+  color: #fff;
+  font-size: 20px;
+  padding: 10px 15px;
+  text-shadow: 1px 1px 1px #005357;
+  display: inline;
+}
+
+.section:hover {
+  background-color: #00747a;
+  text-decoration-line: underline;
+}

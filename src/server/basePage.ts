@@ -1,4 +1,4 @@
-export const createTemplate = ({title, body, initialState, isStatic}: {title: string, body: string, initialState: string, isStatic?: boolean}) => {
+export const createTemplate = ({ title, body, initialState, isStatic }: { title: string; body: string; initialState: string; isStatic?: boolean }) => {
   return `
   <!DOCTYPE html>
   <html>
