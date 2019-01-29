@@ -22,7 +22,15 @@ export function coursePage(initialState: InitialState) {
     header="Tehtävä 1: Luonnollisten lukujen yhteen- ja kertolasku"
     text="Tee piirros, joka havainnollistaa laskutoimitusta 2+4."
     answer="Placeholder tekstiä"
-  />]
+    open={false}
+  />,
+  <Exercise
+    header="Tehtävä 1: Luonnollisten lukujen yhteen- ja kertolasku, auki"
+    text="Tee piirros, joka havainnollistaa laskutoimitusta 2+4."
+    answer="Placeholder tekstiä"
+    open={true}
+  />
+]
 
   return (
     <div >

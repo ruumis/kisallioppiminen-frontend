@@ -1,7 +1,7 @@
 import React from 'react'
 import './styles/Exercise.scss'
 
-const Exercise = ({ header, text, answer }: { header: any, text: any, answer: any }) => {
+const Exercise = ({ header, text, answer, open}: { header: any, text: any, answer: any, open:boolean }) => {
 
   const toggleVisibility = (id: string) => {
     const content = document.getElementById(id)
@@ -15,15 +15,28 @@ const Exercise = ({ header, text, answer }: { header: any, text: any, answer: an
       }
     }
   }
+  if (!open) {
+    return (
+      <div>
+        <div className="exercise" onClick={() => toggleVisibility('ex1')}>{header}</div>
+        <div id="ex1" className="ex_content">
+          <p>{text}</p>
+          <br />
+          <div className="ex_answer" onClick={() => toggleVisibility('answer')}>Vastaus</div>
+          <p id="answer" className="ex_hidden">{answer}</p>
+        </div>
+      </div>
+    )
+  }
 
   return (
     <div>
-      <div className="exercise" onClick={() => toggleVisibility('ex1')}>{header}</div>
-      <div id="ex1" className="ex_content">
+      <div className="exercise" onClick={() => toggleVisibility('ex2')}>{header}</div>
+      <div style={{display: "block"}} id="ex2" className="ex_content">
         <p>{text}</p>
         <br />
-        <div className="ex_answer" onClick={() => toggleVisibility('answer')}>Vastaus</div>
-        <p id="answer" className="ex_hidden">{answer}</p>
+        <div className="ex_answer" onClick={() => toggleVisibility('answer2')}>Vastaus</div>
+        <p id="answer2" className="ex_hidden">{answer}</p>
       </div>
     </div>
   )
