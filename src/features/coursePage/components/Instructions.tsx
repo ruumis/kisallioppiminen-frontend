@@ -2,9 +2,8 @@ import React, { Component } from 'react'
 import { Col, Card } from 'react-materialize'
 import ReactMarkdown from 'react-markdown'
 
-export class Instructions extends Component<{content: string } > {
+export class Instructions extends Component<{ content: string }> {
   render() {
-
     return (
       <div className="container">
         <Col m={6} s={12}>
@@ -12,7 +11,7 @@ export class Instructions extends Component<{content: string } > {
             <ReactMarkdown source={this.props.content} />
           </Card>
         </Col>
-      </div >
+      </div>
     )
   }
 }

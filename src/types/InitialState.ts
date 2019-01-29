@@ -1,5 +1,5 @@
 export interface InitialState {
-  courseHeaderMarkdown: string,
+  courseHeaderMarkdown: string
   chapters: Chapter[]
 }
 

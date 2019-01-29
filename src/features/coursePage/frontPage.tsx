@@ -6,7 +6,7 @@ import CourseList from '../frontpage/CourseList'
 
 export function frontPage(initialState: InitialState) {
   return (
-    <div >
+    <div>
       <Navigation />
       <Hero />
       {/* Saatavilla olevat kurssit: */}
