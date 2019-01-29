@@ -1,8 +1,7 @@
 import React from 'react'
 import './styles/Chapter.scss'
 
-const Chapter = ({ header, text }: { header: any, text: any }) => {
-
+const Chapter = ({ header, text }: { header: any; text: any }) => {
   const toggleVisibility = () => {
     const content = document.getElementById('testi')
     console.log('funktiota kutsuttiin')
@@ -18,10 +17,14 @@ const Chapter = ({ header, text }: { header: any, text: any }) => {
 
   return (
     <div>
-      <div className="chapter" onClick={toggleVisibility}>{header}</div>
+      <div className="chapter" onClick={toggleVisibility}>
+        {header}
+      </div>
       <div id="testi" className="chapter_content">
         {text}
-        <div className="close_chapter" onClick={toggleVisibility}>Sulje kappale</div>
+        <div className="close_chapter" onClick={toggleVisibility}>
+          Sulje kappale
+        </div>
       </div>
     </div>
   )
