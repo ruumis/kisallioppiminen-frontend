@@ -1,10 +1,23 @@
 import {InitialState} from '../types/InitialState'
-import {Action} from './actions/pageStateActions'
 
-export const pageStateReducer = (state: InitialState, action: Action) => {
-  switch (action) {
+export const pageStateReducer = (state: InitialState | null = null, action: {type: string, data: any}) => {
+  console.log(state, action)
+  switch (action.type) {
     case 'CHANGE_PAGE':
-        console.log(state)
+        if (typeof window !== 'undefined') {
+          const {data} = action
+          window.history.pushState({}, 'Kisällioppiminen', data)
+          if (state) {
+            const {pageParams} = state
+            state = {
+              ...state,
+              pageParams: {
+                ...pageParams,
+                path: data
+              }
+            }
+          }
+        }
         break
   }
 
