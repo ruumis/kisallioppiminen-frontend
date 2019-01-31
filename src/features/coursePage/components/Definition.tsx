@@ -1,5 +1,4 @@
 import React from 'react'
-import './styles/Definition.scss'
 
 const Definition = ({ header, text }: { header: any; text: any }) => {
   return (

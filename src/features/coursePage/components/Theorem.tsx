@@ -1,5 +1,4 @@
 import React from 'react'
-import './styles/Theorem.scss'
 
 const Theorem = ({ header, text, rationalization }: { header: any; text: any; rationalization: any }) => {
   return (
