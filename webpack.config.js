@@ -47,6 +47,21 @@ module.exports = function(env, argv) {
     base.entry = './styles/style.scss';
     base.output.filename = 'css/style.css';
   }
+
+  if (env.platform === 'styles-static') {
+    base.module.rules = [{
+      test: /\.(scss|sass)$/,
+      use: ExtractTextPlugin.extract(['css-loader', 'sass-loader'])
+    }]
+    base.plugins = [
+      new ExtractTextPlugin({
+        filename: 'static/css/style.css',
+        allChunks: true,
+      }),
+    ]
+    base.entry = './styles/style.scss';
+    base.output.filename = 'static/css/style.css';
+  }
   
   // server-specific configuration
   if (env.platform === 'server') {
