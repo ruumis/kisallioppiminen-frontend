@@ -13,6 +13,8 @@ const Chapter = (props: any) => {
     }
   }
 
+  console.log(header)
+
   return (
     <div>
       <div className="chapter" onClick={toggleVisibility}>
