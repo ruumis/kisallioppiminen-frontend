@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import Link from '../../components/Link'
 
 export default class Course extends Component<any, any> {
   render() {
@@ -7,7 +8,9 @@ export default class Course extends Component<any, any> {
 
     return (
       <div className="course">
-        <h2 className="course-title">Luvut ja lukujonot</h2>
+        <Link href="/course">
+          <h2 className="course-title">Luvut ja lukujonot</h2>
+        </Link>
         <ol className="course-parts">
           <li>
             <span className="course-content">Luvut ja laskutoimitukset</span>

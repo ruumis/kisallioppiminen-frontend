@@ -1,7 +1,6 @@
 import { InitialState } from '../types/InitialState'
 
 export const pageStateReducer = (state: InitialState | null = null, action: { type: string; data: any }) => {
-  console.log(state, action)
   switch (action.type) {
     case 'CHANGE_PAGE':
       if (typeof window !== 'undefined') {
@@ -20,6 +19,5 @@ export const pageStateReducer = (state: InitialState | null = null, action: { ty
       }
       break
   }
-
   return state
 }
