@@ -19,3 +19,5 @@ export class Instructions extends Component<{ content: string }> {
     )
   }
 }
+
+export default Instructions

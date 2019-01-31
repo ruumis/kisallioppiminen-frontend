@@ -9,6 +9,6 @@ export function coursePage(initialState: InitialState) {
   )
 }
 
-      // <Navigation />
-      // <Hero />
-      // <Chapter header="Luonnolliset luvut ja kokonaisluvut (1.1 - 1.8)" text={text} />
+// <Navigation />
+// <Hero />
+// <Chapter header="Luonnolliset luvut ja kokonaisluvut (1.1 - 1.8)" text={text} />

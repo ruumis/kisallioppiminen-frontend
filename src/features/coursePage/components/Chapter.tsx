@@ -15,6 +15,8 @@ const Chapter = ({ header, text }: { header: any; text: any }) => {
     }
   }
 
+  console.log(header)
+
   return (
     <div>
       <div className="chapter" onClick={toggleVisibility}>
