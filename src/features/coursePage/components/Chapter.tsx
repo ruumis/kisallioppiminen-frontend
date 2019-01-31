@@ -1,7 +1,6 @@
 import React from 'react'
-import './styles/Chapter.scss'
 
-const Chapter = ({ header, text }: { header: any; text: any }) => {
+const Chapter = ({ header, teksti }: { header: any; teksti: any }) => {
   const toggleVisibility = () => {
     const content = document.getElementById('testi')
     console.log('funktiota kutsuttiin')
@@ -23,7 +22,7 @@ const Chapter = ({ header, text }: { header: any; text: any }) => {
         {header}
       </div>
       <div id="testi" className="chapter_content">
-        {text}
+        {teksti}
         <div className="close_chapter" onClick={toggleVisibility}>
           Sulje kappale
         </div>

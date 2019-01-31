@@ -1,9 +1,18 @@
-{
-  "header": "./content/may1-1.md",
-  "chapters": [
-    {
-      "number": 1,
-      "content": "./content/chapter1/content.md"
-    }
-  ]
-}
+[
+  {
+    "courseName": "Luvut ja lukujonot",
+    "quickLinks": [
+      "Luvut ja laskutoimitukset",
+      "Potenssit ja logaritmit",
+      "Lukujonot ja summat",
+      "Funktio",
+      "Potenssilaskenta"
+    ],
+    "contentFiles": [
+      {
+        "version": 1.0,
+        "path": "./content/may1/version1.idl"
+      }
+    ]
+  }
+]
