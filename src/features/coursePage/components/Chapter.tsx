@@ -13,7 +13,7 @@ const Chapter = (props: any) => {
     }
   }
 
-  console.log(header)
+  // console.log(header)
 
   return (
     <div>
