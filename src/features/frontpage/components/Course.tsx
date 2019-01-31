@@ -3,9 +3,6 @@ import Link from '../../components/Link'
 
 export default class Course extends Component<any, any> {
   render() {
-
-    console.log('RENDERING')
-
     return (
       <div className="course">
         <Link href="/course">
