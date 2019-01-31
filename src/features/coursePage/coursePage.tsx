@@ -8,3 +8,7 @@ export function coursePage(initialState: InitialState) {
     </div>
   )
 }
+
+      // <Navigation />
+      // <Hero />
+      // <Chapter header="Luonnolliset luvut ja kokonaisluvut (1.1 - 1.8)" text={text} />
