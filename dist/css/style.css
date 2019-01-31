@@ -115,6 +115,7 @@ body {
     text-transform: none;
     text-shadow: none;
     margin-left: 5px; }
+<<<<<<< HEAD
   .footer .footer_div {
     width: 33%;
     padding-left: 5%;
@@ -125,6 +126,8 @@ body {
     padding-right: 5%;
     border-left: 2px solid #66666626;
     border-right: 2px solid #66666626; }
+=======
+>>>>>>> latest
 
 .chapter {
   border: 1px;
@@ -170,6 +173,7 @@ body {
 .close_chapter:hover {
   background-color: #eee;
   text-decoration-line: underline; }
+<<<<<<< HEAD
 
 .def_header {
   background-color: #86b300;
@@ -287,3 +291,5 @@ body {
   max-width: 100%;
   width: 40%;
   margin: 1% 1%; }
+=======
+>>>>>>> latest
