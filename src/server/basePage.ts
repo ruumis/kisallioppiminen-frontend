@@ -1,8 +1,4 @@
-<<<<<<< HEAD
 export const createTemplate = ({ title, body, initialState, isStatic }: { title: string; body: string; initialState: string; isStatic?: boolean }) => {
-=======
-export const createTemplate = ({ title, body, initialState }: { title: string; body: string; initialState: string }) => {
->>>>>>> f5d91fa... auto-indentation
   return `
   <!DOCTYPE html>
   <html>
