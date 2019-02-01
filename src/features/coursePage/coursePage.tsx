@@ -4,24 +4,24 @@ import IdyllDocument from 'idyll-document'
 import * as components from 'idyll-components'
 import compiler, { Node } from 'idyll-compiler'
 import Chapter from './components/Chapter'
+import Test from './components/Test'
 
 export function coursePage(initialState: InitialState) {
   const availableComponents = {
     ...components,
-    Chapter
+    Chapter,
+    Test
   }
-
-  const courseToRender = resolveCourse(initialState)
-
-  // The nullcheck for the course before rendering the Idyll doc is shit
-  // at the moment. I think this might fuck up server side rendering for idyll docs?
+  // console.log('-------------------')
+  // console.log(initialState.courses[0].courseContent[0].content)
+  // console.log('-------------------')
   return (
     <div>
       <h1>Kurssisivu</h1>
-      {courseToRender && <IdyllDocument
-        ast={compiler(courseToRender.courseContent[0].content, {async: false}) as Node[]}
+      <IdyllDocument
+        ast={compiler(initialState.courses[0].courseContent[0].content, {async: false}) as Node[]}
         components={availableComponents}
-      />}
+      />
     </div>
   )
 }

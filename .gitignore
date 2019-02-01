@@ -1,5 +1,6 @@
-yarn-error.log
-node_modules
-.env
+node_modules/
+.vscode/  
+dist/css/*.vscode\  
 dist/js/*
-dist/css/*
+yarn-error.log
+.env

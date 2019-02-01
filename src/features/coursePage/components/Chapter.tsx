@@ -12,6 +12,7 @@ const Chapter = (props: any) => {
       }
     }
   }
+  // const { idyll, hasError, updateProps, ...props } = content
 
   // console.log(header)
 
