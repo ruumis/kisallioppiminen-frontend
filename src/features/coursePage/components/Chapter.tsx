@@ -2,14 +2,14 @@ import React from 'react'
 
 const Chapter = ({ header, content }: { header: any; content: any }) => {
   const toggleVisibility = () => {
-    const content = document.getElementById('testi')
+    const pageContent = document.getElementById('testi')
     console.log('funktiota kutsuttiin')
-    if (content) {
-      console.log(content.style.display)
-      if (content.style.display === 'none' || content.style.display === '') {
-        content.style.display = 'block'
+    if (pageContent) {
+      console.log(pageContent.style.display)
+      if (pageContent.style.display === 'none' || pageContent.style.display === '') {
+        pageContent.style.display = 'block'
       } else {
-        content.style.display = 'none'
+        pageContent.style.display = 'none'
       }
     }
   }

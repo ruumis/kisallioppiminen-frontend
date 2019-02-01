@@ -24,8 +24,8 @@ export default class Course extends Component<Props, any> {
 
 function createQuickLinks(links: string[]) {
   return links
-    .map(link => (
-      <li>
+    .map((link, index) => (
+      <li key={index}>
         <span className="course-content">{link}</span>
       </li>
     ))
