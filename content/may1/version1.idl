@@ -1,8 +1,16 @@
-[Chapter 
-  content:'LOL'
-  header:'Luonnolliset luvut ja kokonaisluvut (1.1 - 1.8)'  /]
+[Chapter header:'Olen päällikkö']
+olen chapter teksti
 
-[Chapter 
-  content:'LOL'
-  header:'Luonnolliset luvut ja kokonaisluvut (1.1 - 1.8)'  /]
+  [Equation]
+    y = \int x^2 dx
+  [/Equation]
+[/Chapter]
 
+[Chapter header:'Luonnolliset luvut ja kokonaisluvut (1.1 - 1.8)']
+Olen toinen kappale
+[/Chapter]
+
+
+[Chapter header:'Rationaaliluvut (1.9-1.24)'] 
+Olen kolmas kappale
+[/Chapter]

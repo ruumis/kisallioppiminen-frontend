@@ -1,10 +1,6 @@
 import React from 'react'
 
-export class Chapter extends React.Component<any, any> {
-  constructor(props: any) {
-    super(props)
-    this.state = { header: this.props.header}
-  }
+export class Test extends React.PureComponent {
   toggleVisibility = (id: string) => {
     const pageContent = document.getElementById(id)
     // console.log('funktiota kutsuttiin')
@@ -22,12 +18,12 @@ export class Chapter extends React.Component<any, any> {
   render() {
     return (
       <div>
-        <div className="chapter" onClick={() => this.toggleVisibility(this.state.header)}>
-          {this.state.header}
+        <div className="chapter" onClick={() => this.toggleVisibility('test')}>
+          {'Test header'}
         </div>
-        <div id={this.state.header} className="chapter_content">
+        <div id={'test'} className="chapter_content">
           {this.props.children}
-          <div className="close_chapter" onClick={() => this.toggleVisibility(this.state.header)}>
+          <div className="close_chapter" onClick={() => this.toggleVisibility('test')}>
             Sulje kappale
           </div>
         </div>
@@ -35,4 +31,4 @@ export class Chapter extends React.Component<any, any> {
     )
   }
 }
-export default Chapter
+export default Test
