@@ -8,7 +8,7 @@ export function frontPage(initialState: InitialState) {
     <div>
       <Hero />
       {/* Saatavilla olevat kurssit: */}
-      <CourseList />
+      <CourseList courses={initialState.courses} />
     </div>
   )
 }

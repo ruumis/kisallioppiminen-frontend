@@ -21,7 +21,6 @@ export function resolveInitialState(path: string): InitialState {
 }
 
 function getCourses(): Course[] {
-
   return contentConfig.map(({courseName, quickLinks, contentFiles}) => {
     const courseContent: Array<{version: number, content: string}> = contentFiles.map(({version, path}) => ({version, content: fs.readFileSync(path, 'utf8')}))
     return {

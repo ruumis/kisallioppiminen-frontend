@@ -8,9 +8,12 @@ import { initStore } from '../reducers/store'
 import { changePage } from '../reducers/actions/pageStateActions'
 
 export function createApp(initialState: InitialState) {
-  const mapStateToProps = (state: { pageState: InitialState }) => ({
-    initialState: state.pageState
-  })
+  const store = initStore(initialState)
+  watchPageChanges(store)
+
+  const mapStateToProps = (state: { pageState: InitialState }) => {
+    return {initialState: state.pageState}
+  }
   const mapDispatchToProps = {
     changePage
   }
@@ -30,9 +33,6 @@ export function createApp(initialState: InitialState) {
     mapStateToProps,
     mapDispatchToProps
   )(app)
-
-  const store = initStore(initialState)
-  watchPageChanges(store)
 
   return (
     <Provider store={store}>
