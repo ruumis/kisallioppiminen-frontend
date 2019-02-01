@@ -22,6 +22,7 @@ jobs:
       install:
         - docker-compose build
       after_script:
+        - docker-compose run web npm run build
         - docker-compose down
       script:
         - docker-compose run web npm run lint
@@ -31,3 +32,13 @@ stages:
 
 notifications:
   slack: ohtu-kisallioppiminen:GcdX0H0sF6ifhH4Pg240ie3x
+
+deploy:
+  provider: pages
+  local-dir: './dist/static'
+  repo: Matikkaprojekti/kisallioppiminen-staging
+  skip-cleanup: true
+  github-token: $GITHUB_TOKEN  # Set in the settings page of your repository, as a secure variable
+  keep-history: true
+  on:
+    branch: master
