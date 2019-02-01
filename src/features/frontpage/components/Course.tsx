@@ -1,31 +1,32 @@
 import React, { Component } from 'react'
 import Link from '../../baseComponents/Link'
 
-export default class Course extends Component<any, any> {
+interface Props {
+  courseName: string,
+  quickLinks: string[]
+}
+
+export default class Course extends Component<Props, any> {
   render() {
+    const {courseName, quickLinks} = this.props
     return (
       <div className="course">
         <Link href="/course">
-          <h2 className="course-title">Luvut ja lukujonot</h2>
+          <h2 className="course-title">{courseName}</h2>
         </Link>
         <ol className="course-parts">
-          <li>
-            <span className="course-content">Luvut ja laskutoimitukset</span>
-          </li>
-          <li>
-            <span className="course-content">Potenssit ja logaritmit</span>
-          </li>
-          <li>
-            <span className="course-content">Lukujonot ja summat</span>
-          </li>
-          <li>
-            <span className="course-content">Funktio</span>
-          </li>
-          <li>
-            <span className="course-content">Potenssilaskenta</span>
-          </li>
+          {createQuickLinks(quickLinks)}
         </ol>
       </div>
     )
   }
+}
+
+function createQuickLinks(links: string[]) {
+  return links
+    .map(link => (
+      <li>
+        <span className="course-content">{link}</span>
+      </li>
+    ))
 }

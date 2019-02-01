@@ -6,4 +6,4 @@ const reducer = combineReducers({
   pageState: pageStateReducer
 })
 
-export const initStore = (initalState: InitialState) => createStore(reducer)
+export const initStore = (initalState: InitialState) => createStore(reducer, {pageState: initalState})
