@@ -8,7 +8,7 @@ export function Navigation() {
           <a href="#">Materiaalit</a>
         </li>
         <li className="navigator-item">
-          <a href="#">Blogi</a>
+          <a href="https://blogs.helsinki.fi/kisallioppiminenlukiossa/">Blogi</a>
         </li>
         <li className="navigator-item">
           <a href="#">Tietoa</a>
