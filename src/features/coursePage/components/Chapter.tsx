@@ -30,4 +30,5 @@ const Chapter = (props: any) => {
     </div>
   )
 }
+
 export default Chapter

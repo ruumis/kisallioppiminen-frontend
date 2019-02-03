@@ -15,7 +15,8 @@ export function resolveInitialState(path: string): InitialState {
   return {
     courses: courses || '',
     pageParams: {
-      path
+      path,
+      openedBoxes: {}
     }
   }
 }

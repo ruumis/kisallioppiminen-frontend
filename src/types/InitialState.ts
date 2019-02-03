@@ -4,7 +4,8 @@ export interface InitialState {
 }
 
 export interface PageParams {
-  path: string
+  path: string,
+  openedBoxes: {[index: string]: boolean}
 }
 
 export interface Course {
