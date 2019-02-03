@@ -131,10 +131,12 @@ body {
   background-color: ghostwhite;
   padding: 10px;
   margin: 0 auto;
-  display: none;
+  display: block;
   overflow: hidden;
   border-style: ridge;
   width: 80%; }
+  .chapter_content-hidden {
+    display: none; }
 
 .close_chapter {
   border-style: hidden;

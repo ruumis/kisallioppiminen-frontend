@@ -21,7 +21,7 @@ class Chapter extends React.Component<Props> {
   // const { idyll, hasError, updateProps, ...props } = content
 
   render() {
-    const {header, content, openedBoxes} = this.props
+    const {header, openedBoxes} = this.props
     const contentClassname = classnames('chapter_content', {'chapter_content-hidden': openedBoxes[this.boxId] !== true})
 
     return (
@@ -30,8 +30,8 @@ class Chapter extends React.Component<Props> {
           {header}
         </div>
         <div id="testi" className={contentClassname}>
-          {content}
-          <div className="close_chapter">
+          {this.props.children}
+          <div className="close_chapter" onClick={this.handleBoxClick}>
             Sulje kappale
           </div>
         </div>
