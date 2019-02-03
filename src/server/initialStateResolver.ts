@@ -2,6 +2,7 @@ import fs from 'fs'
 import { InitialState, Course } from '../types/InitialState'
 
 interface ContentConfig {
+  id: string,
   courseName: string,
   quickLinks: string[],
   contentFiles: Array<{version: number, path: string}>
@@ -16,15 +17,17 @@ export function resolveInitialState(path: string): InitialState {
     courses: courses || '',
     pageParams: {
       path,
+      pathParams: {},
       openedBoxes: {}
     }
   }
 }
 
 function getCourses(): Course[] {
-  return contentConfig.map(({courseName, quickLinks, contentFiles}) => {
+  return contentConfig.map(({id, courseName, quickLinks, contentFiles}) => {
     const courseContent: Array<{version: number, content: string}> = contentFiles.map(({version, path}) => ({version, content: fs.readFileSync(path, 'utf8')}))
     return {
+      id,
       courseName,
       quickLinks,
       courseContent

@@ -49,5 +49,7 @@ function resolvePageToRender(initialState: InitialState) {
     return <h1>404 Not found :(</h1>
   }
 
-  return page(initialState)
+  initialState.pageParams.pathParams = page.pathParams
+
+  return page.component(initialState)
 }
