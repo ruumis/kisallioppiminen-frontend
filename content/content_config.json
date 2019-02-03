@@ -1,6 +1,7 @@
 [
   {
-    "courseName": "Luvut ja lukujonot",
+    "id": "123",
+    "courseName": "MAY1 - Luvut ja lukujonot",
     "quickLinks": [
       "Luvut ja laskutoimitukset",
       "Potenssit ja logaritmit",
@@ -12,6 +13,19 @@
       {
         "version": 1.0,
         "path": "./content/may1/version1.idl"
+      }
+    ]
+  },
+  {
+    "id": "321",
+    "courseName": "MAA2 - Polynomifunktiot ja -yhtälöt",
+    "quickLinks": [
+      "Ensimmäisen asteen polynomifunktio"
+    ],
+    "contentFiles": [
+      {
+        "version": 1.0,
+        "path": "./content/maa2/version1.idl"
       }
     ]
   }

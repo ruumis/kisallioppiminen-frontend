@@ -3,18 +3,29 @@ import { coursePage } from './features/coursePage/coursePage'
 import { InitialState } from './types/InitialState'
 import { Store, AnyAction } from 'redux'
 import { changePage } from './reducers/actions/pageStateActions'
+import Path from 'path-parser'
 
-const routes: { [index: string]: { component: (initialState: InitialState) => JSX.Element }} = {
-  '/': {
+const routes: Array<{ path: Path, component: (initialState: InitialState) => JSX.Element }> = [
+  {
+    path: new Path('/'),
     component: frontPage
   },
-  '/course': {
+  {
+    path: new Path('/courses/:id'),
     component: coursePage
   }
-}
+]
 
-export function getPage(path: string): (initialState: InitialState) => JSX.Element {
-  return routes[path].component
+export function getPage(path: string): { component: ((initialState: InitialState) => JSX.Element), pathParams: any } | undefined {
+  const selectedRoute = routes
+    .find(route => route.path.test(path) !== null)
+  if (selectedRoute !== undefined) {
+    return {
+      component: selectedRoute.component,
+      pathParams: selectedRoute.path.test(path)
+    }
+  }
+  return
 }
 
 export function watchPageChanges(store: Store<{pageState: InitialState | null}, AnyAction>) {

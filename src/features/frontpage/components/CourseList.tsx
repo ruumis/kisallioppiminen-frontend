@@ -13,5 +13,5 @@ export default function CourseList(props: {courses: CourseObject[]}) {
 
 function createCourses(courses: CourseObject[]) {
   return courses
-    .map((course, index) => <Course courseName={course.courseName} quickLinks={course.quickLinks} key={index} />)
+    .map((course, index) => <Course id={course.id} courseName={course.courseName} quickLinks={course.quickLinks} version={course.courseContent[course.courseContent.length - 1].version} key={index} />)
 }
