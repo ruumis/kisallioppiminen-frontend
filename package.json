@@ -83,6 +83,7 @@
     "acorn": "6.0.5",
     "babel-plugin-react-transform": "2.0.0-beta1",
 <<<<<<< HEAD
+<<<<<<< HEAD
     "css-loader": "^2.1.0",
     "extract-text-webpack-plugin": "4.0.0-beta.0",
     "nodemon": "1.18.9",
@@ -91,6 +92,9 @@
     "style-loader": "^0.23.1",
     "tslint": "^5.12.1"
 =======
+=======
+    "copy-webpack-plugin": "^4.6.0",
+>>>>>>> added favicon.ico and some idyll example stuff
     "css-loader": "2.1.0",
     "extract-text-webpack-plugin": "4.0.0-beta.0",
     "nodemon": "1.18.9",
