@@ -1,38 +1,60 @@
 import React from 'react'
+import { toggleContentBox } from '../../../reducers/actions/pageStateActions'
+import { connect } from 'react-redux'
+import { InitialState } from '../../../types/InitialState'
+import classnames from 'classnames'
 
-export class Chapter extends React.Component<any, any> {
-  constructor(props: any) {
+interface Props {
+  header: string,
+  content: string,
+  openedBoxes: {[index: string]: boolean}
+  toggleContentBox: typeof toggleContentBox
+}
+
+class Chapter extends React.Component<Props> {
+  private boxId: string
+
+  constructor(props: Props) {
     super(props)
-    this.state = { header: this.props.header}
-  }
-  toggleVisibility = (id: string) => {
-    const pageContent = document.getElementById(id)
-    // console.log('funktiota kutsuttiin')
-    if (pageContent) {
-      console.log(pageContent.style.display)
-      if (pageContent.style.display === 'none' || pageContent.style.display === '') {
-        pageContent.style.display = 'block'
-      } else {
-        pageContent.style.display = 'none'
-      }
-    }
+    this.boxId = props.header + Math.floor(Math.random() * 100000)
   }
   // const { idyll, hasError, updateProps, ...props } = content
 
   render() {
+    const {header, content, openedBoxes} = this.props
+    const contentClassname = classnames('chapter_content', {'chapter_content-hidden': openedBoxes[this.boxId] !== true})
+
     return (
       <div>
-        <div className="chapter" onClick={() => this.toggleVisibility(this.state.header)}>
-          {this.state.header}
+        <div className="chapter" onClick={this.handleBoxClick}>
+          {header}
         </div>
-        <div id={this.state.header} className="chapter_content">
-          {this.props.children}
-          <div className="close_chapter" onClick={() => this.toggleVisibility(this.state.header)}>
+        <div id="testi" className={contentClassname}>
+          {content}
+          <div className="close_chapter">
             Sulje kappale
           </div>
         </div>
       </div>
     )
   }
+
+  handleBoxClick = () => {
+    this.props.toggleContentBox(this.boxId)
+  }
 }
-export default Chapter
+
+const mapStateToProps = ({pageState}: {pageState: InitialState}) => ({
+  openedBoxes: pageState.pageParams.openedBoxes
+})
+
+const mapDispatchToProps = {
+  toggleContentBox
+}
+
+const ConnectedChapter = connect(
+  mapStateToProps,
+  mapDispatchToProps
+)(Chapter)
+
+export default ConnectedChapter

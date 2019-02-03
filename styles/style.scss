@@ -162,10 +162,13 @@ body {
   background-color: ghostwhite;
   padding: 10px;
   margin: 0 auto;
-  display: none;
+  display: block;
   overflow: hidden;
   border-style: ridge;
   width: 80%;
+  &-hidden {
+    display: none;
+  }
 }
 
 .close_chapter {
