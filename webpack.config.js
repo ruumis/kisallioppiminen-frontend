@@ -1,5 +1,6 @@
 const path = require('path')
-const ExtractTextPlugin = require('extract-text-webpack-plugin');
+const ExtractTextPlugin = require('extract-text-webpack-plugin')
+const CopyWebpackPlugin = require('copy-webpack-plugin')
 
 module.exports = function(env, argv) {
   
@@ -36,6 +37,10 @@ module.exports = function(env, argv) {
         filename: 'css/style.css',
         allChunks: true,
       }),
+  		new CopyWebpackPlugin([
+  		  // relative path is from src
+				{ from: 'favicon.ico' }, // <- your path to favicon
+  		])
     ]
   }
 
