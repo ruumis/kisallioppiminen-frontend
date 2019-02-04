@@ -42,7 +42,10 @@ body {
     margin: 0px;
     padding-top: 20px;
     padding-bottom: 20px;
-    text-align: center; }
+    text-align: center;
+    cursor: pointer; }
+  .course-title:hover {
+    background-color: #36823a; }
   .course-parts {
     background: white;
     margin-top: 0px;
