@@ -1,13 +1,17 @@
 export interface InitialState {
-  courseHeaderMarkdown: string
-  chapters: Chapter[]
+  courses: Course[]
   pageParams: PageParams
 }
 
-export interface Chapter {
-  content: string
+export interface PageParams {
+  path: string,
+  pathParams: any, // No smart way of typifying these, so let's just got with any
+  openedBoxes: {[index: string]: boolean}
 }
 
-export interface PageParams {
-  path: string
+export interface Course {
+  id: string,
+  courseName: string,
+  quickLinks: string[],
+  courseContent: Array<{version: number, content: string}>
 }

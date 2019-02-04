@@ -1,0 +1,10 @@
+[Chapter header:'POLYNOMIEN SUMMA, EROTUS JA TULO (1.6 - 1.12)']
+  Tässä kappaleessa palautetaan mieleen, miten niin sanotuilla polynomeilla lasketaan. Polynomi tarkoittaa lauseketta, joka on muodostettu muuttujista (eli kirjaimista) ja vakioista (eli luvuista) käyttämällä yhteen-, vähennys- ja kertolaskua. Esimerkiksi
+  [Equation]2x^3-5x^2 + 8x -3[/Equation]
+
+  [Chapter header:'TEHTÄVÄ 1.6: POLYNOMIT']
+    Polynomien yhteen- ja vähennyslaskussa yhdistetään samaa astetta olevat termit. Seuraavat laskut havainnollistavat ideaa:
+
+    Matkan viimeisenä päivänä reppureissaaja löytää lompakostaan 35 euroa, 25 puntaa ja 150 Japanin jeniä. Hänen kaverillaan on puolestaan taskussaan 15 euroa, 7 puntaa ja 95 jeniä. Kuinka paljon rahaa kaveruksilla on yhteensä?
+  [/Chapter]
+[/Chapter]

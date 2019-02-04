@@ -6,7 +6,7 @@ export function frontPage(initialState: InitialState) {
   return (
     <div className="app">
       {/* Saatavilla olevat kurssit: */}
-      <CourseList />
+      <CourseList courses={initialState.courses} />
     </div>
   )
 }
