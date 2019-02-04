@@ -4,6 +4,8 @@ services:
     build:
       context: .
       shm_size: 1G
+    volumes: 
+      - ./dist:/app/dist
     ports:
       - "8080:3000"
     command: yarn watch

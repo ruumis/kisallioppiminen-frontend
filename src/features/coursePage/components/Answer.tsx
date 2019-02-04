@@ -1,6 +1,6 @@
 import React from 'react'
 
-const Exercise = (props: any) => {
+const Answer = (props: any) => {
   const toggleVisibility = (id: string) => {
     const content = document.getElementById(id)
     console.log('funktiota kutsuttiin')
@@ -13,29 +13,17 @@ const Exercise = (props: any) => {
       }
     }
   }
-  if (!props.open) {
-    return (
-      <div>
-        <div className="exercise" onClick={() => toggleVisibility('ex1')}>
-          {props.header}
-        </div>
-        <div id="ex1" className="ex_content">
-          {props.children}
-        </div>
-      </div>
-    )
-  }
 
   return (
     <div>
-      <div className="exercise" onClick={() => toggleVisibility('ex2')}>
-        {props.header}
+      <div className="ex_answer" onClick={() => toggleVisibility('answer2')}>
+        Vastaus
       </div>
-      <div style={{ display: 'block' }} id="ex2" className="ex_content">
+      <div id="answer2" className="ex_hidden">
         {props.children}
       </div>
     </div>
   )
 }
 
-export default Exercise
+export default Answer

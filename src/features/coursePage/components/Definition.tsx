@@ -1,15 +1,14 @@
 import React from 'react'
-import './styles/Definition.scss'
 
-const Definition = ({ header, text }: { header: any; text: any }) => {
+const Definition = (props: any) => {
   return (
     <div>
-      <div className="header">
-        <h3 className="head_cont"> {header} </h3>
+      <div className="def_header">
+        <h3 className="def_head_cont"> {props.header} </h3>
       </div>
 
       <div className="def_content">
-        <p className="def_text">{text}</p>
+        <p className="def_text">{props.children}</p>
       </div>
     </div>
   )
