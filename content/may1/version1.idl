@@ -2,18 +2,11 @@
   // Olen kommentti
   olen chapter teksti
 
-  [Equation]
-    y = \int x^2 dx
-  [/Equation]
-
   lisää tekstiä
 [/Chapter]
 
 [Chapter header:'Luonnolliset luvut ja kokonaisluvut (1.1 - 1.8)']
 Olen toinen kappale
-
-  [var name:"selectVal" value:"eka" /]
-  [Select value:selectVal options:`["eka", "toka", "kolmas"]`  /]
 [/Chapter]
 
 
