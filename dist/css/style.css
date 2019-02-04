@@ -206,9 +206,11 @@ body {
   width: 95%; }
 
 .ex_answer {
+  display: inline-block;
   color: #00747a;
   text-transform: uppercase;
-  display: inline; }
+  margin-top: 10px;
+  margin-bottom: 5px; }
 
 .ex_answer:hover {
   background-color: #d5eff0;

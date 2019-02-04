@@ -1,6 +1,5 @@
 import React from 'react'
-
-const Chapter = ({ header, text }: { header: any; text: any }) => {
+const Chapter = (props: any) => {
   const toggleVisibility = () => {
     const content = document.getElementById('testi')
     console.log('funktiota kutsuttiin')
@@ -17,10 +16,10 @@ const Chapter = ({ header, text }: { header: any; text: any }) => {
   return (
     <div>
       <div className="chapter" onClick={toggleVisibility}>
-        {header}
+        {props.header}
       </div>
       <div id="testi" className="chapter_content">
-        {text}
+        {props.children}
         <div className="close_chapter" onClick={toggleVisibility}>
           Sulje kappale
         </div>
