@@ -22,9 +22,6 @@ a {
   text-shadow: 1px 1px 2px black;
   text-transform: uppercase; }
 
-body {
-  background: #7b7b7b12; }
-
 .app {
   background-color: white;
   min-height: 100vh; }
@@ -43,16 +40,20 @@ body {
     padding-top: 20px;
     padding-bottom: 20px;
     text-align: center;
-    cursor: pointer; }
+    cursor: pointer;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px; }
   .course-title:hover {
     background-color: #36823a; }
   .course-parts {
-    background: white;
+    background: #b8ee7c00;
     margin-top: 0px;
     margin-bottom: 0px;
     color: #4fab53;
     padding-top: 20px;
-    padding-bottom: 20px; }
+    padding-bottom: 20px;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px; }
   .course-content:hover {
     background: #fff6a6; }
 
@@ -100,6 +101,7 @@ body {
     padding: 15px; }
 
 .footer {
+  background: #c4da87;
   display: flex;
   padding: 20px;
   height: 200px;

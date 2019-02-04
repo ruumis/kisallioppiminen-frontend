@@ -28,7 +28,6 @@ a {
 }
 
 body {
-  background: #7b7b7b12;
 }
 
 .app {
@@ -52,6 +51,8 @@ body {
     padding-bottom: 20px;
     text-align: center;
     cursor: pointer;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
   }
 
   &-title:hover {
@@ -59,12 +60,14 @@ body {
   }
 
   &-parts {
-    background: white;
+    background: #b8ee7c00;
     margin-top: 0px;
     margin-bottom: 0px;
     color: #4fab53;
     padding-top: 20px;
     padding-bottom: 20px;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
   }
 
   &-content:hover {
@@ -129,6 +132,7 @@ body {
 }
 
 .footer {
+  background: #c4da87;
   display: flex;
   padding: 20px;
   height: 200px;
