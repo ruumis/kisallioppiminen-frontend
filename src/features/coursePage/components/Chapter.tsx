@@ -1,5 +1,4 @@
 import React from 'react'
-import './styles/Chapter.scss'
 
 const Chapter = ({ header, text }: { header: any; text: any }) => {
   const toggleVisibility = () => {
