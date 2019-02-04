@@ -35,3 +35,10 @@ function resolveCourse({pageParams, courses}: InitialState) {
   }
   return undefined
 }
+<<<<<<< HEAD
+=======
+
+// <Navigation />
+// <Hero />
+// <Chapter header="Luonnolliset luvut ja kokonaisluvut (1.1 - 1.8)" text={text} />
+>>>>>>> ca9d0e4c39096cc43ff48a28422798fe2d9e73c3
