@@ -111,6 +111,16 @@ body {
     text-transform: none;
     text-shadow: none;
     margin-left: 5px; }
+  .footer .footer_div {
+    width: 33%;
+    padding-left: 5%;
+    padding-right: 5%; }
+  .footer .footer_contact_div {
+    width: 33%;
+    padding-left: 5%;
+    padding-right: 5%;
+    border-left: 2px solid #66666626;
+    border-right: 2px solid #66666626; }
 
 .chapter {
   border: 1px;
