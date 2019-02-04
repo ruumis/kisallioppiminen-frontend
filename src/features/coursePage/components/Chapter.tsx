@@ -1,34 +1,60 @@
 import React from 'react'
-const Chapter = (props: any) => {
-  const toggleVisibility = () => {
-    const pageContent = document.getElementById('testi')
-    console.log('funktiota kutsuttiin')
-    if (pageContent) {
-      console.log(pageContent.style.display)
-      if (pageContent.style.display === 'none' || pageContent.style.display === '') {
-        pageContent.style.display = 'block'
-      } else {
-        pageContent.style.display = 'none'
-      }
-    }
+import { toggleContentBox } from '../../../reducers/actions/pageStateActions'
+import { connect } from 'react-redux'
+import { InitialState } from '../../../types/InitialState'
+import classnames from 'classnames'
+
+interface Props {
+  header: string,
+  content: string,
+  openedBoxes: {[index: string]: boolean}
+  toggleContentBox: typeof toggleContentBox
+}
+
+class Chapter extends React.Component<Props> {
+  private boxId: string
+
+  constructor(props: Props) {
+    super(props)
+    this.boxId = props.header + Math.floor(Math.random() * 100000)
   }
   // const { idyll, hasError, updateProps, ...props } = content
 
-  // console.log(header)
+  render() {
+    const {header, openedBoxes} = this.props
+    const contentClassname = classnames('chapter_content', {'chapter_content-hidden': openedBoxes[this.boxId] !== true})
 
-  return (
-    <div>
-      <div className="chapter" onClick={toggleVisibility}>
-        {props.header}
-      </div>
-      <div id="testi" className="chapter_content">
-        {props.children}
-        <div className="close_chapter" onClick={toggleVisibility}>
-          Sulje kappale
+    return (
+      <div>
+        <div className="chapter" onClick={this.handleBoxClick}>
+          {header}
+        </div>
+        <div id="testi" className={contentClassname}>
+          {this.props.children}
+          <div className="close_chapter" onClick={this.handleBoxClick}>
+            Sulje kappale
+          </div>
         </div>
       </div>
-    </div>
-  )
+    )
+  }
+
+  handleBoxClick = () => {
+    this.props.toggleContentBox(this.boxId)
+  }
 }
 
-export default Chapter
+const mapStateToProps = ({pageState}: {pageState: InitialState}) => ({
+  openedBoxes: pageState.pageParams.openedBoxes
+})
+
+const mapDispatchToProps = {
+  toggleContentBox
+}
+
+const ConnectedChapter = connect(
+  mapStateToProps,
+  mapDispatchToProps
+)(Chapter)
+
+export default ConnectedChapter
