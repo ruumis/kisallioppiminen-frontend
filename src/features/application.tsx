@@ -1,7 +1,8 @@
 import React from 'react'
 import { InitialState } from '../types/InitialState'
-import Footer from './components/Footer'
-import Navigation from './components/Navigation'
+import Footer from './baseComponents/Footer'
+import Navigation from './baseComponents/Navigation'
+import Hero from './baseComponents/Hero'
 import { getPage, watchPageChanges } from '../routes'
 import { Provider, connect } from 'react-redux'
 import { initStore } from '../reducers/store'
@@ -20,6 +21,7 @@ export function createApp(initialState: InitialState) {
     return (
       <React.Fragment>
         <Navigation />
+        <Hero />
         {resolvePageToRender(state)}
         <Footer />
       </React.Fragment>

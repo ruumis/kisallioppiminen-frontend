@@ -51,6 +51,11 @@ body {
     padding-top: 20px;
     padding-bottom: 20px;
     text-align: center;
+    cursor: pointer;
+  }
+
+  &-title:hover {
+    background-color: #36823a;
   }
 
   &-parts {

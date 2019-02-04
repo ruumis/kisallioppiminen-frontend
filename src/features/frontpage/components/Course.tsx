@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import Link from '../../components/Link'
+import Link from '../../baseComponents/Link'
 
 export default class Course extends Component<any, any> {
   render() {
