@@ -1,6 +1,6 @@
 # Kisällioppiminen frontend
 
-[Application in Heroku](http://kisallioppiminen.herokuapp.com/)
+[Application in Github Pages](https://matikkaprojekti.github.io/kisallioppiminen-staging/)
 
 [![Build Status](https://travis-ci.com/Matikkaprojekti/kisallioppiminen-frontend.svg?branch=master)](https://travis-ci.com/Matikkaprojekti/kisallioppiminen-frontend)
 
