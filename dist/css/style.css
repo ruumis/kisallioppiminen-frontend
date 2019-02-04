@@ -42,7 +42,8 @@ a {
     text-align: center;
     cursor: pointer;
     border-top-left-radius: 10px;
-    border-top-right-radius: 10px; }
+    border-top-right-radius: 10px;
+    font-size: 20px; }
   .course-title:hover {
     background-color: #36823a; }
   .course-parts {
@@ -56,6 +57,8 @@ a {
     border-bottom-right-radius: 10px; }
   .course-content:hover {
     background: #fff6a6; }
+  .course-container {
+    min-height: 100vh; }
 
 .courseList {
   width: 80%;
