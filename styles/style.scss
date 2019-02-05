@@ -38,31 +38,31 @@ body {
 }
 
 .course {
-  &-container {
-    min-height: 100vh;
-    margin-bottom: 100px;
-  }
-
-  display: inline-grid;
+  display: inline-table;
   padding: 0px;
   width: 250px;
+  height: 250px;
   margin: 10px;
   background: beige;
   text-align: left;
   min-height: 250px;
 
+  &-container {
+    min-height: 100vh;
+    margin-bottom: 100px;
+  }
+
   &-title {
     color: white;
     background: $greenColor;
     margin: 0px;
-    padding-top: 20px;
-    padding-bottom: 20px;
     text-align: center;
     cursor: pointer;
     border-top-left-radius: 10px;
     border-top-right-radius: 10px;
     font-size: 20px;
     height: 60px;
+    padding: 20px;
   }
 
   &-title:hover {
