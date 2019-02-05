@@ -32,8 +32,9 @@ a {
   width: 250px;
   height: 250px;
   margin: 10px;
-  background: beige;
-  text-align: left; }
+  background: #c4da87;
+  text-align: left;
+  border-radius: 10px; }
   .course-container {
     min-height: 100vh;
     margin-bottom: 100px; }
@@ -51,10 +52,9 @@ a {
   .course-title:hover {
     background-color: #36823a; }
   .course-parts {
-    background: #b8ee7c00;
     margin-top: 0px;
     margin-bottom: 0px;
-    color: #4fab53;
+    color: #292929;
     padding-top: 20px;
     padding-bottom: 20px;
     border-bottom-left-radius: 10px;
