@@ -55,6 +55,11 @@ body {
     margin-bottom: 100px;
   }
 
+  &-container {
+    min-height: 100vh;
+    margin-bottom: 100px;
+  }
+
   &-title {
     color: white;
     background: $greenColor;
@@ -95,7 +100,7 @@ body {
   min-height: 100vh;
 }
 
-.courseList {
+.course-list {
   width: 80%;
   margin: 0 auto;
   margin-top: 100px;

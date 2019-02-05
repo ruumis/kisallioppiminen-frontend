@@ -39,6 +39,9 @@ a {
   .course-container {
     min-height: 100vh;
     margin-bottom: 100px; }
+  .course-container {
+    min-height: 100vh;
+    margin-bottom: 100px; }
   .course-title {
     color: white;
     background: #4fab53;
@@ -69,7 +72,7 @@ a {
 .coursePageContainer {
   min-height: 100vh; }
 
-.courseList {
+.course-list {
   width: 80%;
   margin: 0 auto;
   margin-top: 100px;
