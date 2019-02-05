@@ -84,7 +84,8 @@ a {
   .hero-logo {
     position: absolute;
     margin-top: -45px;
-    width: 300px; }
+    width: 300px;
+    cursor: pointer; }
 
 .navigator {
   background-color: #c4da87;
