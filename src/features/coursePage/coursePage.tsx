@@ -4,13 +4,21 @@ import IdyllDocument from 'idyll-document'
 import * as components from 'idyll-components'
 import compiler, { Node } from 'idyll-compiler'
 import Chapter from './components/Chapter'
-import Test from './components/Test'
+import Exercise from './components/Exercise'
+import Answer from './components/Answer'
+import Theorem from './components/Theorem'
+import Definition from './components/Definition'
+import Rationalization from './components/Rationalization'
 
 export function coursePage(initialState: InitialState) {
   const availableComponents = {
     ...components,
     Chapter,
-    Test
+    Exercise,
+    Answer,
+    Theorem,
+    Rationalization,
+    Definition
   }
 
   const courseToRender = resolveCourse(initialState)

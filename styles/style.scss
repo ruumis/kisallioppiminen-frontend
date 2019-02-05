@@ -279,10 +279,12 @@ body {
   background-color: ghostwhite;
   padding: 10px;
   margin: 0 auto;
-  display: none;
   overflow: hidden;
   border-style: ridge;
   width: 95%;
+  &-hidden {
+    display: none;
+  }
 }
 
 .ex_answer {
@@ -298,8 +300,10 @@ body {
   text-decoration-line: underline;
 }
 
-.ex_hidden {
-  display: none;
+.ex_answer_content {
+  &-hidden {
+    display: none;
+  }
 }
 
 .section {
