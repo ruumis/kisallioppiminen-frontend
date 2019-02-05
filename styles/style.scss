@@ -1,3 +1,6 @@
+$primary-color: #c4da87;
+$secondary-color: #4fab53;
+
 li {
   list-style-type: none;
 }
@@ -36,13 +39,19 @@ body {
 }
 
 .course {
+  &-container {
+    min-height: 100vh;
+    margin-bottom: 100px;
+  }
+
   display: inline-table;
   padding: 0px;
   width: 250px;
   height: 250px;
   margin: 10px;
-  background: beige;
+  background: $primary-color;
   text-align: left;
+  border-radius: 10px;
 
   &-container {
     min-height: 100vh;
@@ -51,7 +60,7 @@ body {
 
   &-title {
     color: white;
-    background: #4fab53;
+    background: $secondary-color;
     margin: 0px;
     text-align: center;
     cursor: pointer;
@@ -67,10 +76,9 @@ body {
   }
 
   &-parts {
-    background: #b8ee7c00;
     margin-top: 0px;
     margin-bottom: 0px;
-    color: #4fab53;
+    color: #292929;
     padding-top: 20px;
     padding-bottom: 20px;
     border-bottom-left-radius: 10px;
@@ -98,7 +106,7 @@ body {
     font-size: 25px;
     border-radius: 22px;
     padding: 10px;
-    background: #4fab53;
+    background: $secondary-color;
     color: white;
     text-shadow: 1px 1px 2px black;
     margin-left: 25%;
@@ -116,7 +124,7 @@ body {
 }
 
 .navigator {
-  background-color: #c4da87;
+  background-color: $primary-color;
   text-align: right;
 
   &-item {
@@ -126,7 +134,7 @@ body {
     margin-top: 10px;
     margin-bottom: 10px;
     margin-right: 10px;
-    background-color: #4fab53;
+    background-color: $secondary-color;
   }
 
   &-item:hover {
@@ -140,7 +148,7 @@ body {
 }
 
 .footer {
-  background: #c4da87;
+  background: $primary-color;
   display: flex;
   padding: 20px;
   height: 200px;
@@ -155,7 +163,7 @@ body {
   }
 
   .link {
-    color: #4fab53;
+    color: $secondary-color;
     text-transform: none;
     text-shadow: none;
     margin-left: 5px;
@@ -208,7 +216,7 @@ body {
   text-transform: uppercase;
 }
 
-.defefenition-content {
+.definition-content {
   margin-top: 0px;
   background-color: #f2ffcc;
   margin-bottom: 10px;
@@ -217,7 +225,7 @@ body {
   padding: 25px 10px;
 }
 
-.def-text {
+.definition-text {
   margin: 0px 15px;
 }
 
@@ -345,19 +353,26 @@ body {
   color: #00747a;
   text-transform: uppercase;
 
-  &-content {
-    border-top-style: hidden;
-    display: block;
-    overflow: hidden;
-
-    &-hidden {
-      display: none;
-    }
-  }
-
   &:hover {
     background-color: #eee;
     text-decoration-line: underline;
+  }
+}
+
+.chapter-content {
+  border: 1px;
+  border-style: ridge;
+  border-color: #dddddd;
+  background-color: ghostwhite;
+  padding: 10px;
+  margin: 0 auto;
+  border-top-style: hidden;
+  display: block;
+  overflow: hidden;
+  width: 80%;
+
+  &-hidden {
+    display: none;
   }
 }
 

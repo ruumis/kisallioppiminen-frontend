@@ -1,17 +1,18 @@
-import React from 'react'
+import React, { useState } from 'react'
+import ReactDOM from 'react-dom'
 import { toggleContentBox } from '../../../reducers/actions/pageStateActions'
 import { connect } from 'react-redux'
 import { InitialState } from '../../../types/InitialState'
 import classnames from 'classnames'
 
-interface Props {
-  header: string
-  content: string
-  openedBoxes: { [index: string]: boolean }
+/* interface Props {
+  header: string,
+  content: string,
+  openedBoxes: {[index: string]: boolean}
   toggleContentBox: typeof toggleContentBox
-}
+} */
 
-class Chapter extends React.Component<Props> {
+/* class Chapter extends React.Component<Props> {
   private boxId: string
 
   constructor(props: Props) {
@@ -42,9 +43,28 @@ class Chapter extends React.Component<Props> {
   handleBoxClick = () => {
     this.props.toggleContentBox(this.boxId)
   }
+} */
+
+const Chapter = (props: any) => {
+  const [open, setOpen] = useState(false)
+  const contentClassname = classnames('chapter-content', { 'chapter-content-hidden': open !== true })
+
+  return (
+    <div>
+      <div className="chapter" onClick={() => setOpen(!open)}>
+        {props.header}
+      </div>
+      <div className={contentClassname}>
+        {props.children}
+        <div className="close-chapter" onClick={() => setOpen(!open)}>
+          Sulje kappale
+        </div>
+      </div>
+    </div>
+  )
 }
 
-const mapStateToProps = ({ pageState }: { pageState: InitialState }) => ({
+/* const mapStateToProps = ({ pageState }: { pageState: InitialState }) => ({
   openedBoxes: pageState.pageParams.openedBoxes
 })
 
@@ -57,4 +77,5 @@ const ConnectedChapter = connect(
   mapDispatchToProps
 )(Chapter)
 
-export default ConnectedChapter
+export default ConnectedChapter */
+export default Chapter

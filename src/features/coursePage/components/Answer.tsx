@@ -1,27 +1,16 @@
-import React from 'react'
+import React, { useState } from 'react'
+import classnames from 'classnames'
 
 const Answer = (props: any) => {
-  const toggleVisibility = (id: string) => {
-    const content = document.getElementById(id)
-    console.log('funktiota kutsuttiin')
-    if (content) {
-      console.log(content.style.display)
-      if (content.style.display === 'none' || content.style.display === '') {
-        content.style.display = 'block'
-      } else {
-        content.style.display = 'none'
-      }
-    }
-  }
+  const [open, setOpen] = useState(props.open)
+  const contentClassname = classnames('exercise-answer-content', { 'exercise-answer-content-hidden': open !== true })
 
   return (
     <div>
-      <div className="exercise-answer" onClick={() => toggleVisibility('answer2')}>
+      <div className="exercise-answer" onClick={() => setOpen(!open)}>
         Vastaus
       </div>
-      <div id="answer2" className="exercise-hidden">
-        {props.children}
-      </div>
+      <div className={contentClassname}>{props.children}</div>
     </div>
   )
 }
