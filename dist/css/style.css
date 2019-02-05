@@ -34,7 +34,8 @@ a {
   background: beige;
   text-align: left; }
   .course-container {
-    min-height: 100vh; }
+    min-height: 100vh;
+    margin-bottom: 100px; }
   .course-title {
     color: white;
     background: #4fab53;
@@ -226,10 +227,11 @@ a {
   background-color: ghostwhite;
   padding: 10px;
   margin: 0 auto;
-  display: none;
   overflow: hidden;
   border-style: ridge;
   width: 95%; }
+  .ex_content-hidden {
+    display: none; }
 
 .ex_answer {
   display: inline-block;
@@ -242,7 +244,7 @@ a {
   background-color: #d5eff0;
   text-decoration-line: underline; }
 
-.ex_hidden {
+.ex_answer_content-hidden {
   display: none; }
 
 .containerwrapper {
