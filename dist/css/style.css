@@ -38,6 +38,9 @@ a {
   .course-container {
     min-height: 100vh;
     margin-bottom: 100px; }
+  .course-container {
+    min-height: 100vh;
+    margin-bottom: 100px; }
   .course-title {
     color: white;
     background: #4fab53;
