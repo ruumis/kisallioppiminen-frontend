@@ -1,22 +1,24 @@
+[var name:'selectTab' value:1 /]
+
 [ContainerWrapper]
   [Section header:'MAY1'
-          renderSection:'funktio' 
+          renderSection:selectTab
           selected:true /]
 
   [Section header:'1. Luvut ja laskutoimitukset'
-          renderSection:'funktio' 
+          renderSection:selectTab
           selected:false /]
 
   [Section header:'2. Luku'
-          renderSection:'funktio' 
+          renderSection:selectTab
           selected:false /]
 
   [Section header:'3. Luku'
-          renderSection:'funktio' 
+          renderSection:selectTab
           selected:false /]
 
   [Section header:'4. Luku'
-          renderSection:'funktio' 
+          renderSection:selectTab
           selected:false /]
 [/ContainerWrapper]
 

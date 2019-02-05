@@ -3,33 +3,27 @@ import { InitialState } from '../../types/InitialState'
 import IdyllDocument from 'idyll-document'
 import * as components from 'idyll-components'
 import compiler, { Node } from 'idyll-compiler'
-import Chapter from './components/Chapter'
-<<<<<<< HEAD
-import Section from './components/Section'
 import ContainerWrapper from './components/ContainerWrapper'
-=======
+import Section from './components/Section'
+import Chapter from './components/Chapter'
 import Exercise from './components/Exercise'
 import Answer from './components/Answer'
 import Theorem from './components/Theorem'
 import Definition from './components/Definition'
 import Rationalization from './components/Rationalization'
->>>>>>> 2175db3b80fa54e97ac2489fb72f14da3a12fb7c
 
 export function coursePage(initialState: InitialState) {
   const [coursePageTab, setCoursePageTab] = useState(1)
   const availableComponents = {
     ...components,
-    Chapter,
-<<<<<<< HEAD
     ContainerWrapper,
-    Section
-=======
+    Section,
+    Chapter,
     Exercise,
     Answer,
     Theorem,
     Rationalization,
     Definition
->>>>>>> 2175db3b80fa54e97ac2489fb72f14da3a12fb7c
   }
 
   const courseToRender = resolveCourse(initialState)
