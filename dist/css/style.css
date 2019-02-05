@@ -34,7 +34,8 @@ a {
   background: beige;
   text-align: left; }
   .course-container {
-    min-height: 100vh; }
+    min-height: 100vh;
+    margin-bottom: 100px; }
   .course-title {
     color: white;
     background: #4fab53;
@@ -228,36 +229,23 @@ a {
   margin: 0 auto;
   overflow: hidden;
   border-style: ridge;
-
-  width: 95%;
-}
-.ex_content-hidden {
-  display: none;
-}
-
+  width: 95%; }
+  .ex_content-hidden {
+    display: none; }
 
 .ex_answer {
   display: inline-block;
   color: #00747a;
   text-transform: uppercase;
   margin-top: 10px;
-  margin-bottom: 5px;
-}
-.ex_answer-hidden {
-  display: none;
-}
-
+  margin-bottom: 5px; }
 
 .ex_answer:hover {
   background-color: #d5eff0;
-  text-decoration-line: underline;
-}
-
+  text-decoration-line: underline; }
 
 .ex_answer_content-hidden {
-  display: none;
-}
-
+  display: none; }
 
 .section {
   background-color: #a8bb73;
