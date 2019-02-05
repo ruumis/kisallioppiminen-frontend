@@ -4,13 +4,11 @@ import IdyllDocument from 'idyll-document'
 import * as components from 'idyll-components'
 import compiler, { Node } from 'idyll-compiler'
 import Chapter from './components/Chapter'
-import Test from './components/Test'
 
 export function coursePage(initialState: InitialState) {
   const availableComponents = {
     ...components,
-    Chapter,
-    Test
+    Chapter
   }
 
   const courseToRender = resolveCourse(initialState)
@@ -21,17 +19,17 @@ export function coursePage(initialState: InitialState) {
     <div>
       <h1>Kurssisivu</h1>
       {courseToRender && <IdyllDocument
-        ast={compiler(courseToRender.courseContent[0].content, {async: false}) as Node[]}
+        ast={compiler(courseToRender.courseContent[0].content, { async: false }) as Node[]}
         components={availableComponents}
       />}
     </div>
   )
 }
 
-function resolveCourse({pageParams, courses}: InitialState) {
-  const {pathParams} = pageParams
+function resolveCourse({ pageParams, courses }: InitialState) {
+  const { pathParams } = pageParams
   if (pathParams.id) {
-    return courses.find(({id}) => id === pathParams.id)
+    return courses.find(({ id }) => id === pathParams.id)
   }
   return undefined
 }
