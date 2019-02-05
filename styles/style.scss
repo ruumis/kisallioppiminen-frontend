@@ -165,7 +165,7 @@ body {
   position: static;
   bottom: 0;
 
-  .fb_link {
+  .fb-link {
     position: relative;
     top: -32px;
     left: 45px;
@@ -179,13 +179,13 @@ body {
     margin-left: 5px;
   }
 
-  .footer_div {
+  .footer-div {
     width: 33%;
     padding-left: 5%;
     padding-right: 5%;
   }
 
-  .footer_contact_div {
+  .footer-contact-div {
     width: 33%;
     padding-left: 5%;
     padding-right: 5%;
@@ -194,40 +194,7 @@ body {
   }
 }
 
-.chapter {
-  border: 1px;
-  border-style: ridge;
-  border-color: #dddddd;
-  background-color: ghostwhite;
-  padding: 10px;
-  margin: 0 auto;
-  margin-top: 20px;
-  font-size: 24px;
-  width: 80%;
-  text-align: left;
-  color: #00747a;
-  text-transform: uppercase;
-}
-
-.chapter:hover {
-  background-color: #eee;
-  text-decoration-line: underline;
-}
-
-.chapter_content {
-  border: 1px;
-  border-color: #dddddd;
-  border-top-style: hidden;
-  background-color: ghostwhite;
-  padding: 10px;
-  margin: 0 auto;
-  display: none;
-  overflow: hidden;
-  border-style: ridge;
-  width: 80%;
-}
-
-.close_chapter {
+.close-chapter {
   border-style: hidden;
   background-color: #ddd;
   padding: 10px;
@@ -237,14 +204,14 @@ body {
   width: 98%;
   text-align: center;
   color: #00747a;
+
+  &:hover {
+    background-color: #eee;
+    text-decoration-line: underline;
+  }
 }
 
-.close_chapter:hover {
-  background-color: #eee;
-  text-decoration-line: underline;
-}
-
-.def_header {
+.definition-header {
   background-color: #86b300;
   margin-bottom: 0px;
   margin-top: 20px;
@@ -254,12 +221,12 @@ body {
   padding: 10px;
 }
 
-.def_head_cont {
+.definition-header-content {
   margin: 0px 10px;
   text-transform: uppercase;
 }
 
-.def_content {
+.defefenition-content {
   margin-top: 0px;
   background-color: #f2ffcc;
   margin-bottom: 10px;
@@ -268,7 +235,7 @@ body {
   padding: 25px 10px;
 }
 
-.def_text {
+.def-text {
   margin: 0px 15px;
 }
 
@@ -285,14 +252,14 @@ body {
   text-align: left;
   color: #111;
   text-transform: uppercase;
+
+  &:hover {
+    background-color: rgb(196, 196, 196);
+    text-decoration-line: underline;
+  }
 }
 
-.exercise:hover {
-  background-color: rgb(196, 196, 196);
-  text-decoration-line: underline;
-}
-
-.ex_content {
+.exercise-content {
   border: 1px;
   border-color: #dddddd;
   border-top-style: hidden;
@@ -307,20 +274,20 @@ body {
   }
 }
 
-.ex_answer {
+.exercise-answer {
   display: inline-block;
   color: #00747a;
   text-transform: uppercase;
   margin-top: 10px;
   margin-bottom: 5px;
+
+  &:hover {
+    background-color: #d5eff0;
+    text-decoration-line: underline;
+  }
 }
 
-.ex_answer:hover {
-  background-color: #d5eff0;
-  text-decoration-line: underline;
-}
-
-.ex_answer_content {
+.exercise-answer-content {
   &-hidden {
     display: none;
   }
@@ -340,14 +307,14 @@ body {
   /* text-align: center; */
   /* margin: 0 auto; */
   margin-right: 6px;
+
+  &:hover {
+    background-color: #00747a;
+    text-decoration-line: underline;
+  }
 }
 
-.section:hover {
-  background-color: #00747a;
-  text-decoration-line: underline;
-}
-
-.theo_header {
+.theorem-header {
   background-color: #737373;
   margin-bottom: 0px;
   width: 95%;
@@ -357,12 +324,12 @@ body {
   padding: 10px;
 }
 
-.theo_head_cont {
+.theorem-header-content {
   margin: 0px 10px;
   text-transform: uppercase;
 }
 
-.theo_content {
+.theorem-content {
   margin-top: 0px;
   background-color: #cccccc;
   margin-bottom: 10px;
@@ -371,11 +338,11 @@ body {
   padding: 25px 10px;
 }
 
-.theo_text {
+.theorem-text {
   margin: 0px 15px;
 }
 
-.theo_rationalization {
+.theorem-rationalization {
   margin-top: 0px;
   background-color: #e6e6e6;
   margin-bottom: 10px;
@@ -402,30 +369,24 @@ body {
   text-align: left;
   color: #00747a;
   text-transform: uppercase;
-}
 
-.chapter:hover {
-  background-color: #eee;
-  text-decoration-line: underline;
-}
+  &-content {
+    border-top-style: hidden;
+    display: block;
+    overflow: hidden;
 
-.chapter_content {
-  border: 1px;
-  border-color: #dddddd;
-  border-top-style: hidden;
-  background-color: ghostwhite;
-  padding: 10px;
-  margin: 0 auto;
-  display: block;
-  overflow: hidden;
-  border-style: ridge;
-  width: 80%;
-  &-hidden {
-    display: none;
+    &-hidden {
+      display: none;
+    }
+  }
+
+  &:hover {
+    background-color: #eee;
+    text-decoration-line: underline;
   }
 }
 
-.close_chapter {
+.close-chapter {
   border-style: hidden;
   background-color: #ddd;
   padding: 10px;
@@ -435,11 +396,10 @@ body {
   width: 98%;
   text-align: center;
   color: #00747a;
-}
-
-.close_chapter:hover {
-  background-color: #eee;
-  text-decoration-line: underline;
+  &:hover {
+    background-color: #eee;
+    text-decoration-line: underline;
+  }
 }
 
 .course-selector-box {
