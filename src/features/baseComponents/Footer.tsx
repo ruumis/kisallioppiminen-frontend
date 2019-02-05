@@ -11,12 +11,6 @@ export default function Footer() {
           <p>Materiaalit ovat erityisesti suunniteltu tukemaan tehostetun kisällioppimisen menetelmän käyttöä.</p>
         </div>
         <div className="footer_contact_div">
-          {/* <img
-            className="facebook-icon"
-            src="https://seeklogo.com/images/F/facebook-logo-966BBFBC34-seeklogo.com.png"
-            alt="fb-icon"
-          /> */}
-
           <IconContext.Provider
             value={{
               color: 'blue',

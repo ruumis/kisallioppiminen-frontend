@@ -18,20 +18,17 @@ export function coursePage(initialState: InitialState) {
   // The nullcheck for the course before rendering the Idyll doc is shit
   // at the moment. I think this might fuck up server side rendering for idyll docs?
   return (
-    <div>
+    <div className="course-container">
       <h1>Kurssisivu</h1>
-      {courseToRender && <IdyllDocument
-        ast={compiler(courseToRender.courseContent[0].content, {async: false}) as Node[]}
-        components={availableComponents}
-      />}
+      {courseToRender && <IdyllDocument ast={compiler(courseToRender.courseContent[0].content, { async: false }) as Node[]} components={availableComponents} />}
     </div>
   )
 }
 
-function resolveCourse({pageParams, courses}: InitialState) {
-  const {pathParams} = pageParams
+function resolveCourse({ pageParams, courses }: InitialState) {
+  const { pathParams } = pageParams
   if (pathParams.id) {
-    return courses.find(({id}) => id === pathParams.id)
+    return courses.find(({ id }) => id === pathParams.id)
   }
   return undefined
 }
