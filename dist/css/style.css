@@ -224,6 +224,8 @@ body {
   overflow: hidden;
   border-style: ridge;
   width: 95%; }
+  .ex_content-hidden {
+    display: none; }
 
 .ex_answer {
   display: inline-block;
@@ -231,6 +233,8 @@ body {
   text-transform: uppercase;
   margin-top: 10px;
   margin-bottom: 5px; }
+  .ex_answer-hidden {
+    display: none; }
 
 .ex_answer:hover {
   background-color: #d5eff0;
