@@ -264,16 +264,28 @@ a {
   display: none;
   overflow: hidden;
   border-style: ridge;
+<<<<<<< fc797195e93b82c84dcc7996c89f6dc26ca07691
   width: 95%;
 }
+=======
+  width: 95%; }
+  .ex_content-hidden {
+    display: none; }
+>>>>>>> use hooks to change state
 
 .ex_answer {
   display: inline-block;
   color: #00747a;
   text-transform: uppercase;
   margin-top: 10px;
+<<<<<<< fc797195e93b82c84dcc7996c89f6dc26ca07691
   margin-bottom: 5px;
 }
+=======
+  margin-bottom: 5px; }
+  .ex_answer-hidden {
+    display: none; }
+>>>>>>> use hooks to change state
 
 .ex_answer:hover {
   background-color: #d5eff0;
