@@ -21,9 +21,9 @@ export class Test extends React.PureComponent {
         <div className="chapter" onClick={() => this.toggleVisibility('test')}>
           {'Test header'}
         </div>
-        <div id={'test'} className="chapter_content">
+        <div id={'test'} className="chapter-content">
           {this.props.children}
-          <div className="close_chapter" onClick={() => this.toggleVisibility('test')}>
+          <div className="close-chapter" onClick={() => this.toggleVisibility('test')}>
             Sulje kappale
           </div>
         </div>

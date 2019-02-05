@@ -5,9 +5,9 @@ import { InitialState } from '../../../types/InitialState'
 import classnames from 'classnames'
 
 interface Props {
-  header: string,
-  content: string,
-  openedBoxes: {[index: string]: boolean}
+  header: string
+  content: string
+  openedBoxes: { [index: string]: boolean }
   toggleContentBox: typeof toggleContentBox
 }
 
@@ -21,8 +21,8 @@ class Chapter extends React.Component<Props> {
   // const { idyll, hasError, updateProps, ...props } = content
 
   render() {
-    const {header, openedBoxes} = this.props
-    const contentClassname = classnames('chapter_content', {'chapter_content-hidden': openedBoxes[this.boxId] !== true})
+    const { header, openedBoxes } = this.props
+    const contentClassname = classnames('chapter-content', { 'chapter-content-hidden': openedBoxes[this.boxId] !== true })
 
     return (
       <div>
@@ -31,7 +31,7 @@ class Chapter extends React.Component<Props> {
         </div>
         <div id="testi" className={contentClassname}>
           {this.props.children}
-          <div className="close_chapter" onClick={this.handleBoxClick}>
+          <div className="close-chapter" onClick={this.handleBoxClick}>
             Sulje kappale
           </div>
         </div>
@@ -44,7 +44,7 @@ class Chapter extends React.Component<Props> {
   }
 }
 
-const mapStateToProps = ({pageState}: {pageState: InitialState}) => ({
+const mapStateToProps = ({ pageState }: { pageState: InitialState }) => ({
   openedBoxes: pageState.pageParams.openedBoxes
 })
 

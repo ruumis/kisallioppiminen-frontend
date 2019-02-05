@@ -19,7 +19,7 @@ const Exercise = (props: any) => {
         <div className="exercise" onClick={() => toggleVisibility('ex1')}>
           {props.header}
         </div>
-        <div id="ex1" className="ex_content">
+        <div id="ex1" className="exercise-content">
           {props.children}
         </div>
       </div>
@@ -31,7 +31,7 @@ const Exercise = (props: any) => {
       <div className="exercise" onClick={() => toggleVisibility('ex2')}>
         {props.header}
       </div>
-      <div style={{ display: 'block' }} id="ex2" className="ex_content">
+      <div style={{ display: 'block' }} id="ex2" className="exercise-content">
         {props.children}
       </div>
     </div>

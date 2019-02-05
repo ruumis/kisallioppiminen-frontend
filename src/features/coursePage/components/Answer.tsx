@@ -16,10 +16,10 @@ const Answer = (props: any) => {
 
   return (
     <div>
-      <div className="ex_answer" onClick={() => toggleVisibility('answer2')}>
+      <div className="exercise-answer" onClick={() => toggleVisibility('answer2')}>
         Vastaus
       </div>
-      <div id="answer2" className="ex_hidden">
+      <div id="answer2" className="exercise-hidden">
         {props.children}
       </div>
     </div>
