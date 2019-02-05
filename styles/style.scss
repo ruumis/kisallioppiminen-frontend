@@ -269,7 +269,6 @@ body {
   background-color: ghostwhite;
   padding: 10px;
   margin: 0 auto;
-  display: none;
   overflow: hidden;
   border-style: ridge;
   width: 95%;
@@ -284,9 +283,6 @@ body {
   text-transform: uppercase;
   margin-top: 10px;
   margin-bottom: 5px;
-  &-hidden {
-    display: none;
-  }
 }
 
 .ex_answer:hover {
@@ -294,8 +290,10 @@ body {
   text-decoration-line: underline;
 }
 
-.ex_hidden {
-  display: none;
+.ex_answer_content {
+  &-hidden {
+    display: none;
+  }
 }
 
 .section {

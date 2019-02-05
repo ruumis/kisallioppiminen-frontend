@@ -4,13 +4,21 @@ import IdyllDocument from 'idyll-document'
 import * as components from 'idyll-components'
 import compiler, { Node } from 'idyll-compiler'
 import Chapter from './components/Chapter'
-import Test from './components/Test'
+import Exercise from './components/Exercise'
+import Answer from './components/Answer'
+import Theorem from './components/Theorem'
+import Definition from './components/Definition'
+import Rationalization from './components/Rationalization'
 
 export function coursePage(initialState: InitialState) {
   const availableComponents = {
     ...components,
     Chapter,
-    Test
+    Exercise,
+    Answer,
+    Theorem,
+    Rationalization,
+    Definition
   }
 
   const courseToRender = resolveCourse(initialState)
@@ -20,18 +28,15 @@ export function coursePage(initialState: InitialState) {
   return (
     <div>
       <h1>Kurssisivu</h1>
-      {courseToRender && <IdyllDocument
-        ast={compiler(courseToRender.courseContent[0].content, {async: false}) as Node[]}
-        components={availableComponents}
-      />}
+      {courseToRender && <IdyllDocument ast={compiler(courseToRender.courseContent[0].content, { async: false }) as Node[]} components={availableComponents} />}
     </div>
   )
 }
 
-function resolveCourse({pageParams, courses}: InitialState) {
-  const {pathParams} = pageParams
+function resolveCourse({ pageParams, courses }: InitialState) {
+  const { pathParams } = pageParams
   if (pathParams.id) {
-    return courses.find(({id}) => id === pathParams.id)
+    return courses.find(({ id }) => id === pathParams.id)
   }
   return undefined
 }
