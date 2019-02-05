@@ -1,16 +1,19 @@
-import React from 'react'
+import React,{useState} from 'react'
 import { InitialState } from '../../types/InitialState'
 import IdyllDocument from 'idyll-document'
 import * as components from 'idyll-components'
 import compiler, { Node } from 'idyll-compiler'
 import Chapter from './components/Chapter'
-import Test from './components/Test'
+import Section from './components/Section'
+import ContainerWrapper from './components/ContainerWrapper'
 
 export function coursePage(initialState: InitialState) {
+  const [coursePageTab, setCoursePageTab] = useState(1)
   const availableComponents = {
     ...components,
     Chapter,
-    Test
+    ContainerWrapper,
+    Section
   }
 
   const courseToRender = resolveCourse(initialState)
