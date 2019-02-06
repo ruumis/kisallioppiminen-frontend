@@ -6,7 +6,7 @@ function CourseVersionSelector({versions, selectCourseVersion}: {versions: numbe
   return (
     <div>
       <p>Valitse kurssin versio:</p>
-      <select onChange={e => handleOnChange(e, selectCourseVersion)}>
+      <select className="course-selector-box" onChange={e => handleOnChange(e, selectCourseVersion)}>
         {versions.map(v => <option>{v}</option>)}
       </select>
     </div>

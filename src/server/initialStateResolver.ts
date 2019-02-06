@@ -22,7 +22,6 @@ export function resolveInitialState(path: string): { pageState: InitialState; co
       }
     },
     coursePageState: {
-      openedBoxes: {},
       selectedCourseVersion: null
     }
   }

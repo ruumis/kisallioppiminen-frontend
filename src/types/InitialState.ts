@@ -16,6 +16,5 @@ export interface Course {
 }
 
 export interface CoursePageState {
-  selectedCourseVersion: number | null,
-  openedBoxes: {[index: string]: boolean}
+  selectedCourseVersion: number | null
 }

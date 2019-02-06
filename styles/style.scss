@@ -1,3 +1,5 @@
+@import './_fixtures.scss';
+
 li {
   list-style-type: none;
 }
@@ -50,7 +52,7 @@ body {
 
   &-title {
     color: white;
-    background: #4fab53;
+    background: $greenColor;
     margin: 0px;
     padding-top: 20px;
     padding-bottom: 20px;
@@ -69,7 +71,7 @@ body {
     background: #b8ee7c00;
     margin-top: 0px;
     margin-bottom: 0px;
-    color: #4fab53;
+    color: $greenColor;
     padding-top: 20px;
     padding-bottom: 20px;
     border-bottom-left-radius: 10px;
@@ -97,7 +99,7 @@ body {
     font-size: 25px;
     border-radius: 22px;
     padding: 10px;
-    background: #4fab53;
+    background: $greenColor;
     color: white;
     text-shadow: 1px 1px 2px black;
     margin-left: 25%;
@@ -125,7 +127,7 @@ body {
     margin-top: 10px;
     margin-bottom: 10px;
     margin-right: 10px;
-    background-color: #4fab53;
+    background-color: $greenColor;
   }
 
   &-item:hover {
@@ -154,7 +156,7 @@ body {
   }
 
   .link {
-    color: #4fab53;
+    color: $greenColor;
     text-transform: none;
     text-shadow: none;
     margin-left: 5px;
@@ -421,4 +423,17 @@ body {
 .close_chapter:hover {
   background-color: #eee;
   text-decoration-line: underline;
+}
+
+.course-selector-box {
+  display: inline-block;
+  padding: 13px;
+  border-radius: 5px;
+  margin-top: 10px;
+  color: white;
+  width: 100px;
+  height: 30px;
+  margin-bottom: 10px;
+  margin-right: 10px;
+  background-color: $greenColor;
 }

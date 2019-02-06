@@ -348,3 +348,15 @@ a {
 .close_chapter:hover {
   background-color: #eee;
   text-decoration-line: underline; }
+
+.course-selector-box {
+  display: inline-block;
+  padding: 13px;
+  border-radius: 5px;
+  margin-top: 10px;
+  color: white;
+  width: 100px;
+  height: 30px;
+  margin-bottom: 10px;
+  margin-right: 10px;
+  background-color: #4fab53; }
