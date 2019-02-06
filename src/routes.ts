@@ -5,7 +5,7 @@ import { Store, AnyAction } from 'redux'
 import { changePage } from './reducers/actions/pageStateActions'
 import Path from 'path-parser'
 
-const routes: Array<{ path: Path, component: (initialState: InitialState) => JSX.Element }> = [
+const routes: Array<{ path: Path, component: () => JSX.Element}> = [
   {
     path: new Path('/'),
     component: frontPage
@@ -16,7 +16,7 @@ const routes: Array<{ path: Path, component: (initialState: InitialState) => JSX
   }
 ]
 
-export function getPage(path: string): { component: ((initialState: InitialState) => JSX.Element), pathParams: any } | undefined {
+export function getPage(path: string): { component: () =>  JSX.Element , pathParams: any } | undefined {
   const selectedRoute = routes
     .find(route => route.path.test(path) !== null)
   if (selectedRoute !== undefined) {
@@ -25,7 +25,7 @@ export function getPage(path: string): { component: ((initialState: InitialState
       pathParams: selectedRoute.path.test(path)
     }
   }
-  return
+  return undefined
 }
 
 export function watchPageChanges(store: Store<{pageState: InitialState | null}, AnyAction>) {

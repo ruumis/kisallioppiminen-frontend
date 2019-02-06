@@ -1,8 +1,7 @@
-import React, { useState } from 'react'
-import ReactDOM from 'react-dom'
-import { toggleContentBox } from '../../../reducers/actions/pageStateActions'
+import React from 'react'
+import { toggleContentBox } from '../../../reducers/actions/courseActions'
 import { connect } from 'react-redux'
-import { InitialState } from '../../../types/InitialState'
+import { CoursePageState } from '../../../types/InitialState'
 import classnames from 'classnames'
 
 /* interface Props {
@@ -64,8 +63,8 @@ const Chapter = (props: any) => {
   )
 }
 
-/* const mapStateToProps = ({ pageState }: { pageState: InitialState }) => ({
-  openedBoxes: pageState.pageParams.openedBoxes
+const mapStateToProps = ({coursePageState}: {coursePageState: CoursePageState}) => ({
+  openedBoxes: coursePageState.openedBoxes
 })
 
 const mapDispatchToProps = {
@@ -77,5 +76,4 @@ const ConnectedChapter = connect(
   mapDispatchToProps
 )(Chapter)
 
-export default ConnectedChapter */
-export default Chapter
+export default ConnectedChapter
