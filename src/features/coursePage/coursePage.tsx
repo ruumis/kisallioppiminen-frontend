@@ -6,9 +6,13 @@ import compiler, { Node } from 'idyll-compiler'
 import ContainerWrapper from './components/ContainerWrapper'
 import Section from './components/Section'
 import Chapter from './components/Chapter'
-import Test from './components/Test'
 import CourseVersionSelector from './components/CourseVersionSelector'
 import { connect } from 'react-redux'
+import Exercise from './components/Exercise'
+import Answer from './components/Answer'
+import Theorem from './components/Theorem'
+import Rationalization from './components/Rationalization'
+import Definition from './components/Definition'
 
 export function coursePage() {
   const availableComponents = {

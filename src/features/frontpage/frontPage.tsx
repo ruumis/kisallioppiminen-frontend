@@ -2,6 +2,7 @@ import React from 'react'
 import { InitialState } from '../../types/InitialState'
 import CourseList from './components/CourseList'
 import { connect } from 'react-redux'
+import Hero from '../baseComponents/Hero'
 
 export function frontPage() {
   const mapStateToProps = ({pageState}: {pageState: InitialState}) => ({
