@@ -5,8 +5,7 @@ export interface InitialState {
 
 export interface PageParams {
   path: string,
-  pathParams: any, // No smart way of typifying these, so let's just got with any
-  openedBoxes: {[index: string]: boolean}
+  pathParams: any // No smart way of typifying these, so let's just got with any
 }
 
 export interface Course {
@@ -14,4 +13,8 @@ export interface Course {
   courseName: string,
   quickLinks: string[],
   courseContent: Array<{version: number, content: string}>
+}
+
+export interface CoursePageState {
+  selectedCourseVersion: number | null
 }

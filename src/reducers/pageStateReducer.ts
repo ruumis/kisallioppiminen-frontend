@@ -1,5 +1,4 @@
 import { InitialState } from '../types/InitialState'
-import * as R from 'ramda'
 
 export const pageStateReducer = (state: InitialState | null = null, action: { type: string; data: any }): InitialState | null => {
   const { data } = action
@@ -17,21 +16,6 @@ export const pageStateReducer = (state: InitialState | null = null, action: { ty
             }
           }
         }
-      }
-      break
-    case 'TOGGLE_CONTENT_BOX':
-      if (state) {
-        const { openedBoxes } = state.pageParams
-        const currentValue = openedBoxes[data]
-        return R.merge(state, {
-          pageParams: {
-            ...state.pageParams,
-            openedBoxes: {
-              ...openedBoxes,
-              [data]: currentValue !== undefined ? !currentValue : true
-            }
-          }
-        })
       }
   }
   return state

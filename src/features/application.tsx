@@ -1,40 +1,34 @@
 import React from 'react'
-import { InitialState } from '../types/InitialState'
+import { InitialState, CoursePageState } from '../types/InitialState'
 import Footer from './baseComponents/Footer'
 import Navigation from './baseComponents/Navigation'
 import Hero from './baseComponents/Hero'
 import { getPage, watchPageChanges } from '../routes'
 import { Provider, connect } from 'react-redux'
 import { initStore } from '../reducers/store'
-import { changePage } from '../reducers/actions/pageStateActions'
 
-export function createApp(initialState: InitialState) {
+export function createApp(initialState: { pageState: InitialState; coursePageState: CoursePageState }) {
   const store = initStore(initialState)
   watchPageChanges(store)
 
-  const mapStateToProps = (state: { pageState: InitialState }) => {
-    return {initialState: state.pageState}
-  }
-  const mapDispatchToProps = {
-    changePage
+  const mapStateToProps = (state: { pageState: InitialState; coursePageState: CoursePageState }) => {
+    return { initialState: state.pageState }
   }
 
   const app = (props: { initialState: InitialState }) => {
     const { initialState: state } = props
+    const page = resolvePageToRender(state)
     return (
       <React.Fragment>
         <Navigation />
         <Hero />
-        {resolvePageToRender(state)}
+        {page}
         <Footer />
       </React.Fragment>
     )
   }
 
-  const ConnectedApp = connect(
-    mapStateToProps,
-    mapDispatchToProps
-  )(app)
+  const ConnectedApp = connect(mapStateToProps)(app)
 
   return (
     <Provider store={store}>
@@ -53,5 +47,5 @@ function resolvePageToRender(initialState: InitialState) {
 
   initialState.pageParams.pathParams = page.pathParams
 
-  return page.component(initialState)
+  return page.component()
 }
