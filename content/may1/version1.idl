@@ -38,21 +38,32 @@
 [/Chapter]
 
 [Chapter header:'Luonnolliset luvut ja kokonaisluvut (1.1 - 1.8)']
-  Olen toinen kappale
+  Olen toinen kappale.
 
+  Tässä ensimmäinen kuva, joka on lisätty idyllillä.
+  [MaterialPicture imagesrc:'/img/may1/rationaaliK1.png' alt:'testi1' /]
+  Tässä toinen kuva.
+
+  [MaterialPicture imagesrc:'/img/may1/rationaaliK1.png' alt:'testi2' /]
   [Exercise header:'Tehtävä 1']
-    erittäin vaikea tehtävä
+    Erittäin vaikea tehtävä.
 
+    Toistan tässä itseäni.
     [Answer]
       ei ole mahdollinen ratkaista
+
+      ei ole
     [/Answer]
   [/Exercise]
 
   [Exercise header:'Tehtävä 2 (auki)' open:true]
     liian helppo tehtävä
 
+    ON.
     [Answer]
       kaikki vastaukset ovat oikein
+
+      ON.
     [/Answer]
   [/Exercise]
 [/Chapter]
