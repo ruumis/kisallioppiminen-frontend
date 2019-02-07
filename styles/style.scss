@@ -226,7 +226,7 @@ body {
   text-transform: uppercase;
 }
 
-.defefenition-content {
+.definition-content {
   margin-top: 0px;
   background-color: #f2ffcc;
   margin-bottom: 10px;
@@ -235,7 +235,7 @@ body {
   padding: 25px 10px;
 }
 
-.def-text {
+.definition-text {
   margin: 0px 15px;
 }
 
@@ -370,19 +370,26 @@ body {
   color: #00747a;
   text-transform: uppercase;
 
-  &-content {
-    border-top-style: hidden;
-    display: block;
-    overflow: hidden;
-
-    &-hidden {
-      display: none;
-    }
-  }
-
   &:hover {
     background-color: #eee;
     text-decoration-line: underline;
+  }
+}
+
+.chapter-content {
+  border: 1px;
+  border-style: ridge;
+  border-color: #dddddd;
+  background-color: ghostwhite;
+  padding: 10px;
+  margin: 0 auto;
+  border-top-style: hidden;
+  display: block;
+  overflow: hidden;
+  width: 80%;
+
+  &-hidden {
+    display: none;
   }
 }
 

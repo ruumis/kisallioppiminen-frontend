@@ -16,7 +16,7 @@ const Chapter = (props: any) => {
       <div className="chapter" onClick={() => setOpen(!open)}>
         {props.header}
       </div>
-      <div id="testi" className={contentClassname}>
+      <div className={contentClassname}>
         {props.children}
         <div className="close-chapter" onClick={() => setOpen(!open)}>
           Sulje kappale

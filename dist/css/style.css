@@ -171,7 +171,7 @@ a {
   margin: 0px 10px;
   text-transform: uppercase; }
 
-.defefenition-content {
+.definition-content {
   margin-top: 0px;
   background-color: #f2ffcc;
   margin-bottom: 10px;
@@ -179,7 +179,7 @@ a {
   margin: 0 auto;
   padding: 25px 10px; }
 
-.def-text {
+.definition-text {
   margin: 0px 15px; }
 
 .exercise {
@@ -292,15 +292,23 @@ a {
   text-align: left;
   color: #00747a;
   text-transform: uppercase; }
-  .chapter-content {
-    border-top-style: hidden;
-    display: block;
-    overflow: hidden; }
-    .chapter-content-hidden {
-      display: none; }
   .chapter:hover {
     background-color: #eee;
     text-decoration-line: underline; }
+
+.chapter-content {
+  border: 1px;
+  border-style: ridge;
+  border-color: #dddddd;
+  background-color: ghostwhite;
+  padding: 10px;
+  margin: 0 auto;
+  border-top-style: hidden;
+  display: block;
+  overflow: hidden;
+  width: 80%; }
+  .chapter-content-hidden {
+    display: none; }
 
 .close-chapter {
   border-style: hidden;
