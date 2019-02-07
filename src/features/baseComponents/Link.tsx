@@ -11,7 +11,11 @@ class Link extends React.Component<{
   }
 
   render() {
-    return <a onClick={this.handleOnClick}>{this.props.children}</a>
+    return (
+      <a href={this.props.href} onClick={this.handleOnClick}>
+        {this.props.children}
+      </a>
+    )
   }
 
   handleOnClick = (e: React.MouseEvent<HTMLAnchorElement>) => {
