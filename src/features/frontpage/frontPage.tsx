@@ -5,23 +5,23 @@ import { connect } from 'react-redux'
 import Hero from '../baseComponents/Hero'
 
 export function frontPage() {
-  const mapStateToProps = ({pageState}: {pageState: InitialState}) => ({
+  const mapStateToProps = ({ pageState }: { pageState: InitialState }) => ({
     pageState
   })
-  const app = (props: {pageState: InitialState}) => {
+  const app = (props: { pageState: InitialState }) => {
     const { pageState } = props
     return (
-      <div>
-        <Hero />
+      <div className="frontPageContainer">
         {/* Saatavilla olevat kurssit: */}
         <CourseList courses={pageState.courses} />
       </div>
     )
   }
 
-  const ConnectedFrotPage = connect(mapStateToProps, {})(app)
+  const ConnectedFrotPage = connect(
+    mapStateToProps,
+    {}
+  )(app)
 
-  return (
-    <ConnectedFrotPage />
-  )
+  return <ConnectedFrotPage />
 }

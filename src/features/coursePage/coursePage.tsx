@@ -27,24 +27,25 @@ export function coursePage() {
     Definition
   }
 
-  const mapStateToProps = (state: { pageState: InitialState, coursePageState: CoursePageState }) => ({
-    pageState: state.pageState, coursePageState: state.coursePageState
+  const mapStateToProps = (state: { pageState: InitialState; coursePageState: CoursePageState }) => ({
+    pageState: state.pageState,
+    coursePageState: state.coursePageState
   })
 
-  const coursePageApp = (props: {pageState: InitialState, coursePageState: CoursePageState}) => {
-    const {pageState, coursePageState} = props
+  const coursePageApp = (props: { pageState: InitialState; coursePageState: CoursePageState }) => {
+    const { pageState, coursePageState } = props
 
     const courseToRender = resolveCourse(pageState)
     const courseMaterialVersion = resolveCourseVersion(coursePageState, courseToRender)
     return (
-      <div>
+      <div className="coursePageContainer">
         <h1>Kurssisivu</h1>
         <CourseVersionSelector versions={courseToRender !== undefined ? courseToRender.courseContent.map(c => c.version) : []} />
-        {
-          typeof window !== 'undefined' ?
-          <IdyllDocument markup={courseMaterialVersion ? courseMaterialVersion.content : ''} components={availableComponents}/> :
-          <IdyllDocument ast={compiler(courseMaterialVersion ? courseMaterialVersion.content : '', {async: false}) as Node[]} components={availableComponents}/>
-        }
+        {typeof window !== 'undefined' ? (
+          <IdyllDocument markup={courseMaterialVersion ? courseMaterialVersion.content : ''} components={availableComponents} />
+        ) : (
+          <IdyllDocument ast={compiler(courseMaterialVersion ? courseMaterialVersion.content : '', { async: false }) as Node[]} components={availableComponents} />
+        )}
       </div>
     )
   }
@@ -62,13 +63,12 @@ function resolveCourse({ pageParams, courses }: InitialState) {
   return undefined
 }
 
-function resolveCourseVersion({selectedCourseVersion}: CoursePageState, course?: Course) {
-  return course ? course
-  .courseContent
-  .find(content => {
-    return content.version === Number(selectedCourseVersion)
-  }) || course.courseContent[0] : undefined
-
+function resolveCourseVersion({ selectedCourseVersion }: CoursePageState, course?: Course) {
+  return course
+    ? course.courseContent.find(content => {
+        return content.version === Number(selectedCourseVersion)
+      }) || course.courseContent[0]
+    : undefined
 }
 
 // <Navigation />

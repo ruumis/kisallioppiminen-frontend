@@ -43,12 +43,13 @@ body {
     margin-bottom: 100px;
   }
 
-  display: inline-block;
+  display: inline-grid;
   padding: 0px;
   width: 250px;
   margin: 10px;
   background: beige;
   text-align: left;
+  min-height: 250px;
 
   &-title {
     color: white;
@@ -61,6 +62,7 @@ body {
     border-top-left-radius: 10px;
     border-top-right-radius: 10px;
     font-size: 20px;
+    height: 60px;
   }
 
   &-title:hover {
@@ -81,6 +83,14 @@ body {
   &-content:hover {
     background: #fff6a6;
   }
+}
+
+.frontPageContainer {
+  min-height: 100vh;
+}
+
+.coursePageContainer {
+  min-height: 100vh;
 }
 
 .courseList {

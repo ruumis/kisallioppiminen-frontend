@@ -2,16 +2,17 @@ import React from 'react'
 import { InitialState, CoursePageState } from '../types/InitialState'
 import Footer from './baseComponents/Footer'
 import Navigation from './baseComponents/Navigation'
+import Hero from './baseComponents/Hero'
 import { getPage, watchPageChanges } from '../routes'
 import { Provider, connect } from 'react-redux'
 import { initStore } from '../reducers/store'
 
-export function createApp(initialState: {pageState: InitialState, coursePageState: CoursePageState}) {
+export function createApp(initialState: { pageState: InitialState; coursePageState: CoursePageState }) {
   const store = initStore(initialState)
   watchPageChanges(store)
 
-  const mapStateToProps = (state: { pageState: InitialState, coursePageState: CoursePageState }) => {
-    return {initialState: state.pageState}
+  const mapStateToProps = (state: { pageState: InitialState; coursePageState: CoursePageState }) => {
+    return { initialState: state.pageState }
   }
 
   const app = (props: { initialState: InitialState }) => {
@@ -20,15 +21,14 @@ export function createApp(initialState: {pageState: InitialState, coursePageStat
     return (
       <React.Fragment>
         <Navigation />
+        <Hero />
         {page}
         <Footer />
       </React.Fragment>
     )
   }
 
-  const ConnectedApp = connect(
-    mapStateToProps
-  )(app)
+  const ConnectedApp = connect(mapStateToProps)(app)
 
   return (
     <Provider store={store}>
