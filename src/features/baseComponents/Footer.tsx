@@ -6,11 +6,11 @@ export default function Footer() {
   return (
     <div>
       <footer className="footer">
-        <div className="footer_div">
+        <div className="footer-div">
           <p>Kisallioppiminen.fi tarjoaa ilmaisia ja avoimia materiaaleja matematiikan oppimisen ja opettamisen tueksi.</p>
           <p>Materiaalit ovat erityisesti suunniteltu tukemaan tehostetun kisällioppimisen menetelmän käyttöä.</p>
         </div>
-        <div className="footer_contact_div">
+        <div className="footer-contact-div">
           <IconContext.Provider
             value={{
               color: 'blue',
@@ -22,11 +22,11 @@ export default function Footer() {
             </div>
           </IconContext.Provider>
 
-          <a className="fb_link" href="https://www.facebook.com/groups/899303056853769/">
+          <a className="fb-link" href="https://www.facebook.com/groups/899303056853769/">
             Facebook-ryhmä
           </a>
         </div>
-        <div className="footer_div">
+        <div className="footer-div">
           <p>
             <img src="/img/CC.png" alt="Creative Commons copyright" />
             <br />

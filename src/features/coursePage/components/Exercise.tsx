@@ -3,7 +3,7 @@ import classnames from 'classnames'
 
 const Exercise = (props: any) => {
   const [open, setOpen] = useState(props.open)
-  const contentClassname = classnames('ex_content', { 'ex_content-hidden': open !== true })
+  const contentClassname = classnames('exercise-content', { 'exercise-content-hidden': open !== true })
 
   return (
     <div>

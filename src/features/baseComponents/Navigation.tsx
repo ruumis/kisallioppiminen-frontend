@@ -5,7 +5,7 @@ export function Navigation() {
     <nav className="navigator">
       <ul>
         <li className="navigator-item">
-          <a className="navigator-link" href="#">
+          <a className="navigator-link" href="/">
             Materiaalit
           </a>
         </li>
