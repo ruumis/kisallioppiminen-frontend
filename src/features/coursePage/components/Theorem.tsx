@@ -3,12 +3,12 @@ import React from 'react'
 const Theorem = (props: any) => {
   return (
     <div>
-      <div className="theo_header">
-        <h3 className="theo_head_cont"> {props.header} </h3>
+      <div className="theorem-header">
+        <h3 className="theorem-header-content"> {props.header} </h3>
       </div>
 
-      <div className="theo_content">
-        <p className="theo_text">{props.children}</p>
+      <div className="theorem-content">
+        <p className="theorem-text">{props.children}</p>
       </div>
     </div>
   )
