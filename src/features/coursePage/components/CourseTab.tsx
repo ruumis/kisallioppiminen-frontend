@@ -8,7 +8,7 @@ const CourseTab = (props: any) => {
   }
 
   return (
-		props.value === props.tabId ? ( 
+	props.value === props.tabId ? (
       <div style={{ backgroundColor: '#30A491' }} className="section" onClick={() => changeTab()}>
         {props.header}
       </div>
