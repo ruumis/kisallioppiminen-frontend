@@ -1,71 +1,74 @@
-[var name:'selectTab' value:1 /]
+[var name:'selectedTab' value:0 /]
 
-[ContainerWrapper]
-  [Section header:'MAY1'
-          renderSection:selectTab
-          selected:true /]
+[CourseMenu]
+  [CourseTab header:'MAY1'
+          tabId:0
+          value:selectedTab /]
 
-  [Section header:'1. Luvut ja laskutoimitukset'
-          renderSection:selectTab
-          selected:false /]
+  [CourseTab header:'1. Luvut ja laskutoimitukset'
+          tabId:1
+          value:selectedTab /]
 
-  [Section header:'2. Luku'
-          renderSection:selectTab
-          selected:false /]
+  [CourseTab header:'2. Luku'
+          tabId:2
+          value:selectedTab /]
 
-  [Section header:'3. Luku'
-          renderSection:selectTab
-          selected:false /]
+  [CourseTab header:'3. Luku'
+          tabId:3 
+          value:selectedTab /]
 
-  [Section header:'4. Luku'
-          renderSection:selectTab
-          selected:false /]
-[/ContainerWrapper]
+  [CourseTab header:'4. Luku'
+          tabId:4 
+          value:selectedTab /]
+[/CourseMenu]
 
-[Chapter header:'Olen ylätunniste']
-  // Olen kommentti
-  olen chapter teksti
+[CourseSection sectionId:0 value:selectedTab]
+  [Chapter header:'Olen ylätunniste']
+    // Olen kommentti
+    olen chapter teksti
 
-  [Theorem header:'Teoreema 1']
-    syvällistä
-  [/Theorem]
+    [Theorem header:'Teoreema 1']
+      syvällistä
+    [/Theorem]
 
-  [Rationalization]
-    iha hyvä perustelu
-  [/Rationalization]
+    [Rationalization]
+      iha hyvä perustelu
+    [/Rationalization]
 
-  lisää tekstiä
-[/Chapter]
+    lisää tekstiä
+  [/Chapter]
 
-[Chapter header:'Luonnolliset luvut ja kokonaisluvut (1.1 - 1.8)']
-  Olen toinen kappale
+  [Chapter header:'Luonnolliset luvut ja kokonaisluvut (1.1 - 1.8)']
+    Olen toinen kappale
 
-  [Exercise header:'Tehtävä 1']
-    erittäin vaikea tehtävä
+    [Exercise header:'Tehtävä 1']
+      erittäin vaikea tehtävä
 
-    [Answer]
-      ei ole mahdollinen ratkaista
-    [/Answer]
-  [/Exercise]
+      [Answer]
+        ei ole mahdollinen ratkaista
+      [/Answer]
+    [/Exercise]
 
-  [Exercise header:'Tehtävä 2 (auki)' open:true]
-    liian helppo tehtävä
+    [Exercise header:'Tehtävä 2 (auki)' open:true]
+      liian helppo tehtävä
 
-    [Answer]
-      kaikki vastaukset ovat oikein
-    [/Answer]
-  [/Exercise]
-[/Chapter]
+      [Answer]
+        kaikki vastaukset ovat oikein
+      [/Answer]
+    [/Exercise]
+  [/Chapter]
+[/CourseSection]
 
+[CourseSection sectionId:1 value:selectedTab]
+  [Chapter header:'Rationaaliluvut (1.9-1.24)'] 
+  Olen kolmas kappale
 
-[Chapter header:'Rationaaliluvut (1.9-1.24)'] 
-Olen kolmas kappale
+    [Definition header:'Määritelmä 1']
+      Määrittelyä
+    [/Definition]
 
-  [Definition header:'Määritelmä 1']
-    Määrittelyä
-  [/Definition]
-
-  [var name:"myVar" value:10 /]
-  [Range value:myVar min:0 max:100 /]
-  [Display value:myVar /]
-[/Chapter]
+    [var name:"myVar" value:10 /]
+    [Range value:myVar min:0 max:100 /]
+    [Display value:myVar /]
+  [/Chapter]
+[/CourseSection]
