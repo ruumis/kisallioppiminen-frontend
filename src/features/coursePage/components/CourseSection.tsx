@@ -3,9 +3,9 @@ import React, { useState } from 'react'
 const CourseSection = (props:any) => {
   return (
 		props.value === props.sectionId ? 
-		<div>{props.children}</div> 
+		<div id="CourseSection">{props.children}</div> 
 		: 
-		<div></div>
+		<div style={{ display: 'none' }}></div>
 	)
 }
 

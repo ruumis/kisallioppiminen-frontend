@@ -3,11 +3,12 @@ import { selectCourseVersion as selectCourse } from '../../../reducers/actions/c
 import { connect } from 'react-redux'
 
 function CourseVersionSelector({versions, selectCourseVersion}: {versions: number[], selectCourseVersion?: typeof selectCourse}) {
+  // Option key should have better value? 
   return (
     <div>
       <p>Valitse kurssin versio:</p>
       <select className="course-selector-box" onChange={e => handleOnChange(e, selectCourseVersion)}>
-        {versions.map(v => <option>{v}</option>)}
+        {versions.map(v => <option key={v.toString()}>{v}</option>)}
       </select>
     </div>
   )

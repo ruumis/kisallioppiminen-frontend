@@ -7,8 +7,8 @@ const CourseTab = (props:any) => {
     })
   }
 
-	console.log('value = ', props.value)
-	console.log('id = ', props.tabId)
+	// console.log('value = ', props.value)
+	// console.log('id = ', props.tabId)
 
   return (
 		props.value === props.tabId ? ( 
