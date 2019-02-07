@@ -13,6 +13,7 @@ import Answer from './components/Answer'
 import Theorem from './components/Theorem'
 import Rationalization from './components/Rationalization'
 import Definition from './components/Definition'
+import MaterialPicture from './components/MaterialPicture'
 
 export function coursePage() {
   const availableComponents = {
@@ -24,7 +25,8 @@ export function coursePage() {
     Answer,
     Theorem,
     Rationalization,
-    Definition
+    Definition,
+    MaterialPicture
   }
 
   const mapStateToProps = (state: { pageState: InitialState; coursePageState: CoursePageState }) => ({
