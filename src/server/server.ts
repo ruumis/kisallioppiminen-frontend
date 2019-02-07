@@ -18,7 +18,7 @@ server.get('*', (req, res) => {
     title: 'Kisällioppiminen.fi',
     body,
     initialState: JSON.stringify(initialState),
-    styleSource: '/css/style.css'
+    styleSource: '"/css/style.css"'
   })
 
   res.send(template)

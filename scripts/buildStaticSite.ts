@@ -12,7 +12,7 @@ const wrappedHtml = createTemplate({
   body: staticHtml,
   initialState: JSON.stringify(initialState),
   isStatic: true,
-  styleSource: './css/style.css'
+  styleSource: '"./css/style.css"'
 })
 
 writeFileSync('./dist/static/index.html', wrappedHtml)
