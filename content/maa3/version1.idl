@@ -13,6 +13,12 @@
 
 [Chapter header:'Luvun tavoitteet']
   // Olen kommentti
-  Tässä tavoitteet.
+
+  Tässä ensimmäinen kuva, joka on lisätty idyllillä.
+  [MaterialPicture imagesrc:'/img/may1/rationaaliK1.png' alt:'kuva1' /]
+  Tässä toinen kuva.
+
+  [MaterialPicture imagesrc:'/img/may1/rationaaliK1.png' alt:'kuva2' /]
+
 
 [/Chapter]
