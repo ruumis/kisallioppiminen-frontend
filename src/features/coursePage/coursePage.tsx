@@ -3,8 +3,9 @@ import { InitialState, Course, CoursePageState } from '../../types/InitialState'
 import IdyllDocument from 'idyll-document'
 import * as components from 'idyll-components'
 import compiler, { Node } from 'idyll-compiler'
-import ContainerWrapper from './components/ContainerWrapper'
-import Section from './components/Section'
+import CourseMenu from './components/CourseMenu'
+import CourseTab from './components/CourseTab'
+import CourseSection from './components/CourseSection'
 import Chapter from './components/Chapter'
 import CourseVersionSelector from './components/CourseVersionSelector'
 import { connect } from 'react-redux'
@@ -18,8 +19,9 @@ import MaterialPicture from './components/MaterialPicture'
 export function coursePage() {
   const availableComponents = {
     ...components,
-    ContainerWrapper,
-    Section,
+    CourseMenu,
+    CourseTab,
+    CourseSection,
     Chapter,
     Exercise,
     Answer,

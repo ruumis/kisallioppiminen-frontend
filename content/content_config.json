@@ -83,5 +83,18 @@
         "path": "./content/maa7/version1.idl"
       }
     ]
+  },
+  {
+    "id": "1337",
+    "courseName": "MAB2 - Tabit ja sarakkeet",
+    "quickLinks": [
+      "Viidennen asteen polynomifunktio"
+    ],
+    "contentFiles": [
+      {
+        "version": 1.0,
+        "path": "./content/mab2/version1.idl"
+      }
+    ]
   }
 ]
