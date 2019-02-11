@@ -1,18 +1,28 @@
-[var name:'selectTab' value:1 /]
+[var name:'selectedTab' value:0 /]
 
-[ContainerWrapper]
-  [Section header:'MAA4'
-          renderSection:selectTab
-          selected:true /]
+[CourseMenu]
+  [CourseTab header:'MAA4'
+          tabId:0
+          value:selectedTab /]
 
-  [Section header:'1. Vektorit ja xy-koordinaatisto'
-          renderSection:selectTab
-          selected:false /]
+  [CourseTab header:'1. Vektorit ja xy-koordinaatisto'
+          tabId:1
+          value:selectedTab /]
 
-[/ContainerWrapper]
+[/CourseMenu]
 
-[Chapter header:'Luvun tavoitteet']
-  // Olen kommentti
-  Tässä tavoitteet.
+[CourseSection sectionId:0 value:selectedTab]
+  [Chapter header:'Luvun tavoitteet']
+    // Olen kommentti
+    Tässä tavoitteet.
 
-[/Chapter]
+  [/Chapter]
+[/CourseSection]
+
+[CourseSection sectionId:1 value:selectedTab]
+  [Chapter header:'v2: Luvun tavoitteet']
+    // Olen kommentti
+    Tässä tavoitteet.
+
+  [/Chapter]
+[/CourseSection]
