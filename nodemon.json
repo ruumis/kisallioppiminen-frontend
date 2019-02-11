@@ -1,6 +1,0 @@
-{
-  "watch": ["src", "styles"],
-  "ext": "*",
-  "ignore": ["src/**/*.spec.ts"],
-  "exec": "webpack --env.platform=server --mode=development && webpack --env.platform=web --mode=development && webpack --env.platform=styles && node ./dist/js/server.js"
-}
