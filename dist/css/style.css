@@ -62,7 +62,8 @@ a {
     padding-top: 20px;
     padding-bottom: 20px;
     border-bottom-left-radius: 10px;
-    border-bottom-right-radius: 10px; }
+    border-bottom-right-radius: 10px;
+    cursor: pointer; }
   .course-content:hover {
     background: #fff6a6; }
 
@@ -219,7 +220,8 @@ a {
   color: #00747a;
   text-transform: uppercase;
   margin-top: 10px;
-  margin-bottom: 5px; }
+  margin-bottom: 5px;
+  cursor: pointer; }
   .exercise-answer:hover {
     background-color: #d5eff0;
     text-decoration-line: underline; }
@@ -237,8 +239,7 @@ a {
   padding: 10px 15px;
   text-shadow: 1px 1px 1px #005357;
   display: inline;
-  /* text-align: center; */
-  /* margin: 0 auto; */
+  cursor: pointer;
   margin-right: 6px; }
   .section:hover {
     background-color: #00747a;
@@ -293,7 +294,8 @@ a {
   width: 80%;
   text-align: left;
   color: #00747a;
-  text-transform: uppercase; }
+  text-transform: uppercase;
+  cursor: pointer; }
   .chapter:hover {
     background-color: #eee;
     text-decoration-line: underline; }
