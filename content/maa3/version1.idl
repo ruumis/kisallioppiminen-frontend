@@ -1,24 +1,39 @@
-[var name:'selectTab' value:1 /]
+[var name:'selectedTab' value:0 /]
 
-[ContainerWrapper]
-  [Section header:'MAA3'
-          renderSection:selectTab
-          selected:true /]
+[CourseMenu]
+  [CourseTab header:'MAA3'
+          tabId:0
+          value:selectedTab /]
 
-  [Section header:'1. Kolmio'
-          renderSection:selectTab
-          selected:false /]
+  [CourseTab header:'1. Kolmio'
+          tabId:1
+          value:selectedTab /]
 
-[/ContainerWrapper]
+[/CourseMenu]
 
-[Chapter header:'Luvun tavoitteet']
-  // Olen kommentti
+[CourseSection sectionId:0 value:selectedTab]
+  [Chapter header:'Luvun tavoitteet']
+    // Olen kommentti
 
-  Tässä ensimmäinen kuva, joka on lisätty idyllillä.
-  [MaterialPicture imagesrc:'/img/may1/rationaaliK1.png' alt:'kuva1' /]
-  Tässä toinen kuva.
+    Tässä ensimmäinen kuva, joka on lisätty idyllillä.
+    [MaterialPicture imagesrc:'/img/may1/rationaaliK1.png' alt:'kuva1' /]
+    Tässä toinen kuva.
 
-  [MaterialPicture imagesrc:'/img/may1/rationaaliK1.png' alt:'kuva2' /]
+    [MaterialPicture imagesrc:'/img/may1/rationaaliK1.png' alt:'kuva2' /]
 
 
-[/Chapter]
+  [/Chapter]
+[/CourseSection]
+
+[CourseSection sectionId:1 value:selectedTab]
+  [Chapter header:'Sama vanha: Luvun tavoitteet']
+
+    Tässä ensimmäinen kuva, joka on lisätty idyllillä.
+    [MaterialPicture imagesrc:'/img/may1/rationaaliK1.png' alt:'kuva1' /]
+    Tässä toinen kuva.
+
+    [MaterialPicture imagesrc:'/img/may1/rationaaliK1.png' alt:'kuva2' /]
+
+  [/Chapter]
+
+[/CourseSection]

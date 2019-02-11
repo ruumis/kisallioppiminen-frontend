@@ -1,18 +1,28 @@
-[var name:'selectTab' value:1 /]
+[var name:'selectedTab' value:0 /]
 
-[ContainerWrapper]
-  [Section header:'MAA5'
-          renderSection:selectTab
-          selected:true /]
+[CourseMenu]
+  [CourseTab header:'MAA5'
+          tabId:0
+          value:selectedTab /]
 
-  [Section header:'1. Etäisyys'
-          renderSection:selectTab
-          selected:false /]
+  [CourseTab header:'1. Etäisyys'
+          tabId:1
+          value:selectedTab /]
 
-[/ContainerWrapper]
+[/CourseMenu]
 
-[Chapter header:'Luvun tavoitteet']
-  // Olen kommentti
-  Tässä tavoitteet.
+[CourseSection sectionId:0 value:selectedTab]
 
-[/Chapter]
+  [Chapter header:'Luvun tavoitteet']
+    Tässä tavoitteet.
+  [/Chapter]
+
+[/CourseSection]
+
+[CourseSection sectionId:1 value:selectedTab]
+
+  [Chapter header:'v2: Luvun tavoitteet']
+    Tässä tavoitteet (v2).
+  [/Chapter]
+
+[/CourseSection]
