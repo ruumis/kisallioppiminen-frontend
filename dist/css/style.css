@@ -67,10 +67,12 @@ a {
     background: #fff6a6; }
 
 .frontPageContainer {
-  min-height: 100vh; }
+  min-height: 100vh;
+  margin-bottom: 50px; }
 
 .coursePageContainer {
-  min-height: 100vh; }
+  min-height: 100vh;
+  margin-bottom: 50px; }
 
 .course-list {
   width: 80%;

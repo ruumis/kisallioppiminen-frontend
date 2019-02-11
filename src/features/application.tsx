@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { InitialState, CoursePageState } from '../types/InitialState'
 import Footer from './baseComponents/Footer'
 import Navigation from './baseComponents/Navigation'
@@ -16,12 +16,14 @@ export function createApp(initialState: { pageState: InitialState; coursePageSta
   }
 
   const app = (props: { initialState: InitialState }) => {
+    const [location, setLocation] = useState('')
+
     const { initialState: state } = props
-    const page = resolvePageToRender(state)
+    const page = resolvePageToRender(state, location, setLocation)
     return (
       <React.Fragment>
         <Navigation />
-        <Hero />
+        <Hero location={location} />
         {page}
         <Footer />
       </React.Fragment>
@@ -37,10 +39,43 @@ export function createApp(initialState: { pageState: InitialState; coursePageSta
   )
 }
 
-function resolvePageToRender(initialState: InitialState) {
+function resolvePageToRender(initialState: InitialState, location: string, setLocation: any) {
   const { pageParams } = initialState
   const { path } = pageParams
   const page = getPage(path)
+
+  // Hero sijaitilogiikkaa:
+  console.log(initialState.pageParams.pathParams)
+  const courses = initialState.courses
+
+  if (initialState.pageParams.path !== '/') {
+    let id: string
+
+    // 50ms timeout saattaa olla riittämätön, jos on todella hidas kone?
+    setTimeout(() => {
+      id = initialState.pageParams.pathParams.id
+
+      const course = courses.find(kurssielementti => {
+        return kurssielementti.id === id
+      })
+
+      if (course) {
+        console.log('You are in course page ', id, course.courseName)
+        if (location !== course.courseName) {
+          setLocation(course.courseName)
+        }
+      }
+      console.log('you are in course page (could not find course)')
+    }, 50)
+  } else {
+    console.log('You are in frontpage!')
+    if (location !== 'Etusivu') {
+      setLocation('Etusivu')
+    }
+  }
+
+  // End lokaatiologiikkaa
+
   if (page === undefined) {
     return <h1>404 Not found :(</h1>
   }
