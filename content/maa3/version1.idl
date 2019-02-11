@@ -16,6 +16,7 @@
     // Olen kommentti
 
     Tässä ensimmäinen kuva, joka on lisätty idyllillä.
+
     [MaterialPicture imagesrc:'/img/may1/rationaaliK1.png' alt:'kuva1' /]
     Tässä toinen kuva.
 
@@ -29,7 +30,9 @@
   [Chapter header:'Sama vanha: Luvun tavoitteet']
 
     Tässä ensimmäinen kuva, joka on lisätty idyllillä.
+
     [MaterialPicture imagesrc:'/img/may1/rationaaliK1.png' alt:'kuva1' /]
+
     Tässä toinen kuva.
 
     [MaterialPicture imagesrc:'/img/may1/rationaaliK1.png' alt:'kuva2' /]
