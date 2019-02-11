@@ -282,6 +282,7 @@ body {
   text-transform: uppercase;
   margin-top: 10px;
   margin-bottom: 5px;
+  cursor: pointer;
 
   &:hover {
     background-color: #d5eff0;
@@ -306,8 +307,7 @@ body {
   padding: 10px 15px;
   text-shadow: 1px 1px 1px #005357;
   display: inline;
-  /* text-align: center; */
-  /* margin: 0 auto; */
+  cursor: hover;
   margin-right: 6px;
 
   &:hover {
@@ -371,6 +371,7 @@ body {
   text-align: left;
   color: #00747a;
   text-transform: uppercase;
+  cursor: pointer;
 
   &:hover {
     background-color: #eee;

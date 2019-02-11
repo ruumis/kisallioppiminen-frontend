@@ -45,7 +45,6 @@ function resolvePageToRender(initialState: InitialState, location: string, setLo
   const page = getPage(path)
 
   // Hero sijaitilogiikkaa:
-  console.log(initialState.pageParams.pathParams)
   const courses = initialState.courses
 
   if (initialState.pageParams.path !== '/') {
@@ -64,8 +63,9 @@ function resolvePageToRender(initialState: InitialState, location: string, setLo
         if (location !== course.courseName) {
           setLocation(course.courseName)
         }
+      } else {
+        console.log('you are in course page (could not find course)')
       }
-      console.log('you are in course page (could not find course)')
     }, 50)
   } else {
     console.log('You are in frontpage!')
