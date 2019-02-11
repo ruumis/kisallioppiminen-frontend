@@ -70,7 +70,3 @@ function resolveCourseVersion({ selectedCourseVersion }: CoursePageState, course
       }) || course.courseContent[0]
     : undefined
 }
-
-// <Navigation />
-// <Hero />
-// <Chapter header="Luonnolliset luvut ja kokonaisluvut (1.1 - 1.8)" text={text} />
