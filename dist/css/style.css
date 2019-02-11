@@ -1,5 +1,5 @@
 li {
-  list-style-type: none; }
+  list-style-type: decimal; }
 
 span {
   display: inline;
@@ -27,13 +27,18 @@ a {
   min-height: 100vh; }
 
 .course {
-  display: inline-grid;
+  display: inline-table;
   padding: 0px;
   width: 250px;
+  height: 250px;
   margin: 10px;
-  background: beige;
+  background: #c4da87;
   text-align: left;
-  min-height: 250px; }
+  min-height: 250px;
+  border-radius: 10px; }
+  .course-container {
+    min-height: 100vh;
+    margin-bottom: 100px; }
   .course-container {
     min-height: 100vh;
     margin-bottom: 100px; }
@@ -41,18 +46,16 @@ a {
     color: white;
     background: #4fab53;
     margin: 0px;
-    padding-top: 20px;
-    padding-bottom: 20px;
     text-align: center;
     cursor: pointer;
     border-top-left-radius: 10px;
     border-top-right-radius: 10px;
     font-size: 20px;
-    height: 60px; }
+    height: 60px;
+    padding: 20px; }
   .course-title:hover {
     background-color: #36823a; }
   .course-parts {
-    background: #b8ee7c00;
     margin-top: 0px;
     margin-bottom: 0px;
     color: #4fab53;
@@ -71,7 +74,7 @@ a {
   min-height: 100vh;
   margin-bottom: 50px; }
 
-.courseList {
+.course-list {
   width: 80%;
   margin: 0 auto;
   margin-top: 100px;
@@ -122,7 +125,7 @@ a {
   height: 200px;
   position: static;
   bottom: 0; }
-  .footer .fb_link {
+  .footer .fb-link {
     position: relative;
     top: -32px;
     left: 45px;
@@ -132,48 +135,18 @@ a {
     text-transform: none;
     text-shadow: none;
     margin-left: 5px; }
-  .footer .footer_div {
+  .footer .footer-div {
     width: 33%;
     padding-left: 5%;
     padding-right: 5%; }
-  .footer .footer_contact_div {
+  .footer .footer-contact-div {
     width: 33%;
     padding-left: 5%;
     padding-right: 5%;
     border-left: 2px solid #66666626;
     border-right: 2px solid #66666626; }
 
-.chapter {
-  border: 1px;
-  border-style: ridge;
-  border-color: #dddddd;
-  background-color: ghostwhite;
-  padding: 10px;
-  margin: 0 auto;
-  margin-top: 20px;
-  font-size: 24px;
-  width: 80%;
-  text-align: left;
-  color: #00747a;
-  text-transform: uppercase; }
-
-.chapter:hover {
-  background-color: #eee;
-  text-decoration-line: underline; }
-
-.chapter_content {
-  border: 1px;
-  border-color: #dddddd;
-  border-top-style: hidden;
-  background-color: ghostwhite;
-  padding: 10px;
-  margin: 0 auto;
-  display: none;
-  overflow: hidden;
-  border-style: ridge;
-  width: 80%; }
-
-.close_chapter {
+.close-chapter {
   border-style: hidden;
   background-color: #ddd;
   padding: 10px;
@@ -183,12 +156,11 @@ a {
   width: 98%;
   text-align: center;
   color: #00747a; }
+  .close-chapter:hover {
+    background-color: #eee;
+    text-decoration-line: underline; }
 
-.close_chapter:hover {
-  background-color: #eee;
-  text-decoration-line: underline; }
-
-.def_header {
+.definition-header {
   background-color: #86b300;
   margin-bottom: 0px;
   margin-top: 20px;
@@ -197,11 +169,11 @@ a {
   color: aliceblue;
   padding: 10px; }
 
-.def_head_cont {
+.definition-header-content {
   margin: 0px 10px;
   text-transform: uppercase; }
 
-.def_content {
+.definition-content {
   margin-top: 0px;
   background-color: #f2ffcc;
   margin-bottom: 10px;
@@ -209,7 +181,7 @@ a {
   margin: 0 auto;
   padding: 25px 10px; }
 
-.def_text {
+.definition-text {
   margin: 0px 15px; }
 
 .exercise {
@@ -225,12 +197,11 @@ a {
   text-align: left;
   color: #111;
   text-transform: uppercase; }
+  .exercise:hover {
+    background-color: #c4c4c4;
+    text-decoration-line: underline; }
 
-.exercise:hover {
-  background-color: #c4c4c4;
-  text-decoration-line: underline; }
-
-.ex_content {
+.exercise-content {
   border: 1px;
   border-color: #dddddd;
   border-top-style: hidden;
@@ -240,21 +211,20 @@ a {
   overflow: hidden;
   border-style: ridge;
   width: 95%; }
-  .ex_content-hidden {
+  .exercise-content-hidden {
     display: none; }
 
-.ex_answer {
+.exercise-answer {
   display: inline-block;
   color: #00747a;
   text-transform: uppercase;
   margin-top: 10px;
   margin-bottom: 5px; }
+  .exercise-answer:hover {
+    background-color: #d5eff0;
+    text-decoration-line: underline; }
 
-.ex_answer:hover {
-  background-color: #d5eff0;
-  text-decoration-line: underline; }
-
-.ex_answer_content-hidden {
+.exercise-answer-content-hidden {
   display: none; }
 
 .containerwrapper {
@@ -270,12 +240,11 @@ a {
   /* text-align: center; */
   /* margin: 0 auto; */
   margin-right: 6px; }
+  .section:hover {
+    background-color: #00747a;
+    text-decoration-line: underline; }
 
-.section:hover {
-  background-color: #00747a;
-  text-decoration-line: underline; }
-
-.theo_header {
+.theorem-header {
   background-color: #737373;
   margin-bottom: 0px;
   width: 95%;
@@ -284,11 +253,11 @@ a {
   color: aliceblue;
   padding: 10px; }
 
-.theo_head_cont {
+.theorem-header-content {
   margin: 0px 10px;
   text-transform: uppercase; }
 
-.theo_content {
+.theorem-content {
   margin-top: 0px;
   background-color: #cccccc;
   margin-bottom: 10px;
@@ -296,10 +265,10 @@ a {
   margin: 0 auto;
   padding: 25px 10px; }
 
-.theo_text {
+.theorem-text {
   margin: 0px 15px; }
 
-.theo_rationalization {
+.theorem-rationalization {
   margin-top: 0px;
   background-color: #e6e6e6;
   margin-bottom: 10px;
@@ -325,26 +294,25 @@ a {
   text-align: left;
   color: #00747a;
   text-transform: uppercase; }
+  .chapter:hover {
+    background-color: #eee;
+    text-decoration-line: underline; }
 
-.chapter:hover {
-  background-color: #eee;
-  text-decoration-line: underline; }
-
-.chapter_content {
+.chapter-content {
   border: 1px;
+  border-style: ridge;
   border-color: #dddddd;
-  border-top-style: hidden;
   background-color: ghostwhite;
   padding: 10px;
   margin: 0 auto;
+  border-top-style: hidden;
   display: block;
   overflow: hidden;
-  border-style: ridge;
   width: 80%; }
-  .chapter_content-hidden {
+  .chapter-content-hidden {
     display: none; }
 
-.close_chapter {
+.close-chapter {
   border-style: hidden;
   background-color: #ddd;
   padding: 10px;
@@ -354,10 +322,9 @@ a {
   width: 98%;
   text-align: center;
   color: #00747a; }
-
-.close_chapter:hover {
-  background-color: #eee;
-  text-decoration-line: underline; }
+  .close-chapter:hover {
+    background-color: #eee;
+    text-decoration-line: underline; }
 
 .course-selector-box {
   display: inline-block;

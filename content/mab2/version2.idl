@@ -25,7 +25,7 @@
 [CourseSection sectionId:0 value:selectedTab]
   [Chapter header:'Olen ylätunniste']
     // Olen kommentti
-    olen chapter teksti
+    olen chapter teksti2
 
     [Theorem header:'Teoreema 1']
       syvällistä

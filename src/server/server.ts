@@ -17,7 +17,8 @@ server.get('*', (req, res) => {
   const template = createTemplate({
     title: 'Kisällioppiminen.fi',
     body,
-    initialState: JSON.stringify(initialState)
+    initialState: JSON.stringify(initialState),
+    styleSource: '"/css/style.css"'
   })
 
   res.send(template)
