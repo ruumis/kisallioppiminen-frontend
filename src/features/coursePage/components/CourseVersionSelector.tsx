@@ -2,7 +2,7 @@ import React from 'react'
 import { selectCourseVersion as selectCourse } from '../../../reducers/actions/courseActions'
 import { connect } from 'react-redux'
 
-function CourseVersionSelector({versions, selectCourseVersion}: {versions: number[], selectCourseVersion?: typeof selectCourse}) {
+function CourseVersionSelector({versions, selectCourseVersion}: {versions: number[], selectCourseVersion: typeof selectCourse}) {
   // Option key should have better value?
   return (
     <div>
@@ -14,10 +14,8 @@ function CourseVersionSelector({versions, selectCourseVersion}: {versions: numbe
   )
 }
 
-function handleOnChange(e: any, hook?: typeof selectCourse) {
-  if (e.target && hook) { // Lol wtf fix pls
-    hook(e.target.value)
-  }
+function handleOnChange(e: any, hook: typeof selectCourse) {
+  hook(e.target.value)
 }
 
 const mapStateToProps = () => ({})
