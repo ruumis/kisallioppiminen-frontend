@@ -426,3 +426,42 @@ body {
   margin-right: 10px;
   background-color: $greenColor;
 }
+
+.trafficlight {
+  padding: 10px;
+  font-size: 24px;
+
+  &-container {
+    height: 45px;
+    width: 150px;
+    text-align: center;
+    background-color: #fff;
+    margin: 0 auto;
+    margin-top: 15px;
+  }
+
+  &-green {
+    background-color: green;
+  }
+  &-green:hover {
+    background: #009200;
+  }
+
+  &-yellow {
+    background-color: yellow;
+  }
+  &-yellow:hover {
+    background-color: #e2ce00;
+  }
+
+  &-red {
+    background-color: red;
+  }
+  &-red:hover {
+    background-color: #d20000;
+  }
+}
+
+.clickable {
+  cursor: pointer;
+}

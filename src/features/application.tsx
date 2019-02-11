@@ -6,6 +6,7 @@ import Hero from './baseComponents/Hero'
 import { getPage, watchPageChanges } from '../routes'
 import { Provider, connect } from 'react-redux'
 import { initStore } from '../reducers/store'
+import Trafficlights from './coursePage/components/Trafficlights'
 
 export function createApp(initialState: { pageState: InitialState; coursePageState: CoursePageState }) {
   const store = initStore(initialState)
@@ -22,6 +23,7 @@ export function createApp(initialState: { pageState: InitialState; coursePageSta
     const page = resolvePageToRender(state, location, setLocation)
     return (
       <React.Fragment>
+        <Trafficlights />
         <Navigation />
         <Hero location={location} />
         {page}

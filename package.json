@@ -21,6 +21,7 @@
     "ramda": "^0.26.1",
     "react": "16.8.0-alpha.0",
     "react-dom": "16.8.0-alpha.0",
+    "react-emoji-render": "^0.5.0",
     "react-icons": "3.3.0",
     "react-markdown": "4.0.6",
     "react-materialize": "2.6.0",
