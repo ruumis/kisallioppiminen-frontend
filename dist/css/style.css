@@ -239,7 +239,7 @@ a {
   padding: 10px 15px;
   text-shadow: 1px 1px 1px #005357;
   display: inline;
-  cursor: hover;
+  cursor: pointer;
   margin-right: 6px; }
   .section:hover {
     background-color: #00747a;
