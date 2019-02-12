@@ -23,7 +23,6 @@ export function createApp(initialState: { pageState: InitialState; coursePageSta
     const page = resolvePageToRender(state, location, setLocation)
     return (
       <React.Fragment>
-        <Trafficlights />
         <Navigation />
         <Hero location={location} />
         {page}
