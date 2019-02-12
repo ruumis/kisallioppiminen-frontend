@@ -43,8 +43,9 @@ export function coursePage() {
     const courseMaterialVersion = resolveCourseVersion(coursePageState, courseToRender)
     return (
       <div className="coursePageContainer">
-        <h1>Kurssisivu</h1>
-        <CourseVersionSelector versions={courseToRender !== undefined ? courseToRender.courseContent.map(c => c.version) : []} />
+        <div className="courseVersionSelectorContainer">
+          <CourseVersionSelector versions={courseToRender !== undefined ? courseToRender.courseContent.map(c => c.version) : []} />
+        </div>
         {typeof window !== 'undefined' ? (
           <IdyllDocument markup={courseMaterialVersion ? courseMaterialVersion.content : ''} components={availableComponents} />
         ) : (
