@@ -329,6 +329,7 @@ a {
     text-decoration-line: underline; }
 
 .course-selector-box {
+  background-image: linear-gradient(to bottom, #c4da87, #4fab53);
   display: inline-block;
   padding: 13px;
   border-radius: 5px;
@@ -339,3 +340,58 @@ a {
   margin-bottom: 10px;
   margin-right: 10px;
   background-color: #4fab53; }
+
+.trafficlight-container {
+  height: 49px;
+  width: 150px;
+  text-align: center;
+  border-radius: 10px;
+  margin: 0 auto; }
+
+.trafficlight-green {
+  background-color: green;
+  padding: 6px;
+  font-size: 24px;
+  position: relative;
+  top: 10px;
+  border-radius: 10px;
+  margin-right: 10px;
+  box-shadow: 2px 2px 0px 1px black; }
+
+.trafficlight-green:hover {
+  background: #009200;
+  box-shadow: 1px 1px 0px 1px black; }
+
+.trafficlight-yellow {
+  background-color: yellow;
+  padding: 6px;
+  font-size: 24px;
+  position: relative;
+  top: 10px;
+  border-radius: 10px;
+  margin-right: 10px;
+  box-shadow: 2px 2px 0px 1px black; }
+
+.trafficlight-yellow:hover {
+  background-color: #e2ce00;
+  box-shadow: 1px 1px 0px 1px black; }
+
+.trafficlight-red {
+  background-color: red;
+  padding: 6px;
+  font-size: 24px;
+  position: relative;
+  top: 10px;
+  border-radius: 10px;
+  box-shadow: 2px 2px 0px 1px black; }
+
+.trafficlight-red:hover {
+  background-color: #d20000;
+  box-shadow: 1px 1px 0px 1px black; }
+
+.clickable {
+  cursor: pointer; }
+
+.mitenTehtavaMeni {
+  text-align: center;
+  margin-bottom: 10px; }
