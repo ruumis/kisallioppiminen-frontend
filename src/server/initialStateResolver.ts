@@ -1,7 +1,8 @@
 import fs from 'fs'
 import { InitialState, Course, CoursePageState } from '../types/InitialState'
+import { getCourses } from './services/contentService'
 
-interface ContentConfig {
+export interface ContentConfig {
   id: string
   courseName: string
   quickLinks: string[]
@@ -11,8 +12,8 @@ interface ContentConfig {
 const contentConfig: ContentConfig[] = JSON.parse(fs.readFileSync('./content/content_config.json', 'utf8'))
 // const idyllConfig: ContentConfig = JSON.parse(fs.readFileSync('./content/index.idl', 'utf-8'))
 
-export function resolveInitialState(path: string): { pageState: InitialState; coursePageState: CoursePageState } {
-  const courses = getCourses()
+export async function resolveInitialState(path: string): Promise<{ pageState: InitialState; coursePageState: CoursePageState }> {
+  const courses = await Promise.all(getCourses(contentConfig))
   return {
     pageState: {
       courses: courses || '',
@@ -25,16 +26,4 @@ export function resolveInitialState(path: string): { pageState: InitialState; co
       selectedCourseVersion: null
     }
   }
-}
-
-function getCourses(): Course[] {
-  return contentConfig.map(({ id, courseName, quickLinks, contentFiles }) => {
-    const courseContent: Array<{ version: number; content: string }> = contentFiles.map(({ version, path }) => ({ version, content: fs.readFileSync(path, 'utf8') }))
-    return {
-      id,
-      courseName,
-      quickLinks,
-      courseContent
-    }
-  })
 }
