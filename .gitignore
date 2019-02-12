@@ -1,7 +1,6 @@
 node_modules/
 .vscode/  
-dist/css/*.vscode\  
-dist/js/*
+dist
 yarn-error.log
 .env
 .DS_Store
