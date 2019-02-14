@@ -245,7 +245,8 @@ a {
   display: none; }
 
 .containerwrapper {
-  text-align: center; }
+  padding-left: 10%;
+  padding-right: 10%; }
 
 .section {
   background-color: #a8bb73;
@@ -253,9 +254,20 @@ a {
   font-size: 20px;
   padding: 10px 15px;
   text-shadow: 1px 1px 1px #005357;
-  display: inline;
+  display: inline-table;
   cursor: pointer;
-  margin-right: 6px; }
+  margin-right: 6px;
+  margin-top: 10px; }
+  .section-active {
+    color: #fff;
+    font-size: 20px;
+    padding: 10px 15px;
+    text-shadow: 1px 1px 1px #005357;
+    display: inline;
+    /* text-align: center; */
+    /* margin: 0 auto; */
+    margin-right: 6px;
+    background-color: #30a491; }
   .section:hover {
     background-color: #00747a;
     text-decoration-line: underline; }
@@ -410,11 +422,8 @@ a {
 .mitenTehtavaMeni {
   text-align: center;
   margin-bottom: 10px; }
-<<<<<<< HEAD
 
 .courseVersionSelectorContainer {
   width: 80%;
   margin: 0 auto;
   margin-bottom: 50px; }
-=======
->>>>>>> dc44bcf29d942fc03e9033ae9d1e35e52395c653
