@@ -119,6 +119,21 @@ a {
     margin: -15px;
     padding: 15px; }
 
+.navigatorBottom {
+  background-color: #c3da877a;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  padding-left: 15px;
+  padding-right: 15px;
+  height: 50px; }
+  .navigatorBottom-item {
+    display: inline-block;
+    padding: 5px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    font-weight: bold; }
+
 .footer {
   background: #c4da87;
   display: flex;

@@ -15,6 +15,7 @@ import Theorem from './components/Theorem'
 import Rationalization from './components/Rationalization'
 import Definition from './components/Definition'
 import MaterialPicture from './components/MaterialPicture'
+import NavBottom from '../baseComponents/NavBottom'
 
 export function coursePage() {
   const availableComponents = {
@@ -51,6 +52,7 @@ export function coursePage() {
         ) : (
           <IdyllDocument ast={compiler(courseMaterialVersion ? courseMaterialVersion.content : '', { async: false }) as Node[]} components={availableComponents} />
         )}
+        <NavBottom />
       </div>
     )
   }
