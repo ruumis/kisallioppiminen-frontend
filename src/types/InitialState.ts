@@ -12,9 +12,9 @@ export interface Course {
   id: string
   courseName: string
   quickLinks: string[]
-  courseContent: Array<{ version: number; content: string }>
+  courseContent: Array<{ version: string; content: string }>
 }
 
 export interface CoursePageState {
-  selectedCourseVersion: number | null
+  selectedCourseVersion: string | null
 }
