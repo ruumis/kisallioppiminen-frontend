@@ -1,17 +1,14 @@
-[var name:'selectedTab' value:0 /]
 
 [CourseMenu]
   [CourseTab header:'MAA3'
-          tabId:0
-          value:selectedTab /]
+          tabId:0 /]
 
   [CourseTab header:'1. Kolmio'
-          tabId:1
-          value:selectedTab /]
+          tabId:1 /]
 
 [/CourseMenu]
 
-[CourseSection sectionId:0 value:selectedTab]
+[CourseSection sectionId:0]
   [Chapter header:'Luvun tavoitteet']
     // Olen kommentti
 
@@ -26,7 +23,7 @@
   [/Chapter]
 [/CourseSection]
 
-[CourseSection sectionId:1 value:selectedTab]
+[CourseSection sectionId:1]
   [Chapter header:'Sama vanha: Luvun tavoitteet']
 
     Tässä ensimmäinen kuva, joka on lisätty idyllillä.

@@ -1,17 +1,14 @@
-[var name:'selectedTab' value:0 /]
 
 [CourseMenu]
   [CourseTab header:'MAA4'
-          tabId:0
-          value:selectedTab /]
+          tabId:0 /]
 
   [CourseTab header:'1. Vektorit ja xy-koordinaatisto'
-          tabId:1
-          value:selectedTab /]
+          tabId:1 /]
 
 [/CourseMenu]
 
-[CourseSection sectionId:0 value:selectedTab]
+[CourseSection sectionId:0 ]
   [Chapter header:'Luvun tavoitteet']
     // Olen kommentti
     Tässä tavoitteet.
@@ -19,7 +16,7 @@
   [/Chapter]
 [/CourseSection]
 
-[CourseSection sectionId:1 value:selectedTab]
+[CourseSection sectionId:1]
   [Chapter header:'v2: Luvun tavoitteet']
     // Olen kommentti
     Tässä tavoitteet.

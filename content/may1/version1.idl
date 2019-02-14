@@ -1,33 +1,27 @@
 
 [CourseMenu]
   [CourseTab header:'MAY1'
-          tabId:0
-          value:selectedTab /]
+          tabId:0 /]
 
   [CourseTab header:'1. Luvut ja laskutoimitukset'
-          tabId:1
-          value:selectedTab /]
+          tabId:1 /]
 
   [CourseTab header:'2. Potenssi ja logaritmi'
-          tabId:2
-          value:selectedTab /]
+          tabId:2 /]
 
   [CourseTab header:'3. Lukujonot ja summat'
-          tabId:3 
-          value:selectedTab /]
+          tabId:3 /]
 
   [CourseTab header:'4. Funktio'
-          tabId:4 
-          value:selectedTab /]
+          tabId:4 /]
 
   [CourseTab header:'5. Prosenttilaskenta'
-          tabId:5
-          value:selectedTab/]
+          tabId:5 /]
 
 [/CourseMenu]
 
 
-[CourseSection sectionId:0 value:selectedTab]
+[CourseSection sectionId:0 ]
   [Chapter header:'Kurssin tavoitteet ja keskeiset sisällöt']
     Matematiikan asema aikamme kulttuurissa edellyttää valmiutta ymmärtää, hyödyntää ja tuottaa matemaattisesti esitettyä tietoa. Sillä on merkittävä tai ratkaiseva rooli muun muassa tieteissä, teknologiassa, taloudessa, yrittäjyydessä, terveydenhuollossa ja turvallisuudessa. Matematiikan opiskelun tehtävänä on tutustuttaa sinut matemaattisen ajattelun malleihin sekä matematiikan perusideoihin ja rakenteisiin, opettaa sinua käyttämään puhuttua ja kirjoitettua matematiikan kieltä sekä kehittää laskemisen, ilmiöiden mallintamisen ja ongelmien ratkaisemisen taitojasi.
 
@@ -190,7 +184,7 @@
   [/Chapter]
 [/CourseSection]
 
-[CourseSection sectionId:5 value:selectedTab]
+[CourseSection sectionId:5]
   [Chapter header:'5. Luku']
     // Olen kommentti
     olen 5. luvun chapter teksti
