@@ -295,7 +295,8 @@ a {
 }
 
 .containerwrapper {
-  text-align: center;
+  padding-left: 10%;
+  padding-right: 10%;
 }
 
 .section {
@@ -304,9 +305,10 @@ a {
   font-size: 20px;
   padding: 10px 15px;
   text-shadow: 1px 1px 1px #005357;
-  display: inline;
+  display: inline-table;
   cursor: pointer;
   margin-right: 6px;
+  margin-top: 10px;
   &-active {
     color: #fff;
     font-size: 20px;
@@ -316,7 +318,7 @@ a {
     /* text-align: center; */
     /* margin: 0 auto; */
     margin-right: 6px;
-    background-color: #30A491;
+    background-color: #30a491;
   }
   &:hover {
     background-color: #00747a;
