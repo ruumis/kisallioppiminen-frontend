@@ -6,6 +6,7 @@ import Hero from './baseComponents/Hero'
 import { getPage, watchPageChanges } from '../routes'
 import { Provider, connect } from 'react-redux'
 import { initStore } from '../reducers/store'
+import Trafficlights from './coursePage/components/Trafficlights'
 
 export function createApp(initialState: { pageState: InitialState; coursePageState: CoursePageState }) {
   const store = initStore(initialState)
@@ -17,12 +18,12 @@ export function createApp(initialState: { pageState: InitialState; coursePageSta
 
   const app = (props: { initialState: InitialState }) => {
     const { initialState: state } = props
-    const page = resolvePageToRender(state)
+    const {component, pageName} = resolvePageToRender(state)
     return (
       <React.Fragment>
         <Navigation />
-        <Hero />
-        {page}
+        <Hero location={pageName} />
+        {component}
         <Footer />
       </React.Fragment>
     )
@@ -41,11 +42,13 @@ function resolvePageToRender(initialState: InitialState) {
   const { pageParams } = initialState
   const { path } = pageParams
   const page = getPage(path)
+
   if (page === undefined) {
-    return <h1>404 Not found :(</h1>
+    return {component: <h1>404 Not found :(</h1>, pageName: 'Not found'}
   }
 
   initialState.pageParams.pathParams = page.pathParams
+  const {component, pageName} = page
 
-  return page.component()
+  return {component: component(), pageName}
 }

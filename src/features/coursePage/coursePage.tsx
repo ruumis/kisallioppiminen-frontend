@@ -44,8 +44,9 @@ export function coursePage() {
     const courseMaterialVersion = resolveCourseVersion(coursePageState, courseToRender)
     return (
       <div className="coursePageContainer">
-        <h1>Kurssisivu</h1>
-        <CourseVersionSelector versions={courseToRender !== undefined ? courseToRender.courseContent.map(c => c.version) : []} />
+        <div className="courseVersionSelectorContainer">
+          <CourseVersionSelector versions={courseToRender !== undefined ? courseToRender.courseContent.map(c => c.version) : []} />
+        </div>
         {typeof window !== 'undefined' ? (
           <IdyllDocument markup={courseMaterialVersion ? courseMaterialVersion.content : ''} components={availableComponents} />
         ) : (
@@ -76,7 +77,3 @@ function resolveCourseVersion({ selectedCourseVersion }: CoursePageState, course
       }) || course.courseContent[0]
     : undefined
 }
-
-// <Navigation />
-// <Hero />
-// <Chapter header="Luonnolliset luvut ja kokonaisluvut (1.1 - 1.8)" text={text} />
