@@ -1,17 +1,14 @@
-[var name:'selectedTab' value:0 /]
 
 [CourseMenu]
   [CourseTab header:'MAA7'
-          tabId:0
-          value:selectedTab /]
+          tabId:0 /]
 
   [CourseTab header:'1. Trigonometriaa yksikköympyrässä'
-          tabId:1
-          value:selectedTab /]
+          tabId:1 /]
 
 [/CourseMenu]
 
-[CourseSection sectionId:0 value:selectedTab]
+[CourseSection sectionId:0 ]
 
   [Chapter header:'Luvun tavoitteet']
     Tässä tavoitteet.
@@ -19,7 +16,7 @@
 
 [/CourseSection]
 
-[CourseSection sectionId:1 value:selectedTab]
+[CourseSection sectionId:1 ]
 
   [Chapter header:'v2: Luvun tavoitteet']
     Tässä tavoitteet (v2).

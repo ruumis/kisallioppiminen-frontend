@@ -1,28 +1,22 @@
-[var name:'selectedTab' value:0 /]
 
 [CourseMenu]
   [CourseTab header:'MAY1'
-          tabId:0
-          value:selectedTab /]
+          tabId:0 /]
 
   [CourseTab header:'1. Luvut ja laskutoimitukset'
-          tabId:1
-          value:selectedTab /]
+          tabId:1 /]
 
   [CourseTab header:'2. Luku'
-          tabId:2
-          value:selectedTab /]
+          tabId:2 /]
 
   [CourseTab header:'3. Luku'
-          tabId:3 
-          value:selectedTab /]
+          tabId:3 /]
 
   [CourseTab header:'4. Luku'
-          tabId:4 
-          value:selectedTab /]
+          tabId:4 /]
 [/CourseMenu]
 
-[CourseSection sectionId:0 value:selectedTab]
+[CourseSection sectionId:0 ]
   [Chapter header:'Olen erilainen ylätunniste']
     // Olen kommentti
     olen chapter teksti
@@ -59,7 +53,7 @@
   [/Chapter]
 [/CourseSection]
 
-[CourseSection sectionId:1 value:selectedTab]
+[CourseSection sectionId:1]
   [Chapter header:'Rationaaliluvut (1.9-1.24)'] 
   Olen kolmas kappale
 
@@ -73,7 +67,7 @@
   [/Chapter]
 [/CourseSection]
 
-[CourseSection sectionId:2 value:selectedTab]
+[CourseSection sectionId:2 ]
   [Chapter header:'2. Luku']
     // Olen kommentti
     olen 2. luvun chapter teksti
@@ -90,7 +84,7 @@
   [/Chapter]
 [/CourseSection]
 
-[CourseSection sectionId:3 value:selectedTab]
+[CourseSection sectionId:3]
   [Chapter header:'3. Luku']
     // Olen kommentti
     olen chapter teksti kolmannelle luvulle 
@@ -107,7 +101,7 @@
   [/Chapter]
 [/CourseSection]
 
-[CourseSection sectionId:4 value:selectedTab]
+[CourseSection sectionId:4]
   [Chapter header:'4. Luku']
     // Olen kommentti
     olen chapter teksti neljännelle luvulle 
