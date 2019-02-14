@@ -50,19 +50,9 @@ export function coursePage() {
         {typeof window !== 'undefined' ? (
           <IdyllDocument markup={courseMaterialVersion ? courseMaterialVersion.content : ''} components={availableComponents} />
         ) : (
-<<<<<<< HEAD
-<<<<<<< 70b4eb7e2543ecbd1162244756ba19572e6b0b9c
-          <IdyllDocument ast={compiler(courseMaterialVersion ? courseMaterialVersion.content : '', { async: false }) as Node[]} components={availableComponents} />
-        )}
+            <IdyllDocument ast={compiler(courseMaterialVersion ? courseMaterialVersion.content : '', { async: false }) as Node[]} components={availableComponents} />
+          )}
         <NavBottom />
-=======
-            <IdyllDocument ast={compiler(courseMaterialVersion ? courseMaterialVersion.content : '', { async: false }) as Node[]} components={availableComponents} />
-          )}
->>>>>>> Course version is a string
-=======
-            <IdyllDocument ast={compiler(courseMaterialVersion ? courseMaterialVersion.content : '', { async: false }) as Node[]} components={availableComponents} />
-          )}
->>>>>>> f4747a75742880a551f381205671785363124309
       </div>
     )
   }
