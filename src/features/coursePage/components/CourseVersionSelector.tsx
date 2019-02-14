@@ -2,7 +2,7 @@ import React from 'react'
 import { selectCourseVersion as selectCourse } from '../../../reducers/actions/courseActions'
 import { connect } from 'react-redux'
 
-function CourseVersionSelector({versions, selectCourseVersion}: {versions: number[], selectCourseVersion: typeof selectCourse}) {
+function CourseVersionSelector({ versions, selectCourseVersion }: { versions: string[], selectCourseVersion: typeof selectCourse }) {
   // Option key should have better value?
   return (
     <div>

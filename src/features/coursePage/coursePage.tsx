@@ -49,8 +49,8 @@ export function coursePage() {
         {typeof window !== 'undefined' ? (
           <IdyllDocument markup={courseMaterialVersion ? courseMaterialVersion.content : ''} components={availableComponents} />
         ) : (
-          <IdyllDocument ast={compiler(courseMaterialVersion ? courseMaterialVersion.content : '', { async: false }) as Node[]} components={availableComponents} />
-        )}
+            <IdyllDocument ast={compiler(courseMaterialVersion ? courseMaterialVersion.content : '', { async: false }) as Node[]} components={availableComponents} />
+          )}
       </div>
     )
   }
@@ -71,7 +71,7 @@ function resolveCourse({ pageParams, courses }: InitialState) {
 function resolveCourseVersion({ selectedCourseVersion }: CoursePageState, course?: Course) {
   return course
     ? course.courseContent.find(content => {
-        return content.version === Number(selectedCourseVersion)
-      }) || course.courseContent[0]
+      return content.version === selectedCourseVersion
+    }) || course.courseContent[0]
     : undefined
 }
