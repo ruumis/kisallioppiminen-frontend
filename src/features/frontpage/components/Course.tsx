@@ -5,7 +5,7 @@ interface Props {
   id: string
   courseName: string
   quickLinks: string[]
-  version: number
+  version: string
 }
 
 export default class Course extends Component<Props, any> {
