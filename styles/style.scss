@@ -100,6 +100,26 @@ a {
   margin-bottom: 50px;
 }
 
+.infoPageContainer {
+  min-height: 100vh;
+  margin-bottom: 50px;
+
+  &-heading {
+    margin-left: 9%;
+    margin-right: 9%;
+  }
+
+  &-subheading {
+    font-weight: normal;
+    text-transform: uppercase;
+  }
+
+  &-list {
+    list-style-type: circle;
+    padding-left: 1%;
+  }
+}
+
 .course-list {
   width: 80%;
   margin: 0 auto;

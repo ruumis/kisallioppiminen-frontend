@@ -5,13 +5,15 @@ import Chapter from '../coursePage/components/Chapter'
 export function infoPage() {
   const app = () => {
     return (
-      <div className="frontPageContainer">
-        <h2>Tietoa sivusta</h2>
-        <p>
-          Tälle sivulle luodaan vuodesta 2015 alkaen uusien lukion opetussuunnitelmien perusteiden mukaisia avoimia oppimateriaaleja matematiikan opiskeluun ja
-          opettamiseen. Materiaalit on erityisesti suunniteltu tukemaan tehostetun kisällioppimisen menetelmän käyttöä. Työ tehdään Helsingin kaupungin Mäkelänrinteen
-          lukion ja Helsingin yliopiston matematiikan ja tilastotieteen laitoksen välisenä yhteistyönä. Hanketta rahoittaa Teknologiateollisuuden 100-vuotissäätiö.
-        </p>
+      <div className="infoPageContainer">
+        <div className="infoPageContainer-heading">
+          <h2 className="infoPageContainer-subheading">Tietoa sivusta</h2>
+          <p>
+            Tälle sivulle luodaan vuodesta 2015 alkaen uusien lukion opetussuunnitelmien perusteiden mukaisia avoimia oppimateriaaleja matematiikan opiskeluun ja
+            opettamiseen. Materiaalit on erityisesti suunniteltu tukemaan tehostetun kisällioppimisen menetelmän käyttöä. Työ tehdään Helsingin kaupungin Mäkelänrinteen
+            lukion ja Helsingin yliopiston matematiikan ja tilastotieteen laitoksen välisenä yhteistyönä. Hanketta rahoittaa Teknologiateollisuuden 100-vuotissäätiö.
+          </p>
+        </div>
         <Chapter header="MITÄ ON TEHOSTETTU KISÄLLIOPPIMINEN?">
           <div>
             <p>
@@ -47,8 +49,8 @@ export function infoPage() {
               lukion oppimistilanteeseen. Lukiokurssien materiaaleissa etenkin tehtäviä pitää uudistaa soveltuviksi opetusmenetelmälle.
             </p>
             <div>
-              <div>AIHEESTA LISÄÄ:</div>
-              <ul>
+              <h2 className="infoPageContainer-subheading">AIHEESTA LISÄÄ:</h2>
+              <ol className="infoPageContainer-list">
                 <li>Vikberg T., Oinonen L. & Rämö J. (2015): Tehostettu kisällioppiminen matematiikan yliopisto-opetuksessa. Yliopistopedagogiikka. </li>
                 <li>Lahdenperä J. (2015): Opiskelijoiden matemaattinen osaaminen tehostetun kisällioppimisen menetelmässä. Pro gradu -työ. Helsingin yliopisto.</li>
                 <li>Torkkeli M. (2015): Opiskelijoiden kokemukset matematiikan tehostetussa kisällioppimisessa lukiossa. Pro gradu -työ. Helsingin yliopisto.</li>
@@ -57,7 +59,7 @@ export function infoPage() {
                   Vondrová (Eds.), Proceedings of the Ninth Congress of the European Society for Research in Mathematics Education (pp. 2242–2248). Prague: Charles
                   University in Prague, Faculty of Education and ERME.
                 </li>
-              </ul>
+              </ol>
             </div>
           </div>
         </Chapter>
@@ -71,16 +73,16 @@ export function infoPage() {
               Kurssinhallntajärjestelmässä on edelleen ilmeisiä puutteita. Esimerkiksi kurssien päivittyessä vanhojen versioiden merkinnät joudutaan jyräämään, eikä
               palvelu sen takia sovellu opiskelijoiden pitkäaikaiseen kurssien ylittävään seurantaan.
             </p>
-            <div>REKISTERÖITYMINEN PALVELUUN</div>
+            <h2 className="infoPageContainer-subheading">REKISTERÖITYMINEN PALVELUUN</h2>
             <p>
               Palvelu edellyttää opettajalta ja opiskelijoilta Google-tunnuksia, joilla rekisteröidytään palveluun. Rekisteröitymisen yhteydessä palvelu saa tiedon
               käyttäjän nimestä ja sähköpostiosoitteesta. Muita tietoja ei kerätä eikä palvelua varten tarvitse luoda omia tunnuksia.
             </p>
-            <ul>
+            <ul className="infoPageContainer-list">
               <li>Palvelun käyttöehdot</li>
               <li>Palvelun tietosuojaseloste</li>
             </ul>
-            <div>KURSSIN LUONTI</div>
+            <h2 className="infoPageContainer-subheading">KURSSIN LUONTI</h2>
             <p>Rekisteröinnin jälkeen voit luoda kurssihallinta-sivulla uuden kurssin jolla on kurssiavain:</p>
             <p>
               Kun päivität Kurssihallinta-sivun, sivulle ilmestyy tekemäsi kurssi ja sen avain näkyy otsikossa. Painamalla kurssin otsikossa nuolta näet kaikki kurssin
@@ -88,11 +90,11 @@ export function infoPage() {
             </p>
             <p>Kun opiskelijoita liittyy kurssille ja he rupeavat tekemään tehtäviä, näet heidän edistymisensä paneelissa:</p>
             <p>Kun liikutat hiirtä ruutujen päällä, näet mistä tehtävästä ja kenen vastauksesta on kyse.</p>
-            <div>KURSSILLE ILMOITTAUTUMINEN</div>
+            <h2 className="infoPageContainer-subheading">KURSSILLE ILMOITTAUTUMINEN</h2>
             <p>Omat kurssit -sivulta voit ilmoittautua kurssille opettajan antaman kurssiavaimen avulla. Kurssin opettaja ei voi liittyä kurssinsa opiskelijaksi.</p>
-            <div>OPISKELIJANA KURSSILLA</div>
+            <h2 className="infoPageContainer-subheading">OPISKELIJANA KURSSILLA</h2>
             <p>Kun opiskelija menee ilmoittautumisen jälkeen kurssille ja avaa tehtävän voi hän valita kolmesta hymynaamasta:</p>
-            <ol>
+            <ol className="infoPageContainer-list">
               <li>En osannut tehtävää. Tarvitsen apua.</li>
               <li>Ratkaisin tehtävän, mutta olen epävarma vastauksesta.</li>
               <li>Ratkaisin tehtävän ja osaan tämän.</li>
@@ -163,8 +165,8 @@ export function infoPage() {
               myös muilta kommentteja ja konkreettisia muutosehdotuksia GitHub-versionhallintapalveluun.
             </p>
             <div>
-              <div>AIHEESTA LISÄÄ:</div>
-              <ul>
+              <h2 className="infoPageContainer-subheading">AIHEESTA LISÄÄ:</h2>
+              <ul className="infoPageContainer-list">
                 <li>
                   Orr,D., M. Rimini & D. van Damme (2015), Open Educational Resources: A Catalyst for Innovation, Educational Research and Innovation, OECD Publishing,
                   Paris. DOI: http://dx.doi.org/10.1787/9789264247543-en{' '}
