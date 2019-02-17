@@ -16,6 +16,7 @@
 
 [CourseSection sectionId:0 ]
   [Chapter header:'Kurssin tavoitteet ja keskeiset sisällöt']
+  // Kommentteja voi lisätä materiaalin koodin sekaan selkeyttämään
     ### Kurssin tavoitteena on, että
 
 * harjaannut hahmottamaan ja kuvaamaan tilaa sekä muotoa koskevaa tietoa sekä kaksi- että kolmiulotteisissa tilanteissa
@@ -58,6 +59,7 @@
 
 [CourseSection sectionId:1]
   [Chapter header:'LUVUN TAVOITTEET'] 
+      // Kommentteja voi lisätä materiaalin koodin sekaan selkeyttämään
     [Definition header:'']
       Tämän luvun tavoitteena on, että osaat ratkaista erilaisia geometrisia ongelmia kolmioiden avulla. Osaat
 
@@ -70,6 +72,7 @@
   [/Chapter]
 
   [Chapter header:'KOLMION PINTA-ALA JA KULMAT (1.1 - 1.7)'] 
+      // Kommentteja voi lisätä materiaalin koodin sekaan selkeyttämään
       Kolmioita voidaan käyttää apuna monien geometristen ongelmien ratkaisemisessa. 
       Aloitammekin tämän kurssin palauttamalla mieleen kolmioiden geometrisia ominaisuuksia.
 
