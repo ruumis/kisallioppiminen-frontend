@@ -447,3 +447,22 @@ a {
   width: 80%;
   margin: 0 auto;
   margin-bottom: 50px; }
+
+.scoreboard {
+  overflow: scroll; }
+  .scoreboard-light-green {
+    padding: 1em;
+    margin: 2px;
+    background-color: green; }
+  .scoreboard-light-yellow {
+    padding: 1em;
+    margin: 2px;
+    background-color: yellow; }
+  .scoreboard-light-red {
+    padding: 1em;
+    margin: 2px;
+    background-color: red; }
+  .scoreboard-light-gray {
+    padding: 1em;
+    margin: 2px;
+    background-color: gray; }
