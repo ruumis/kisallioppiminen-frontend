@@ -8,9 +8,12 @@ interface Props {
   openedBoxes: { [index: string]: boolean }
 }
 
-const Chapter = (props: any) => {
+const Chapter = (props: any, ref: any) => {
   const [open, setOpen] = useState(false)
   const contentClassname = classnames('chapter-content', { 'chapter-content-hidden': open !== true })
+  
+  // props.value = "Chapter"
+  ref = "chapter"
 
   const start = props.count.number
 
