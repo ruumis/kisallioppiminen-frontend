@@ -91,7 +91,7 @@
     [/Exercise]
 
     [Exercise header:'TEHTÄVÄ 4.20: ENSIMMÄISEN ASTEEN POLYNOMIFUNKTIO' open:false]
-      a) Piirrä laskimellasi samaan kuvaan funktioiden [Equation]f(x)=0,5x+1, g(x)=2x+1 ja h(x)=−x+1[/Equation] kuvaajat.
+      a) Piirrä laskimellasi samaan kuvaan funktioiden [Equation]f(x)=0,5x+1 [/Equation], [Equation]g(x)=2x+1[/Equation] ja [Equation]h(x)=−x+1[/Equation] kuvaajat.
 
       b) Mitä yhteistä näiden funktioiden kuvaajilla on? Entä mitä eroa niillä on?
 
