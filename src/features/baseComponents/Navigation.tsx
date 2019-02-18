@@ -15,7 +15,7 @@ export function Navigation() {
           </a>
         </li>
         <li className="navigator-item">
-          <a className="navigator-link" href="#">
+          <a className="navigator-link" href="/tietoa">
             Tietoa
           </a>
         </li>
