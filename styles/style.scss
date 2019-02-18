@@ -569,3 +569,31 @@ a {
   margin: 0 auto;
   margin-bottom: 50px;
 }
+
+.scoreboard {
+  overflow: scroll;
+
+  &-light {
+
+    &-green {
+      padding: 1em;
+      margin: 2px;
+      background-color: green;
+    }
+    &-yellow {
+      padding: 1em;
+      margin: 2px;
+      background-color: yellow;
+    }
+    &-red {
+      padding: 1em;
+      margin: 2px;
+      background-color: red;
+    }
+    &-gray {
+      padding: 1em;
+      margin: 2px;
+      background-color: gray;
+    }
+  }
+}
