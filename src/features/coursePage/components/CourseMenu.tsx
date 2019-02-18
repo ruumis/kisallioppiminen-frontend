@@ -1,6 +1,7 @@
 import React from 'react'
 
-const ContainerWrapper = (props: any) => {
+const CourseMenu = (props: any, ref: any) => {
+  ref = "menuuuu"
   return (
     <div className="containerwrapper">
       {props.children}
@@ -8,4 +9,4 @@ const ContainerWrapper = (props: any) => {
   )
 }
 
-export default ContainerWrapper
+export default CourseMenu
