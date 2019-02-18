@@ -117,6 +117,16 @@ a {
   margin-bottom: 50px;
 }
 
+.courseAdministrationPageContainer {
+  min-height: 100vh;
+  margin-bottom: 50px;
+
+  &-heading {
+    margin-left: 9%;
+    margin-right: 9%;
+  }
+}
+
 .infoPageContainer {
   min-height: 100vh;
   margin-bottom: 50px;
