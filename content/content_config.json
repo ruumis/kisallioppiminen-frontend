@@ -2,13 +2,7 @@
   {
     "id": "123",
     "courseName": "MAY1 - Luvut ja lukujonot",
-    "quickLinks": [
-      "Luvut ja laskutoimitukset",
-      "Potenssit ja logaritmit",
-      "Lukujonot ja summat",
-      "Funktio",
-      "Potenssilaskenta"
-    ],
+    "quickLinks": ["Luvut ja laskutoimitukset", "Potenssit ja logaritmit", "Lukujonot ja summat", "Funktio", "Potenssilaskenta"],
     "contentFiles": [
       {
         "version": 1.0,
@@ -19,9 +13,7 @@
   {
     "id": "321",
     "courseName": "MAA2 - Polynomifunktiot ja -yhtälöt",
-    "quickLinks": [
-      "Ensimmäisen asteen polynomifunktio"
-    ],
+    "quickLinks": ["Ensimmäisen asteen polynomifunktio"],
     "contentFiles": [
       {
         "version": 1.0,
@@ -36,9 +28,7 @@
   {
     "id": "1234",
     "courseName": "MAA3 - Geometria",
-    "quickLinks": [
-      "Kolmio"
-    ],
+    "quickLinks": ["Kolmio"],
     "contentFiles": [
       {
         "version": 1.0,
@@ -53,9 +43,7 @@
   {
     "id": "12345",
     "courseName": "MAA4 - Vektorit",
-    "quickLinks": [
-      "Vektorit ja xy-koordinaatisto"
-    ],
+    "quickLinks": ["Vektorit ja xy-koordinaatisto"],
     "contentFiles": [
       {
         "version": 1.0,
@@ -66,9 +54,7 @@
   {
     "id": "12346",
     "courseName": "MAA5 - Analyyttinen geometria",
-    "quickLinks": [
-      "Etäisyys"
-    ],
+    "quickLinks": ["Etäisyys"],
     "contentFiles": [
       {
         "version": 1.0,
@@ -83,9 +69,7 @@
   {
     "id": "12347",
     "courseName": "MAA6 - Derivaatta",
-    "quickLinks": [
-      "Derivaatta"
-    ],
+    "quickLinks": ["Derivaatta"],
     "contentFiles": [
       {
         "version": 1.0,
@@ -96,9 +80,7 @@
   {
     "id": "12348",
     "courseName": "MAA7 - Trigonometriset funktiot",
-    "quickLinks": [
-      "Trigonometriaa yksikköympyrässä"
-    ],
+    "quickLinks": ["Trigonometriaa yksikköympyrässä"],
     "contentFiles": [
       {
         "version": 1.0,
@@ -109,16 +91,14 @@
   {
     "id": "1337",
     "courseName": "MAB2 - Tabit ja sarakkeet",
-    "quickLinks": [
-      "Viidennen asteen polynomifunktio"
-    ],
+    "quickLinks": ["Viidennen asteen polynomifunktio"],
     "contentFiles": [
       {
         "version": "Mäntsälän lukio",
         "path": "./content/mab2/version1.idl"
       },
       {
-        "version": "KOlarin lukio",
+        "version": "Kolarin lukio",
         "path": "./content/mab2/version2.idl"
       }
     ]
