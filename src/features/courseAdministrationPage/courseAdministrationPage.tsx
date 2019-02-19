@@ -11,6 +11,9 @@ export function courseAdministrationPage() {
         <Chapter header="Testikurssi">
           <Scoreboard />
         </Chapter>
+        <Chapter header="Toinen kurssi">
+          <Scoreboard />
+        </Chapter>
       </div>
     )
   }
