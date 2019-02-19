@@ -12,20 +12,22 @@ const Chapter = (props: any) => {
   const [open, setOpen] = useState(false)
   const contentClassname = classnames('chapter-content', { 'chapter-content-hidden': open !== true })
 
+  const start = props.count.number
+
   const arr = filterChildren(props.children, (c: any) => {
     return true
   })
 
-  let count = 0
-
+  const toggleVisibility = () => {
+    props.count.number = start
+    setOpen(!open)
+  }
   const arr2 = mapChildren(arr, (c: any) => {
     if (c.type.name && c.type.name.toLowerCase() === 'exercise') {
-      count++
+      props.count.number++
       const clone = React.cloneElement(c, {
-        header: `Tehtävä ${count}: ${c.props.header}`
+        header: `Tehtävä ${props.numeral}.${props.count.number}: ${c.props.header}`
       })
-      console.log(clone)
-      c = clone
       return clone
     }
     return c
@@ -33,12 +35,12 @@ const Chapter = (props: any) => {
 
   return (
     <div>
-      <div className="chapter" onClick={() => setOpen(!open)}>
-        {props.header}
+      <div className="chapter" onClick={toggleVisibility}>
+        {props.header} ({props.numeral}.{start + 1} - {props.numeral}.{props.count.number})
       </div>
       <div className={contentClassname}>
         {arr2}
-        <div className="close-chapter" onClick={() => setOpen(!open)}>
+        <div className="close-chapter" onClick={toggleVisibility}>
           Sulje kappale
         </div>
       </div>
