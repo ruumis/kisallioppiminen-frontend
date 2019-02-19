@@ -5,7 +5,7 @@
   [/CourseMenu]
 
   [CourseSection sectionId:0 value:selectedTab]
-    [Chapter header:'Luonnolliset luvut ja kokonaisluvut (1.1 - 1.8)']
+    [Chapter header:'Luonnolliset luvut ja kokonaisluvut']
       [Exercise header:'Tehtävä 2 (auki)' open:true]
         liian helppo tehtävä
 

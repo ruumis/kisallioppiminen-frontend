@@ -1,37 +1,25 @@
 import React from 'react'
 import { filterChildren, mapChildren } from 'idyll-component-children'
 
-/* const filtteri = (children: any) => {
-  if (children) {
-    return filterChildren(children, (c: any) => {
-      console.log(c)
-      if (c.props.children && c.props.children.length) {
-        console.log('menee')
-        filtteri(c.props.children)
-      }
-      return true
-    })
-  }
-} */
-
 const CourseNumberer = (props: any) => {
-  // const arr = filterChildren(props.children, (c: any) => {
-  //   return c.type.name && c.type.name.toLowerCase() === 'connect'
-  // })
+  const arr = filterChildren(props.children, (c: any) => {
+    return true
+  })
 
-  /* filtteri(props.children) */
+  let count = 0
 
-  // const arr2 = mapChildren(arr, (c: any) => {
-  //   console.log(c)
-  // if (c.props.children) {
-  //   c.props.children.push('jotai')
-  // }
-  //   return c
-  // })
+  const arr2 = mapChildren(arr, (c: any) => {
+    if (c.type.name && c.type.name.toLowerCase() === 'connect') {
+      count++
+      const clone = React.cloneElement(c, {
+        numeral: count
+      })
+      return clone
+    }
+    return c
+  })
 
-  // console.log(arr2)
-
-  return <div>{props.children}</div>
+  return <div>{arr2}</div>
 }
 
 export default CourseNumberer
