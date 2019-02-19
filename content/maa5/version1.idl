@@ -1,0 +1,25 @@
+
+[CourseMenu]
+  [CourseTab header:'MAA5'
+          tabId:0 /]
+
+  [CourseTab header:'1. Etäisyys'
+          tabId:1 /]
+
+[/CourseMenu]
+
+[CourseSection sectionId:0 ]
+
+  [Chapter header:'Luvun tavoitteet']
+    Tässä tavoitteet.
+  [/Chapter]
+
+[/CourseSection]
+
+[CourseSection sectionId:1 ]
+
+  [Chapter header:'v2: Luvun tavoitteet']
+    Tässä tavoitteet (v2).
+  [/Chapter]
+
+[/CourseSection]

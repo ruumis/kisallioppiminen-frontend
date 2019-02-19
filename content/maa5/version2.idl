@@ -1,0 +1,25 @@
+
+[CourseMenu]
+  [CourseTab header:'MAA5'
+          tabId:0 /]
+
+  [CourseTab header:'1. Muutos'
+          tabId:1 /]
+
+[/CourseMenu]
+
+[CourseSection sectionId:0]
+
+  [Chapter header:'Luvun tavoitteet']
+    Tässä tavoitteet ja vähän extra tekstiä.
+  [/Chapter]
+
+[/CourseSection]
+
+[CourseSection sectionId:1]
+
+  [Chapter header:'Matematiikka']
+    voit muuttaa muuttujan arvoa
+  [/Chapter]
+
+[/CourseSection]
