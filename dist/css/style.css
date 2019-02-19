@@ -39,6 +39,8 @@ a {
   text-align: left;
   min-height: 250px;
   border-radius: 10px; }
+  .course-content {
+    text-transform: none; }
   .course-container {
     min-height: 100vh;
     margin-bottom: 100px; }
