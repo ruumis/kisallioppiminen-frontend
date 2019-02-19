@@ -1,25 +1,24 @@
+[CourseNumberer]
+  [CourseMenu]
+    [CourseTab header:'MAA4' /]
 
-[CourseMenu]
-  [CourseTab header:'MAA4'
-          tabId:0 /]
+    [CourseTab header:'1. Vektorit ja xy-koordinaatisto' /]
 
-  [CourseTab header:'1. Vektorit ja xy-koordinaatisto'
-          tabId:1 /]
+  [/CourseMenu]
 
-[/CourseMenu]
+  [CourseSection]
+    [Chapter header:'Luvun tavoitteet']
+      // Olen kommentti
+      Tässä tavoitteet.
 
-[CourseSection sectionId:0 ]
-  [Chapter header:'Luvun tavoitteet']
-    // Olen kommentti
-    Tässä tavoitteet.
+    [/Chapter]
+  [/CourseSection]
 
-  [/Chapter]
-[/CourseSection]
+  [CourseSection]
+    [Chapter header:'v2: Luvun tavoitteet']
+      // Olen kommentti
+      Tässä tavoitteet.
 
-[CourseSection sectionId:1]
-  [Chapter header:'v2: Luvun tavoitteet']
-    // Olen kommentti
-    Tässä tavoitteet.
-
-  [/Chapter]
-[/CourseSection]
+    [/Chapter]
+  [/CourseSection]
+[/CourseNumberer]

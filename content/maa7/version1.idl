@@ -1,30 +1,30 @@
-[CourseMenu]
-  [CourseTab header:'MAA7'
-          tabId:0 /]
+[CourseNumberer]
+  [CourseMenu]
+    [CourseTab header:'MAA7' /]
 
-  [CourseTab header:'1. Trigonometriaa yksikköympyrässä'
-          tabId:1 /]
-[/CourseMenu]
+    [CourseTab header:'1. Trigonometriaa yksikköympyrässä' /]
+  [/CourseMenu]
 
-[CourseSection sectionId:0 ]
+  [CourseSection]
 
-  [Chapter header:'Luvun tavoitteet']
-    Tässä tavoitteet.
-    [Exercise header:'Tehtävä 1']
-      erittäin vaikea tehtävä
+    [Chapter header:'Luvun tavoitteet']
+      Tässä tavoitteet.
+      [Exercise header:'Tehtävä 1']
+        erittäin vaikea tehtävä
 
-      [Answer]
-        ei ole mahdollinen ratkaista
-      [/Answer]
-    [/Exercise]
-  [/Chapter]
+        [Answer]
+          ei ole mahdollinen ratkaista
+        [/Answer]
+      [/Exercise]
+    [/Chapter]
 
-[/CourseSection]
+  [/CourseSection]
 
-[CourseSection sectionId:1 ]
+  [CourseSection]
 
-  [Chapter header:'v2: Luvun tavoitteet']
-    Tässä tavoitteet (v2).
-  [/Chapter]
+    [Chapter header:'v2: Luvun tavoitteet']
+      Tässä tavoitteet (v2).
+    [/Chapter]
 
-[/CourseSection]
+  [/CourseSection]
+[/CourseNumberer]
