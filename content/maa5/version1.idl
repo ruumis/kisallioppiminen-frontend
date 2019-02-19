@@ -10,6 +10,8 @@
 
     [Chapter header:'Luvun tavoitteet']
       Tässä tavoitteet.
+
+      Tässä tavoitteet.
     [/Chapter]
 
   [/CourseSection]
@@ -18,7 +20,8 @@
 
     [Chapter header:'v2: Luvun tavoitteet']
       Tässä tavoitteet (v2).
-    [/Chapter]
 
+      Tässä tavoitteet (v2).
+    [/Chapter]
   [/CourseSection]
 [/CourseNumberer]

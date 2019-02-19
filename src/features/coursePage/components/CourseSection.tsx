@@ -1,17 +1,12 @@
 import React from 'react'
 import { InitialState, CoursePageState } from '../../../types/InitialState'
 import { connect } from 'react-redux'
-import { filterChildren, mapChildren } from 'idyll-component-children'
+import { mapChildren } from 'idyll-component-children'
 
 const CourseSection = (props: { sectionId: number; courseTabId: number; children: any; numeral: number }) => {
-  const arr = filterChildren(props.children, (c: any) => {
-    return true
-  })
-
   const exCount = { number: 0 }
-
-  const arr2 = mapChildren(arr, (c: any) => {
-    if (c.type.name && c.type.name.toLowerCase() === 'chapter') {
+  const arr2 = mapChildren(props.children, (c: any) => {
+    if (c.type && c.type.name && c.type.name.toLowerCase() === 'chapter') {
       const clone = React.cloneElement(c, {
         numeral: props.numeral,
         count: exCount

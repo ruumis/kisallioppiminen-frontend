@@ -10,15 +10,13 @@
     [Chapter header:'Luvun tavoitteet']
       // Olen kommentti
       Tässä tavoitteet.
-
     [/Chapter]
   [/CourseSection]
 
   [CourseSection]
     [Chapter header:'v2: Luvun tavoitteet']
       // Olen kommentti
-      Tässä tavoitteet.
-
+      Tässä tavoitteet2.
     [/Chapter]
   [/CourseSection]
 [/CourseNumberer]
