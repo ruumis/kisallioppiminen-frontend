@@ -39,6 +39,15 @@ a {
   text-align: left;
   min-height: 250px;
   border-radius: 10px; }
+  .course-version {
+    color: white;
+    text-align: center;
+    margin: 0;
+    margin-top: 5px;
+    text-shadow: 1px 1px 2px black; }
+  .course-content {
+    text-transform: none;
+    width: 80%; }
   .course-container {
     min-height: 100vh;
     margin-bottom: 100px; }
@@ -136,13 +145,14 @@ a {
     padding: 15px; }
 
 .navigatorBottom {
-  background-color: #c3da877a;
+  background-color: #acd24a;
   position: fixed;
   bottom: 0;
   width: 100%;
   padding-left: 15px;
   padding-right: 15px;
-  height: 50px; }
+  height: 50px;
+  border: 1px solid black; }
   .navigatorBottom-item {
     display: inline-block;
     padding: 5px;
@@ -154,7 +164,7 @@ a {
   background: #c4da87;
   display: flex;
   padding: 20px;
-  height: 200px;
+  height: 300px;
   position: static;
   bottom: 0; }
   .footer .fb-link {
