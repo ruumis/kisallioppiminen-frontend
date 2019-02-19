@@ -1,10 +1,37 @@
 [CourseNumberer]
   [CourseMenu]
-    [CourseTab header:'MAY1'
-            tabId:0 /]
+    [CourseTab header:'MAY1' /]
+    [CourseTab header:'uusi tabi' /]
   [/CourseMenu]
 
-  [CourseSection sectionId:0 value:selectedTab]
+  [CourseSection]
+    [Chapter header:'Luonnolliset luvut ja kokonaisluvut']
+      [Exercise header:'Tehtävä 2 (auki)' open:true]
+        liian helppo tehtävä
+
+      [/Exercise]
+      [Theorem header:'heeteri' /]
+      [Answer]
+        kaikki vastaukset ovat oikein
+      [/Answer]
+      [Exercise header:'Tehtävä 2 (auki)' open:true]
+        liian helppo tehtävä
+
+      [/Exercise]
+    [/Chapter]
+    [Chapter header:'Toka chapteri']
+      [Exercise header:'Tehtävä 2 (auki)' open:true]
+        liian helppo tehtävä
+
+      [/Exercise]
+      [Theorem header:'heeteri' /]
+        [Answer]
+          kaikki vastaukset ovat oikein
+        [/Answer]
+    [/Chapter]
+  [/CourseSection]
+
+  [CourseSection]
     [Chapter header:'Luonnolliset luvut ja kokonaisluvut']
       [Exercise header:'Tehtävä 2 (auki)' open:true]
         liian helppo tehtävä

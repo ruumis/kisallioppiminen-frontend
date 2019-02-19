@@ -12,10 +12,13 @@ const CourseNumberer = (props: any) => {
     if (c.type.name && c.type.name.toLowerCase() === 'connect') {
       count++
       const clone = React.cloneElement(c, {
-        numeral: count
+        numeral: count,
+        sectionId: count
       })
+
       return clone
     }
+
     return c
   })
 

@@ -13,7 +13,7 @@ export default class Course extends Component<Props, any> {
     const { id, courseName, quickLinks, version } = this.props
     return (
       <div className="course">
-        <Link href={`/courses/${id}/tab/0`}>
+        <Link href={`/courses/${id}/tab/1`}>
           <h2 className="course-title">{courseName}</h2>
         </Link>
         <p className="course-version">{version}</p>
@@ -26,10 +26,8 @@ export default class Course extends Component<Props, any> {
 function createQuickLinks(links: string[], courseId: string) {
   return links.map((link, index) => (
     <li key={index}>
-      <Link href={`/courses/${courseId}/tab/${index}`}>
-        <div className="course-content">
-          {link}
-        </div>
+      <Link href={`/courses/${courseId}/tab/${index + 2}`}>
+        <div className="course-content">{link}</div>
       </Link>
     </li>
   ))
