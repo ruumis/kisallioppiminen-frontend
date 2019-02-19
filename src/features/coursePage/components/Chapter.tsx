@@ -17,10 +17,23 @@ const Chapter = (props: any) => {
     setOpen(!open)
   }
 
+  const exercises = () => {
+    const theGap = ''
+    if (props.count.number === start) {
+      return null
+    }
+
+    if (props.count.number - start > 1) {
+      return `(${props.numeral}.${start + 1} - ${props.numeral}.${props.count.number})`
+    }
+
+    return `(${props.numeral}.${props.count.number})`
+  }
+
   return (
     <div>
       <div className="chapter" onClick={toggleVisibility}>
-        {props.header} ({props.numeral}.{start + 1} - {props.numeral}.{props.count.number})
+        {props.header} {exercises()}
       </div>
       <div className={contentClassname}>
         {props.children}
