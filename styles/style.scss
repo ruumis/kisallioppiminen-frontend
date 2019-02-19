@@ -51,6 +51,14 @@ a {
   min-height: 250px;
   border-radius: 10px;
 
+  &-version {
+    color: white;
+    text-align: center;
+    margin: 0;
+    margin-top: 5px;
+    text-shadow: 1px 1px 2px black;
+  }
+
   &-content {
     text-transform: none;
     width: 80%;

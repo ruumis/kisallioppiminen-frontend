@@ -16,7 +16,7 @@ export default class Course extends Component<Props, any> {
         <Link href={`/courses/${id}/tab/0`}>
           <h2 className="course-title">{courseName}</h2>
         </Link>
-        <span className="course-version">{version}</span>
+        <p className="course-version">{version}</p>
         <ol className="course-parts">{createQuickLinks(quickLinks, id)}</ol>
       </div>
     )
