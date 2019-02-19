@@ -1,7 +1,7 @@
 import React from 'react'
 import { filterChildren, mapChildren } from 'idyll-component-children'
 
-const filtteri = (children: any) => {
+/* const filtteri = (children: any) => {
   if (children) {
     return filterChildren(children, (c: any) => {
       console.log(c)
@@ -12,14 +12,14 @@ const filtteri = (children: any) => {
       return true
     })
   }
-}
+} */
 
 const CourseNumberer = (props: any) => {
   // const arr = filterChildren(props.children, (c: any) => {
   //   return c.type.name && c.type.name.toLowerCase() === 'connect'
   // })
 
-  filtteri(props.children)
+  /* filtteri(props.children) */
 
   // const arr2 = mapChildren(arr, (c: any) => {
   //   console.log(c)
