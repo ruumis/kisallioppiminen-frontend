@@ -3,8 +3,7 @@
     [CourseTab header:'MAY1' /]
     [CourseTab header:'uusi tabi' /]
   [/CourseMenu]
-
-<<<<<<< 12e8f579211f04dcb74f218eb96ff0ed26bead4f
+  
   [CourseSection]
     [Chapter header:'Luonnolliset luvut ja kokonaisluvut']
       [Exercise header:'Tehtävä 2 (auki)' open:true]
@@ -33,9 +32,6 @@
   [/CourseSection]
 
   [CourseSection]
-=======
-  [CourseSection sectionId:0 value:selectedTab]
->>>>>>> number chapters and exercises
     [Chapter header:'Luonnolliset luvut ja kokonaisluvut']
       [Exercise header:'Tehtävä 2 (auki)' open:true]
         liian helppo tehtävä
