@@ -8,14 +8,11 @@ const CourseSection = (props: { sectionId: number; courseTabId: number; children
     return true
   })
 
-  let count = 0
   const exCount = { number: 0 }
 
   const arr2 = mapChildren(arr, (c: any) => {
     if (c.type.name && c.type.name.toLowerCase() === 'chapter') {
-      count++
       const clone = React.cloneElement(c, {
-        digit: count,
         numeral: props.numeral,
         count: exCount
       })
