@@ -40,7 +40,8 @@ a {
   min-height: 250px;
   border-radius: 10px; }
   .course-content {
-    text-transform: none; }
+    text-transform: none;
+    width: 80%; }
   .course-container {
     min-height: 100vh;
     margin-bottom: 100px; }
