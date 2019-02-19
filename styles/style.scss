@@ -185,13 +185,14 @@ a {
   }
 }
 .navigatorBottom {
-  background-color: #c3da877a;
+  background-color: #acd24a;
   position: fixed;
   bottom: 0;
   width: 100%;
   padding-left: 15px;
   padding-right: 15px;
   height: 50px;
+  border: 1px solid black;
 
   &-item {
     display: inline-block;
