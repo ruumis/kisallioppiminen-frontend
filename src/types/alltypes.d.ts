@@ -1,4 +1,4 @@
 declare module 'react-materialize'
 declare module 'react-dom'
 declare module 'idyll-components'
-declare module 'idyll-components-children'
+declare module 'idyll-component-children'
