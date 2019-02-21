@@ -17,10 +17,10 @@ export function frontPage() {
     )
   }
 
-  const ConnectedFrotPage = connect(
+  const ConnectedFrontPage = connect(
     mapStateToProps,
     {}
   )(app)
 
-  return <ConnectedFrotPage />
+  return <ConnectedFrontPage />
 }

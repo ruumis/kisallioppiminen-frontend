@@ -117,6 +117,16 @@ a {
   margin-bottom: 50px;
 }
 
+.courseAdministrationPageContainer {
+  min-height: 100vh;
+  margin-bottom: 50px;
+
+  &-heading {
+    margin-left: 9%;
+    margin-right: 9%;
+  }
+}
+
 .infoPageContainer {
   min-height: 100vh;
   margin-bottom: 50px;
@@ -559,3 +569,40 @@ a {
   margin: 0 auto;
   margin-bottom: 50px;
 }
+
+.scoreboard {
+  overflow: scroll;
+
+  &-light {
+
+    &-green {
+      height: 25px;
+      width: 25px;
+      background-color: green;
+    }
+    &-yellow {
+      height: 25px;
+      width: 25px;
+      background-color: yellow;
+    }
+    &-red {
+      height: 25px;
+      width: 25px;
+      background-color: red;
+    }
+    &-gray {
+      height: 25px;
+      width: 25px;
+      background-color: gray;
+    }
+  }
+}
+
+.scoreboard table {
+  border-spacing: 1px;
+}
+
+.scoreboard th {
+  transform: rotate(270deg);
+}
+
