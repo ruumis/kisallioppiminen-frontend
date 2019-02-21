@@ -6,10 +6,6 @@ body {
   font-family: 'Roboto', sans-serif;
 }
 
-li {
-  list-style-type: decimal;
-}
-
 span {
   display: inline;
   padding: 1px;
@@ -22,7 +18,7 @@ header {
 }
 
 ul {
-  padding-left: 0px;
+  padding-left: 2%;
   margin-top: 0px;
   margin-right: 0%;
   margin-bottom: 0px;
@@ -50,6 +46,7 @@ a {
   text-align: left;
   min-height: 250px;
   border-radius: 10px;
+  list-style-type: decimal;
 
   &-version {
     color: white;
@@ -374,6 +371,7 @@ a {
   cursor: pointer;
   margin-right: 6px;
   margin-top: 10px;
+
   &-active {
     color: #fff;
     font-size: 20px;
