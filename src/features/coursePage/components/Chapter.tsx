@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
 import classnames from 'classnames'
+import { mapChildren } from 'idyll-component-children'
 
 interface Props {
   header: string
@@ -15,6 +16,20 @@ const Chapter = (props: any) => {
   const toggleVisibility = () => {
     props.count.number = start
     setOpen(!open)
+  }
+
+  let arr = props.children
+  if (props.children && props.children[0].type) {
+    arr = mapChildren(props.children, (c: any) => {
+      if (c.type && c.type.name && c.type.name.toLowerCase() === 'exercise') {
+        props.count.number++
+        const clone = React.cloneElement(c, {
+          header: `Tehtävä ${props.numeral}.${props.count.number}: ${c.props.header}`
+        })
+        return clone
+      }
+      return c
+    })
   }
 
   const exercises = () => {
@@ -36,7 +51,7 @@ const Chapter = (props: any) => {
         {props.header} {exercises()}
       </div>
       <div className={contentClassname}>
-        {props.children}
+        {arr}
         <div className="close-chapter" onClick={toggleVisibility}>
           Sulje kappale
         </div>

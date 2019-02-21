@@ -8,7 +8,7 @@ const Theorem = (props: any) => {
       </div>
 
       <div className="theorem-content">
-        <p className="theorem-text">{props.children}</p>
+        <div className="theorem-text">{props.children}</div>
       </div>
     </div>
   )
