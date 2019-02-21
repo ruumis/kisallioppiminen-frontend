@@ -2,7 +2,7 @@ import React from 'react'
 import { mapChildren } from 'idyll-component-children'
 
 const CourseMenu = (props: any) => {
-  let count = 0
+  let count = -1
   const arr2 = mapChildren(props.children, (c: any) => {
     if (c.type && c.type.name && c.type.name.toLowerCase() === 'connect') {
       count++
