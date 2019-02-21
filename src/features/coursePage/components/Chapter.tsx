@@ -33,7 +33,6 @@ const Chapter = (props: any) => {
   }
 
   const exercises = () => {
-    const theGap = ''
     if (props.count.number === start) {
       return null
     }
