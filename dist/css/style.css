@@ -173,7 +173,6 @@ a {
   position: static;
   bottom: 0; }
   .footer .fb-link {
-    position: relative;
     top: -32px;
     left: 45px;
     border-bottom: 1px dotted #aaa; }
