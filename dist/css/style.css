@@ -164,6 +164,16 @@ a {
     margin-top: 10px;
     margin-bottom: 10px;
     font-weight: bold; }
+  .navigatorBottom-scroll-up {
+    padding: 2px;
+    border-radius: 5px;
+    margin-top: 5px;
+    margin-right: 10%;
+    background-color: #4fab53;
+    float: right;
+    padding-left: 1%;
+    padding-right: 1%;
+    font-size: 180%; }
 
 .footer {
   background: #c4da87;
