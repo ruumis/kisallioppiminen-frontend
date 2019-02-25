@@ -45,7 +45,7 @@ Tehtävän ohjeistus ja vastausvaihtoehdot...
 [Answer]
 (a) [Equation]1850 m^2[/Equation]
 
-(b) [Equation]Noin 29 %.[/Equation]
+(b) [Math]Noin 29 %.[/Math]
 
 [/Answer]
 [/Exercise]
@@ -60,9 +60,17 @@ Teoreeman sisältö
 Perustelu...
 [/Proof]
 
+[Math]
+x = \begin{cases}
+   a &\text{if } b \\
+   c &\text{if } d
+\end{cases}
+[/Math]
+
+[Math]\frac {(a+x)h}{2}[/Math]
+[Math]\Omega = \omega \alpha \beta * \Sigma[/Math]
 
 [/Chapter]
 [/CourseSection]
-
 
 [/CourseNumberer]
