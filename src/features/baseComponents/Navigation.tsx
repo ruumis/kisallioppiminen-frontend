@@ -1,19 +1,20 @@
 import React from 'react'
+import Link from './Link'
 
 export function Navigation() {
   return (
     <nav className="navigator">
       <ul>
         <li className="navigator-item">
-          <a className="navigator-link" href="/courseAdmin">
+          <Link className="navigator-link" href="/courseAdmin">
             Kurssihallinta
-          </a>
+          </Link>
         </li>
 
         <li className="navigator-item">
-          <a className="navigator-link" href="/">
+          <Link className="navigator-link" href="/">
             Materiaalit
-          </a>
+          </Link>
         </li>
         <li className="navigator-item">
           <a className="navigator-link" href="https://blogs.helsinki.fi/kisallioppiminenlukiossa/">
@@ -21,9 +22,9 @@ export function Navigation() {
           </a>
         </li>
         <li className="navigator-item">
-          <a className="navigator-link" href="/tietoa">
+          <Link className="navigator-link" href="/tietoa">
             Tietoa
-          </a>
+          </Link>
         </li>
         <li className="navigator-item">
           <a className="navigator-link" href="#">
