@@ -74,7 +74,7 @@ function resolveCourse({ pageParams, courses }: InitialState) {
 function resolveCourseVersion({ selectedCourseVersion }: CoursePageState, course?: Course) {
   return course
     ? course.courseContent.find(content => {
-        return content.version === selectedCourseVersion
+        return String(content.version) === selectedCourseVersion
       }) || course.courseContent[0]
     : undefined
 }
