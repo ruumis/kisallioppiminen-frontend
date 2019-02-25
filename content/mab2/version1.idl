@@ -1,60 +1,60 @@
 [CourseNumberer]
-  [CourseMenu]
-    [CourseTab header:'MAY1' /]
-    [CourseTab header:'uusi tabi' /]
-  [/CourseMenu]
-  
-  [CourseSection]
-    [Chapter header:'Luonnolliset luvut ja kokonaisluvut']
-      [Exercise header:'Helppo tehtävä (auki)' open:true]
-        liian helppo tehtävä
+[CourseMenu]
+[CourseTab header:'MAY1' /]
+[CourseTab header:'uusi tabi' /]
+[/CourseMenu]
 
-      [/Exercise]
-      [Theorem header:'heeteri' /]
-      [Answer]
-        kaikki vastaukset ovat oikein
-      [/Answer]
-      [Exercise header:'Helppo tehtävä (auki)' open:true]
-        liian helppo tehtävä
+[CourseSection]
+[Chapter header:'Luonnolliset luvut ja kokonaisluvut']
+[Exercise header:'Helppo tehtävä (auki)' open:true]
+liian helppo tehtävä
 
-      [/Exercise]
-    [/Chapter]
-    [Chapter header:'Toka chapteri']
-      [Exercise header:'Helppo tehtävä (auki)' open:true]
-        liian helppo tehtävä
+[/Exercise]
+[Theorem header:'heeteri' /]
+[Answer]
+kaikki vastaukset ovat oikein
+[/Answer]
+[Exercise header:'Helppo tehtävä (auki)' open:true]
+liian helppo tehtävä
 
-      [/Exercise]
-      [Theorem header:'heeteri' /]
-        [Answer]
-          kaikki vastaukset ovat oikein
-        [/Answer]
-    [/Chapter]
-  [/CourseSection]
+[/Exercise]
+[/Chapter]
+[Chapter header:'Toka chapteri']
+[Exercise header:'Helppo tehtävä (auki)' open:true]
+liian helppo tehtävä
 
-  [CourseSection]
-    [Chapter header:'Luonnolliset luvut ja kokonaisluvut']
-      [Exercise header:'Helppo tehtävä (auki)' open:true]
-        liian helppo tehtävä
+[/Exercise]
+[Theorem header:'heeteri' /]
+[Answer]
+kaikki vastaukset ovat oikein
+[/Answer]
+[/Chapter]
+[/CourseSection]
 
-      [/Exercise]
-      [Theorem header:'heeteri' /]
-      [Answer]
-        kaikki vastaukset ovat oikein
-      [/Answer]
-      [Exercise header:'Helppo tehtävä (auki)' open:true]
-        liian helppo tehtävä
+[CourseSection]
+[Chapter header:'Luonnolliset luvut ja kokonaisluvut']
+[Exercise header:'Helppo tehtävä (auki)' open:true]
+liian helppo tehtävä
 
-      [/Exercise]
-    [/Chapter]
-    [Chapter header:'Toka chapteri']
-      [Exercise header:'Helppo tehtävä (auki)' open:true]
-        liian helppo tehtävä
+[/Exercise]
+[Theorem header:'heeteri' /]
+[Answer]
+kaikki vastaukset ovat oikein
+[/Answer]
+[Exercise header:'Helppo tehtävä (auki)' open:true]
+liian helppo tehtävä
 
-      [/Exercise]
-      [Theorem header:'heeteri' /]
-        [Answer]
-          kaikki vastaukset ovat oikein
-        [/Answer]
-    [/Chapter]
-  [/CourseSection]
+[/Exercise]
+[/Chapter]
+[Chapter header:'Toka chapteri']
+[Exercise header:'Helppo tehtävä (auki)' open:true]
+liian helppo tehtävä
+
+[/Exercise]
+[Theorem header:'heeteri' /]
+[Answer]
+kaikki vastaukset ovat oikein
+[/Answer]
+[/Chapter]
+[/CourseSection]
 [/CourseNumberer]

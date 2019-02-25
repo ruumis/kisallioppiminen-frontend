@@ -1,27 +1,27 @@
 [CourseNumberer]
-  [CourseMenu]
-    [CourseTab header:'MAA5' /]
+[CourseMenu]
+[CourseTab header:'MAA5' /]
 
-    [CourseTab header:'1. Etäisyys' /]
+[CourseTab header:'1. Etäisyys' /]
 
-  [/CourseMenu]
+[/CourseMenu]
 
-  [CourseSection]
+[CourseSection]
 
-    [Chapter header:'Luvun tavoitteet']
-      Tässä tavoitteet.
+[Chapter header:'Luvun tavoitteet']
+Tässä tavoitteet.
 
-      Tässä tavoitteet.
-    [/Chapter]
+Tässä tavoitteet.
+[/Chapter]
 
-  [/CourseSection]
+[/CourseSection]
 
-  [CourseSection]
+[CourseSection]
 
-    [Chapter header:'v2: Luvun tavoitteet']
-      Tässä tavoitteet (v2).
+[Chapter header:'v2: Luvun tavoitteet']
+Tässä tavoitteet (v2).
 
-      Tässä tavoitteet (v2).
-    [/Chapter]
-  [/CourseSection]
+Tässä tavoitteet (v2).
+[/Chapter]
+[/CourseSection]
 [/CourseNumberer]

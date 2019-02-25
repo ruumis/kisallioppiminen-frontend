@@ -90,9 +90,9 @@ Kentän pituuden on oltava vähintään 100 m ja enintään 110 m.
 (b) Kuinka monta prosenttia suurin mahdollinen kenttä on isompi kuin pienin mahdollinen kenttä?
 
 [Answer]
-  (a) [Equation]1850 m^2[/Equation]
+(a) [Equation]1850 m^2[/Equation]
 
-  (b) [Equation]Noin 29 %.[/Equation]
+(b) [Equation]Noin 29 %.[/Equation]
 
 [/Answer]
 [/Exercise]
@@ -139,15 +139,15 @@ Kolmion pinta-ala on puolet sen kannan ja korkeuden tulosta eli alla olevan kuvi
 Perustelu: Kolmion korkeusjanan toinen päätepiste voi sijaita kolmion sivun päätepisteessä, kolmion sivulla tai sivun jatkeella. 
 Tarkastellaan jokainen näistä tapauksista erikseen.
 
- 1. Tapaus, jossa kolmion korkeusjanan toinen päätepiste sijaitsee kolmion sivun päätepisteessä, on käsitelty tehtävässä 1.2. 
+1. Tapaus, jossa kolmion korkeusjanan toinen päätepiste sijaitsee kolmion sivun päätepisteessä, on käsitelty tehtävässä 1.2. 
 
 [MaterialPicture imagesrc:'/img/maa3/suoraK18.png' /]
 
- 2. Tapaus, jossa kolmion korkeusjanan toinen päätepiste sijaitsee kolmion sivulla, on käsitelty tehtävässä 1.3.
+2. Tapaus, jossa kolmion korkeusjanan toinen päätepiste sijaitsee kolmion sivulla, on käsitelty tehtävässä 1.3.
 
 [MaterialPicture imagesrc:'/img/maa3/suoraK05.png' /]
 
- 3. Jos kolmion korkeusjanan toinen päätepiste sijaitsee kolmion sivun jatkeella, 
+3. Jos kolmion korkeusjanan toinen päätepiste sijaitsee kolmion sivun jatkeella, 
 voidaan kolmio täydentää suorakulmaiseksi kolmioksi, jonka pinta-ala on tehtävän 1.2 nojalla 
 [Equation](a+x)h/2[/Equation]
 

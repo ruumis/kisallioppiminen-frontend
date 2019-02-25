@@ -1,24 +1,24 @@
 [CourseNumberer]
-  [CourseMenu]
-    [CourseTab header:'MAA5' /]
+[CourseMenu]
+[CourseTab header:'MAA5' /]
 
-    [CourseTab header:'1. Muutos' /]
+[CourseTab header:'1. Muutos' /]
 
-  [/CourseMenu]
+[/CourseMenu]
 
-  [CourseSection]
+[CourseSection]
 
-    [Chapter header:'Luvun tavoitteet']
-      Tässä tavoitteet ja vähän extra tekstiä.
-    [/Chapter]
+[Chapter header:'Luvun tavoitteet (uusi versio)']
+Tässä tavoitteet ja vähän extra tekstiä.
+[/Chapter]
 
-  [/CourseSection]
+[/CourseSection]
 
-  [CourseSection]
+[CourseSection]
 
-    [Chapter header:'Matematiikka']
-      voit muuttaa muuttujan arvoa
-    [/Chapter]
+[Chapter header:'Matematiikka']
+voit muuttaa muuttujan arvoa
+[/Chapter]
 
-  [/CourseSection]
+[/CourseSection]
 [/CourseNumberer]
