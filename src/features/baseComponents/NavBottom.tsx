@@ -15,6 +15,9 @@ export function NavBottom() {
         Avaa kaikki
       </label>
       <input type="checkbox" id="avaakaikki" />
+      <a className="navigatorBottom-scroll-up" href="#">
+        ⬆
+      </a>
     </div>
   )
 }
