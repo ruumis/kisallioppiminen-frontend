@@ -16,6 +16,7 @@ import Theorem from './components/Theorem'
 import Proof from './components/Proof'
 import Definition from './components/Definition'
 import Picture from './components/Picture'
+import Math from './components/Math'
 
 export function coursePage() {
   const availableComponents = {
@@ -30,7 +31,8 @@ export function coursePage() {
     Theorem,
     Proof,
     Definition,
-    Picture
+    Picture,
+    Math
   }
 
   const mapStateToProps = (state: { pageState: InitialState; coursePageState: CoursePageState }) => ({
