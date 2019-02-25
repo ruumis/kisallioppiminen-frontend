@@ -5,6 +5,7 @@ import * as components from 'idyll-components'
 import compiler, { Node } from 'idyll-compiler'
 import CourseMenu from './components/CourseMenu'
 import CourseTab from './components/CourseTab'
+import CourseNumberer from './components/CourseNumberer'
 import CourseSection from './components/CourseSection'
 import Chapter from './components/Chapter'
 import CourseVersionSelector from './components/CourseVersionSelector'
@@ -15,11 +16,11 @@ import Theorem from './components/Theorem'
 import Rationalization from './components/Rationalization'
 import Definition from './components/Definition'
 import MaterialPicture from './components/MaterialPicture'
-import NavBottom from '../baseComponents/NavBottom'
 
 export function coursePage() {
   const availableComponents = {
     ...components,
+    CourseNumberer,
     CourseMenu,
     CourseTab,
     CourseSection,
@@ -42,6 +43,7 @@ export function coursePage() {
 
     const courseToRender = resolveCourse(pageState)
     const courseMaterialVersion = resolveCourseVersion(coursePageState, courseToRender)
+
     return (
       <div className="coursePageContainer">
         <div className="courseVersionSelectorContainer">
@@ -50,9 +52,8 @@ export function coursePage() {
         {typeof window !== 'undefined' ? (
           <IdyllDocument markup={courseMaterialVersion ? courseMaterialVersion.content : ''} components={availableComponents} />
         ) : (
-            <IdyllDocument ast={compiler(courseMaterialVersion ? courseMaterialVersion.content : '', { async: false }) as Node[]} components={availableComponents} />
-          )}
-        <NavBottom />
+          <IdyllDocument ast={compiler(courseMaterialVersion ? courseMaterialVersion.content : '', { async: false }) as Node[]} components={availableComponents} />
+        )}
       </div>
     )
   }
@@ -73,7 +74,7 @@ function resolveCourse({ pageParams, courses }: InitialState) {
 function resolveCourseVersion({ selectedCourseVersion }: CoursePageState, course?: Course) {
   return course
     ? course.courseContent.find(content => {
-      return content.version === selectedCourseVersion
-    }) || course.courseContent[0]
+        return content.version === selectedCourseVersion
+      }) || course.courseContent[0]
     : undefined
 }

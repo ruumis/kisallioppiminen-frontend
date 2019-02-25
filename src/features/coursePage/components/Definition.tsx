@@ -8,7 +8,7 @@ const Definition = (props: any) => {
       </div>
 
       <div className="definition-content">
-        <p className="definition-text">{props.children}</p>
+        <div className="definition-text">{props.children}</div>
       </div>
     </div>
   )
