@@ -64,6 +64,15 @@ Aloitamme tämän kappaleen tekemällä sopimuksen siitä, mitä tarkoitetaan, k
 Tällaista sopimusta siitä, mitä jokin nimitys tarkoittaa, sanotaan matematiikassa määritelmäksi.
 Luonnollisten lukujen määritelmä siis kertoo, mitä luonnollisilla luvuilla tarkoitetaan.
 
+[Theorem header:'Teoreema 1']
+Teoreeman selitys
+[/Theorem]
+
+[Rationalization]
+Perustelut, miksi teoreema todella pitää paikkansa.
+[/Rationalization]
+
+
 [Definition header:'Määritelmä: Luennolliset luvut']
 Lukumäärien ilmaisemiseen käytettäviä lukuja [Equation]0, 1, 2, 3, 4, …[/Equation] kutsutaan luonnollisiksi luvuiksi.
 Luonnollisten lukujen joukkoa merkitään kirjaimella [Equation]N[/Equation]. Siis
@@ -109,8 +118,7 @@ d) [Equation]16:50[/Equation]
 [Chapter header:'Kuvatesti']
 
 Materiaaliin saa myös kuvia
-
-dsfdsf
+[MaterialPicture imagesrc:'/img/maa3/suoraK04.png' /]
 [/Chapter]
 
 [/CourseSection]
