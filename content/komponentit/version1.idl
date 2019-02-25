@@ -34,7 +34,7 @@ Määritelmän sisältö tulee tähän...
 
 //Chapter with image................................................
 [Chapter header:'Chapter with Image']
-[MaterialPicture imagesrc:'/img/maa3/suoraK17.png' /]
+[Picture imagesrc:'/img/maa3/suoraK17.png' /]
 [/Chapter]
 
 //Chapter with exercise and answer..................................
@@ -56,9 +56,9 @@ Tehtävän ohjeistus ja vastausvaihtoehdot...
 [Theorem header:'Teoreeman otsikko']
 Teoreeman sisältö
 [/Theorem]
-[Rationalization]
+[Proof]
 Perustelu...
-[/Rationalization]
+[/Proof]
 
 
 [/Chapter]
