@@ -79,5 +79,16 @@
         "path": "./content/mab2/version1.idl"
       }
     ]
+  },
+  {
+    "id": "1231265",
+    "courseName": "Komponentit",
+    "quickLinks": ["Komponenttilistaus"],
+    "contentFiles": [
+      {
+        "version": "Versio 1",
+        "path": "./content/komponentit/version1.idl"
+      }
+    ]
   }
 ]

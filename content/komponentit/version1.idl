@@ -1,0 +1,68 @@
+[CourseNumberer]
+[CourseMenu]
+[CourseTab header:'MAA3' /]
+
+[CourseTab header:'1. osa' /]
+
+[CourseTab header:'2. osa' /]
+
+[CourseTab header:'3. osa' /]
+
+[/CourseMenu]
+
+
+[CourseSection]
+
+//Chapter...........................................................
+[Chapter header:'Otsikko']
+Sisältö...
+
+
+
+[/Chapter]
+
+
+//Chapter with definition...........................................
+[Chapter header:'Chapter with Definition']
+Sisältö...
+
+[Definition header:'MÄÄRITELMÄ: Esimerkkimääritelmä']
+Määritelmän sisältö tulee tähän...
+[/Definition]
+
+[/Chapter]
+
+//Chapter with image................................................
+[Chapter header:'Chapter with Image']
+[MaterialPicture imagesrc:'/img/maa3/suoraK17.png' /]
+[/Chapter]
+
+//Chapter with exercise and answer..................................
+[Chapter header:'Chapter with exercise and answer']
+[Exercise header:'Tehtävän otsikko' open:false]
+Tehtävän ohjeistus ja vastausvaihtoehdot...
+
+[Answer]
+(a) [Equation]1850 m^2[/Equation]
+
+(b) [Equation]Noin 29 %.[/Equation]
+
+[/Answer]
+[/Exercise]
+[/Chapter]
+
+//Chapter with theorem and rationization...........................
+[Chapter header:'Chapter with theorem and rarionalization']
+[Theorem header:'Teoreeman otsikko']
+Teoreeman sisältö
+[/Theorem]
+[Rationalization]
+Perustelu...
+[/Rationalization]
+
+
+[/Chapter]
+[/CourseSection]
+
+
+[/CourseNumberer]
