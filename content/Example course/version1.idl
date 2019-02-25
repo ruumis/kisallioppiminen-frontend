@@ -68,7 +68,7 @@
       [/Definition]
     [/Chapter]
 
-    [Chapter header:'KOLMION PINTA-ALA JA KULMAT (1.1 - 1.7)'] 
+    [Chapter header:'KOLMION PINTA-ALA JA KULMAT'] 
         // Kommentteja voi lisätä materiaalin koodin sekaan selkeyttämään
         Kolmioita voidaan käyttää apuna monien geometristen ongelmien ratkaisemisessa. 
         Aloitammekin tämän kurssin palauttamalla mieleen kolmioiden geometrisia ominaisuuksia.
@@ -82,7 +82,7 @@
         [MaterialPicture imagesrc:'/img/maa3/suoraK04.png' /]
       [/Definition]
 
-      [Exercise header:'TEHTÄVÄ 1.1: SUORAKULMION PINTA-ALA' open:false]
+      [Exercise header:'SUORAKULMION PINTA-ALA' open:false]
         Kansainvälisissä aikuisten jalkapallo-otteluissa kentän leveyden on oltava vähintään 64 m ja enintään 75 m. 
         Kentän pituuden on oltava vähintään 100 m ja enintään 110 m.
 
@@ -100,7 +100,7 @@
       
       Suorakulmion pinta-alan avulla saadaan johdettua lauseke kolmion pinta-alalle.
 
-      [Exercise header:'TEHTÄVÄ 1.2: KOLMION PINTA-ALA' open:false]
+      [Exercise header:'KOLMION PINTA-ALA' open:false]
 
         [MaterialPicture imagesrc:'/img/maa3/suoraK17.png' /]
         (a) Piirrä yllä olevan kuvan kolmio vihkoosi ja täydennä se suorakulmioksi.
@@ -111,7 +111,7 @@
 
         [/Exercise]
 
-        [Exercise header:'TEHTÄVÄ 1.3: KOLMION PINTA-ALA' open:false]
+        [Exercise header:'KOLMION PINTA-ALA' open:false]
         [MaterialPicture imagesrc:'/img/maa3/suoraK05.png' /]
         (a) Piirrä yllä olevan kuvan kolmio vihkoosi ja täydennä se suorakulmioksi. 
         Vinkki: voit esimerkiksi soveltaa edellisen tehtävän ideaa kumpaankin kuvassa näkyvään suorakulmaiseen kolmioon.

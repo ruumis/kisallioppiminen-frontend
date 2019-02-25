@@ -11,15 +11,17 @@ interface Props {
 const Chapter = (props: any) => {
   const [open, setOpen] = useState(false)
   const contentClassname = classnames('chapter-content', { 'chapter-content-hidden': open !== true })
-  const start = props.count.number
+  const start = props.count ? props.count.number : 0
 
   const toggleVisibility = () => {
-    props.count.number = start
+    if (props.count) {
+      props.count.number = start
+    }
     setOpen(!open)
   }
 
   let arr = props.children
-  if (props.children && props.children[0].type) {
+  if (props.count && props.children && props.children[0].type) {
     arr = mapChildren(props.children, (c: any) => {
       if (c.type && c.type.name && c.type.name.toLowerCase() === 'exercise') {
         props.count.number++
@@ -33,7 +35,7 @@ const Chapter = (props: any) => {
   }
 
   const exercises = () => {
-    if (props.count.number === start) {
+    if (!props.count || props.count.number === start) {
       return null
     }
 
