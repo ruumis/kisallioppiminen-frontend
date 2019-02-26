@@ -15,21 +15,6 @@
     ]
   },
   {
-    "id": "321",
-    "courseName": "MAA2 - Polynomifunktiot ja -yhtälöt",
-    "quickLinks": ["Ensimmäisen asteen polynomifunktio"],
-    "contentFiles": [
-      {
-        "version": 1.0,
-        "path": "./content/maa2/version1.idl"
-      },
-      {
-        "version": 2.0,
-        "path": "./content/maa2/version2.idl"
-      }
-    ]
-  },
-  {
     "id": "1234",
     "courseName": "MAA3 - Geometria",
     "quickLinks": ["Kolmio"],
@@ -37,10 +22,6 @@
       {
         "version": 1.0,
         "path": "./content/maa3/version1.idl"
-      },
-      {
-        "version": 2.0,
-        "path": "./content/maa3/version2.idl"
       }
     ]
   },
@@ -100,10 +81,17 @@
       {
         "version": "Mäntsälän lukio",
         "path": "./content/mab2/version1.idl"
-      },
+      }
+    ]
+  },
+  {
+    "id": "1231265",
+    "courseName": "Komponentit",
+    "quickLinks": ["Komponenttilistaus"],
+    "contentFiles": [
       {
-        "version": "Kolarin lukio",
-        "path": "./content/mab2/version2.idl"
+        "version": "Versio 1",
+        "path": "./content/komponentit/version1.idl"
       }
     ]
   }

@@ -1,202 +1,211 @@
-
+[CourseNumberer]
 [CourseMenu]
-  [CourseTab header:'MAY1'
-          tabId:0 /]
+[CourseTab header:'MAY1' /]
 
-  [CourseTab header:'1. Luvut ja laskutoimitukset'
-          tabId:1 /]
+[CourseTab header:'1. Luvut ja laskutoimitukset' /]
 
-  [CourseTab header:'2. Potenssi ja logaritmi'
-          tabId:2 /]
+[CourseTab header:'2. Potenssi ja logaritmi' /]
 
-  [CourseTab header:'3. Lukujonot ja summat'
-          tabId:3 /]
+[CourseTab header:'3. Lukujonot ja summat' /]
 
-  [CourseTab header:'4. Funktio'
-          tabId:4 /]
+[CourseTab header:'4. Funktio' /]
 
-  [CourseTab header:'5. Prosenttilaskenta'
-          tabId:5 /]
+[CourseTab header:'5. Prosenttilaskenta' /]
 
 [/CourseMenu]
 
 
-[CourseSection sectionId:0 ]
-  [Chapter header:'Kurssin tavoitteet ja keskeiset sisällöt']
-    Matematiikan asema aikamme kulttuurissa edellyttää valmiutta ymmärtää, hyödyntää ja tuottaa matemaattisesti esitettyä tietoa. Sillä on merkittävä tai ratkaiseva rooli muun muassa tieteissä, teknologiassa, taloudessa, yrittäjyydessä, terveydenhuollossa ja turvallisuudessa. Matematiikan opiskelun tehtävänä on tutustuttaa sinut matemaattisen ajattelun malleihin sekä matematiikan perusideoihin ja rakenteisiin, opettaa sinua käyttämään puhuttua ja kirjoitettua matematiikan kieltä sekä kehittää laskemisen, ilmiöiden mallintamisen ja ongelmien ratkaisemisen taitojasi.
+[CourseSection]
+[Chapter header:'Kurssin tavoitteet ja keskeiset sisällöt']
+Matematiikan asema aikamme kulttuurissa edellyttää valmiutta ymmärtää, hyödyntää ja tuottaa matemaattisesti esitettyä tietoa. Sillä on merkittävä tai ratkaiseva rooli muun muassa tieteissä, teknologiassa, taloudessa, yrittäjyydessä, terveydenhuollossa ja turvallisuudessa. Matematiikan opiskelun tehtävänä on tutustuttaa sinut matemaattisen ajattelun malleihin sekä matematiikan perusideoihin ja rakenteisiin, opettaa sinua käyttämään puhuttua ja kirjoitettua matematiikan kieltä sekä kehittää laskemisen, ilmiöiden mallintamisen ja ongelmien ratkaisemisen taitojasi.
 
-    Syksystä 2016 lukion matematiikan opiskelu alkaa pitkän ja lyhyen oppimäärän yhteisellä kurssilla. Matematiikan yhteinen kurssi avaa näköaloja matematiikan moninaiseen merkitykseen ihmiselle ja yhteiskunnalle sekä sen ainutlaatuiseen ja kiehtovaan olemukseen tieteenalana. Tässä kurssissa sinulla on tilaisuus vahvistaa pohjaa matematiikan opinnoillesi ja nähdä matematiikka hyödyllisenä ja käyttökelpoisena selitettäessä ja hallittaessa muun muassa yhteiskunnan, talouden ja luonnon tapahtumia ja tilanteita.
+Syksystä 2016 lukion matematiikan opiskelu alkaa pitkän ja lyhyen oppimäärän yhteisellä kurssilla. Matematiikan yhteinen kurssi avaa näköaloja matematiikan moninaiseen merkitykseen ihmiselle ja yhteiskunnalle sekä sen ainutlaatuiseen ja kiehtovaan olemukseen tieteenalana. Tässä kurssissa sinulla on tilaisuus vahvistaa pohjaa matematiikan opinnoillesi ja nähdä matematiikka hyödyllisenä ja käyttökelpoisena selitettäessä ja hallittaessa muun muassa yhteiskunnan, talouden ja luonnon tapahtumia ja tilanteita.
 
-    Kurssin tavoitteena on, että
+Kurssin tavoitteena on, että
 
-    - pohdit matematiikan merkitystä yksilön ja yhteiskunnan näkökulmasta
+- pohdit matematiikan merkitystä yksilön ja yhteiskunnan näkökulmasta
 
-    - kertaat ja täydennät lukualueet, kertaat peruslaskutoimitukset ja prosenttilaskennan periaatteet
+- kertaat ja täydennät lukualueet, kertaat peruslaskutoimitukset ja prosenttilaskennan periaatteet
 
-    - vahvistat ymmärrystäsi funktion käsitteestä
+- vahvistat ymmärrystäsi funktion käsitteestä
 
-    - ymmärrät lukujonon käsitteen
+- ymmärrät lukujonon käsitteen
 
-    - osaat määrittää lukujonoja, kun annetaan alkuehdot ja tapa, jolla seuraavat termit muodostetaan
+- osaat määrittää lukujonoja, kun annetaan alkuehdot ja tapa, jolla seuraavat termit muodostetaan
 
-    - osaat havainnollisen käsityksen lukujonon summan määrittämisestä
+- osaat havainnollisen käsityksen lukujonon summan määrittämisestä
 
-    - osaat ratkaista käytännön ongelmia aritmeettisen ja geometrisen jonon ja niistä muodostettujen summien avulla
+- osaat ratkaista käytännön ongelmia aritmeettisen ja geometrisen jonon ja niistä muodostettujen summien avulla
 
-    - osaat käyttää teknisiä apuvälineitä funktion kuvaajan ja lukujonojen tutkimisessa sekä lukujonoihin liittyvien sovellusongelmien ratkaisussa.
-    
-    KESKEISET SISÄLLÖT
+- osaat käyttää teknisiä apuvälineitä funktion kuvaajan ja lukujonojen tutkimisessa sekä lukujonoihin liittyvien sovellusongelmien ratkaisussa.
 
-    - reaaliluvut, peruslaskutoimitukset ja prosenttilaskenta
+KESKEISET SISÄLLÖT
 
-    - funktio, kuvaajan piirto ja tulkinta
+- reaaliluvut, peruslaskutoimitukset ja prosenttilaskenta
 
-    - lukujono
+- funktio, kuvaajan piirto ja tulkinta
 
-    - rekursiivinen lukujono
+- lukujono
 
-    - aritmeettinen jono ja summa
+- rekursiivinen lukujono
 
-    - logaritmi ja potenssi sekä niiden välinen yhteys
+- aritmeettinen jono ja summa
 
-    - muotoa [Equation]ax=b,x[/Equation] luonnollinen luku, olevien yhtälöiden ratkaiseminen
+- logaritmi ja potenssi sekä niiden välinen yhteys
 
-    - geometrinen jono ja summa
-  [/Chapter]
+- muotoa [Equation]ax=b,x[/Equation] luonnollinen luku, olevien yhtälöiden ratkaiseminen
 
-  [Chapter header:'Luonnolliset luvut ja kokonaisluvut (1.1 - 1.8)']
+- geometrinen jono ja summa
+[/Chapter]
 
-    Aloitamme tämän kappaleen tekemällä sopimuksen siitä, mitä tarkoitetaan, kun puhutaan luonnollisista luvuista.
-    Tällaista sopimusta siitä, mitä jokin nimitys tarkoittaa, sanotaan matematiikassa määritelmäksi.
-    Luonnollisten lukujen määritelmä siis kertoo, mitä luonnollisilla luvuilla tarkoitetaan.
+[Chapter header:'Luonnolliset luvut ja kokonaisluvut']
 
-    [Definition header:'Määritelmä: Luennolliset luvut']
-    Lukumäärien ilmaisemiseen käytettäviä lukuja [Equation]0, 1, 2, 3, 4, …[/Equation] kutsutaan luonnollisiksi luvuiksi.
-    Luonnollisten lukujen joukkoa merkitään kirjaimella [Equation]N[/Equation]. Siis
+Aloitamme tämän kappaleen tekemällä sopimuksen siitä, mitä tarkoitetaan, kun puhutaan luonnollisista luvuista.
+Tällaista sopimusta siitä, mitä jokin nimitys tarkoittaa, sanotaan matematiikassa määritelmäksi.
+Luonnollisten lukujen määritelmä siis kertoo, mitä luonnollisilla luvuilla tarkoitetaan.
 
-      [Equation]N={0,1,2,3,4,…}.[/Equation]
-    [/Definition]
+[Theorem header:'Teoreema 1']
+Teoreeman selitys
+[/Theorem]
+
+[Rationalization]
+Perustelut, miksi teoreema todella pitää paikkansa.
+[/Rationalization]
 
 
-    [Exercise header:'TEHTÄVÄ 1.1: LUONNOLLISTEN LUKUJEN YHTEEN- JA KERTOLASKU']
+[Definition header:'Määritelmä: Luennolliset luvut']
+Lukumäärien ilmaisemiseen käytettäviä lukuja [Equation]0, 1, 2, 3, 4, …[/Equation] kutsutaan luonnollisiksi luvuiksi.
+Luonnollisten lukujen joukkoa merkitään kirjaimella [Equation]N[/Equation]. Siis
 
-      a) Tee piirros, joka havainnollistaa laskutoimitusta [Equation]2+4.[/Equation]
+[Equation]N={0,1,2,3,4,…}.[/Equation]
+[Math]N={0,1,2,3,4,…}.[/Math]
+[/Definition]
 
-      b) Tee piirros, joka havainnollistaa laskutoimitusta [Equation]2*3.[/Equation]
 
-      c) Tee piirros, joka havainnollistaa laskutoimitusta [Equation]3*2.[/Equation]
+[Exercise header:'LUONNOLLISTEN LUKUJEN YHTEEN- JA KERTOLASKU']
 
-      d) Mitä eroa b- ja c-kohtien laskuilla on? Entä mitä yhteistä niillä on?
+a) Tee piirros, joka havainnollistaa laskutoimitusta [Equation]2+4.[/Equation]
 
-    [/Exercise]
+b) Tee piirros, joka havainnollistaa laskutoimitusta [Equation]2*3.[/Equation]
 
-    [Exercise header:'TEHTÄVÄ 4.20: ENSIMMÄISEN ASTEEN POLYNOMIFUNKTIO' open:false]
-      a) Piirrä laskimellasi samaan kuvaan funktioiden [Equation]f(x)=0,5x+1 [/Equation], [Equation]g(x)=2x+1[/Equation] ja [Equation]h(x)=(−x+1)[/Equation] kuvaajat.
+c) Tee piirros, joka havainnollistaa laskutoimitusta [Equation]3*2.[/Equation]
 
-      b) Mitä yhteistä näiden funktioiden kuvaajilla on? Entä mitä eroa niillä on?
+d) Mitä eroa b- ja c-kohtien laskuilla on? Entä mitä yhteistä niillä on?
 
-      c) Kaikki tämän tehtävän funktiot ovat muotoa [Equation]x↦ax+1[/Equation] eli ne kertovat muuttujaa [Equation]x[/Equation] jollakin luvulla [Equation]a[/Equation] ja lisäävät tulokseen luvun [Equation]1[/Equation]. Miten luku [Equation]1[/Equation] näkyy funktioiden kuvaajissa?
+[/Exercise]
 
-      d) Pystytkö päättelemään kuvaajaa piirtämättä, millä korkeudella funktio [Equation]k(x)=x+4[/Equation] leikkaa y-akselin?
+[Exercise header:'ENSIMMÄISEN ASTEEN POLYNOMIFUNKTIO']
+a) Piirrä laskimellasi samaan kuvaan funktioiden [Equation]f(x)=0,5x+1, g(x)=2x+1 \text{ ja } h(x)=-x+1[/Equation] kuvaajat.
 
-      [Answer]
-        a) [Equation]a(x)=0,0662x+4,02 ja b(x)=0,0799x+3,75[/Equation]
+b) Mitä yhteistä näiden funktioiden kuvaajilla on? Entä mitä eroa niillä on?
 
-        b) [Equation]50 min[/Equation]
+c) Kaikki tämän tehtävän funktiot ovat muotoa [Equation]x↦ax+1[/Equation] eli ne kertovat muuttujaa [Equation]x[/Equation] jollakin luvulla [Equation]a[/Equation] ja lisäävät tulokseen luvun [Equation]1[/Equation]. Miten luku [Equation]1[/Equation] näkyy funktioiden kuvaajissa?
 
-        c)
+d) Pystytkö päättelemään kuvaajaa piirtämättä, millä korkeudella funktio [Equation]k(x)=x+4[/Equation] leikkaa y-akselin?
 
-        d) [Equation]16:50[/Equation]
+[Answer]
+a) [Equation]a(x)=0,0662x+4,02 ja b(x)=0,0799x+3,75[/Equation]
 
-      [/Answer]
-    [/Exercise]
-  [/Chapter]
+b) [Equation]50 min[/Equation]
 
-[Chapter header:'Kuvatesti']Materiaaliin saa myös kuvia[/Chapter]
+c)
+
+d) [Equation]16:50[/Equation]
+
+[/Answer]
+[/Exercise]
+[/Chapter]
+
+[Chapter header:'Kuvatesti']
+
+Materiaaliin saa myös kuvia
+[MaterialPicture imagesrc:'/img/maa3/suoraK04.png' /]
+[/Chapter]
 
 [/CourseSection]
 
-[CourseSection sectionId:1]
-  [Chapter header:'Rationaaliluvut (1.9-1.24)'] 
-      // Olen kommentti
-    olen 1. luvun chapter teksti
+[CourseSection]
+[Chapter header:'Rationaaliluvut'] 
+// Olen kommentti
+olen 1. luvun chapter teksti
 
-    [Theorem header:'Teoreema 1']
-      syvällistä
-    [/Theorem]
+[Theorem header:'Teoreema 1']
+syvällistä
+[/Theorem]
 
-    [Rationalization]
-      iha hyvä perustelu
-    [/Rationalization]
+[Proof]
+iha hyvä perustelu
+[/Proof]
 
-    lisää tekstiä
-  [/Chapter]
+lisää tekstiä
+[/Chapter]
 [/CourseSection]
 
-[CourseSection sectionId:2]
-  [Chapter header:'2. Luku']
-    // Olen kommentti
-    olen 2. luvun chapter teksti
+[CourseSection]
+[Chapter header:'2. Luku']
+// Olen kommentti
+olen 2. luvun chapter teksti
 
-    [Theorem header:'Teoreema 1']
-      syvällistä
-    [/Theorem]
+[Theorem header:'Teoreema 1']
+syvällistä
+[/Theorem]
 
-    [Rationalization]
-      iha hyvä perustelu
-    [/Rationalization]
+[Proof]
+iha hyvä perustelu
+[/Proof]
 
-    lisää tekstiä
-  [/Chapter]
+lisää tekstiä
+[/Chapter]
 [/CourseSection]
 
-[CourseSection sectionId:3]
-  [Chapter header:'3. Luku']
-    // Olen kommentti
-    olen chapter teksti kolmannelle luvulle 
+[CourseSection]
+[Chapter header:'3. Luku']
+// Olen kommentti
+olen chapter teksti kolmannelle luvulle 
 
-    [Theorem header:'Teoreema 1']
-      syvällistä
-    [/Theorem]
+[Theorem header:'Teoreema 1']
+syvällistä
+[/Theorem]
 
-    [Rationalization]
-      iha hyvä perustelu
-    [/Rationalization]
+[Proof]
+iha hyvä perustelu
+[/Proof]
 
-    lisää tekstiä
-  [/Chapter]
+lisää tekstiä
+[/Chapter]
 [/CourseSection]
 
-[CourseSection sectionId:4]
-  [Chapter header:'4. Luku']
-    // Olen kommentti
-    olen chapter teksti neljännelle luvulle 
+[CourseSection]
+[Chapter header:'4. Luku']
+// Olen kommentti
+olen chapter teksti neljännelle luvulle 
 
-    [Theorem header:'Teoreema 1']
-      syvällistä
-    [/Theorem]
+[Theorem header:'Teoreema 1']
+syvällistä
+[/Theorem]
 
-    [Rationalization]
-      iha hyvä perustelu
-    [/Rationalization]
+[Proof]
+iha hyvä perustelu
+[/Proof]
 
-    lisää tekstiä
-  [/Chapter]
+lisää tekstiä
+[/Chapter]
 [/CourseSection]
 
-[CourseSection sectionId:5]
-  [Chapter header:'5. Luku']
-    // Olen kommentti
-    olen 5. luvun chapter teksti
+[CourseSection]
+[Chapter header:'5. Luku']
+// Olen kommentti
+olen 5. luvun chapter teksti
 
-    [Theorem header:'Teoreema 1']
-      syvällistä
-    [/Theorem]
+[Theorem header:'Teoreema 1']
+syvällistä
+[/Theorem]
 
-    [Rationalization]
-      iha hyvä perustelu
-    [/Rationalization]
+[Proof]
+iha hyvä perustelu
+[/Proof]
 
-    lisää tekstiä
-  [/Chapter]
+lisää tekstiä
+[/Chapter]
 [/CourseSection]
+[/CourseNumberer]

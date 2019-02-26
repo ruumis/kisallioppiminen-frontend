@@ -1,0 +1,76 @@
+[CourseNumberer]
+[CourseMenu]
+[CourseTab header:'MAA3' /]
+
+[CourseTab header:'1. osa' /]
+
+[CourseTab header:'2. osa' /]
+
+[CourseTab header:'3. osa' /]
+
+[/CourseMenu]
+
+
+[CourseSection]
+
+//Chapter...........................................................
+[Chapter header:'Otsikko']
+Sisältö...
+
+
+
+[/Chapter]
+
+
+//Chapter with definition...........................................
+[Chapter header:'Chapter with Definition']
+Sisältö...
+
+[Definition header:'MÄÄRITELMÄ: Esimerkkimääritelmä']
+Määritelmän sisältö tulee tähän...
+[/Definition]
+
+[/Chapter]
+
+//Chapter with image................................................
+[Chapter header:'Chapter with Image']
+[Picture imagesrc:'/img/maa3/suoraK17.png' /]
+[/Chapter]
+
+//Chapter with exercise and answer..................................
+[Chapter header:'Chapter with exercise and answer']
+[Exercise header:'Tehtävän otsikko' open:false]
+Tehtävän ohjeistus ja vastausvaihtoehdot...
+
+[Answer]
+(a) [Equation]1850 m^2[/Equation]
+
+(b) [Math]Noin 29 %.[/Math]
+
+[/Answer]
+[/Exercise]
+[/Chapter]
+
+//Chapter with theorem and rationization...........................
+[Chapter header:'Chapter with theorem and rarionalization']
+[Theorem header:'Teoreeman otsikko']
+Teoreeman sisältö
+[/Theorem]
+[Proof]
+Perustelu...
+[/Proof]
+
+[Math]
+x = \begin{cases}
+   a &\text{if } b \\
+   c &\text{if } d
+\end{cases}
+[/Math]
+
+[Math]\frac {(a+x)h}{2}[/Math]
+[Math]\Omega = \omega \alpha \beta * \Sigma[/Math]
+
+[/Chapter]
+[/CourseSection]
+
+[/CourseNumberer]
