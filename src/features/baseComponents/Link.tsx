@@ -1,4 +1,5 @@
 import React from 'react'
+import classNames from 'classnames'
 import { connect } from 'react-redux'
 import { changePage } from '../../reducers/actions/pageStateActions'
 
@@ -22,7 +23,7 @@ class Link extends React.Component<{
     }
 
     return (
-      <a href={this.props.href} onClick={this.handleOnClick}>
+      <a className="white-link" href={this.props.href} onClick={this.handleOnClick}>
         {this.props.children}
       </a>
     )
