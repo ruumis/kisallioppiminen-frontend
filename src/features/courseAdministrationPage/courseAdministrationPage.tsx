@@ -6,28 +6,28 @@ import Scoreboard from './components/Scoreboard'
 export function courseAdministrationPage() {
   const testidata = [
     {
-      "user": "Anthony",
-      "exercises": [
+      user: 'Anthony',
+      exercises: [
         {
-          "id": "3BA56960-503F-4697-B508-9F4A3EEAC41B",
-          "status": "green"
+          id: '3BA56960-503F-4697-B508-9F4A3EEAC41B',
+          status: 'green'
         },
         {
-          "id": "CA5CC927-2800-427C-AD31-4FD0DD06C068",
-          "status": "yellow"
+          id: 'CA5CC927-2800-427C-AD31-4FD0DD06C068',
+          status: 'yellow'
         }
       ]
     },
     {
-      "user": "Bert",
-      "exercises": [
+      user: 'Bert',
+      exercises: [
         {
-          "id": "3BA56960-503F-4697-B508-9F4A3EEAC41B",
-          "status": "red"
+          id: '3BA56960-503F-4697-B508-9F4A3EEAC41B',
+          status: 'red'
         },
         {
-          "id": "CA5CC927-2800-427C-AD31-4FD0DD06C068",
-          "status": "gray"
+          id: 'CA5CC927-2800-427C-AD31-4FD0DD06C068',
+          status: 'gray'
         }
       ]
     }
