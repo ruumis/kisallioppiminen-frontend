@@ -2,11 +2,11 @@
 [CourseMenu]
 [CourseTab header:'MAA3' /]
 
-[CourseTab header:'1. Kolmio' /]
+[CourseTab header:'Kolmio' /]
 
-[CourseTab header:'2. Tasogeometriaa' /]
+[CourseTab header:'Tasogeometriaa' /]
 
-[CourseTab header:'3. Avaruusgeometriaa' /]
+[CourseTab header:'Avaruusgeometriaa' /]
 
 [/CourseMenu]
 
