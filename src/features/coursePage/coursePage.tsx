@@ -13,9 +13,10 @@ import { connect } from 'react-redux'
 import Exercise from './components/Exercise'
 import Answer from './components/Answer'
 import Theorem from './components/Theorem'
-import Rationalization from './components/Rationalization'
+import Proof from './components/Proof'
 import Definition from './components/Definition'
-import MaterialPicture from './components/MaterialPicture'
+import Picture from './components/Picture'
+import Math from './components/Math'
 
 export function coursePage() {
   const availableComponents = {
@@ -28,9 +29,10 @@ export function coursePage() {
     Exercise,
     Answer,
     Theorem,
-    Rationalization,
+    Proof,
     Definition,
-    MaterialPicture
+    Picture,
+    Math
   }
 
   const mapStateToProps = (state: { pageState: InitialState; coursePageState: CoursePageState }) => ({
