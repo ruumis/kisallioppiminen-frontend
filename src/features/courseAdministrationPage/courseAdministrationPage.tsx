@@ -2,8 +2,10 @@ import React from 'react'
 import { connect } from 'react-redux'
 import Chapter from '../coursePage/components/Chapter'
 import Scoreboard from './components/Scoreboard'
+import { Course } from '../../types/jsontypes'
 
 export function courseAdministrationPage() {
+  // Replace courses below with a request to server once the server is running
   const courses = [
     {
       name: 'MAY1: Lukujonot ja summat',
@@ -115,24 +117,17 @@ export function courseAdministrationPage() {
     }
   ]
 
-
-
-
-
-
-
-
-
-
-
+  const addCourses = () =>
+    courses.map(course =>
+      <Chapter key={course.id} header={course.name}>
+        <Scoreboard students={course.students} />
+      </Chapter>)
 
   const app = () => {
     return (
       <div className="courseAdministrationPageContainer">
         <h2 className="courseAdministrationPageContainer-heading">Kurssiesi tulostaulut:</h2>
-        <Chapter header="Testikurssi">
-          <Scoreboard students={testidata} />
-        </Chapter>
+        {addCourses()}
       </div>
     )
   }
