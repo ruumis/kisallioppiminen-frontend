@@ -112,7 +112,7 @@ Suorakulmion pinta-alan avulla saadaan johdettua lauseke kolmion pinta-alalle.
 
 [Exercise header:'KOLMION PINTA-ALA' open:false]
 
-[Picture imagesrc:'dist//img/maa3/suoraK05.png' /]
+[Picture imagesrc:'/img/maa3/suoraK05.png' /]
 
 (a) Piirrä yllä olevan kuvan kolmio vihkoosi ja täydennä se suorakulmioksi. 
 Vinkki: voit esimerkiksi soveltaa edellisen tehtävän ideaa kumpaankin kuvassa näkyvään suorakulmaiseen kolmioon.
