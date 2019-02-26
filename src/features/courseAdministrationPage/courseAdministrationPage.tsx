@@ -4,34 +4,127 @@ import Chapter from '../coursePage/components/Chapter'
 import Scoreboard from './components/Scoreboard'
 
 export function courseAdministrationPage() {
-  const testidata = [
+  const courses = [
     {
-      user: 'Anthony',
-      exercises: [
+      name: 'MAY1: Lukujonot ja summat',
+      coursekey: 'matikkaonkivaa',
+      id: 1,
+      html_id: 'may1',
+      startdate: '2017-03-14',
+      enddate: '2017-05-02',
+      students: [
         {
-          id: '3BA56960-503F-4697-B508-9F4A3EEAC41B',
-          status: 'green'
+          user: 'Anthony',
+          exercises: [
+            {
+              id: '3BA56960-503F-4697-B508-9F4A3EEAC41B',
+              status: 'green'
+            },
+            {
+              id: 'CA5CC927-2800-427C-AD31-4FD0DD06C068',
+              status: 'yellow'
+            }
+          ]
         },
         {
-          id: 'CA5CC927-2800-427C-AD31-4FD0DD06C068',
-          status: 'yellow'
+          user: 'Bert',
+          exercises: [
+            {
+              id: '3BA56960-503F-4697-B508-9F4A3EEAC41B',
+              status: 'red'
+            },
+            {
+              id: 'CA5CC927-2800-427C-AD31-4FD0DD06C068',
+              status: 'gray'
+            }
+          ]
         }
       ]
     },
     {
-      user: 'Bert',
-      exercises: [
+      name: 'Testikurssi',
+      coursekey: 'matikkaonkivaa',
+      id: 2,
+      html_id: 'may1',
+      startdate: '2017-03-14',
+      enddate: '2017-05-02',
+      students: [
         {
-          id: '3BA56960-503F-4697-B508-9F4A3EEAC41B',
-          status: 'red'
+          user: 'Anthony',
+          exercises: [
+            {
+              id: '3BA56960-503F-4697-B508-9F4A3EEAC41B',
+              status: 'green'
+            },
+            {
+              id: 'CA5CC927-2800-427C-AD31-4FD0DD06C068',
+              status: 'yellow'
+            }
+          ]
         },
         {
-          id: 'CA5CC927-2800-427C-AD31-4FD0DD06C068',
-          status: 'gray'
+          user: 'Bert',
+          exercises: [
+            {
+              id: '3BA56960-503F-4697-B508-9F4A3EEAC41B',
+              status: 'red'
+            },
+            {
+              id: 'CA5CC927-2800-427C-AD31-4FD0DD06C068',
+              status: 'gray'
+            }
+          ]
+        }
+      ]
+    },
+    {
+      name: 'MAA3: Geometria',
+      coursekey: 'matikkaonkivaa',
+      id: 3,
+      html_id: 'may1',
+      startdate: '2017-03-14',
+      enddate: '2017-05-02',
+      students: [
+        {
+          user: 'Anthony',
+          exercises: [
+            {
+              id: '3BA56960-503F-4697-B508-9F4A3EEAC41B',
+              status: 'green'
+            },
+            {
+              id: 'CA5CC927-2800-427C-AD31-4FD0DD06C068',
+              status: 'yellow'
+            }
+          ]
+        },
+        {
+          user: 'Bert',
+          exercises: [
+            {
+              id: '3BA56960-503F-4697-B508-9F4A3EEAC41B',
+              status: 'red'
+            },
+            {
+              id: 'CA5CC927-2800-427C-AD31-4FD0DD06C068',
+              status: 'gray'
+            }
+          ]
         }
       ]
     }
   ]
+
+
+
+
+
+
+
+
+
+
+
 
   const app = () => {
     return (
