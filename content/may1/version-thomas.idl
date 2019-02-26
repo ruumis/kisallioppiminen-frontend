@@ -1,0 +1,232 @@
+
+[CourseMenu]
+  [CourseTab header:'MAY1'
+          tabId:0 /]
+
+  [CourseTab header:'1. Luvut ja laskutoimitukset'
+          tabId:1 /]
+
+  [CourseTab header:'2. Potenssi ja logaritmi'
+          tabId:2 /]
+
+  [CourseTab header:'3. Lukujonot ja summat'
+          tabId:3 /]
+
+  [CourseTab header:'4. Funktio'
+          tabId:4 /]
+
+  [CourseTab header:'5. Prosenttilaskenta'
+          tabId:5 /]
+
+[/CourseMenu]
+
+
+[CourseSection sectionId:0 ]
+  [Chapter header:'Kurssin tavoitteet ja keskeiset sisällöt']
+    Matematiikan asema aikamme kulttuurissa edellyttää valmiutta ymmärtää, hyödyntää ja tuottaa matemaattisesti esitettyä tietoa. Sillä on merkittävä tai ratkaiseva rooli muun muassa tieteissä, teknologiassa, taloudessa, yrittäjyydessä, terveydenhuollossa ja turvallisuudessa. Matematiikan opiskelun tehtävänä on tutustuttaa sinut matemaattisen ajattelun malleihin sekä matematiikan perusideoihin ja rakenteisiin, opettaa sinua käyttämään puhuttua ja kirjoitettua matematiikan kieltä sekä kehittää laskemisen, ilmiöiden mallintamisen ja ongelmien ratkaisemisen taitojasi.
+
+    Syksystä 2016 lukion matematiikan opiskelu alkaa pitkän ja lyhyen oppimäärän yhteisellä kurssilla. Matematiikan yhteinen kurssi avaa näköaloja matematiikan moninaiseen merkitykseen ihmiselle ja yhteiskunnalle sekä sen ainutlaatuiseen ja kiehtovaan olemukseen tieteenalana. Tässä kurssissa sinulla on tilaisuus vahvistaa pohjaa matematiikan opinnoillesi ja nähdä matematiikka hyödyllisenä ja käyttökelpoisena selitettäessä ja hallittaessa muun muassa yhteiskunnan, talouden ja luonnon tapahtumia ja tilanteita.
+
+    Kurssin tavoitteena on, että
+
+    - pohdit matematiikan merkitystä yksilön ja yhteiskunnan näkökulmasta
+
+    - kertaat ja täydennät lukualueet, kertaat peruslaskutoimitukset ja prosenttilaskennan periaatteet
+
+    - vahvistat ymmärrystäsi funktion käsitteestä
+
+    - ymmärrät lukujonon käsitteen
+
+    - osaat määrittää lukujonoja, kun annetaan alkuehdot ja tapa, jolla seuraavat termit muodostetaan
+
+    - osaat havainnollisen käsityksen lukujonon summan määrittämisestä
+
+    - osaat ratkaista käytännön ongelmia aritmeettisen ja geometrisen jonon ja niistä muodostettujen summien avulla
+
+    - osaat käyttää teknisiä apuvälineitä funktion kuvaajan ja lukujonojen tutkimisessa sekä lukujonoihin liittyvien sovellusongelmien ratkaisussa.
+    
+    KESKEISET SISÄLLÖT
+
+    - reaaliluvut, peruslaskutoimitukset ja prosenttilaskenta
+
+    - funktio, kuvaajan piirto ja tulkinta
+
+    - lukujono
+
+    - rekursiivinen lukujono
+
+    - aritmeettinen jono ja summa
+
+    - logaritmi ja potenssi sekä niiden välinen yhteys
+
+    - muotoa [Equation]ax=b,x[/Equation] luonnollinen luku, olevien yhtälöiden ratkaiseminen
+
+    - geometrinen jono ja summa
+  [/Chapter]
+
+  [Chapter header:'Luonnolliset luvut ja kokonaisluvut (1.1 - 1.8)']
+
+    Aloitamme tämän kappaleen tekemällä sopimuksen siitä, mitä tarkoitetaan, kun puhutaan luonnollisista luvuista.
+    Tällaista sopimusta siitä, mitä jokin nimitys tarkoittaa, sanotaan matematiikassa määritelmäksi.
+    Luonnollisten lukujen määritelmä siis kertoo, mitä luonnollisilla luvuilla tarkoitetaan.
+
+    [Definition header:'Määritelmä: Luennolliset luvut']
+    Lukumäärien ilmaisemiseen käytettäviä lukuja [Equation]0, 1, 2, 3, 4, …[/Equation] kutsutaan luonnollisiksi luvuiksi.
+    Luonnollisten lukujen joukkoa merkitään kirjaimella [Equation]N[/Equation]. Siis
+
+      [Equation]N={0,1,2,3,4,…}.[/Equation]
+    [/Definition]
+
+
+    [Exercise header:'TEHTÄVÄ 1.1: LUONNOLLISTEN LUKUJEN YHTEEN- JA KERTOLASKU']
+
+      a) Tee piirros, joka havainnollistaa laskutoimitusta [Equation]2+4.[/Equation]
+
+      b) Tee piirros, joka havainnollistaa laskutoimitusta [Equation]2*3.[/Equation]
+
+      c) Tee piirros, joka havainnollistaa laskutoimitusta [Equation]3*2.[/Equation]
+
+      d) Mitä eroa b- ja c-kohtien laskuilla on? Entä mitä yhteistä niillä on?
+
+    [/Exercise]
+
+    [Exercise header:'TEHTÄVÄ 4.20: ENSIMMÄISEN ASTEEN POLYNOMIFUNKTIO' open:false]
+      a) Piirrä laskimellasi samaan kuvaan funktioiden [Equation]f(x)=0,5x+1 [/Equation], [Equation]g(x)=2x+1[/Equation] ja [Equation]h(x)=(−x+1)[/Equation] kuvaajat.
+
+      b) Mitä yhteistä näiden funktioiden kuvaajilla on? Entä mitä eroa niillä on?
+
+      c) Kaikki tämän tehtävän funktiot ovat muotoa [Equation]x↦ax+1[/Equation] eli ne kertovat muuttujaa [Equation]x[/Equation] jollakin luvulla [Equation]a[/Equation] ja lisäävät tulokseen luvun [Equation]1[/Equation]. Miten luku [Equation]1[/Equation] näkyy funktioiden kuvaajissa?
+
+      d) Pystytkö päättelemään kuvaajaa piirtämättä, millä korkeudella funktio [Equation]k(x)=x+4[/Equation] leikkaa y-akselin?
+
+      [Answer]
+        a) [Equation]a(x)=0,0662x+4,02 ja b(x)=0,0799x+3,75[/Equation]
+
+        b) [Equation]50 min[/Equation]
+
+        c)
+
+        d) [Equation]16:50[/Equation]
+
+      [/Answer]
+    [/Exercise]
+  [/Chapter]
+
+[Chapter header:'Kuvatesti']Materiaaliin saa myös kuvia[/Chapter]
+
+[/CourseSection]
+
+[CourseSection sectionId:1]
+  [Chapter header:'Rationaaliluvut (1.9-1.24)'] 
+      // Olen kommentti
+    olen 1. luvun chapter teksti
+
+    [Theorem header:'Teoreema 1']
+      syvällistä
+    [/Theorem]
+
+    [Rationalization]
+      iha hyvä perustelu
+    [/Rationalization]
+
+    lisää tekstiä
+  [/Chapter]
+[/CourseSection]
+
+[CourseSection sectionId:2]
+  [Chapter header:'2. Luku']
+    // Olen kommentti
+    olen 2. luvun chapter teksti
+
+    [Theorem header:'Teoreema 1']
+      syvällistä
+    [/Theorem]
+
+    [Rationalization]
+      iha hyvä perustelu
+    [/Rationalization]
+
+    lisää tekstiä
+  [/Chapter]
+[/CourseSection]
+
+[CourseSection sectionId:3]
+  [Chapter header:'3. Luku']
+    // Olen kommentti
+    olen chapter teksti kolmannelle luvulle 
+
+    [Theorem header:'Teoreema 1']
+      syvällistä
+    [/Theorem]
+
+    [Rationalization]
+      iha hyvä perustelu
+    [/Rationalization]
+
+    lisää tekstiä
+  [/Chapter]
+[/CourseSection]
+
+[CourseSection sectionId:4]
+  [Chapter header:'4. Luku']
+    // Olen kommentti
+    olen chapter teksti neljännelle luvulle 
+
+    [Theorem header:'Teoreema 1']
+      syvällistä
+    [/Theorem]
+
+    [Rationalization]
+      iha hyvä perustelu
+    [/Rationalization]
+
+    lisää tekstiä
+  [/Chapter]
+[/CourseSection]
+
+[CourseSection sectionId:5]
+  [Chapter header:'5. Luvun tavoitteet']
+    Tämän luvun tavoitteena on, että osaat ratkaista prosenttilaskentaan liittyviä ongelmia.
+    Osaat 
+	
+    - laskea, kuinka monta prosenttia luku $a$ on luvusta $b$</li>
+    - laskea, kuinka paljon on $p$ prosenttia luvusta $b$</li>
+    - laskea, mistä luvusta luku $a$ on $p$ prosenttia</li>
+    - laskea, kuinka monta prosenttia luku $a$ on suurempi tai pienempi kuin luku $b$</li>
+    - laskea muutosprosentin</li>
+    - laskea, mikä on uusi arvo, jos muutosprosentti ja alkuperäinen arvo tunnetaan</li>
+    - käyttää kirjainlausekkeita prosenttilaskentaan liittyvissä tehtävissä</li>
+    - käyttää prosenttiyksikköä prosentteina ilmoitettujen lukujen vertaamiseen.
+  [/Chapter]
+  [Chapter header:'5. Prosenttiosuus']
+    Suhteellisten osuuksien ilmaisemiseen käytetään usein prosentteja (kuvankaappauksia [Yle Uutisten sivuilta](http://yle.fi/uutiset/):
+
+                    [MaterialPicture imagesrc:'/content/may1/kuvat/p7.png' /]   
+                    [MaterialPicture imagesrc:'/content/may1/kuvat/p6.png' /]
+                    [MaterialPicture imagesrc:'/content/may1/kuvat/p5.png' /]
+                    
+	Aloitetaan määrittelemällä, mitä prosentilla tarkoitetaan:
+    [Definition header:'PROSENTTI']
+	
+		*Prosentti* on yksi sadasosa:
+		[Equation] 1 \ \% = \frac{1}{100} = 0{,}01.[/Equation]
+	[/Definition]
+	
+	Esimerkiksi [Equation]0{,}04 = 4 \ \%[/Equation], koska kumpikin merkintä tarkoittaa neljää sadasosaa eri tavoilla kirjoitettuna. Samaan tapaan [Equation]0{,}597 = 59{,}7 \ \%[/Equation].
+    
+	[Exercise header:'Prosentti']
+	
+		Ilmoita seuraavat luvut prosenttimerkkiä ([Equation]\%[/Equation]) käyttäen:
+                            (a) [Equation]\displaystyle\frac{35}{100}[/Equation]
+                            (b) [Equation]\displaystyle\frac{1}{5}[/Equation]
+                            (c) [Equation]0{,}56[/Equation]
+                            (d) [Equation]1{,}28[/Equation]
+		[Answer]                
+			(a) 35 % 
+			(b) 20 % 
+			(c) 56 %
+			(d) 128 % 
+		[/Answer]                
+	[/Exercise]
+  [/Chapter]
+[/CourseSection]
