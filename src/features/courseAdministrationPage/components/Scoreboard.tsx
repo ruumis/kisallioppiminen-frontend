@@ -5,11 +5,12 @@ import { Student } from '../../../types/jsontypes'
 const Scoreboard = ({ students }: { students: Student[] }) => {
 
   const addTableData = (exercises: Array<{ id: string; status: string }>) =>
-    exercises.map(exercise => <td><Light color={exercise.status} /></td>)
+    exercises.map(exercise => <td key={exercise.id}><Light color={exercise.status} /></td>)
 
+  // A better unique key for the tr-elements is probably needed!
   const createTableRows = () =>
     students.map(student =>
-      <tr>
+      <tr key={student.user}>
         <td>{student.user}</td>
         {addTableData(student.exercises)}
       </tr>)
