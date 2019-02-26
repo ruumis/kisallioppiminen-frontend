@@ -68,9 +68,9 @@ Luonnollisten lukujen määritelmä siis kertoo, mitä luonnollisilla luvuilla t
 Teoreeman selitys
 [/Theorem]
 
-[Rationalization]
+[Proof]
 Perustelut, miksi teoreema todella pitää paikkansa.
-[/Rationalization]
+[/Proof]
 
 
 [Definition header:'Määritelmä: Luennolliset luvut']
@@ -78,7 +78,7 @@ Lukumäärien ilmaisemiseen käytettäviä lukuja [Equation]0, 1, 2, 3, 4, …[/
 Luonnollisten lukujen joukkoa merkitään kirjaimella [Equation]N[/Equation]. Siis
 
 [Equation]N={0,1,2,3,4,…}.[/Equation]
-[Math]N={0,1,2,3,4,…}.[/Math]
+[Equation]N={0,1,2,3,4,…}.[/Equation]
 [/Definition]
 
 
@@ -119,7 +119,8 @@ d) [Equation]16:50[/Equation]
 [Chapter header:'Kuvatesti']
 
 Materiaaliin saa myös kuvia
-[MaterialPicture imagesrc:'/img/maa3/suoraK04.png' /]
+
+[Picture imagesrc:'/img/maa3/suoraK04.png' /]
 [/Chapter]
 
 [/CourseSection]

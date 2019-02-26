@@ -8,8 +8,10 @@
 
 [CourseSection]
 [Chapter header:'Luvun tavoitteet']
-// Olen kommentti
-Tässä tavoitteet.
+[Math] 
+1 \ \% = 
+\frac {1}{100} = 0{,}01.
+[/Math]
 [/Chapter]
 [/CourseSection]
 
