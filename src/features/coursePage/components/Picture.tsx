@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 
-const MaterialPicture = (props: any) => {
+const Picture = (props: any) => {
   return (
     <div>
       <img className="image" src={props.imagesrc} alt={props.alt} />
@@ -8,4 +8,4 @@ const MaterialPicture = (props: any) => {
   )
 }
 
-export default MaterialPicture
+export default Picture
