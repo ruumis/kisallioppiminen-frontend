@@ -1,7 +1,19 @@
 import React from 'react'
 import Light from './Light'
+import { Student } from '../../../types/jsontypes'
 
-export default function Scoreboard() {
+const Scoreboard = ({ students }: { students: Student[] }) => {
+
+  const addTableData = (exercises: Array<{ id: string; status: string }>) =>
+    exercises.map(exercise => <td><Light color={exercise.status} /></td>)
+
+  const createTableRows = () =>
+    students.map(student =>
+      <tr>
+        <td>{student.user}</td>
+        {addTableData(student.exercises)}
+      </tr>)
+
   return (
     <div className="scoreboard">
       <table>
@@ -41,78 +53,11 @@ export default function Scoreboard() {
             <th>4.1</th>
             <th>4.2</th>
           </tr>
-          <tr>
-            <td>testi Teppo</td>
-            <td><Light color="green" /></td>
-            <td><Light color="gray" /></td>
-            <td><Light color="yellow" /></td>
-            <td><Light color="gray" /></td>
-            <td><Light color="gray" /></td>
-            <td><Light color="red" /></td>
-            <td><Light color="gray" /></td>
-            <td><Light color="gray" /></td>
-            <td><Light color="green" /></td>
-            <td><Light color="gray" /></td>
-            <td><Light color="yellow" /></td>
-            <td><Light color="gray" /></td>
-            <td><Light color="green" /></td>
-            <td><Light color="red" /></td>
-            <td><Light color="gray" /></td>
-            <td><Light color="gray" /></td>
-            <td><Light color="green" /></td>
-            <td><Light color="gray" /></td>
-            <td><Light color="yellow" /></td>
-            <td><Light color="gray" /></td>
-            <td><Light color="red" /></td>
-            <td><Light color="red" /></td>
-            <td><Light color="gray" /></td>
-            <td><Light color="yellow" /></td>
-            <td><Light color="green" /></td>
-            <td><Light color="gray" /></td>
-            <td><Light color="yellow" /></td>
-            <td><Light color="gray" /></td>
-            <td><Light color="gray" /></td>
-            <td><Light color="red" /></td>
-            <td><Light color="gray" /></td>
-            <td><Light color="red" /></td>
-          </tr>
-          <tr>
-            <td>koehenkilo</td>
-            <td><Light color="green" /></td>
-            <td><Light color="gray" /></td>
-            <td><Light color="gray" /></td>
-            <td><Light color="green" /></td>
-            <td><Light color="gray" /></td>
-            <td><Light color="gray" /></td>
-            <td><Light color="red" /></td>
-            <td><Light color="yellow" /></td>
-            <td><Light color="green" /></td>
-            <td><Light color="gray" /></td>
-            <td><Light color="yellow" /></td>
-            <td><Light color="gray" /></td>
-            <td><Light color="gray" /></td>
-            <td><Light color="red" /></td>
-            <td><Light color="gray" /></td>
-            <td><Light color="gray" /></td>
-            <td><Light color="green" /></td>
-            <td><Light color="gray" /></td>
-            <td><Light color="yellow" /></td>
-            <td><Light color="gray" /></td>
-            <td><Light color="gray" /></td>
-            <td><Light color="red" /></td>
-            <td><Light color="gray" /></td>
-            <td><Light color="gray" /></td>
-            <td><Light color="green" /></td>
-            <td><Light color="gray" /></td>
-            <td><Light color="yellow" /></td>
-            <td><Light color="gray" /></td>
-            <td><Light color="gray" /></td>
-            <td><Light color="red" /></td>
-            <td><Light color="yellow" /></td>
-            <td><Light color="green" /></td>
-          </tr>
+          {createTableRows()}
         </tbody>
       </table>
     </div>
   )
 }
+
+export default Scoreboard
