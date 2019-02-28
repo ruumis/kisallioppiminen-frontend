@@ -82,7 +82,7 @@ Luonnollisten lukujen joukkoa merkitään kirjaimella [Equation]N[/Equation]. Si
 [/Definition]
 
 
-[Exercise header:'LUONNOLLISTEN LUKUJEN YHTEEN- JA KERTOLASKU']
+[Exercise UID:5fe90a70-3b3e-11e9-8ff0-571b2e5516d3 header:'LUONNOLLISTEN LUKUJEN YHTEEN- JA KERTOLASKU']
 
 a) Tee piirros, joka havainnollistaa laskutoimitusta [Equation]2+4.[/Equation]
 
@@ -94,7 +94,7 @@ d) Mitä eroa b- ja c-kohtien laskuilla on? Entä mitä yhteistä niillä on?
 
 [/Exercise]
 
-[Exercise header:'ENSIMMÄISEN ASTEEN POLYNOMIFUNKTIO']
+[Exercise UID:5fe90a71-3b3e-11e9-8ff0-571b2e5516d3 header:'ENSIMMÄISEN ASTEEN POLYNOMIFUNKTIO']
 a) Piirrä laskimellasi samaan kuvaan funktioiden [Equation]f(x)=0,5x+1, g(x)=2x+1 \text{ ja } h(x)=-x+1[/Equation] kuvaajat.
 
 b) Mitä yhteistä näiden funktioiden kuvaajilla on? Entä mitä eroa niillä on?
