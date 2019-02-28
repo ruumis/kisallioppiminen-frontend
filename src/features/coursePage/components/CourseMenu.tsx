@@ -7,6 +7,7 @@ const CourseMenu = (props: any) => {
     if (c.type && c.type.name && c.type.name.toLowerCase() === 'connect') {
       count++
       const clone = React.cloneElement(c, {
+        header: count === 0 ? c.props.header : `${count}. ${c.props.header}`,
         tabId: count
       })
 

@@ -2,15 +2,15 @@
 [CourseMenu]
 [CourseTab header:'MAY1' /]
 
-[CourseTab header:'1. Luvut ja laskutoimitukset' /]
+[CourseTab header:'Luvut ja laskutoimitukset' /]
 
-[CourseTab header:'2. Potenssi ja logaritmi' /]
+[CourseTab header:'Potenssi ja logaritmi' /]
 
-[CourseTab header:'3. Lukujonot ja summat' /]
+[CourseTab header:'Lukujonot ja summat' /]
 
-[CourseTab header:'4. Funktio' /]
+[CourseTab header:'Funktio' /]
 
-[CourseTab header:'5. Prosenttilaskenta' /]
+[CourseTab header:'Prosenttilaskenta' /]
 
 [/CourseMenu]
 
