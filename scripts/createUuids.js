@@ -2,7 +2,7 @@ const fs = require('fs')
 const uuidv1 = require('uuid/v1')
 const path = require('path')
 
-const createUids = path => {
+const createUuids = path => {
   const end = path.substring(path.length - 3)
 
   if (end !== 'idl') {
@@ -12,10 +12,10 @@ const createUids = path => {
   const text = fs.readFileSync(path).toString()
   const textByLine = text.split('\n')
   const uidTextByLine = textByLine.map(line => {
-    if (line.includes('[Exercise') && !line.includes('UID:')) {
+    if (line.includes('[Exercise') && !line.includes('UUID:')) {
       var words = line.split(' ')
       const index = words.indexOf('[Exercise')
-      words[index] = `${words[index]} UID:'${uuidv1()}'`
+      words[index] = `${words[index]} UUID:'${uuidv1()}'`
       return words.join(' ')
     }
     return line
@@ -34,7 +34,7 @@ goThroughFiles = base => {
       if (stat && stat.isDirectory()) {
         goThroughFiles(file)
       } else {
-        createUids(file)
+        createUuids(file)
       }
     })
   })

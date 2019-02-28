@@ -72,7 +72,7 @@ Luonnollisten lukujen joukkoa merkitään kirjaimella [Equation]N[/Equation]. Si
 [/Definition]
 
 
-[Exercise UID:'12a9f396-3b49-11e9-a38a-09f848b19644' header:'TEHTÄVÄ 1.1: LUONNOLLISTEN LUKUJEN YHTEEN- JA KERTOLASKU']
+[Exercise UUID:'12a9f396-3b49-11e9-a38a-09f848b19644' header:'TEHTÄVÄ 1.1: LUONNOLLISTEN LUKUJEN YHTEEN- JA KERTOLASKU']
 
 a) Tee piirros, joka havainnollistaa laskutoimitusta [Equation]2+4.[/Equation]
 
@@ -84,7 +84,7 @@ d) Mitä eroa b- ja c-kohtien laskuilla on? Entä mitä yhteistä niillä on?
 
 [/Exercise]
 
-[Exercise UID:'12a9f397-3b49-11e9-a38a-09f848b19644' header:'TEHTÄVÄ 4.20: ENSIMMÄISEN ASTEEN POLYNOMIFUNKTIO' open:false]
+[Exercise UUID:'12a9f397-3b49-11e9-a38a-09f848b19644' header:'TEHTÄVÄ 4.20: ENSIMMÄISEN ASTEEN POLYNOMIFUNKTIO' open:false]
 a) Piirrä laskimellasi samaan kuvaan funktioiden [Equation]f(x)=0,5x+1 [/Equation], [Equation]g(x)=2x+1[/Equation] ja [Equation]h(x)=(-x+1)[/Equation] kuvaajat.
 
 b) Mitä yhteistä näiden funktioiden kuvaajilla on? Entä mitä eroa niillä on?
@@ -209,7 +209,7 @@ Aloitetaan määrittelemällä, mitä prosentilla tarkoitetaan:
 
 Esimerkiksi [Equation]0{,}04 = 4 \ \%[/Equation], koska kumpikin merkintä tarkoittaa neljää sadasosaa eri tavoilla kirjoitettuna. Samaan tapaan [Equation]0{,}597 = 59{,}7 \ \%[/Equation].
 
-[Exercise UID:'12a9f398-3b49-11e9-a38a-09f848b19644' header:'Prosentti']
+[Exercise UUID:'12a9f398-3b49-11e9-a38a-09f848b19644' header:'Prosentti']
 
 Ilmoita seuraavat luvut prosenttimerkkiä ([Equation]\%[/Equation]) käyttäen:
 (a) [Equation]\displaystyle\frac{35}{100}[/Equation]
