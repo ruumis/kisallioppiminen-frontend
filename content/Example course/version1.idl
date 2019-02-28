@@ -82,7 +82,7 @@ Suorakulmion *pinta-ala* on samasta kärjestä alkavien sivujen pituuksien tulo 
 [MaterialPicture imagesrc:'/img/maa3/suoraK04.png' /]
 [/Definition]
 
-[Exercise UID:'12a9cc80-3b49-11e9-a38a-09f848b19644' header:'SUORAKULMION PINTA-ALA' open:false]
+[Exercise UUID:'12a9cc80-3b49-11e9-a38a-09f848b19644' header:'SUORAKULMION PINTA-ALA' open:false]
 Kansainvälisissä aikuisten jalkapallo-otteluissa kentän leveyden on oltava vähintään 64 m ja enintään 75 m. 
 Kentän pituuden on oltava vähintään 100 m ja enintään 110 m.
 
@@ -100,7 +100,7 @@ Kentän pituuden on oltava vähintään 100 m ja enintään 110 m.
 
 Suorakulmion pinta-alan avulla saadaan johdettua lauseke kolmion pinta-alalle.
 
-[Exercise UID:'12a9cc81-3b49-11e9-a38a-09f848b19644' header:'KOLMION PINTA-ALA' open:false]
+[Exercise UUID:'12a9cc81-3b49-11e9-a38a-09f848b19644' header:'KOLMION PINTA-ALA' open:false]
 
 [MaterialPicture imagesrc:'/img/maa3/suoraK17.png' /]
 (a) Piirrä yllä olevan kuvan kolmio vihkoosi ja täydennä se suorakulmioksi.
@@ -111,7 +111,7 @@ Suorakulmion pinta-alan avulla saadaan johdettua lauseke kolmion pinta-alalle.
 
 [/Exercise]
 
-[Exercise UID:'12a9cc82-3b49-11e9-a38a-09f848b19644' header:'KOLMION PINTA-ALA' open:false]
+[Exercise UUID:'12a9cc82-3b49-11e9-a38a-09f848b19644' header:'KOLMION PINTA-ALA' open:false]
 [MaterialPicture imagesrc:'/img/maa3/suoraK05.png' /]
 (a) Piirrä yllä olevan kuvan kolmio vihkoosi ja täydennä se suorakulmioksi. 
 Vinkki: voit esimerkiksi soveltaa edellisen tehtävän ideaa kumpaankin kuvassa näkyvään suorakulmaiseen kolmioon.
