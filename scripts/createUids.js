@@ -15,7 +15,7 @@ const createUids = path => {
     if (line.includes('[Exercise') && !line.includes('UID:')) {
       var words = line.split(' ')
       const index = words.indexOf('[Exercise')
-      words[index] = `${words[index]} UID:${uuidv1()}`
+      words[index] = `${words[index]} UID:'${uuidv1()}'`
       return words.join(' ')
     }
     return line
