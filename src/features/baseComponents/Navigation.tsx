@@ -15,7 +15,6 @@ class Navigation extends React.Component<Props> {
     this.props.fetchUser()
   }
 
-<<<<<<< d3e24c0a91724a74cc570c737ba8403f536b0cf7
   render() {
     const url = process.env.NODE_ENV === 'PRODUCTION' ? 'http://localhost:8000/users/auth' : 'http://localhost:8000/users/auth'
     const { user } = this.props
@@ -49,40 +48,24 @@ class Navigation extends React.Component<Props> {
               </div>
             </li>
           ) : (
-            <li className="navigator-item">
-              <div className="dropdown">
-                <a className="navigator-link" href={url} onClick={setUser()}>
-                  Kirjautuminen
+              <li className="navigator-item">
+                <div className="dropdown">
+                  <a className="navigator-link" href={url} onClick={setUser()}>
+                    Kirjautuminen
                 </a>
-                <div className="dropdown-content">
-                  <a href="/courseAdmin">Kurssihallinta</a>
-                  <a href="/omat">Omat kurssit</a>
-                  <a href="/">Kirjaudu ulos</a>
+                  <div className="dropdown-content">
+                    <a href="/courseAdmin">Kurssihallinta</a>
+                    <a href="/omat">Omat kurssit</a>
+                    <a href="/">Kirjaudu ulos</a>
+                  </div>
                 </div>
-              </div>
-            </li>
-          )}
+              </li>
+            )}
         </ul>
       </nav>
     )
   }
 }
-=======
-export function Navigation() {
-  return (
-    <nav className="navigator">
-      <ul>
-      <li className="navigator-item">
-          <a className="navigator-link" href="/courseAdmin">
-            Kurssihallinta
-          </a>
-        </li>
-        <li className="navigator-item">
-          <Link className="navigator-link" href="/courseAdmin">
-            Kurssihallinta
-          </Link>
-        </li>
->>>>>>> add link to courseAdmin (conditional rendering needed later)
 
 const setUser = () => {
   return () => {
@@ -91,9 +74,11 @@ const setUser = () => {
     return undefined
   }
 }
+
 const mapStateToProps = (state: { pageState: InitialState }) => ({
   user: state.pageState.pageParams.user
 })
+
 const mapDispatchToProps = (dispatch: ThunkDispatch<{}, {}, any>) => ({
   fetchUser: async () => {
     await dispatch(fetchUser())
