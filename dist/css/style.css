@@ -3,7 +3,7 @@ body {
 
 span {
   display: inline;
-  padding: 1px; }
+  padding-left: 1px; }
 
 header {
   background-color: #f6f6f6;
@@ -131,6 +131,14 @@ ul {
     margin-top: -45px;
     width: 300px;
     cursor: pointer; }
+
+.katex {
+  font: normal 1.21em KaTeX_Main, Times New Roman, serif;
+  line-height: 1.2;
+  white-space: nowrap;
+  text-indent: 0;
+  text-rendering: auto;
+  font-size: 25px; }
 
 .navigator {
   background-color: #c4da87;
