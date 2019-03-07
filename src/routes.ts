@@ -14,7 +14,7 @@ const routes: Array<{ path: Path; component: () => JSX.Element; pageName: string
     pageName: 'Etusivu'
   },
   {
-    path: new Path('/courses/:id/tab/:tabId'),
+    path: new Path('/courses/:id/version/:version/tab/:tabId'),
     component: coursePage,
     pageName: 'Kurssisivu'
   },

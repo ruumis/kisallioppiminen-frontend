@@ -5,17 +5,11 @@ export function Navigation() {
   return (
     <nav className="navigator">
       <ul>
-      <li className="navigator-item">
-          <a className="navigator-link" href="/courseAdmin">
-            Kurssihallinta
-          </a>
-        </li>
         <li className="navigator-item">
           <Link className="navigator-link" href="/courseAdmin">
             Kurssihallinta
           </Link>
         </li>
-
         <li className="navigator-item">
           <Link className="navigator-link" href="/">
             Materiaalit
