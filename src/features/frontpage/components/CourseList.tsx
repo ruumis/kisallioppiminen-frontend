@@ -13,7 +13,7 @@ function createCourses(courses: CourseObject[]) {
       id={course.id}
       courseName={course.courseName}
       quickLinks={course.quickLinks}
-      version={course.courseContent[course.courseContent.length - 1].version}
+      versions={course.courseContent}
       key={index}
     />
   ))
