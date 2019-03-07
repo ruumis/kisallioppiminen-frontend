@@ -13,7 +13,7 @@ function handle(props: any) {
 const JoinCourse = (props: any) => {
   return (
     <div>
-      <div className="chapter">
+      <div className="userCourseListPage-header">
         <label className="userCourseListPage-text">Lisää uusi kurssi:</label>
       </div>
       <div className="chapter-content">

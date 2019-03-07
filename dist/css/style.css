@@ -112,6 +112,21 @@ ul {
   padding-bottom: 100px;
   text-align: center; }
 
+.userCourseListPage-header {
+  overflow: auto;
+  border: 1px;
+  border-style: ridge;
+  border-color: #dddddd;
+  background-color: ghostwhite;
+  padding: 10px;
+  margin: 0 auto;
+  margin-top: 20px;
+  font-size: 24px;
+  width: 80%;
+  text-align: left;
+  color: #00747a;
+  text-transform: uppercase; }
+
 .userCourseListPage-button {
   display: inline-block;
   padding: 5px;
