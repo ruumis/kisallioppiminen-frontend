@@ -1,5 +1,11 @@
+// CourseNumberer on komponentti jonka sisälle laitetaan koko kurssi, 
+// sen avulla tehdään kaikki automaattinen numerointi (esim. tehtävät ja kurssin osat)
 [CourseNumberer]
+// Komponentin sisään voidaan lisätä [CourseTab]-komponentteja, 
+// joilla luodaan linkkejä kurssin eri lukuihin. 
+// Linkit tulevat kurssimateriaalin yläpuolelle kaikilla kurssisivuilla. 
 [CourseMenu]
+// Lisätään [CourseMenu]-komponentin sisälle linkiksi.
 [CourseTab header:'MAA3' /]
 
 [CourseTab header:'Kolmio' /]
@@ -10,7 +16,10 @@
 
 [/CourseMenu]
 
+// CourseSectionilla luodaan uusi luku. Luvut numeroitaan automaattisesti.
 [CourseSection]
+
+// Chapterilla luodaan kurssin luvulle uusi kappale. 
 [Chapter header:'Kurssin tavoitteet ja keskeiset sisällöt']
 ### Kurssin tavoitteena on, että
 
@@ -55,6 +64,7 @@ opittuja asioita sekä antaa palautetta oppimisesta ja sen etenemisestä yhteise
 [CourseSection]
 [Chapter header:'LUVUN TAVOITTEET'] 
 
+// Definitiolla voidaan luoda määritelmiä. 
 [Definition header:'']
 Tämän luvun tavoitteena on, että osaat ratkaista erilaisia geometrisia ongelmia kolmioiden avulla. Osaat
 
@@ -80,11 +90,15 @@ Asetetaan seuraava määritelmä:
 
 Suorakulmion *pinta-ala* on samasta kärjestä alkavien sivujen pituuksien tulo eli alla olevan kuvion merkinnöillä ab. 
 
+// Komponentilla luodaa kuva. imagesrc-muuttuja määrittelee kuvan polun. 
 [Picture imagesrc:'/img/maa3/suoraK04.png' /]
 
 [/Definition]
 
-[Exercise UUID:'12a9cc84-3b49-11e9-a38a-09f848b19644' header:'SUORAKULMION PINTA-ALA']
+// Komponentilla voidaan luoda tehtävä. Tehtävissä on automaattinen numerointi. 
+// Open-parametri ei ole pakollinen, vaan voidaan lisätä mikäli halutaan tehtävän olevan 
+// valmiiksi auki. Exercise-komponentti sisältää myös UUID:n, joka lisätään scriptillä. 
+[Exercise UUID:'12a9cc84-3b49-11e9-a38a-09f848b19644' header:'SUORAKULMION PINTA-ALA' open:true]
 
 Kansainvälisissä aikuisten jalkapallo-otteluissa kentän leveyden on oltava vähintään 64 m ja enintään 75 m. 
 Kentän pituuden on oltava vähintään 100 m ja enintään 110 m.
@@ -93,6 +107,7 @@ Kentän pituuden on oltava vähintään 100 m ja enintään 110 m.
 
 (b) Kuinka monta prosenttia suurin mahdollinen kenttä on isompi kuin pienin mahdollinen kenttä?
 
+// Vastaus, jota käytetään Exercise-komponentin sisällä. 
 [Answer]
 
 (a) [Equation]1850 m^2[/Equation]
@@ -134,6 +149,7 @@ Edellisten tehtävien tulokset ovat osa seuraavaa teoreemaa.
 Lue teoreema ja sen perustelu huolellisesti. Mieti jokaisen virkkeen jälkeen, mitä järkeä selityksessä on. 
 Jos jokin kohta tuntuu hämärältä, keskustele siitä kaverin tai opettajan kanssa.
 
+// Määritellään uusi teoria-osuus 
 [Theorem header:'KOLMION PINTA-ALA (TEOREEMA 1)']
 Kolmion pinta-ala on puolet sen kannan ja korkeuden tulosta eli alla olevan kuvion merkinnöillä
 [Equation]\frac {a}{h}[/Equation]
@@ -141,6 +157,7 @@ Kolmion pinta-ala on puolet sen kannan ja korkeuden tulosta eli alla olevan kuvi
 [Picture imagesrc:'/img/maa3/suoraK05.png' /]
 [/Theorem]
 
+// Teorian-osuuden liitteeksi voidaan liittää perustelut teorialle.
 [Proof]
 Perustelu: Kolmion korkeusjanan toinen päätepiste voi sijaita kolmion sivun päätepisteessä, kolmion sivulla tai sivun jatkeella.
 Tarkastellaan jokainen näistä tapauksista erikseen.
