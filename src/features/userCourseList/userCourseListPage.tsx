@@ -3,6 +3,7 @@ import { connect } from 'react-redux'
 import CourseWrapper from './components/CourseWrapper'
 import Scoreboard from '../courseAdministrationPage/components/Scoreboard'
 import { Course } from '../../types/jsontypes'
+import JoinCourse from './components/JoinCourse'
 
 export function userCourseListPage() {
   // Replace courses below with a request to server once the server is running
@@ -127,9 +128,7 @@ export function userCourseListPage() {
   const app = () => {
     return (
       <div className="courseAdministrationPageContainer">
-        <CourseWrapper header="Lisää uusi kurssi:">
-          <h2> aaaa</h2>
-        </CourseWrapper>
+        <JoinCourse />
         {addCourses()}
       </div>
     )
