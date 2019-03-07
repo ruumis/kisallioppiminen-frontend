@@ -6,6 +6,7 @@ import { InitialState } from './types/InitialState'
 import { Store, AnyAction } from 'redux'
 import { changePage } from './reducers/actions/pageStateActions'
 import Path from 'path-parser'
+import { userCourseListPage } from './features/userCourseList/userCourseListPage'
 
 const routes: Array<{ path: Path; component: () => JSX.Element; pageName: string }> = [
   {
@@ -27,10 +28,16 @@ const routes: Array<{ path: Path; component: () => JSX.Element; pageName: string
     path: new Path('/courseAdmin'),
     component: courseAdministrationPage,
     pageName: 'Kurssihallinta'
+  },
+  {
+    path: new Path('/omat'),
+    component: userCourseListPage,
+    pageName: 'Omat Kurssit'
   }
 ]
 
 // courseAdmin sivu yllä ei ole lopullinen reitti!!
+// Eikä omat
 
 export function getPage(currentPath: string): { component: () => JSX.Element; pathParams: any; pageName: string } | undefined {
   const selectedRoute = routes.find(route => route.path.test(currentPath) !== null)

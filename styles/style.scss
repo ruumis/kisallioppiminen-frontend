@@ -152,6 +152,34 @@ ul {
   text-align: center;
 }
 
+.userCourseListPage {
+  &-button {
+    display: inline-block;
+    padding: 13px;
+    border-radius: 5px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    margin-right: 10px;
+    background-color: #4343ff;
+    margin: -15px;
+    color: white;
+    text-decoration: none;
+    text-shadow: 1px 1px 2px black;
+    text-transform: uppercase;
+  }
+  &-close {
+    float: right;
+  }
+  &-text {
+    float: right;
+    display: inline-block;
+  }
+
+  &:hover {
+    background-color: ghostwhite;
+  }
+}
+
 .hero {
   margin-bottom: 50px;
 
