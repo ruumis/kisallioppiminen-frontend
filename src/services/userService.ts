@@ -1,6 +1,5 @@
 import axios from 'axios'
-import { User } from '../types/InitialState';
-const baseUrl = '/users'
+import { User } from '../types/InitialState'
 
 const HTTP = axios.create({
   withCredentials: true
