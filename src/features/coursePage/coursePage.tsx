@@ -45,7 +45,7 @@ export function coursePage() {
     const { pageState, coursePageState } = props
 
     const courseToRender = resolveCourse(pageState)
-    const courseMaterialVersion = resolveCourseVersion(coursePageState, courseToRender)
+    const courseMaterialVersion = resolveCourseVersion(pageState, courseToRender)
 
     return (
       <div className="coursePageContainer">
@@ -55,9 +55,14 @@ export function coursePage() {
         {typeof window !== 'undefined' ? (
           <IdyllDocument markup={courseMaterialVersion ? courseMaterialVersion.content : ''} components={availableComponents} />
         ) : (
+<<<<<<< 277d3e59953696009719c2488f462c1a74688e5e
           <IdyllDocument ast={compiler(courseMaterialVersion ? courseMaterialVersion.content : '', { async: false }) as Node[]} components={availableComponents} />
         )}
         <NavBottom />
+=======
+            <IdyllDocument ast={compiler(courseMaterialVersion ? courseMaterialVersion.content : '', { async: false }) as Node[]} components={availableComponents} />
+          )}
+>>>>>>> Version selector functionality and updated link-urls
       </div>
     )
   }
@@ -75,10 +80,11 @@ function resolveCourse({ pageParams, courses }: InitialState) {
   return undefined
 }
 
-function resolveCourseVersion({ selectedCourseVersion }: CoursePageState, course?: Course) {
+function resolveCourseVersion({ pageParams }: InitialState, course?: Course) {
+  const { pathParams } = pageParams
   return course
     ? course.courseContent.find(content => {
-        return String(content.version) === selectedCourseVersion
-      }) || course.courseContent[0]
+      return String(content.version) === pathParams.version
+    }) || course.courseContent[0]
     : undefined
 }

@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import Link from '../../baseComponents/Link'
 import { connect } from 'react-redux'
 import { InitialState, CoursePageState } from '../../../types/InitialState'
@@ -21,15 +21,10 @@ export default function Course(courseInfo: CourseInfo) {
 
     const { id, courseName, quickLinks, versions } = courseInfo
     const { pageState, coursePageState } = props
-    let selectedVersion = versions[0].version
-    const versionToRender = resolveVersion(coursePageState)
+    const [selectedVersion, setSelectedVersion] = useState(versions[0].version)
 
     const handleSelectorChange = (e: any) => {
-      console.log(e.target.value)
-      console.log("Ennen: ", selectedVersion)
-      selectedVersion = e.target.value
-      console.log("Jälkeen: ", selectedVersion)
-
+      setSelectedVersion(e.target.value)
     }
 
     return (
@@ -40,7 +35,7 @@ export default function Course(courseInfo: CourseInfo) {
         <select className="course-selector-box" defaultValue={versions[0].version} onChange={e => handleSelectorChange(e)}>
           {addVersions(versions)}
         </select>
-        <ol className="course-parts">{createQuickLinks(quickLinks, id)}</ol>
+        <ol className="course-parts">{createQuickLinks(quickLinks, id, selectedVersion)}</ol>
       </div>
     )
   }
@@ -50,18 +45,14 @@ export default function Course(courseInfo: CourseInfo) {
   return <ConnectedCourse />
 }
 
-function resolveVersion(pageState: CoursePageState) {
-  console.log(pageState)
-}
-
 const addVersions = (versions: Array<{ version: string; content: string }>) =>
   versions.map(vrsn =>
     <option key={vrsn.version}>{vrsn.version}</option>)
 
-function createQuickLinks(links: string[], courseId: string) {
+function createQuickLinks(links: string[], courseId: string, selectedVersion: string) {
   return links.map((link, index) => (
     <li key={index}>
-      <Link href={`/courses/${courseId}/tab/${index + 1}`}>
+      <Link href={`/courses/${courseId}/version/${selectedVersion}/tab/${index + 1}`}>
         <div className="course-content">{link}</div>
       </Link>
     </li>
