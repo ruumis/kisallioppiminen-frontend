@@ -1,11 +1,6 @@
 [CourseNumberer]
-[CourseMenu]
-[CourseTab header:'MAA7' /]
 
-[CourseTab header:'Trigonometriaa yksikköympyrässä' /]
-[/CourseMenu]
-
-[CourseSection]
+[CourseSection header:'MAA7']
 
 [Chapter header:'Luvun tavoitteet']
 Tässä tavoitteet.
@@ -21,7 +16,7 @@ ei ole mahdollinen ratkaista
 
 [/CourseSection]
 
-[CourseSection]
+[CourseSection header:'Trigonometriaa yksikköympyrässä']
 
 [Chapter header:'v2: Luvun tavoitteet']
 Tässä tavoitteet (v2).

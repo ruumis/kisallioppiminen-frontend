@@ -1,9 +1,11 @@
 import React from 'react'
 import { mapChildren } from 'idyll-component-children'
+import CourseTab from './CourseTab'
 
-const CourseMenu = (props: any) => {
+const CourseMenu = (props: { headers: string[] }) => {
+  const { headers } = props
   let count = -1
-  const arr2 = mapChildren(props.children, (c: any) => {
+  /* const arr2 = mapChildren(props.children, (c: any) => {
     if (c.type && c.type.name && c.type.name.toLowerCase() === 'connect') {
       count++
       const clone = React.cloneElement(c, {
@@ -15,9 +17,14 @@ const CourseMenu = (props: any) => {
     }
 
     return c
-  })
+  }) */
+  const courseTabs = (hs: string[]) =>
+    hs.map(h => {
+      count++
+      return count === 0 ? <CourseTab key={h} header={h} tabId={count} /> : <CourseTab key={h} header={`${count}. ${h}`} tabId={count} />
+    })
 
-  return <div className="containerwrapper">{arr2}</div>
+  return <div className="containerwrapper">{courseTabs(headers)}</div>
 }
 
 export default CourseMenu

@@ -6,7 +6,7 @@ import { InitialState, CoursePageState } from '../../../types/InitialState'
 interface Props {
   courseTabId: number
   tabId: number
-  header: JSX.Element
+  header: JSX.Element | string
   courseId: number
 }
 

@@ -1,16 +1,5 @@
 [CourseNumberer]
-[CourseMenu]
-[CourseTab header:'MAA3' /]
-
-[CourseTab header:'Kolmio' /]
-
-[CourseTab header:'Tasogeometriaa' /]
-
-[CourseTab header:'Avaruusgeometriaa' /]
-
-[/CourseMenu]
-
-[CourseSection]
+[CourseSection header:'MAA3']
 [Chapter header:'Kurssin tavoitteet ja keskeiset sisällöt']
 ### Kurssin tavoitteena on, että
 
@@ -52,7 +41,7 @@ opittuja asioita sekä antaa palautetta oppimisesta ja sen etenemisestä yhteise
 
 [/CourseSection]
 
-[CourseSection]
+[CourseSection header:'Kolmio']
 [Chapter header:'LUVUN TAVOITTEET'] 
 
 [Definition header:'']
@@ -164,7 +153,7 @@ Alkuperäisen kolmion pinta-ala saadaan tästä vähentämällä pienemmän suor
 [/Chapter]
 [/CourseSection]
 
-[CourseSection]
+[CourseSection header:'Tasogeometriaa']
 
 [Chapter header:'pelkkä tehtävä']
 

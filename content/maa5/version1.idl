@@ -1,12 +1,5 @@
 [CourseNumberer]
-[CourseMenu]
-[CourseTab header:'MAA5' /]
-
-[CourseTab header:'Etäisyys' /]
-
-[/CourseMenu]
-
-[CourseSection]
+[CourseSection header:'MAA5']
 
 [Chapter header:'Luvun tavoitteet']
 Tässä tavoitteet.
@@ -16,7 +9,7 @@ Tässä tavoitteet.
 
 [/CourseSection]
 
-[CourseSection]
+[CourseSection header:'Etäisyys']
 
 [Chapter header:'v2: Luvun tavoitteet']
 Tässä tavoitteet (v2).
