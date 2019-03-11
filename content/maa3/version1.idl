@@ -64,9 +64,11 @@ Tämän luvun tavoitteena on, että osaat ratkaista erilaisia geometrisia ongelm
 * määrittää kolmioiden sivujen pituuksia ja kulmien suuruuksia Pythagoraan lauseen, trigonometristen suhteiden sekä sini- ja kosinilauseiden avulla
 * päätellä suplementtikulman sinin ja kosinin arvot.
 [/Definition]
+
 [/Chapter]
 
 [Chapter header:'KOLMION PINTA-ALA JA KULMAT'] 
+
 Kolmioita voidaan käyttää apuna monien geometristen ongelmien ratkaisemisessa. 
 Aloitammekin tämän kurssin palauttamalla mieleen kolmioiden geometrisia ominaisuuksia.
 
@@ -75,12 +77,15 @@ Lähtökohdaksi voidaan ottaa suorakulmion pinta-ala. Sovitaan siis ensin, mitä
 Asetetaan seuraava määritelmä:
 
 [Definition header:'MÄÄRITELMÄ: SUORAKULMION PINTA-ALA']
+
 Suorakulmion *pinta-ala* on samasta kärjestä alkavien sivujen pituuksien tulo eli alla olevan kuvion merkinnöillä ab. 
 
 [Picture imagesrc:'/img/maa3/suoraK04.png' /]
+
 [/Definition]
 
 [Exercise UUID:'12a9cc84-3b49-11e9-a38a-09f848b19644' header:'SUORAKULMION PINTA-ALA']
+
 Kansainvälisissä aikuisten jalkapallo-otteluissa kentän leveyden on oltava vähintään 64 m ja enintään 75 m. 
 Kentän pituuden on oltava vähintään 100 m ja enintään 110 m.
 
@@ -89,16 +94,18 @@ Kentän pituuden on oltava vähintään 100 m ja enintään 110 m.
 (b) Kuinka monta prosenttia suurin mahdollinen kenttä on isompi kuin pienin mahdollinen kenttä?
 
 [Answer]
+
 (a) [Equation]1850 m^2[/Equation]
 
-(b) [Equation]Noin 29 %.[/Equation]
+(b) [Equation]Noin 29 \%.[/Equation]
 
 [/Answer]
+
 [/Exercise]
 
 Suorakulmion pinta-alan avulla saadaan johdettua lauseke kolmion pinta-alalle.
 
-[Exercise UUID:'12a9cc85-3b49-11e9-a38a-09f848b19644' header:'KOLMION PINTA-ALA (kiinni']
+[Exercise UUID:'12a9cc85-3b49-11e9-a38a-09f848b19644' header:'KOLMION PINTA-ALA ']
 
 [Picture imagesrc:'/img/maa3/suoraK17.png' /]
 
@@ -110,7 +117,7 @@ Suorakulmion pinta-alan avulla saadaan johdettua lauseke kolmion pinta-alalle.
 
 [/Exercise]
 
-[Exercise UUID:'12a9cc86-3b49-11e9-a38a-09f848b19644' header:'KOLMION PINTA-ALA' open:false]
+[Exercise UUID:'12a9cc86-3b49-11e9-a38a-09f848b19644' header:'KOLMION PINTA-ALA']
 
 [Picture imagesrc:'/img/maa3/suoraK05.png' /]
 
@@ -129,39 +136,40 @@ Jos jokin kohta tuntuu hämärältä, keskustele siitä kaverin tai opettajan ka
 
 [Theorem header:'KOLMION PINTA-ALA (TEOREEMA 1)']
 Kolmion pinta-ala on puolet sen kannan ja korkeuden tulosta eli alla olevan kuvion merkinnöillä
-[Equation]ah/2[/Equation]
+[Equation]\frac {a}{h}[/Equation]
 
 [Picture imagesrc:'/img/maa3/suoraK05.png' /]
+
 [/Theorem]
 
 [Proof]
-Perustelu: Kolmion korkeusjanan toinen päätepiste voi sijaita kolmion sivun päätepisteessä, kolmion sivulla tai sivun jatkeella. 
+Perustelu: Kolmion korkeusjanan toinen päätepiste voi sijaita kolmion sivun päätepisteessä, kolmion sivulla tai sivun jatkeella.
 Tarkastellaan jokainen näistä tapauksista erikseen.
 
-1. Tapaus, jossa kolmion korkeusjanan toinen päätepiste sijaitsee kolmion sivun päätepisteessä, on käsitelty tehtävässä 1.2. 
-
+1. Tapaus, jossa kolmion korkeusjanan toinen päätepiste sijaitsee kolmion sivun päätepisteessä, on käsitelty tehtävässä 1.2.
 [Picture imagesrc:'/img/maa3/suoraK18.png' /]
 
 2. Tapaus, jossa kolmion korkeusjanan toinen päätepiste sijaitsee kolmion sivulla, on käsitelty tehtävässä 1.3.
-
 [Picture imagesrc:'/img/maa3/suoraK05.png' /]
 
-3. Jos kolmion korkeusjanan toinen päätepiste sijaitsee kolmion sivun jatkeella, 
-voidaan kolmio täydentää suorakulmaiseksi kolmioksi, jonka pinta-ala on tehtävän 1.2 nojalla 
-[Equation](a+x)h/2[/Equation]
+3. Jos kolmion korkeusjanan toinen päätepiste sijaitsee kolmion sivun jatkeella,
+voidaan kolmio täydentää suorakulmaiseksi kolmioksi, jonka pinta-ala on tehtävän 1.2 nojalla
+[Equation]\frac {(a+x)h}{2}[/Equation]
 
 [Picture imagesrc:'/img/maa3/suoraK08.png' /]
 
-Alkuperäisen kolmion pinta-ala saadaan tästä vähentämällä pienemmän suorakulmaisen kolmion pinta-ala: 
-[Equation](a+x)h/2 - x/h = (ah+xh-xh)/2 = ah/2 [/Equation]
+Alkuperäisen kolmion pinta-ala saadaan tästä vähentämällä pienemmän suorakulmaisen kolmion pinta-ala:
+[Equation]\frac {(a+x)h}{2} - \frac {x}{h} = \frac {(ah+xh-xh)}{2} = \frac {ah}{2}[/Equation]
 [/Proof]
 [/Chapter]
 [/CourseSection]
 
 [CourseSection]
+
 [Chapter header:'pelkkä tehtävä']
 
 [Exercise UUID:'12a9cc87-3b49-11e9-a38a-09f848b19644' header:'miinus lasku']
+
 [Equation]5-3?[/Equation]
 
 [Answer]

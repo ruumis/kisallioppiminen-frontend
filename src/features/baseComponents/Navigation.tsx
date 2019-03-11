@@ -20,7 +20,7 @@ class Navigation extends React.Component<any> {
 
   render() {
     const url = process.env.NODE_ENV === 'PRODUCTION' ? 'http://localhost:8000/users/auth' : 'http://localhost:8000/users/auth'
-    const {user} = this.props
+    const { user } = this.props
     return (
       <nav className="navigator">
         <ul>
@@ -48,7 +48,7 @@ class Navigation extends React.Component<any> {
           {user ? (
             <li className="navigator-item">
               <a className="navigator-link" href={url}>
-                {`Hei, ${user.name}` }
+                {`Hei, ${user.name}`}
               </a>
             </li>
           ) : (

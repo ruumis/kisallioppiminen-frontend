@@ -1,5 +1,5 @@
 import React from 'react'
-import { InitialState, CoursePageState } from '../types/InitialState'
+import { InitialState, CoursePageState, ExercisesState } from '../types/InitialState'
 import Footer from './baseComponents/Footer'
 import Navigation from './baseComponents/Navigation'
 import Hero from './baseComponents/Hero'
@@ -9,7 +9,7 @@ import { initStore } from '../reducers/store'
 import userService from '../services/userService'
 import { fetchUser } from '../reducers/actions/pageStateActions'
 
-export function createApp(initialState: { pageState: InitialState; coursePageState: CoursePageState }) {
+export function createApp(initialState: { pageState: InitialState; coursePageState: CoursePageState; exercises: ExercisesState }) {
   const store = initStore(initialState)
   watchPageChanges(store)
 
@@ -19,7 +19,7 @@ export function createApp(initialState: { pageState: InitialState; coursePageSta
 
   const app = (props: { initialState: InitialState }) => {
     const { initialState: state } = props
-    const {component, pageName} = resolvePageToRender(state)
+    const { component, pageName } = resolvePageToRender(state)
     return (
       <React.Fragment>
         <Navigation />
@@ -45,11 +45,11 @@ function resolvePageToRender(initialState: InitialState) {
   const page = getPage(path)
 
   if (page === undefined) {
-    return {component: <h1>404 Not found :(</h1>, pageName: 'Not found'}
+    return { component: <h1>404 Not found :(</h1>, pageName: 'Not found' }
   }
 
   initialState.pageParams.pathParams = page.pathParams
-  const {component, pageName} = page
+  const { component, pageName } = page
 
-  return {component: component(), pageName}
+  return { component: component(), pageName }
 }

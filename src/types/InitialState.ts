@@ -18,9 +18,13 @@ export interface Course {
   id: string
   courseName: string
   quickLinks: string[]
-  courseContent: Array<{ version: string; content: string }>
+  courseContent: Array<{ version: string; content: string; quickLinks: string[] }>
 }
 
 export interface CoursePageState {
   selectedCourseVersion: string | null
+}
+
+export interface ExercisesState {
+  idToNumber: { [s: string]: string } | null
 }

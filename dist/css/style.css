@@ -3,7 +3,7 @@ body {
 
 span {
   display: inline;
-  padding: 1px; }
+  padding-left: 1px; }
 
 header {
   background-color: #f6f6f6;
@@ -112,6 +112,68 @@ ul {
   padding-bottom: 100px;
   text-align: center; }
 
+.userCourseListPage-header {
+  overflow: auto;
+  border: 1px;
+  border-style: ridge;
+  border-color: #dddddd;
+  background-color: ghostwhite;
+  padding: 10px;
+  margin: 0 auto;
+  margin-top: 20px;
+  font-size: 24px;
+  width: 80%;
+  text-align: left;
+  color: #00747a;
+  text-transform: uppercase; }
+
+.userCourseListPage-button {
+  display: inline-block;
+  padding: 5px;
+  border-radius: 5px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  margin-right: 10px;
+  background-color: #4343ff;
+  color: white;
+  text-decoration: none;
+  text-shadow: 1px 1px 2px black;
+  font-size: 15px; }
+
+.userCourseListPage-date {
+  padding-right: 2%;
+  color: gray;
+  float: left;
+  width: 20%; }
+
+.userCourseListPage-key {
+  padding-left: 2%;
+  padding-right: 2%;
+  color: black;
+  margin: 5px;
+  float: right;
+  text-transform: lowercase; }
+
+.userCourseListPage-text {
+  padding-right: 2%;
+  float: left;
+  width: 20%; }
+
+.userCourseListPage-enter {
+  display: inline-block;
+  padding: 5px;
+  border-radius: 5px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  margin-right: 10px;
+  text-decoration: none;
+  color: gray;
+  font-size: 15px;
+  width: 30%; }
+
+.userCourseListPage:hover {
+  background-color: ghostwhite; }
+
 .hero {
   margin-bottom: 50px; }
   .hero-content {
@@ -131,6 +193,14 @@ ul {
     margin-top: -45px;
     width: 300px;
     cursor: pointer; }
+
+.katex {
+  font: normal 1.21em KaTeX_Main, Times New Roman, serif;
+  line-height: 1.2;
+  white-space: nowrap;
+  text-indent: 0;
+  text-rendering: auto;
+  font-size: 25px; }
 
 .navigator {
   background-color: #c4da87;
@@ -355,6 +425,7 @@ ul {
   margin: 1% 1%; }
 
 .chapter {
+  overflow: auto;
   border: 1px;
   border-style: ridge;
   border-color: #dddddd;
