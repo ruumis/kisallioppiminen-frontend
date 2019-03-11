@@ -34,10 +34,8 @@ const routes: Array<{ path: Path; component: () => JSX.Element; pageName: string
     component: userCourseListPage,
     pageName: 'Omat Kurssit'
   }
-]
-
 // courseAdmin sivu yllä ei ole lopullinen reitti!!
-// Eikä omat
+]
 
 export function getPage(currentPath: string): { component: () => JSX.Element; pathParams: any; pageName: string } | undefined {
   const selectedRoute = routes.find(route => route.path.test(currentPath) !== null)

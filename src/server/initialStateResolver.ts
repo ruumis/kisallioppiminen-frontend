@@ -44,7 +44,8 @@ export function resolveInitialState(path: string): { pageState: InitialState; co
       courses: courses || '',
       pageParams: {
         path,
-        pathParams: {}
+        pathParams: {},
+        user: null
       }
     },
     coursePageState: {
