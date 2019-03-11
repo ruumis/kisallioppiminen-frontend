@@ -44,7 +44,7 @@ export function coursePage() {
   const coursePageApp = (props: { pageState: InitialState; coursePageState: CoursePageState }) => {
     const { pageState, coursePageState } = props
     const courseToRender = resolveCourse(pageState)
-    const courseMaterialVersion = resolveCourseVersion(coursePageState, courseToRender)
+    const courseMaterialVersion = resolveCourseVersion(pageState, courseToRender)
 
     return (
       <div className="coursePageContainer">
@@ -54,8 +54,8 @@ export function coursePage() {
         {typeof window !== 'undefined' ? (
           <IdyllDocument markup={courseMaterialVersion ? courseMaterialVersion.content : ''} components={availableComponents} />
         ) : (
-          <IdyllDocument ast={compiler(courseMaterialVersion ? courseMaterialVersion.content : '', { async: false }) as Node[]} components={availableComponents} />
-        )}
+            <IdyllDocument ast={compiler(courseMaterialVersion ? courseMaterialVersion.content : '', { async: false }) as Node[]} components={availableComponents} />
+          )}
         <NavBottom />
       </div>
     )
@@ -73,10 +73,11 @@ function resolveCourse({ pageParams, courses }: InitialState) {
   return undefined
 }
 
-function resolveCourseVersion({ selectedCourseVersion }: CoursePageState, course?: Course) {
+function resolveCourseVersion({ pageParams }: InitialState, course?: Course) {
+  const { pathParams } = pageParams
   return course
     ? course.courseContent.find(content => {
-        return String(content.version) === selectedCourseVersion
-      }) || course.courseContent[0]
+      return String(content.version) === pathParams.version
+    }) || course.courseContent[0]
     : undefined
 }
