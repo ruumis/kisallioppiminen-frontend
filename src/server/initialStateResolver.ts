@@ -20,7 +20,10 @@ export function resolveInitialState(path: string): { pageState: InitialState; co
       let sectionCount = -1
       let exerciseCount = 0
       const quickLinks: string[] = []
-      const contentByWord = cv.content.replace('\n', ' ').split(' ')
+      const contentByWord = cv.content
+        .replace('\n', ' ')
+        .replace('[', ' [')
+        .split(' ')
       contentByWord.forEach(word => {
         if (word.includes('[CourseSection')) {
           sectionCount++
