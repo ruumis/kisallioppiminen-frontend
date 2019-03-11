@@ -9,7 +9,6 @@ const reducer = combineReducers({
   coursePageState: coursePageReducer
 })
 
-export const initStore = ({pageState, coursePageState}: {pageState: InitialState, coursePageState: CoursePageState}) => 
-    createStore(reducer, { pageState, coursePageState }, applyMiddleware(thunk))
-  // (typeof window !== 'undefined' && (window as any).__REDUX_DEVTOOLS_EXTENSION__) && (window as any).__REDUX_DEVTOOLS_EXTENSION__()
-
+export const initStore = ({ pageState, coursePageState }: { pageState: InitialState; coursePageState: CoursePageState }) =>
+  createStore(reducer, { pageState, coursePageState }, applyMiddleware(thunk))
+// (typeof window !== 'undefined' && (window as any).__REDUX_DEVTOOLS_EXTENSION__) && (window as any).__REDUX_DEVTOOLS_EXTENSION__()

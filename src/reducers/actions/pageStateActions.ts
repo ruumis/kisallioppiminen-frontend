@@ -1,5 +1,5 @@
 import { User } from '../../types/InitialState'
-import userService from "../../services/userService"
+import userService from '../../services/userService'
 
 export class Action extends String {}
 
@@ -12,9 +12,10 @@ export const SET_USER: Action = 'SET_USER'
 export const changePage = (page: string) => ({ type: CHANGE_PAGE, data: page })
 
 export const fetchUser = () => {
-  return async (dispatch: any): Promise<void> => userService.login().then(user => {
-    dispatch(setUser(user))
-  })
+  return async (dispatch: any): Promise<void> =>
+    userService.login().then(user => {
+      dispatch(setUser(user))
+    })
 }
 
-export const setUser = (user: User) => ({type: SET_USER, data: user})
+export const setUser = (user: User) => ({ type: SET_USER, data: user })
