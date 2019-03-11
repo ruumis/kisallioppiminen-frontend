@@ -38,7 +38,7 @@ export function resolveInitialState(path: string): { pageState: InitialState; co
       })
     })
   )
-  console.log(idToNumber)
+
   return {
     pageState: {
       courses: courses || '',
