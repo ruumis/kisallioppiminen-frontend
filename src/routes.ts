@@ -31,7 +31,6 @@ const routes: Array<{ path: Path; component: () => JSX.Element; pageName: string
 // courseAdmin sivu yllä ei ole lopullinen reitti!!
 ]
 
-
 export function getPage(currentPath: string): { component: () => JSX.Element; pathParams: any; pageName: string } | undefined {
   const selectedRoute = routes.find(route => route.path.test(currentPath) !== null)
   if (selectedRoute !== undefined) {

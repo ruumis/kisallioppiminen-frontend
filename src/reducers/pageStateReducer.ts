@@ -15,7 +15,6 @@ export const pageStateReducer = (state: InitialState | null = null, action: { ty
           }
         }
       }
-      break;
     case 'CHANGE_PAGE':
       if (typeof window !== 'undefined') {
         window.history.pushState({}, 'Kisällioppiminen', data)
