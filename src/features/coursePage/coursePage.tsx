@@ -43,7 +43,6 @@ export function coursePage() {
 
   const coursePageApp = (props: { pageState: InitialState; coursePageState: CoursePageState }) => {
     const { pageState, coursePageState } = props
-
     const courseToRender = resolveCourse(pageState)
     const courseMaterialVersion = resolveCourseVersion(coursePageState, courseToRender)
 
@@ -63,7 +62,6 @@ export function coursePage() {
   }
 
   const ConnectedCoursePage = connect(mapStateToProps)(coursePageApp)
-
   return <ConnectedCoursePage />
 }
 

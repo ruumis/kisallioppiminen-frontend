@@ -6,11 +6,10 @@ import Hero from './baseComponents/Hero'
 import { getPage, watchPageChanges } from '../routes'
 import { Provider, connect } from 'react-redux'
 import { initStore } from '../reducers/store'
-import userService from '../services/userService';
+import userService from '../services/userService'
+import { fetchUser } from '../reducers/actions/pageStateActions'
 
 export function createApp(initialState: { pageState: InitialState; coursePageState: CoursePageState }) {
-  const user = userService.login()
-  console.log(user)
   const store = initStore(initialState)
   watchPageChanges(store)
 

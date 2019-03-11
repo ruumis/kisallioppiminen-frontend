@@ -13,10 +13,10 @@ export const SET_USER: Action = 'SET_USER'
 
 export const changePage = (page: string) => ({ type: CHANGE_PAGE, data: page })
 
-export const fetchUser = (): ThunkAction<Promise<void>, {}, {}, AnyAction> => {
-  return async (dispatch: ThunkDispatch<{}, {}, AnyAction>): Promise<void> => userService.login().then(user => {
+export const fetchUser = () => {
+  return async (dispatch: any): Promise<void> => userService.login().then(user => {
     dispatch(setUser(user))
   })
 }
 
-export const setUser = (user: User) => ({type: SET_USER, user})
+export const setUser = (user: User) => ({type: SET_USER, data: user})
