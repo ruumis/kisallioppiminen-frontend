@@ -3,9 +3,15 @@ export interface InitialState {
   pageParams: PageParams
 }
 
+export interface User {
+  id: number
+  name: string
+}
+
 export interface PageParams {
   path: string
   pathParams: any // No smart way of typifying these, so let's just got with any
+  user: User
 }
 
 export interface Course {
