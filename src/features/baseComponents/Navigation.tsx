@@ -10,7 +10,11 @@ export function Navigation() {
             Kurssihallinta
           </Link>
         </li>
-
+        <li className="navigator-item">
+          <Link className="navigator-link" href="/omat">
+            Omat kurssit
+          </Link>
+        </li>
         <li className="navigator-item">
           <Link className="navigator-link" href="/">
             Materiaalit

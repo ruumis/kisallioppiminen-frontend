@@ -152,6 +152,73 @@ ul {
   text-align: center;
 }
 
+.userCourseListPage {
+  &-header {
+    overflow: auto;
+    border: 1px;
+    border-style: ridge;
+    border-color: #dddddd;
+    background-color: ghostwhite;
+    padding: 10px;
+    margin: 0 auto;
+    margin-top: 20px;
+    font-size: 24px;
+    width: 80%;
+    text-align: left;
+    color: #00747a;
+    text-transform: uppercase;
+  }
+  &-button {
+    display: inline-block;
+    padding: 5px;
+    border-radius: 5px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    margin-right: 10px;
+    background-color: #4343ff;
+    color: white;
+    text-decoration: none;
+    text-shadow: 1px 1px 2px black;
+    font-size: 15px;
+  }
+  &-date {
+    padding-right: 2%;
+    color: gray;
+    float: left;
+    width: 20%;
+  }
+  &-key {
+    padding-left: 2%;
+    padding-right: 2%;
+    color: black;
+    margin: 5px;
+    float: right;
+    text-transform: lowercase;
+  }
+
+  &-text {
+    padding-right: 2%;
+    float: left;
+    width: 20%;
+  }
+  &-enter {
+    display: inline-block;
+    padding: 5px;
+    border-radius: 5px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    margin-right: 10px;
+    text-decoration: none;
+    color: gray;
+    font-size: 15px;
+    width: 30%;
+  }
+
+  &:hover {
+    background-color: ghostwhite;
+  }
+}
+
 .hero {
   margin-bottom: 50px;
 
@@ -457,6 +524,7 @@ ul {
 }
 
 .chapter {
+  overflow: auto;
   border: 1px;
   border-style: ridge;
   border-color: #dddddd;
