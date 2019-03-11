@@ -1,12 +1,5 @@
 [CourseNumberer]
-[CourseMenu]
-[CourseTab header:'MAA4' /]
-
-[CourseTab header:'Vektorit ja xy-koordinaatisto' /]
-
-[/CourseMenu]
-
-[CourseSection]
+[CourseSection header:'MAA4']
 [Chapter header:'Luvun tavoitteet']
 [Math] 
 1 \ \% = 
@@ -15,7 +8,7 @@
 [/Chapter]
 [/CourseSection]
 
-[CourseSection]
+[CourseSection header:'Vektorit ja xy-koordinaatisto']
 [Chapter header:'v2: Luvun tavoitteet']
 // Olen kommentti
 Tässä tavoitteet2.

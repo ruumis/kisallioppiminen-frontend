@@ -1,21 +1,5 @@
 [CourseNumberer]
-[CourseMenu]
-[CourseTab header:'MAY1' /]
-
-[CourseTab header:'Luvut ja laskutoimitukset' /]
-
-[CourseTab header:'Potenssi ja logaritmi' /]
-
-[CourseTab header:'Lukujonot ja summat' /]
-
-[CourseTab header:'Funktio' /]
-
-[CourseTab header:'Prosenttilaskenta' /]
-
-[/CourseMenu]
-
-
-[CourseSection]
+[CourseSection header:'MAY1']
 [Chapter header:'Kurssin tavoitteet ja keskeiset sisällöt']
 Matematiikan asema aikamme kulttuurissa edellyttää valmiutta ymmärtää, hyödyntää ja tuottaa matemaattisesti esitettyä tietoa. Sillä on merkittävä tai ratkaiseva rooli muun muassa tieteissä, teknologiassa, taloudessa, yrittäjyydessä, terveydenhuollossa ja turvallisuudessa. Matematiikan opiskelun tehtävänä on tutustuttaa sinut matemaattisen ajattelun malleihin sekä matematiikan perusideoihin ja rakenteisiin, opettaa sinua käyttämään puhuttua ja kirjoitettua matematiikan kieltä sekä kehittää laskemisen, ilmiöiden mallintamisen ja ongelmien ratkaisemisen taitojasi.
 
@@ -125,7 +109,7 @@ Materiaaliin saa myös kuvia
 
 [/CourseSection]
 
-[CourseSection]
+[CourseSection header:'Luvut ja laskutoimitukset']
 [Chapter header:'Rationaaliluvut'] 
 // Olen kommentti
 olen 1. luvun chapter teksti
@@ -142,7 +126,7 @@ lisää tekstiä
 [/Chapter]
 [/CourseSection]
 
-[CourseSection]
+[CourseSection header:'Potenssi ja logaritmi']
 [Chapter header:'2. Luku']
 // Olen kommentti
 olen 2. luvun chapter teksti
@@ -159,7 +143,7 @@ lisää tekstiä
 [/Chapter]
 [/CourseSection]
 
-[CourseSection]
+[CourseSection header:'Lukujonot ja summat']
 [Chapter header:'3. Luku']
 // Olen kommentti
 olen chapter teksti kolmannelle luvulle 
@@ -176,7 +160,7 @@ lisää tekstiä
 [/Chapter]
 [/CourseSection]
 
-[CourseSection]
+[CourseSection header:'Funktio']
 [Chapter header:'4. Luku']
 // Olen kommentti
 olen chapter teksti neljännelle luvulle 
@@ -193,7 +177,7 @@ lisää tekstiä
 [/Chapter]
 [/CourseSection]
 
-[CourseSection]
+[CourseSection header:'Prosenttilaskenta']
 [Chapter header:'5. Luku']
 // Olen kommentti
 olen 5. luvun chapter teksti

@@ -1,19 +1,12 @@
 [CourseNumberer]
-[CourseMenu]
-[CourseTab header:'MAA6' /]
-
-[CourseTab header:'Derivaatta' /]
-
-[/CourseMenu]
-
-[CourseSection]
+[CourseSection header:'MAA6']
 [Chapter header:'Luvun tavoitteet']
 Tässä tavoitteet.
 [/Chapter]
 
 [/CourseSection]
 
-[CourseSection]
+[CourseSection header:'Derivaatta']
 [Chapter header:'v2: Luvun tavoitteet']
 Tässä tavoitteet (v2).
 [/Chapter]

@@ -1,17 +1,5 @@
 [CourseNumberer]
-[CourseMenu]
-[CourseTab header:'MAA3' /]
-
-[CourseTab header:'osa' /]
-
-[CourseTab header:'osa' /]
-
-[CourseTab header:'osa' /]
-
-[/CourseMenu]
-
-
-[CourseSection]
+[CourseSection header:'MAA3']
 
 //Chapter...........................................................
 [Chapter header:'Otsikko']

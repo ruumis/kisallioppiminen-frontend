@@ -4,20 +4,9 @@
 // Komponentin sisään voidaan lisätä [CourseTab]-komponentteja, 
 // joilla luodaan linkkejä kurssin eri lukuihin. 
 // Linkit tulevat kurssimateriaalin yläpuolelle kaikilla kurssisivuilla. 
-[CourseMenu]
-// Lisätään [CourseMenu]-komponentin sisälle linkiksi.
-[CourseTab header:'MAA3' /]
-
-[CourseTab header:'Kolmio' /]
-
-[CourseTab header:'Tasogeometriaa' /]
-
-[CourseTab header:'Avaruusgeometriaa' /]
-
-[/CourseMenu]
 
 // CourseSectionilla luodaan uusi luku. Luvut numeroitaan automaattisesti.
-[CourseSection]
+[CourseSection header:'MAA3']
 
 // Chapterilla luodaan kurssin luvulle uusi kappale. 
 [Chapter header:'Kurssin tavoitteet ja keskeiset sisällöt']
@@ -61,7 +50,7 @@ opittuja asioita sekä antaa palautetta oppimisesta ja sen etenemisestä yhteise
 
 [/CourseSection]
 
-[CourseSection]
+[CourseSection header:'Kolmio']
 [Chapter header:'LUVUN TAVOITTEET'] 
 
 // Definitiolla voidaan luoda määritelmiä. 
@@ -176,7 +165,7 @@ Alkuperäisen kolmion pinta-ala saadaan tästä vähentämällä pienemmän suor
 [/Chapter]
 [/CourseSection]
 
-[CourseSection]
+[CourseSection header:'Tasogeometriaa']
 
 [Chapter header:'pelkkä tehtävä']
 
