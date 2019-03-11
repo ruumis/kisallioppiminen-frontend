@@ -55,14 +55,9 @@ export function coursePage() {
         {typeof window !== 'undefined' ? (
           <IdyllDocument markup={courseMaterialVersion ? courseMaterialVersion.content : ''} components={availableComponents} />
         ) : (
-<<<<<<< 277d3e59953696009719c2488f462c1a74688e5e
-          <IdyllDocument ast={compiler(courseMaterialVersion ? courseMaterialVersion.content : '', { async: false }) as Node[]} components={availableComponents} />
-        )}
-        <NavBottom />
-=======
             <IdyllDocument ast={compiler(courseMaterialVersion ? courseMaterialVersion.content : '', { async: false }) as Node[]} components={availableComponents} />
           )}
->>>>>>> Version selector functionality and updated link-urls
+        <NavBottom />
       </div>
     )
   }
