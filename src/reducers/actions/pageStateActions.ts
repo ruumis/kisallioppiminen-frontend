@@ -1,5 +1,7 @@
 import { User } from '../../types/InitialState'
 import userService from '../../services/userService'
+import { ThunkAction, ThunkDispatch } from 'redux-thunk'
+import { AnyAction } from 'redux'
 
 export class Action extends String {}
 
@@ -11,10 +13,11 @@ export const SET_USER: Action = 'SET_USER'
 
 export const changePage = (page: string) => ({ type: CHANGE_PAGE, data: page })
 
-export const fetchUser = () => {
-  return async (dispatch: any): Promise<void> =>
+export const fetchUser = (): ThunkAction<Promise<User>, {}, {}, AnyAction>  => {
+  return async (dispatch) =>
     userService.login().then(user => {
       dispatch(setUser(user))
+      return user
     })
 }
 
