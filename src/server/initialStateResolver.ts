@@ -18,6 +18,7 @@ export function resolveInitialState(path: string): { pageState: InitialState; co
   const courseExercises: { [index: string]: string[] } = {}
   courses.forEach(c => {
     c.courseContent.forEach(cv => {
+      courseExercises[`${c.id} ${cv.version}`] = []
       let sectionCount = -1
       let exerciseCount = 0
       const quickLinks: string[] = []
@@ -34,12 +35,14 @@ export function resolveInitialState(path: string): { pageState: InitialState; co
         if (word.includes('UUID:')) {
           exerciseCount++
           const UUID = word.substring(6, word.length - 1)
-          // courseExercises[c.courseName].push(UUID)
+          courseExercises[`${c.id} ${cv.version}`].push(UUID)
           idToNumber[UUID] = `${sectionCount}.${exerciseCount}`
         }
       })
     })
   })
+
+  console.log(courseExercises)
 
   return {
     pageState: {
