@@ -120,7 +120,7 @@ export function userCourseListPage() {
 
   const addCourses = () =>
     courses.map(course => (
-      <CourseWrapper key={course.id} header={course.name}>
+      <CourseWrapper key={course.id} header={course.name} coursekey={course.coursekey} startdate={course.startdate} enddate={course.enddate}>
         <Scoreboard students={course.students} />
       </CourseWrapper>
     ))
