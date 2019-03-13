@@ -1,140 +1,53 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import { connect } from 'react-redux'
 import CourseWrapper from './components/CourseWrapper'
 import Scoreboard from '../courseAdministrationPage/components/Scoreboard'
-import { Course } from '../../types/jsontypes'
+import { UserCourse } from '../../types/jsontypes'
 import JoinCourse from './components/JoinCourse'
+import courseService from './../../services/courseService'
+import { InitialState, CoursePageState } from '../../types/InitialState'
+import { ThunkDispatch } from 'redux-thunk'
+import { fetchOwnCourses as fetchOwnCoursesAction } from '../../reducers/actions/courseActions'
+
+interface Props {
+  ownCourses: UserCourse[],
+  fetchOwnCourses: () => Promise<void>
+}
 
 export function userCourseListPage() {
-  // Replace courses below with a request to server once the server is running
-  const courses = [
-    {
-      name: 'MAY1: Lukujonot ja summat',
-      coursekey: 'matikkaonkivaa',
-      id: 1,
-      html_id: 'may1',
-      startdate: '2017-03-14',
-      enddate: '2017-05-02',
-      students: [
-        {
-          user: 'Anthony',
-          exercises: [
-            {
-              id: '3BA56960-503F-4697-B508-9F4A3EEAC41B',
-              status: 'green'
-            },
-            {
-              id: 'CA5CC927-2800-427C-AD31-4FD0DD06C068',
-              status: 'yellow'
-            }
-          ]
-        },
-        {
-          user: 'Bert',
-          exercises: [
-            {
-              id: '3BA56960-503F-4697-B508-9F4A3EEAC41B',
-              status: 'red'
-            },
-            {
-              id: 'CA5CC927-2800-427C-AD31-4FD0DD06C068',
-              status: 'gray'
-            }
-          ]
-        }
-      ]
-    },
-    {
-      name: 'Testikurssi',
-      coursekey: 'matikkaonkivaa',
-      id: 2,
-      html_id: 'may1',
-      startdate: '2017-03-14',
-      enddate: '2017-05-02',
-      students: [
-        {
-          user: 'Anthony',
-          exercises: [
-            {
-              id: '3BA56960-503F-4697-B508-9F4A3EEAC41B',
-              status: 'green'
-            },
-            {
-              id: 'CA5CC927-2800-427C-AD31-4FD0DD06C068',
-              status: 'yellow'
-            }
-          ]
-        },
-        {
-          user: 'Bert',
-          exercises: [
-            {
-              id: '3BA56960-503F-4697-B508-9F4A3EEAC41B',
-              status: 'red'
-            },
-            {
-              id: 'CA5CC927-2800-427C-AD31-4FD0DD06C068',
-              status: 'gray'
-            }
-          ]
-        }
-      ]
-    },
-    {
-      name: 'MAA3: Geometria',
-      coursekey: 'matikkaonkivaa',
-      id: 3,
-      html_id: 'may1',
-      startdate: '2017-03-14',
-      enddate: '2017-05-02',
-      students: [
-        {
-          user: 'Anthony',
-          exercises: [
-            {
-              id: '3BA56960-503F-4697-B508-9F4A3EEAC41B',
-              status: 'green'
-            },
-            {
-              id: 'CA5CC927-2800-427C-AD31-4FD0DD06C068',
-              status: 'yellow'
-            }
-          ]
-        },
-        {
-          user: 'Bert',
-          exercises: [
-            {
-              id: '3BA56960-503F-4697-B508-9F4A3EEAC41B',
-              status: 'red'
-            },
-            {
-              id: 'CA5CC927-2800-427C-AD31-4FD0DD06C068',
-              status: 'gray'
-            }
-          ]
-        }
-      ]
-    }
-  ]
 
-  const addCourses = () =>
+  const addCourses = (courses: UserCourse[]) =>
     courses.map(course => (
       <CourseWrapper key={course.id} header={course.name} coursekey={course.coursekey} startdate={course.startdate} enddate={course.enddate}>
         <Scoreboard students={course.students} />
       </CourseWrapper>
     ))
 
-  const app = () => {
+  const app = (props: Props) => {
+    const {ownCourses, fetchOwnCourses} = props
+    useEffect(() => {
+      fetchOwnCourses()
+    }, [])
+
     return (
       <div className="courseAdministrationPageContainer">
         <JoinCourse />
-        {addCourses()}
+        {addCourses(ownCourses)}
       </div>
     )
   }
 
-  const ConnectedUserCourseListPage = connect()(app)
+  const mapStateToProps = (state: {pageState: InitialState, coursePageState: CoursePageState}) => ({
+    ownCourses: state.coursePageState.ownCourses
+  })
+
+  const mapDispatchToProps = (dispatch: ThunkDispatch<{}, {}, any>) => ({
+    fetchOwnCourses: async () => {
+      await dispatch(fetchOwnCoursesAction())
+    }
+  })
+
+  const ConnectedUserCourseListPage = connect(mapStateToProps, mapDispatchToProps)(app)
 
   return <ConnectedUserCourseListPage />
 }

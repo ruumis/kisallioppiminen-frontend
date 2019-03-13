@@ -9,6 +9,11 @@ export const coursePageReducer = (state: CoursePageState | null = null, action: 
         return R.merge(state, { selectedCourseVersion: data })
       }
       break
+    case 'SET_OWN_COURSES':
+      if (state) {
+        return R.merge(state, {ownCourses: data})
+      }
+      break
   }
 
   return state
