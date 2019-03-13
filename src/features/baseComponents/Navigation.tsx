@@ -17,10 +17,15 @@ class Navigation extends React.Component<Props> {
 
   render() {
     const url = process.env.NODE_ENV === 'PRODUCTION' ? 'http://localhost:8000/users/auth' : 'http://localhost:8000/users/auth'
-    const {user} = this.props
+    const { user } = this.props
     return (
       <nav className="navigator">
         <ul>
+          <li className="navigator-item">
+            <Link className="navigator-link" href="/omat">
+              Omat kurssit
+            </Link>
+          </li>
           <li className="navigator-item">
             <Link className="navigator-link" href="/courseAdmin">
               Kurssihallinta
@@ -45,7 +50,7 @@ class Navigation extends React.Component<Props> {
           {user ? (
             <li className="navigator-item">
               <a className="navigator-link" href={url}>
-                {`Hei, ${user.name}` }
+                {`Hei, ${user.name}`}
               </a>
             </li>
           ) : (
