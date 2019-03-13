@@ -7,7 +7,7 @@ const HTTP = axios.create({
 })
 
 const joinCourse = async (courseKey: string): Promise<any> => {
-  const response = await HTTP.post(`${baseUrl}/courses/join`, courseKey)
+  const response = await HTTP.put(`${baseUrl}/courses/${courseKey}`)
   console.log(response)
   return response.data
 }
