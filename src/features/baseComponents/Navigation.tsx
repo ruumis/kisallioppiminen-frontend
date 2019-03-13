@@ -2,18 +2,15 @@ import React from 'react'
 import Link from './Link'
 import userService from '../../services/userService'
 import { InitialState, User } from '../../types/InitialState'
-import { pageStateReducer } from '../../reducers/pageStateReducer'
 import { fetchUser } from '../../reducers/actions/pageStateActions'
 import { connect } from 'react-redux'
+import { ThunkDispatch } from 'redux-thunk'
 interface Props {
   user: User | null
-  fetchUser: typeof fetchUser
+  fetchUser: () => Promise<void>
 }
 
-class Navigation extends React.Component<any> {
-  constructor(props: any) {
-    super(props)
-  }
+class Navigation extends React.Component<Props> {
   componentDidMount() {
     this.props.fetchUser()
   }
@@ -24,12 +21,6 @@ class Navigation extends React.Component<any> {
     return (
       <nav className="navigator">
         <ul>
-          <li className="navigator-item">
-            <Link className="navigator-link" href="/courseAdmin">
-              Kurssihallinta
-            </Link>
-          </li>
-
           <li className="navigator-item">
             <Link className="navigator-link" href="/">
               Materiaalit
@@ -50,12 +41,24 @@ class Navigation extends React.Component<any> {
               <a className="navigator-link" href={url}>
                 {`Hei, ${user.name}`}
               </a>
+              <div className="dropdown-content">
+                <a href="/courseAdmin">Kurssihallinta</a>
+                <a href="/omat">Omat kurssit</a>
+                <a href="/">Kirjaudu ulos</a>
+              </div>
             </li>
           ) : (
             <li className="navigator-item">
-              <a className="navigator-link" href={url} onClick={setUser()}>
-                Kirjautuminen
-              </a>
+              <div className="dropdown">
+                <a className="navigator-link" href={url} onClick={setUser()}>
+                  Kirjautuminen
+                </a>
+                <div className="dropdown-content">
+                  <a href="/courseAdmin">Kurssihallinta</a>
+                  <a href="/omat">Omat kurssit</a>
+                  <a href="/">Kirjaudu ulos</a>
+                </div>
+              </div>
             </li>
           )}
         </ul>
@@ -74,9 +77,11 @@ const setUser = () => {
 const mapStateToProps = (state: { pageState: InitialState }) => ({
   user: state.pageState.pageParams.user
 })
-const mapDispatchToProps = {
-  fetchUser
-}
+const mapDispatchToProps = (dispatch: ThunkDispatch<{}, {}, any>) => ({
+  fetchUser: async () => {
+    await dispatch(fetchUser())
+  }
+})
 
 const ConnectedNavigation = connect(
   mapStateToProps,

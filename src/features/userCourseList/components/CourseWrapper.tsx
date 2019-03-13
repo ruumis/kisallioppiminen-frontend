@@ -26,14 +26,15 @@ const CourseWrapper = (props: any) => {
       return c
     })
   }
-
   return (
     <div>
       <div className="chapter" onClick={toggleVisibility}>
         <label className="userCourseListPage-text">{props.header}</label>
-        <label className="userCourseListPage-date">2.2.2019 - 2.2.2019</label>
+        <label className="userCourseListPage-date">
+          {props.startdate} - {props.enddate}
+        </label>
         <button className="userCourseListPage-button">Poistu kurssilta</button>
-        <label className="userCourseListPage-key">kurssiavain</label>
+        <label className="userCourseListPage-key">{props.coursekey}</label>
       </div>
       <div className={contentClassname}>{arr}</div>
     </div>
