@@ -13,9 +13,9 @@ const joinCourse = async (courseKey: string): Promise<any> => {
 }
 
 const ownCourses = async (): Promise<any> => {
-  const response = await HTTP.get(`${baseUrl}/users/courses`)
-  console.log(response)
-  return response.data
+  const {data} = await HTTP.get(`${baseUrl}/users/courses`)
+  console.log(data)
+  return data
 }
 
 export default { joinCourse, ownCourses }

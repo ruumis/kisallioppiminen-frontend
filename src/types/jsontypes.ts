@@ -7,7 +7,7 @@ export interface Student {
   exercises: Array<{ id: string; status: string }>
 }
 
-export interface Course {
+export interface UserCourse {
   name: string
   courseKey: string
   id: number

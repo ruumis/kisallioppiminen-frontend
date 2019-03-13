@@ -34,7 +34,7 @@ export function resolveInitialState(path: string): { pageState: InitialState; co
         if (word.includes('UUID:')) {
           exerciseCount++
           const UUID = word.substring(6, word.length - 1)
-          courseExercises[c.courseName].push(UUID)
+          // courseExercises[c.courseName].push(UUID)
           idToNumber[UUID] = `${sectionCount}.${exerciseCount}`
         }
       })
@@ -51,7 +51,8 @@ export function resolveInitialState(path: string): { pageState: InitialState; co
       }
     },
     coursePageState: {
-      selectedCourseVersion: null
+      selectedCourseVersion: null,
+      ownCourses: []
     },
     exercises: {
       idToNumber

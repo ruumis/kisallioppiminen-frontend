@@ -2,7 +2,6 @@ import React from 'react'
 import { connect } from 'react-redux'
 import Chapter from '../coursePage/components/Chapter'
 import Scoreboard from './components/Scoreboard'
-import { Course } from '../../types/jsontypes'
 
 export function courseAdministrationPage() {
   // Replace courses below with a request to server once the server is running

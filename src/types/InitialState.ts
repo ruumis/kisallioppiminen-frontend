@@ -1,3 +1,5 @@
+import { UserCourse } from './jsontypes'
+
 export interface InitialState {
   courses: Course[]
   pageParams: PageParams
@@ -23,6 +25,8 @@ export interface Course {
 
 export interface CoursePageState {
   selectedCourseVersion: string | null
+  ownCourses: UserCourse[]
+
 }
 
 export interface ExercisesState {
