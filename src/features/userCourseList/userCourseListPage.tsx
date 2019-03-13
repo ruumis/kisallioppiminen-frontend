@@ -1,13 +1,14 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import { connect } from 'react-redux'
 import CourseWrapper from './components/CourseWrapper'
 import Scoreboard from '../courseAdministrationPage/components/Scoreboard'
 import { Course } from '../../types/jsontypes'
 import JoinCourse from './components/JoinCourse'
+import courseService from './../../services/courseService'
 
 export function userCourseListPage() {
   // Replace courses below with a request to server once the server is running
-  const courses = [
+  let courses = [
     {
       name: 'MAY1: Lukujonot ja summat',
       coursekey: 'matikkaonkivaa',
@@ -26,19 +27,6 @@ export function userCourseListPage() {
             {
               id: 'CA5CC927-2800-427C-AD31-4FD0DD06C068',
               status: 'yellow'
-            }
-          ]
-        },
-        {
-          user: 'Bert',
-          exercises: [
-            {
-              id: '3BA56960-503F-4697-B508-9F4A3EEAC41B',
-              status: 'red'
-            },
-            {
-              id: 'CA5CC927-2800-427C-AD31-4FD0DD06C068',
-              status: 'gray'
             }
           ]
         }
@@ -64,19 +52,6 @@ export function userCourseListPage() {
               status: 'yellow'
             }
           ]
-        },
-        {
-          user: 'Bert',
-          exercises: [
-            {
-              id: '3BA56960-503F-4697-B508-9F4A3EEAC41B',
-              status: 'red'
-            },
-            {
-              id: 'CA5CC927-2800-427C-AD31-4FD0DD06C068',
-              status: 'gray'
-            }
-          ]
         }
       ]
     },
@@ -100,23 +75,18 @@ export function userCourseListPage() {
               status: 'yellow'
             }
           ]
-        },
-        {
-          user: 'Bert',
-          exercises: [
-            {
-              id: '3BA56960-503F-4697-B508-9F4A3EEAC41B',
-              status: 'red'
-            },
-            {
-              id: 'CA5CC927-2800-427C-AD31-4FD0DD06C068',
-              status: 'gray'
-            }
-          ]
         }
       ]
     }
   ]
+
+  const updateCourseList = async () => {
+    courses = await courseService.ownCourses()
+  }
+
+  useEffect(() => {
+    updateCourseList()
+  }, [])
 
   const addCourses = () =>
     courses.map(course => (
