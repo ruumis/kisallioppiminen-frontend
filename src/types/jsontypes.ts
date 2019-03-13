@@ -9,7 +9,7 @@ export interface Student {
 
 export interface UserCourse {
   name: string
-  courseKey: string
+  coursekey: string
   id: number
   html_id: string
   startdate: string
