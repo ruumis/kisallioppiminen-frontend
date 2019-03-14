@@ -53,11 +53,6 @@ class Navigation extends React.Component<Props> {
                 <a className="navigator-link" href={url} onClick={setUser()}>
                   Kirjautuminen
                 </a>
-                <div className="dropdown-content">
-                  <a href="/courseAdmin">Kurssihallinta</a>
-                  <a href="/omat">Omat kurssit</a>
-                  <a href="/">Kirjaudu ulos</a>
-                </div>
               </div>
             </li>
           )}
