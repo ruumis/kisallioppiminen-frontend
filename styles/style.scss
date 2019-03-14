@@ -717,13 +717,14 @@ ul {
   margin-left: -10px;
 }
 
-.dropdown-content a {
+.dropdown-content-link {
   color: black;
   padding: 2px 0px;
   text-decoration: none;
   display: block;
 }
-.dropdown-content a:hover {
+
+.dropdown-content-link:hover {
   padding: 5px 5px;
-  background-color: #f1f1f1;
+  background-color: #c4da87;
 }
