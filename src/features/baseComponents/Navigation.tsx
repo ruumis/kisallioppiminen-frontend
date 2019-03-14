@@ -38,25 +38,35 @@ class Navigation extends React.Component<Props> {
           </li>
           {user ? (
             <li className="navigator-item">
-              <a className="navigator-link" href={url}>
+              <Link className="navigator-link" href={url}>
                 {`Hei, ${user.name}`}
-              </a>
+              </Link>
               <div className="dropdown-content">
-                <a href="/courseAdmin">Kurssihallinta</a>
-                <a href="/omat">Omat kurssit</a>
-                <a href="/">Kirjaudu ulos</a>
+                <Link className="dropdown-content-link" href="/courseAdmin">
+                  Kurssihallinta
+                </Link>
+                <Link className="dropdown-content-link" href="/omat">
+                  Omat kurssit
+                </Link>
+                <Link className="dropdown-content-link" href="/">
+                  Kirjaudu ulos
+                </Link>
               </div>
             </li>
           ) : (
             <li className="navigator-item">
               <div className="dropdown">
-                <a className="navigator-link" href={url} onClick={setUser()}>
+                {/*onClick={setUser()}*/}
+                <Link className="navigator-link" href={url}>
                   Kirjautuminen
-                </a>
+                </Link>
                 <div className="dropdown-content">
-                  <a href="/courseAdmin">Kurssihallinta</a>
-                  <a href="/omat">Omat kurssit</a>
-                  <a href="/">Kirjaudu ulos</a>
+                  <Link className="dropdown-content-link" href="/courseAdmin">
+                    Kurssihallinta
+                  </Link>
+                  <Link className="dropdown-content-link" href="/omat">
+                    Omat kurssit
+                  </Link>
                 </div>
               </div>
             </li>
