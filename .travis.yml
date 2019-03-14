@@ -36,7 +36,8 @@ notifications:
 deploy:
   provider: pages
   local-dir: './dist/static'
-  repo: Matikkaprojekti/kisallioppiminen-staging
+  repo: Matikkaprojekti/matikkaprojekti.github.io
+  target-branch: master
   skip-cleanup: true
   github-token: $GITHUB_TOKEN # Set in the settings page of your repository, as a secure variable
   keep-history: true
