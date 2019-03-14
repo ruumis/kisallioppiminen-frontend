@@ -42,8 +42,6 @@ export function resolveInitialState(path: string): { pageState: InitialState; co
     })
   })
 
-  console.log(courseExercises)
-
   return {
     pageState: {
       courses: courses || '',
