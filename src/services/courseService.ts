@@ -1,6 +1,7 @@
 import axios from 'axios'
+import { resolveUri } from '../utils/resolveUri'
 
-const baseUrl = 'http://localhost:8080'
+const baseUrl = resolveUri()
 
 const HTTP = axios.create({
   withCredentials: true

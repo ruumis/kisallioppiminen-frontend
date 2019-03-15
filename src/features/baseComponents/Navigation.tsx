@@ -5,6 +5,7 @@ import { InitialState, User } from '../../types/InitialState'
 import { fetchUser } from '../../reducers/actions/pageStateActions'
 import { connect } from 'react-redux'
 import { ThunkDispatch } from 'redux-thunk'
+import { resolveUri } from '../../utils/resolveUri'
 interface Props {
   user: User | null
   fetchUser: () => Promise<void>
@@ -16,7 +17,7 @@ class Navigation extends React.Component<Props> {
   }
 
   render() {
-    const url = process.env.NODE_ENV === 'PRODUCTION' ? 'http://localhost:8000/users/auth' : 'http://localhost:8000/users/auth'
+    const url = 'https://ko-be-staging.herokuapp.com/users/auth'
     const { user } = this.props
     return (
       <nav className="navigator">
@@ -38,26 +39,34 @@ class Navigation extends React.Component<Props> {
           </li>
           {user ? (
             <li className="navigator-item">
-              <a className="navigator-link" href={url}>
+              <Link className="navigator-link" href={url}>
                 {`Hei, ${user.name}`}
-              </a>
+              </Link>
               <div className="dropdown-content">
-                <a href="/courseAdmin">Kurssihallinta</a>
-                <a href="/omat">Omat kurssit</a>
-                <a href="/">Kirjaudu ulos</a>
+                <Link className="dropdown-content-link" href="/courseAdmin">
+                  Kurssihallinta
+                </Link>
+                <Link className="dropdown-content-link" href="/omat">
+                  Omat kurssit
+                </Link>
+                <Link className="dropdown-content-link" href="/">
+                  Kirjaudu ulos
+                </Link>
               </div>
             </li>
           ) : (
-              <li className="navigator-item">
-                <div className="dropdown">
-                  <a className="navigator-link" href={url} onClick={setUser()}>
-                    Kirjautuminen
+            <li className="navigator-item">
+              <div className="dropdown">
+                <a className="navigator-link" href={url}>
+                  Kirjautuminen
                 </a>
-                  <div className="dropdown-content">
-                    <a href="/courseAdmin">Kurssihallinta</a>
-                    <a href="/omat">Omat kurssit</a>
-                    <a href="/">Kirjaudu ulos</a>
-                  </div>
+                <div className="dropdown-content">
+                  <Link className="dropdown-content-link" href="/courseAdmin">
+                    Kurssihallinta
+                  </Link>
+                  <Link className="dropdown-content-link" href="/omat">
+                    Omat kurssit
+                  </Link>
                 </div>
               </li>
             )}
