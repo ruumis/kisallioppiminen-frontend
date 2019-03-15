@@ -8,11 +8,12 @@ interface Props {
   tabId: number
   header: JSX.Element | string
   courseId: number
+  courseVersion: string
 }
 
-const CourseTab = ({tabId, courseTabId, header, courseId}: Props) => {
+const CourseTab = ({ tabId, courseTabId, header, courseId, courseVersion }: Props) => {
   return (
-    <Link href={`/courses/${courseId}/tab/${tabId}`}>
+    <Link href={`/courses/${courseId}/version/${courseVersion}/tab/${tabId}`}>
       <div className={courseTabId !== tabId ? 'section' : 'section-active'}>
         {header}
       </div>
@@ -22,7 +23,8 @@ const CourseTab = ({tabId, courseTabId, header, courseId}: Props) => {
 
 const mapStateToProps = (state: { pageState: InitialState; coursePageState: CoursePageState }) => ({
   courseTabId: Number(state.pageState.pageParams.pathParams.tabId),
-  courseId: state.pageState.pageParams.pathParams.id
+  courseId: state.pageState.pageParams.pathParams.id,
+  courseVersion: state.pageState.pageParams.pathParams.version
 })
 
 const ConnectedCoursTab = connect(

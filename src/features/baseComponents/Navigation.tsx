@@ -6,6 +6,7 @@ import { fetchUser } from '../../reducers/actions/pageStateActions'
 import { connect } from 'react-redux'
 import { ThunkDispatch } from 'redux-thunk'
 import { resolveUri } from '../../utils/resolveUri'
+
 interface Props {
   user: User | null
   fetchUser: () => Promise<void>
@@ -84,9 +85,11 @@ const setUser = () => {
     return undefined
   }
 }
+
 const mapStateToProps = (state: { pageState: InitialState }) => ({
   user: state.pageState.pageParams.user
 })
+
 const mapDispatchToProps = (dispatch: ThunkDispatch<{}, {}, any>) => ({
   fetchUser: async () => {
     await dispatch(fetchUser())

@@ -1,32 +1,43 @@
-import React, { Component } from 'react'
+import React, { useState } from 'react'
 import Link from '../../baseComponents/Link'
 
-interface Props {
+interface CourseInfo {
   id: string
   courseName: string
   quickLinks: string[]
-  version: string
+  versions: Array<{ version: string; content: string }>
 }
 
-export default class Course extends Component<Props, any> {
-  render() {
-    const { id, courseName, quickLinks, version } = this.props
-    return (
-      <div className="course">
-        <Link href={`/courses/${id}/tab/0`}>
-          <h2 className="course-title">{courseName}</h2>
-        </Link>
-        <p className="course-version">{version}</p>
-        <ol className="course-parts">{createQuickLinks(quickLinks, id)}</ol>
-      </div>
-    )
+export default function Course(courseInfo: CourseInfo) {
+
+  const { id, courseName, quickLinks, versions } = courseInfo
+  const [selectedVersion, setSelectedVersion] = useState(versions[0].version)
+
+  const handleSelectorChange = (e: any) => {
+    setSelectedVersion(e.target.value)
   }
+
+  return (
+    <div className="course">
+      <Link href={`/courses/${id}/version/${selectedVersion}/tab/0`}>
+        <h2 className="course-title">{courseName}</h2>
+      </Link>
+      <select className="course-selector-box" defaultValue={versions[0].version} onChange={e => handleSelectorChange(e)}>
+        {addVersions(versions)}
+      </select>
+      <ol className="course-parts">{createQuickLinks(quickLinks, id, selectedVersion)}</ol>
+    </div>
+  )
 }
 
-function createQuickLinks(links: string[], courseId: string) {
+const addVersions = (versions: Array<{ version: string; content: string }>) =>
+  versions.map(vrsn =>
+    <option key={vrsn.version}>{vrsn.version}</option>)
+
+function createQuickLinks(links: string[], courseId: string, selectedVersion: string) {
   return links.map((link, index) => (
     <li key={index}>
-      <Link href={`/courses/${courseId}/tab/${index + 1}`}>
+      <Link href={`/courses/${courseId}/version/${selectedVersion}/tab/${index + 1}`}>
         <div className="course-content">{link}</div>
       </Link>
     </li>
