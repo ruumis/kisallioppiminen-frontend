@@ -106,18 +106,11 @@ module.exports = function(env, argv) {
       const image = fs.readFileSync(newPath)
       let folderPath = newPath.split('/img/')
       let folder = folderPath[1].split('/')[0]
-      if (fs.existsSync(`./dist/static/img/${folder}`)) {
-        fs.writeFileSync(`./dist/static/img/${folderPath[1]}`, image)
-      } else {
-        if (!folder.includes('.')) {
-          fs.mkdirSync(`./dist/static/img/${folder}`)
-          fs.writeFileSync(`./dist/static/img/${folderPath[1]}`, image)
-        } else {
-          fs.writeFileSync(`./dist/static/img/${folderPath[1]}`, image)
-        }
+      if (!fs.existsSync(`./dist/static/img/${folder}`) && !folder.includes('.')) {
+        fs.mkdirSync(`./dist/static/img/${folder}`)
       }
+      fs.writeFileSync(`./dist/static/img/${folderPath[1]}`, image)
     }
-
     goThroughFiles(`${__dirname}/dist/img`)
   }
 
