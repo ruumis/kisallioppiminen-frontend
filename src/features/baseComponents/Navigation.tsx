@@ -17,7 +17,7 @@ class Navigation extends React.Component<Props> {
   }
 
   render() {
-    const url = resolveUri() + '/users/auth'
+    const url = 'https://ko-be-staging.herokuapp.com/users/auth'
     const { user } = this.props
     return (
       <nav className="navigator">
@@ -57,7 +57,6 @@ class Navigation extends React.Component<Props> {
           ) : (
             <li className="navigator-item">
               <div className="dropdown">
-                {/*onClick={setUser()}*/}
                 <a className="navigator-link" href={url}>
                   Kirjautuminen
                 </a>
