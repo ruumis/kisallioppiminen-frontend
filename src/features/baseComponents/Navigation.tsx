@@ -5,6 +5,7 @@ import { InitialState, User } from '../../types/InitialState'
 import { fetchUser } from '../../reducers/actions/pageStateActions'
 import { connect } from 'react-redux'
 import { ThunkDispatch } from 'redux-thunk'
+import { resolveUri } from '../../utils/resolveUri'
 interface Props {
   user: User | null
   fetchUser: () => Promise<void>
@@ -16,7 +17,7 @@ class Navigation extends React.Component<Props> {
   }
 
   render() {
-    const url = process.env.NODE_ENV === 'PRODUCTION' ? 'http://localhost:8000/users/auth' : 'http://localhost:8000/users/auth'
+    const url = 'https://ko-be-staging.herokuapp.com/users/auth'
     const { user } = this.props
     return (
       <nav className="navigator">
