@@ -40,7 +40,7 @@ class Navigation extends React.Component<Props> {
           </li>
           {user ? (
             <li className="navigator-item">
-              <div>
+              <div className="dropdown">
                 <Link className="navigator-link" href={url}>
                   {`Hei, ${user.name}`}
                 </Link>
