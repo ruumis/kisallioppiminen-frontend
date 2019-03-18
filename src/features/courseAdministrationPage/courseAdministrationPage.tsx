@@ -125,7 +125,10 @@ export function courseAdministrationPage() {
   const app = () => {
     return (
       <div className="courseAdministrationPageContainer">
-        <h2 className="courseAdministrationPageContainer-heading">Kurssiesi tulostaulut:</h2>
+        <div className="courseAdministrationPageContainer-heading">
+          <button className="newCourseButton">Uusi kurssi</button>
+          <h2>Kurssiesi tulostaulut:</h2>
+        </div>
         {addCourses()}
       </div>
     )
