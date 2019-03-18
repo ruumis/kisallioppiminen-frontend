@@ -2,6 +2,7 @@ import React from 'react'
 import { connect } from 'react-redux'
 import Chapter from '../coursePage/components/Chapter'
 import Scoreboard from './components/Scoreboard'
+import NewInstanceForm from './components/NewInstanceForm'
 
 export function courseAdministrationPage() {
   // Replace courses below with a request to server once the server is running
@@ -122,11 +123,14 @@ export function courseAdministrationPage() {
         <Scoreboard students={course.students} />
       </Chapter>)
 
+  const displayForm = () =>
+    console.log(NewInstanceForm)
+
   const app = () => {
     return (
       <div className="courseAdministrationPageContainer">
         <div className="courseAdministrationPageContainer-heading">
-          <button className="newCourseButton">Uusi kurssi</button>
+          <button className="newCourseButton" onClick={displayForm}>Uusi kurssi</button>
           <h2>Kurssiesi tulostaulut:</h2>
         </div>
         {addCourses()}
