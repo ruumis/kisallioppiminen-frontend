@@ -26,9 +26,9 @@ export interface Course {
 export interface CoursePageState {
   selectedCourseVersion: string | null
   ownCourses: UserCourse[]
-
 }
 
 export interface ExercisesState {
   idToNumber: { [s: string]: string } | null
+  courseExercises: { [s: string]: string[] } | null
 }
