@@ -56,7 +56,8 @@ export function resolveInitialState(path: string): { pageState: InitialState; co
       ownCourses: []
     },
     exercises: {
-      idToNumber
+      idToNumber,
+      courseExercises
     }
   }
 }
