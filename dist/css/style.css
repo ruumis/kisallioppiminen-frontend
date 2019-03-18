@@ -8,7 +8,7 @@ span {
 header {
   background-color: #f6f6f6;
   height: 160px;
-  box-shadow: 0px 4px 0px 0px #666666; }
+  box-shadow: 0px 1px 0px 2px #666666; }
 
 ul {
   padding-left: 2%;
@@ -224,7 +224,7 @@ ul {
     text-transform: uppercase; }
 
 .navigatorBottom {
-  background-color: #acd24a;
+  background-color: #f6f6f6;
   position: fixed;
   bottom: 0;
   width: 100%;
@@ -250,12 +250,13 @@ ul {
     font-size: 180%; }
 
 .footer {
-  background: #c4da87;
+  background: #f6f6f6;
   display: flex;
   padding: 20px;
   height: 300px;
   position: static;
-  bottom: 0; }
+  bottom: 0;
+  box-shadow: 0px -1px 1px 2px #666666; }
   .footer .fb-link {
     top: -32px;
     left: 45px;
