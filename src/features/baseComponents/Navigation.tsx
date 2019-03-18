@@ -40,27 +40,9 @@ class Navigation extends React.Component<Props> {
           </li>
           {user ? (
             <li className="navigator-item">
-              <Link className="navigator-link" href={url}>
-                {`Hei, ${user.name}`}
-              </Link>
-              <div className="dropdown-content">
-                <Link className="dropdown-content-link" href="/courseAdmin">
-                  Kurssihallinta
-                </Link>
-                <Link className="dropdown-content-link" href="/omat">
-                  Omat kurssit
-                </Link>
-                <Link className="dropdown-content-link" href="/">
-                  Kirjaudu ulos
-                </Link>
-              </div>
-            </li>
-          ) : (
-            <li className="navigator-item">
-              <div className="dropdown">
-                {/*onClick={setUser()}*/}
+              <div>
                 <Link className="navigator-link" href={url}>
-                  Kirjautuminen
+                  {`Hei, ${user.name}`}
                 </Link>
                 <div className="dropdown-content">
                   <Link className="dropdown-content-link" href="/courseAdmin">
@@ -69,10 +51,30 @@ class Navigation extends React.Component<Props> {
                   <Link className="dropdown-content-link" href="/omat">
                     Omat kurssit
                   </Link>
+                  <Link className="dropdown-content-link" href="/">
+                    Kirjaudu ulos
+                  </Link>
                 </div>
               </div>
             </li>
-          )}
+          ) : (
+              <li className="navigator-item">
+                <div className="dropdown">
+                  {/*onClick={setUser()}*/}
+                  <Link className="navigator-link" href={url}>
+                    Kirjautuminen
+                </Link>
+                  <div className="dropdown-content">
+                    <Link className="dropdown-content-link" href="/courseAdmin">
+                      Kurssihallinta
+                  </Link>
+                    <Link className="dropdown-content-link" href="/omat">
+                      Omat kurssit
+                  </Link>
+                  </div>
+                </div>
+              </li>
+            )}
         </ul>
       </nav>
     )
