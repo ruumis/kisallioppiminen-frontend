@@ -2,6 +2,7 @@ import React from 'react'
 import { connect } from 'react-redux'
 import Chapter from '../coursePage/components/Chapter'
 import Scoreboard from './components/Scoreboard'
+import { ExercisesState } from './../../types/InitialState'
 
 export function courseAdministrationPage() {
   // Replace courses below with a request to server once the server is running
@@ -9,8 +10,8 @@ export function courseAdministrationPage() {
     {
       name: 'MAY1: Lukujonot ja summat',
       coursekey: 'matikkaonkivaa',
-      id: 1,
-      html_id: 'may1',
+      id: '123',
+      version: 1.0,
       startdate: '2017-03-14',
       enddate: '2017-05-02',
       students: [
@@ -18,11 +19,11 @@ export function courseAdministrationPage() {
           user: 'Anthony',
           exercises: [
             {
-              id: '3BA56960-503F-4697-B508-9F4A3EEAC41B',
+              id: '12a9f399-3b49-11e9-a38a-09f848b19644',
               status: 'green'
             },
             {
-              id: 'CA5CC927-2800-427C-AD31-4FD0DD06C068',
+              id: '12a9f39a-3b49-11e9-a38a-09f848b19644',
               status: 'yellow'
             }
           ]
@@ -31,11 +32,11 @@ export function courseAdministrationPage() {
           user: 'Bert',
           exercises: [
             {
-              id: '3BA56960-503F-4697-B508-9F4A3EEAC41B',
+              id: '12a9f399-3b49-11e9-a38a-09f848b19644',
               status: 'red'
             },
             {
-              id: 'CA5CC927-2800-427C-AD31-4FD0DD06C068',
+              id: '12a9f39a-3b49-11e9-a38a-09f848b19644',
               status: 'gray'
             }
           ]
@@ -43,10 +44,10 @@ export function courseAdministrationPage() {
       ]
     },
     {
-      name: 'Testikurssi',
-      coursekey: 'matikkaonkivaa',
-      id: 2,
-      html_id: 'may1',
+      name: 'MAY1: Lukujonot ja summat',
+      coursekey: 'matikkaonkivaa2',
+      id: '123',
+      version: 1.1,
       startdate: '2017-03-14',
       enddate: '2017-05-02',
       students: [
@@ -54,11 +55,11 @@ export function courseAdministrationPage() {
           user: 'Anthony',
           exercises: [
             {
-              id: '3BA56960-503F-4697-B508-9F4A3EEAC41B',
+              id: '12a9f396-3b49-11e9-a38a-09f848b19644',
               status: 'green'
             },
             {
-              id: 'CA5CC927-2800-427C-AD31-4FD0DD06C068',
+              id: '12a9f397-3b49-11e9-a38a-09f848b19644',
               status: 'yellow'
             }
           ]
@@ -67,11 +68,11 @@ export function courseAdministrationPage() {
           user: 'Bert',
           exercises: [
             {
-              id: '3BA56960-503F-4697-B508-9F4A3EEAC41B',
+              id: '12a9f398-3b49-11e9-a38a-09f848b19644',
               status: 'red'
             },
             {
-              id: 'CA5CC927-2800-427C-AD31-4FD0DD06C068',
+              id: '12a9f397-3b49-11e9-a38a-09f848b19644',
               status: 'gray'
             }
           ]
@@ -79,10 +80,10 @@ export function courseAdministrationPage() {
       ]
     },
     {
-      name: 'MAA3: Geometria',
-      coursekey: 'matikkaonkivaa',
-      id: 3,
-      html_id: 'may1',
+      name: 'MAA3 - Geometria',
+      coursekey: 'matikkaonkivaa3',
+      id: '1234',
+      version: 1.0,
       startdate: '2017-03-14',
       enddate: '2017-05-02',
       students: [
@@ -90,11 +91,11 @@ export function courseAdministrationPage() {
           user: 'Anthony',
           exercises: [
             {
-              id: '3BA56960-503F-4697-B508-9F4A3EEAC41B',
+              id: '12a9cc85-3b49-11e9-a38a-09f848b19644',
               status: 'green'
             },
             {
-              id: 'CA5CC927-2800-427C-AD31-4FD0DD06C068',
+              id: '12a9cc86-3b49-11e9-a38a-09f848b19644',
               status: 'yellow'
             }
           ]
@@ -103,11 +104,11 @@ export function courseAdministrationPage() {
           user: 'Bert',
           exercises: [
             {
-              id: '3BA56960-503F-4697-B508-9F4A3EEAC41B',
+              id: '12a9cc87-3b49-11e9-a38a-09f848b19644',
               status: 'red'
             },
             {
-              id: 'CA5CC927-2800-427C-AD31-4FD0DD06C068',
+              id: '12a9cc85-3b49-11e9-a38a-09f848b19644',
               status: 'gray'
             }
           ]
@@ -116,25 +117,45 @@ export function courseAdministrationPage() {
     }
   ]
 
-  const addCourses = () =>
-    courses.map(course =>
-      <Chapter key={course.id} header={course.name}>
-        <Scoreboard students={course.students} />
-      </Chapter>)
+  const app = ({ exercises }: { exercises: ExercisesState }) => {
+    const betterCourses = courses.map(c => {
+      if (exercises !== null && exercises.courseExercises !== null && exercises.idToNumber !== null) {
+        const exerciseNumbers = exercises.courseExercises[`${c.id} ${c.version}`].map(e => exercises.idToNumber[e])
 
-  const app = () => {
+        const students = c.students.map(s => ({ ...s, exercises: s.exercises.map(ex => ({ ...ex, id: exercises.idToNumber[ex.id] })) }))
+
+        return {
+          ...c,
+          exerciseNumbers,
+          students
+        }
+      }
+      return { ...c, exerciseNumbers: [] }
+    })
+
     return (
       <div className="courseAdministrationPageContainer">
         <div className="courseAdministrationPageContainer-heading">
           <button className="newCourseButton">Uusi kurssi</button>
           <h2>Kurssiesi tulostaulut:</h2>
         </div>
-        {addCourses()}
+        {addCourses(betterCourses)}
       </div>
     )
   }
 
-  const ConnectedCourseAdministrationPage = connect()(app)
+  const addCourses = (betterCourses: any) =>
+    betterCourses.map((course: any) => (
+      <Chapter key={`${course.id} ${course.version}`} header={course.name}>
+        <Scoreboard course={course} />
+      </Chapter>
+    ))
+
+  const mapStateToProps = ({ exercises }: { exercises: ExercisesState }) => {
+    return { exercises }
+  }
+
+  const ConnectedCourseAdministrationPage = connect(mapStateToProps)(app)
 
   return <ConnectedCourseAdministrationPage />
 }

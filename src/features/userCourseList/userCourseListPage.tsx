@@ -5,40 +5,57 @@ import Scoreboard from '../courseAdministrationPage/components/Scoreboard'
 import { UserCourse } from '../../types/jsontypes'
 import JoinCourse from './components/JoinCourse'
 import courseService from './../../services/courseService'
-import { InitialState, CoursePageState } from '../../types/InitialState'
+import { InitialState, CoursePageState, ExercisesState } from '../../types/InitialState'
 import { ThunkDispatch } from 'redux-thunk'
 import { fetchOwnCourses as fetchOwnCoursesAction } from '../../reducers/actions/courseActions'
 
 interface Props {
-  ownCourses: UserCourse[],
+  ownCourses: UserCourse[]
   fetchOwnCourses: () => Promise<void>
+  exercises: ExercisesState
 }
 
 export function userCourseListPage() {
-
   const addCourses = (courses: UserCourse[]) =>
     courses.map(course => (
       <CourseWrapper key={course.id} header={course.name} coursekey={course.coursekey} startdate={course.startdate} enddate={course.enddate}>
-        <Scoreboard students={course.students} />
+        <Scoreboard course={course} />
       </CourseWrapper>
     ))
 
   const app = (props: Props) => {
-    const {ownCourses, fetchOwnCourses} = props
+    const { ownCourses, fetchOwnCourses, exercises } = props
+
     useEffect(() => {
       fetchOwnCourses()
     }, [])
 
+    const betterCourses = ownCourses.map(c => {
+      if (exercises !== null && exercises.courseExercises !== null && exercises.idToNumber !== null) {
+        const exerciseNumbers = exercises.courseExercises[`${c.id} ${c.version}`].map(e => exercises.idToNumber[e])
+
+        const students = c.students.map(s => ({ ...s, exercises: s.exercises.map(ex => ({ ...ex, id: exercises.idToNumber[ex.id] })) }))
+
+        return {
+          ...c,
+          exerciseNumbers,
+          students
+        }
+      }
+      return { ...c, exerciseNumbers: [] }
+    })
+
     return (
       <div className="courseAdministrationPageContainer">
         <JoinCourse />
-        {addCourses(ownCourses)}
+        {addCourses(betterCourses)}
       </div>
     )
   }
 
-  const mapStateToProps = (state: {pageState: InitialState, coursePageState: CoursePageState}) => ({
-    ownCourses: state.coursePageState.ownCourses
+  const mapStateToProps = (state: { pageState: InitialState; coursePageState: CoursePageState; exercises: ExercisesState }) => ({
+    ownCourses: state.coursePageState.ownCourses,
+    exercises: state.exercises
   })
 
   const mapDispatchToProps = (dispatch: ThunkDispatch<{}, {}, any>) => ({
@@ -47,7 +64,10 @@ export function userCourseListPage() {
     }
   })
 
-  const ConnectedUserCourseListPage = connect(mapStateToProps, mapDispatchToProps)(app)
+  const ConnectedUserCourseListPage = connect(
+    mapStateToProps,
+    mapDispatchToProps
+  )(app)
 
   return <ConnectedUserCourseListPage />
 }

@@ -10,9 +10,10 @@ export interface Student {
 export interface UserCourse {
   name: string
   coursekey: string
-  id: number
-  html_id: string
+  id: string
+  version: string
   startdate: string
   enddate: string
   students: Student[]
+  exerciseNumbers: string[]
 }
