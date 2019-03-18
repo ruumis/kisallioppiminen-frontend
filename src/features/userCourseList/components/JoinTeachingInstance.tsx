@@ -9,7 +9,7 @@ interface Props {
 
 function handle(event: any) {
   event.preventDefault()
-  courseService.joinCourse(event.target.courseKey.value)
+  courseService.joinTeachingInstance(event.target.courseKey.value)
 }
 
 const JoinCourse = (props: any) => {

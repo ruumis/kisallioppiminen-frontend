@@ -3,7 +3,7 @@ import { connect } from 'react-redux'
 import CourseWrapper from './components/CourseWrapper'
 import Scoreboard from '../courseAdministrationPage/components/Scoreboard'
 import { UserCourse } from '../../types/jsontypes'
-import JoinCourse from './components/JoinCourse'
+import JoinTeachingInstance from './components/JoinTeachingInstance'
 import courseService from './../../services/courseService'
 import { InitialState, CoursePageState, ExercisesState } from '../../types/InitialState'
 import { ThunkDispatch } from 'redux-thunk'
@@ -25,7 +25,6 @@ export function userCourseListPage() {
 
   const app = (props: Props) => {
     const { ownCourses, fetchOwnCourses, exercises } = props
-
     useEffect(() => {
       fetchOwnCourses()
     }, [])
@@ -47,7 +46,7 @@ export function userCourseListPage() {
 
     return (
       <div className="courseAdministrationPageContainer">
-        <JoinCourse />
+        <JoinTeachingInstance />
         {addCourses(betterCourses)}
       </div>
     )
