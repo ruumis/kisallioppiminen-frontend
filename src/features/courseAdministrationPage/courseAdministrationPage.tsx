@@ -3,6 +3,7 @@ import { connect } from 'react-redux'
 import Chapter from '../coursePage/components/Chapter'
 import Scoreboard from './components/Scoreboard'
 import { ExercisesState } from './../../types/InitialState'
+import { UserCourse } from '../../types/jsontypes'
 
 export function courseAdministrationPage() {
   // Replace courses below with a request to server once the server is running
@@ -11,7 +12,7 @@ export function courseAdministrationPage() {
       name: 'MAY1: Lukujonot ja summat',
       coursekey: 'matikkaonkivaa',
       id: '123',
-      version: 1.0,
+      version: '1',
       startdate: '2017-03-14',
       enddate: '2017-05-02',
       students: [
@@ -47,7 +48,7 @@ export function courseAdministrationPage() {
       name: 'MAY1: Lukujonot ja summat',
       coursekey: 'matikkaonkivaa2',
       id: '123',
-      version: 1.1,
+      version: '1.1',
       startdate: '2017-03-14',
       enddate: '2017-05-02',
       students: [
@@ -83,7 +84,7 @@ export function courseAdministrationPage() {
       name: 'MAA3 - Geometria',
       coursekey: 'matikkaonkivaa3',
       id: '1234',
-      version: 1.0,
+      version: '1',
       startdate: '2017-03-14',
       enddate: '2017-05-02',
       students: [
@@ -144,8 +145,8 @@ export function courseAdministrationPage() {
     )
   }
 
-  const addCourses = (betterCourses: any) =>
-    betterCourses.map((course: any) => (
+  const addCourses = (betterCourses: UserCourse[]) =>
+    betterCourses.map((course: UserCourse) => (
       <Chapter key={`${course.id} ${course.version}`} header={course.name}>
         <Scoreboard course={course} />
       </Chapter>

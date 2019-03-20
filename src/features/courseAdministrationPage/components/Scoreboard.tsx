@@ -1,6 +1,6 @@
 import React from 'react'
 import Light from './Light'
-import { Student } from '../../../types/jsontypes'
+import { Student, Exercise } from '../../../types/jsontypes'
 
 const Scoreboard = ({ course }: { course: { id: string; version: string; students: Student[]; exerciseNumbers: string[] } }) => {
   const { students } = course
@@ -11,8 +11,8 @@ const Scoreboard = ({ course }: { course: { id: string; version: string; student
     index++
   })
 
-  const makeGrays = (exercise: any) => {
-    const grays: any = []
+  const makeGrays = (exercise: Exercise) => {
+    const grays: JSX.Element[] = []
     while (numberToOrder[exercise.id] !== index && index < course.exerciseNumbers.length) {
       grays.push(
         <td key={Math.random() * 100000}>
@@ -28,7 +28,7 @@ const Scoreboard = ({ course }: { course: { id: string; version: string; student
   }
 
   const makeGraysEnd = () => {
-    const grays: any = []
+    const grays: JSX.Element[] = []
     while (index < course.exerciseNumbers.length) {
       grays.push(
         <td key={Math.random() * 10000000}>
@@ -47,7 +47,7 @@ const Scoreboard = ({ course }: { course: { id: string; version: string; student
     index = 0
   }
 
-  const addTableData = (exercises: Array<{ id: string; status: string }>) =>
+  const addTableData = (exercises: Exercise[]) =>
     exercises.map(exercise => (
       <React.Fragment key={`${exercise.id} ${Math.random() * 10000} fragment`}>
         {makeGrays(exercise)}
@@ -57,8 +57,8 @@ const Scoreboard = ({ course }: { course: { id: string; version: string; student
       </React.Fragment>
     ))
 
-  const sortExercises = (student: any) => {
-    student.exercises = student.exercises.sort((e1: any, e2: any) => numberToOrder[e1.id] - numberToOrder[e2.id])
+  const sortExercises = (student: { exercises: Exercise[] }) => {
+    student.exercises = student.exercises.sort((e1: Exercise, e2: Exercise) => numberToOrder[e1.id] - numberToOrder[e2.id])
   }
   // A better unique key for the tr-elements is probably needed!
   const createTableRows = () => {
@@ -79,7 +79,7 @@ const Scoreboard = ({ course }: { course: { id: string; version: string; student
         <tbody>
           <tr>
             <th> </th>
-            {course.exerciseNumbers.map((e: any) => (
+            {course.exerciseNumbers.map((e: string) => (
               <th key={`${e} ${course.id} ${course.version}`}>{e}</th>
             ))}
           </tr>

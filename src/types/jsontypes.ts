@@ -4,7 +4,7 @@ export interface Scoreboard {
 
 export interface Student {
   user: string
-  exercises: Array<{ id: string; status: string }>
+  exercises: Exercise[]
 }
 
 export interface UserCourse {
@@ -16,4 +16,9 @@ export interface UserCourse {
   enddate: string
   students: Student[]
   exerciseNumbers: string[]
+}
+
+export interface Exercise {
+  id: string
+  status: string
 }
