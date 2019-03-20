@@ -8,13 +8,11 @@ const HTTP = axios.create({
 })
 
 const joinTeachingInstance = async (courseKey: string): Promise<any> => {
-  console.log(courseKey)
-  // const response = await HTTP.put(`${baseUrl}/courses/${courseKey}`)
-  // const response = await HTTP.put('localhost:8080/courses/kuuba')
-  // console.log(response)
-  // return response.data
+  // console.log(courseKey)
+  const response = await HTTP.post(`${baseUrl}/courses/${courseKey}`, { courseKey })
+  console.log(response)
+  return response.data
 }
-
 const ownCourses = async (): Promise<any> => {
   const { data } = await HTTP.get(`${baseUrl}/users/courses`)
   console.log(data)

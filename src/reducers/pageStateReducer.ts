@@ -16,6 +16,10 @@ export const pageStateReducer = (state: InitialState | null = null, action: { ty
         }
       }
     case 'CHANGE_PAGE':
+      console.log(data)
+      if (data === 'http://localhost:8080/users/auth') {
+        return state
+      }
       if (typeof window !== 'undefined') {
         window.history.pushState({}, 'Kisällioppiminen', data)
         if (state) {
