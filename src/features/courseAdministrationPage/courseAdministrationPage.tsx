@@ -3,7 +3,6 @@ import { connect } from 'react-redux'
 import Chapter from '../coursePage/components/Chapter'
 import Scoreboard from './components/Scoreboard'
 import NewInstanceForm from './components/NewInstanceForm'
-import classnames from 'classnames'
 
 export function courseAdministrationPage() {
   // Replace courses below with a request to server once the server is running
@@ -119,7 +118,8 @@ export function courseAdministrationPage() {
   ]
 
   const [open, setOpen] = useState(false)
-  const formClass = classnames('newInstanceForm-visible', { 'newInstanceForm-hidden': open !== true })
+  const formClass = open ? 'newInstanceForm-visible' : 'newInstanceForm-hidden'
+  const buttonText = open ? 'Sulje lomake' : 'Uusi kurssi'
 
   const addCourses = () =>
     courses.map(course =>
@@ -134,11 +134,11 @@ export function courseAdministrationPage() {
     return (
       <div>
         <div className={formClass}>
-          <NewInstanceForm></NewInstanceForm>
+          <NewInstanceForm />
         </div>
         <div className="courseAdministrationPageContainer">
           <div className="courseAdministrationPageContainer-heading">
-            <button className="newCourseButton" onClick={displayForm}>Uusi kurssi</button>
+            <button className="newCourseButton" onClick={displayForm}>{buttonText}</button>
             <h2>Kurssiesi tulostaulut:</h2>
           </div>
           {addCourses()}
