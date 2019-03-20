@@ -37,7 +37,7 @@ export function courseAdministrationPage() {
             },
             {
               id: '12a9f39a-3b49-11e9-a38a-09f848b19644',
-              status: 'gray'
+              status: 'red'
             }
           ]
         }
@@ -73,7 +73,7 @@ export function courseAdministrationPage() {
             },
             {
               id: '12a9f397-3b49-11e9-a38a-09f848b19644',
-              status: 'gray'
+              status: 'green'
             }
           ]
         }
@@ -109,7 +109,7 @@ export function courseAdministrationPage() {
             },
             {
               id: '12a9cc85-3b49-11e9-a38a-09f848b19644',
-              status: 'gray'
+              status: 'yellow'
             }
           ]
         }
