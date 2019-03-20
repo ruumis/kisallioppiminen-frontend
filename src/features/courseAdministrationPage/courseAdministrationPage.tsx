@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { connect } from 'react-redux'
 import Chapter from '../coursePage/components/Chapter'
 import Scoreboard from './components/Scoreboard'
@@ -119,6 +119,10 @@ export function courseAdministrationPage() {
     }
   ]
 
+  const [open, setOpen] = useState(false)
+  const formClass = open ? 'newInstanceForm-visible' : 'newInstanceForm-hidden'
+  const buttonText = open ? 'Sulje lomake' : 'Uusi kurssi'
+
   const app = ({ exercises }: { exercises: ExercisesState }) => {
     const betterCourses = courses.map(c => {
       if (exercises !== null && exercises.courseExercises !== null && exercises.idToNumber !== null) {
@@ -139,10 +143,15 @@ export function courseAdministrationPage() {
       console.log(NewInstanceForm)
 
     return (
-      <div className="courseAdministrationPageContainer">
-        <div className="courseAdministrationPageContainer-heading">
-          <button className="newCourseButton" onClick={displayForm}>Uusi kurssi</button>
-          <h2>Kurssiesi tulostaulut:</h2>
+      <div>
+        <div className={formClass}>
+          <NewInstanceForm />
+        </div>
+        <div className="courseAdministrationPageContainer">
+          <div className="courseAdministrationPageContainer-heading">
+            <button className="newCourseButton" onClick={displayForm}>{buttonText}</button>
+            <h2>Kurssiesi tulostaulut:</h2>
+          </div>
         </div>
         {addCourses(betterCourses)}
       </div>
