@@ -1,8 +1,9 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { connect } from 'react-redux'
 import Chapter from '../coursePage/components/Chapter'
 import Scoreboard from './components/Scoreboard'
 import NewInstanceForm from './components/NewInstanceForm'
+import classnames from 'classnames'
 
 export function courseAdministrationPage() {
   // Replace courses below with a request to server once the server is running
@@ -117,6 +118,9 @@ export function courseAdministrationPage() {
     }
   ]
 
+  const [open, setOpen] = useState(false)
+  const formClass = classnames('newInstanceForm-visible', { 'newInstanceForm-hidden': open !== true })
+
   const addCourses = () =>
     courses.map(course =>
       <Chapter key={course.id} header={course.name}>
@@ -124,16 +128,21 @@ export function courseAdministrationPage() {
       </Chapter>)
 
   const displayForm = () =>
-    console.log(NewInstanceForm)
+    setOpen(!open)
 
   const app = () => {
     return (
-      <div className="courseAdministrationPageContainer">
-        <div className="courseAdministrationPageContainer-heading">
-          <button className="newCourseButton" onClick={displayForm}>Uusi kurssi</button>
-          <h2>Kurssiesi tulostaulut:</h2>
+      <div>
+        <div className={formClass}>
+          <NewInstanceForm></NewInstanceForm>
         </div>
-        {addCourses()}
+        <div className="courseAdministrationPageContainer">
+          <div className="courseAdministrationPageContainer-heading">
+            <button className="newCourseButton" onClick={displayForm}>Uusi kurssi</button>
+            <h2>Kurssiesi tulostaulut:</h2>
+          </div>
+          {addCourses()}
+        </div>
       </div>
     )
   }
