@@ -3,5 +3,22 @@ export const resolveUri = () => {
     const host = window.location.host
     return host === 'matikkaprojekti.github.io' ? 'https://ko-interface.herokuapp.com' : 'http://localhost:8080'
   }
-  return 'https://ko-interface.herokuapp.com'
+
+  if (process.env.IS_CI === 'true') {
+    return 'https://ko-interface.herokuapp.com'
+  }
+  return 'http://localhost:8080'
+}
+
+export const resolveAuthUrl = () => {
+  if (typeof window !== 'undefined') {
+    const host = window.location.host
+    return host === 'matikkaprojekti.github.io' ? 'https://ko-backend.herokuapp.com/users/auth' : 'http://localhost:8000/users/auth'
+  }
+
+  if (process.env.IS_CI === 'true') {
+    return 'https://ko-backend.herokuapp.com/users/auth'
+  }
+
+  return 'http://localhost:8000/users/auth'
 }

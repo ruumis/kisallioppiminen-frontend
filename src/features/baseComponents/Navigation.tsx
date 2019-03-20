@@ -5,7 +5,7 @@ import { InitialState, User } from '../../types/InitialState'
 import { fetchUser } from '../../reducers/actions/pageStateActions'
 import { connect } from 'react-redux'
 import { ThunkDispatch } from 'redux-thunk'
-import { resolveUri } from '../../utils/resolveUri'
+import { resolveUri, resolveAuthUrl } from '../../utils/resolveUri'
 
 interface Props {
   user: User | null
@@ -18,7 +18,7 @@ class Navigation extends React.Component<Props> {
   }
 
   render() {
-    const url = 'https://ko-be-staging.herokuapp.com/users/auth'
+    const url = resolveAuthUrl()
     const { user } = this.props
     return (
       <nav className="navigator">
@@ -61,9 +61,9 @@ class Navigation extends React.Component<Props> {
               <li className="navigator-item">
                 <div className="dropdown">
                   {/*onClick={setUser()}*/}
-                  <Link className="navigator-link" href={url}>
+                  <a className="navigator-link" href={url}>
                     Kirjautuminen
-                </Link>
+                  </a>
                   <div className="dropdown-content">
                     <Link className="dropdown-content-link" href="/courseAdmin">
                       Kurssihallinta

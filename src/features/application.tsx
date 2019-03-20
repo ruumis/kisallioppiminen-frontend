@@ -6,12 +6,13 @@ import Hero from './baseComponents/Hero'
 import { getPage, watchPageChanges } from '../routes'
 import { Provider, connect } from 'react-redux'
 import { initStore } from '../reducers/store'
-import userService from '../services/userService'
+import { Store } from 'redux'
 import { fetchUser } from '../reducers/actions/pageStateActions'
 
 export function createApp(initialState: { pageState: InitialState; coursePageState: CoursePageState; exercises: ExercisesState }) {
   const store = initStore(initialState)
   watchPageChanges(store)
+  resolveTokenCallback(store)
 
   const mapStateToProps = (state: { pageState: InitialState; coursePageState: CoursePageState }) => {
     return { initialState: state.pageState }
@@ -52,4 +53,16 @@ function resolvePageToRender(initialState: InitialState) {
   const { component, pageName } = page
 
   return { component: component(), pageName }
+}
+
+function resolveTokenCallback(store: Store<{ pageState: InitialState | null }, any>) {
+  if (typeof window !== 'undefined') {
+    if (window.location.search.startsWith('?token')) {
+      const token = window.location.search.split('=')[1]
+      window.localStorage.setItem('ko_token', token)
+      store.dispatch(fetchUser())
+      // Remove token from url bar
+      window.history.pushState({}, 'Kisällioppiminen', '/')
+    }
+  }
 }
