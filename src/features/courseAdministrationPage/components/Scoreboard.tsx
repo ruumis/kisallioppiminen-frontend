@@ -1,25 +1,77 @@
 import React from 'react'
 import Light from './Light'
-import { Student } from '../../../types/jsontypes'
+import { Student, Exercise } from '../../../types/jsontypes'
 
 const Scoreboard = ({ course }: { course: { id: string; version: string; students: Student[]; exerciseNumbers: string[] } }) => {
   const { students } = course
+  const numberToOrder: { [i: string]: number } = {}
+  let index = 0
+  course.exerciseNumbers.forEach(num => {
+    numberToOrder[num] = index
+    index++
+  })
 
-  const addTableData = (exercises: Array<{ id: string; status: string }>) =>
+  const makeGrays = (exercise: Exercise) => {
+    const grays: JSX.Element[] = []
+    while (numberToOrder[exercise.id] !== index && index < course.exerciseNumbers.length) {
+      grays.push(
+        <td key={Math.random() * 100000}>
+          <Light color="gray" />
+        </td>
+      )
+
+      index++
+    }
+
+    index++
+    return grays
+  }
+
+  const makeGraysEnd = () => {
+    const grays: JSX.Element[] = []
+    while (index < course.exerciseNumbers.length) {
+      grays.push(
+        <td key={Math.random() * 10000000}>
+          <Light color="gray" />
+        </td>
+      )
+
+      index++
+    }
+
+    index++
+    return grays
+  }
+
+  const zeroIndex = () => {
+    index = 0
+  }
+
+  const addTableData = (exercises: Exercise[]) =>
     exercises.map(exercise => (
-      <td key={exercise.id}>
-        <Light color={exercise.status} />
-      </td>
+      <React.Fragment key={`${exercise.id} ${Math.random() * 10000} fragment`}>
+        {makeGrays(exercise)}
+        <td key={`${exercise.id} ${Math.random() * 10000}`}>
+          <Light color={exercise.status} />
+        </td>
+      </React.Fragment>
     ))
 
+  const sortExercises = (student: { exercises: Exercise[] }) => {
+    student.exercises = student.exercises.sort((e1: Exercise, e2: Exercise) => numberToOrder[e1.id] - numberToOrder[e2.id])
+  }
   // A better unique key for the tr-elements is probably needed!
-  const createTableRows = () =>
-    students.map((student: Student) => (
-      <tr key={student.user}>
+  const createTableRows = () => {
+    return students.map((student: Student) => (
+      <tr key={`${student.user} ${Math.random() * 10000}`}>
         <td>{student.user}</td>
+        {zeroIndex()}
+        {sortExercises(student)}
         {addTableData(student.exercises)}
+        {makeGraysEnd()}
       </tr>
     ))
+  }
 
   return (
     <div className="scoreboard">
@@ -27,7 +79,7 @@ const Scoreboard = ({ course }: { course: { id: string; version: string; student
         <tbody>
           <tr>
             <th> </th>
-            {course.exerciseNumbers.map((e: any) => (
+            {course.exerciseNumbers.map((e: string) => (
               <th key={`${e} ${course.id} ${course.version}`}>{e}</th>
             ))}
           </tr>
