@@ -29,6 +29,6 @@ export interface CoursePageState {
 }
 
 export interface ExercisesState {
-  idToNumber: { [s: string]: string } | null
-  courseExercises: { [s: string]: string[] } | null
+  idToNumber: { [s: string]: string }
+  courseExercises: { [s: string]: string[] }
 }
