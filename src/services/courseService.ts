@@ -1,5 +1,6 @@
 import axios from 'axios'
 import { resolveUri } from '../utils/resolveUri'
+import { getRequestConfig } from '../utils/requestUtils'
 
 const baseUrl = resolveUri()
 
@@ -8,8 +9,7 @@ const HTTP = axios.create({
 })
 
 const joinTeachingInstance = async (courseKey: string): Promise<any> => {
-  // console.log(courseKey)
-  const response = await HTTP.post(`${baseUrl}/courses/${courseKey}`, { courseKey })
+  const response = await HTTP.post(`${baseUrl}/teachinginstances/join/${courseKey}`, { courseKey }, getRequestConfig())
   console.log(response)
   return response.data
 }
