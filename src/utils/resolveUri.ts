@@ -4,7 +4,7 @@ export const resolveUri = () => {
     return host === 'matikkaprojekti.github.io' ? 'https://ko-interface.herokuapp.com' : 'https://ko-proxy-mock.herokuapp.com/users/me'
   }
 
-  if (process.env.IS_CI === 'true') {
+  if (process.env.IS_BUILD === 'true') {
     return 'https://ko-interface.herokuapp.com'
   }
   return 'https://ko-proxy-mock.herokuapp.com/users/me'
@@ -16,7 +16,7 @@ export const resolveAuthUrl = () => {
     return host === 'matikkaprojekti.github.io' ? 'https://ko-be-staging.herokuapp.com/users/auth' : 'http://localhost:8000/users/auth'
   }
 
-  if (process.env.IS_CI === 'true') {
+  if (process.env.IS_BUILD === 'true') {
     return 'https://ko-be-staging.herokuapp.com/users/auth'
   }
 

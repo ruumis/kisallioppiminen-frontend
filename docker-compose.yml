@@ -10,4 +10,4 @@ services:
       - "8080:3000"
     command: yarn watch
     environment:
-      - IS_CI=true
+      - IS_BUILD=true

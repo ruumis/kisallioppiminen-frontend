@@ -24,7 +24,7 @@ jobs:
       after_script:
         - docker-compose down
       before_script:
-        - docker-compose run web npm run run-test -d
+        - docker-compose run -d web npm run run-test
       script:
         - docker-compose run web npm run lint
         - docker-compose run web npm run test

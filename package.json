@@ -74,7 +74,7 @@
     "start": "webpack --env.platform=web && webpack --env.platform=server && webpack --env.platform=styles && node ./dist/js/server",
     "watch": "nodemon",
     "build-web": "webpack --env.platform=web",
-    "run-test": "IS_CI=false webpack --env.platform=web && webpack --env.platform=server && webpack --env.platform=styles && node ./dist/js/server",
+    "run-test": "IS_BUILD=false webpack --env.platform=web && webpack --env.platform=server && webpack --env.platform=styles && node ./dist/js/server",
     "test": "./node_modules/.bin/cypress run",
     "build-server": "webpack --env.platform=server",
     "lint": "tslint -c tslint.json 'src/**/*.ts?(x)'",
