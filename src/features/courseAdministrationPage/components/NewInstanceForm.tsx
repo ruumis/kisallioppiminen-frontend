@@ -9,7 +9,7 @@ export default function NewInstanceForm() {
     const [selectedCourse, setSelectedCourse] = useState(pageState.courses[0])
 
     const handleCourseSelectorChange = (selection: string) => {
-      const selected = pageState.courses.find(course => { return course.courseName === selection })
+      const selected = pageState.courses.find(course => course.courseName === selection)
       if (selected !== undefined) {
         setSelectedCourse(selected)
       }
