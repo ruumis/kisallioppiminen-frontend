@@ -2,12 +2,9 @@ import React from 'react'
 import { connect } from 'react-redux'
 import Chapter from '../coursePage/components/Chapter'
 import Scoreboard from './components/Scoreboard'
-<<<<<<< e57863526ef962468dc98d8792b345d0ee7bb409
 import { ExercisesState } from './../../types/InitialState'
 import { UserCourse } from '../../types/jsontypes'
-=======
 import NewInstanceForm from './components/NewInstanceForm'
->>>>>>> First draft of new teaching instance form
 
 export function courseAdministrationPage() {
   // Replace courses below with a request to server once the server is running
@@ -138,13 +135,9 @@ export function courseAdministrationPage() {
       return { ...c, exerciseNumbers: [] }
     })
 
-<<<<<<< e57863526ef962468dc98d8792b345d0ee7bb409
-=======
-  const displayForm = () =>
-    console.log(NewInstanceForm)
+    const displayForm = () =>
+      console.log(NewInstanceForm)
 
-  const app = () => {
->>>>>>> First draft of new teaching instance form
     return (
       <div className="courseAdministrationPageContainer">
         <div className="courseAdministrationPageContainer-heading">
