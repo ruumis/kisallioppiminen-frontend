@@ -4,13 +4,14 @@ import CourseWrapper from './components/CourseWrapper'
 import Scoreboard from '../courseAdministrationPage/components/Scoreboard'
 import { UserCourse } from '../../types/jsontypes'
 import JoinTeachingInstance from './components/JoinTeachingInstance'
-import courseService from './../../services/courseService'
-import { InitialState, CoursePageState, ExercisesState } from '../../types/InitialState'
+import { InitialState, CoursePageState, ExercisesState, User } from '../../types/InitialState'
 import { ThunkDispatch } from 'redux-thunk'
-import { fetchOwnCourses as fetchOwnCoursesAction } from '../../reducers/actions/courseActions'
+import { fetchOwnCourses as fetchOwnCoursesAction, joinTeachingInstance as joinTeachingInstanceAction } from '../../reducers/actions/courseActions'
 
 interface Props {
+  user: User
   ownCourses: UserCourse[]
+  joinTeachingInstance: (courseKey: string, userId: number, teacher: boolean) => Promise<void>
   fetchOwnCourses: () => Promise<void>
   exercises: ExercisesState
 }
@@ -24,10 +25,17 @@ export function userCourseListPage() {
     ))
 
   const app = (props: Props) => {
-    const { ownCourses, fetchOwnCourses, exercises } = props
+    const { user, ownCourses, joinTeachingInstance, fetchOwnCourses, exercises } = props
+
     useEffect(() => {
       fetchOwnCourses()
     }, [])
+
+    function handle(event: any) {
+      event.preventDefault()
+      console.log(user)
+      joinTeachingInstance(event.target.courseKey.value, user.id, false)
+    }
 
     const betterCourses = ownCourses.map(c => {
       if (exercises !== null && exercises.courseExercises !== null && exercises.idToNumber !== null && exercises.courseExercises[`${c.id} ${c.version}`] !== undefined) {
@@ -44,20 +52,25 @@ export function userCourseListPage() {
       return { ...c, exerciseNumbers: [] }
     })
 
+
     return (
       <div className="courseAdministrationPageContainer">
-        <JoinTeachingInstance />
+        <JoinTeachingInstance handle={handle} />
         {addCourses(betterCourses)}
       </div>
     )
   }
 
-  const mapStateToProps = (state: { pageState: InitialState; coursePageState: CoursePageState; exercises: ExercisesState }) => ({
+  const mapStateToProps = (state: { userState: User; pageState: InitialState; coursePageState: CoursePageState; exercises: ExercisesState }) => ({
+    user: state.userState,
     ownCourses: state.coursePageState.ownCourses,
     exercises: state.exercises
   })
 
   const mapDispatchToProps = (dispatch: ThunkDispatch<{}, {}, any>) => ({
+    joinTeachingInstance: async (courseKey: string, userId: number, teacher: boolean) => {
+      await dispatch(joinTeachingInstanceAction(courseKey, userId, teacher))
+    },
     fetchOwnCourses: async () => {
       await dispatch(fetchOwnCoursesAction())
     }

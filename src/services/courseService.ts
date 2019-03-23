@@ -10,15 +10,15 @@ const HTTP = axios.create({
 
 const joinTeachingInstance = async (courseKey: string, userId: number, teacher: boolean): Promise<any> => {
   console.log('userId: ', userId)
-  const body = {
+  const joinTeachingInstanceObject = {
     courseKey,
     userId,
     teacher
   }
-  const response = await HTTP.post(`${baseUrl}/teachinginstances/join/${courseKey}`, { body }, getRequestConfig())
-  console.log(response)
+  const response = await HTTP.post(`${baseUrl}/teachinginstances/join/${courseKey}`, joinTeachingInstanceObject, getRequestConfig())
   return response.data
 }
+
 const ownCourses = async (): Promise<any> => {
   const { data } = await HTTP.get(`${baseUrl}/users/courses`)
   console.log(data)

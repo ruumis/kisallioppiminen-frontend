@@ -4,20 +4,16 @@ import { connect } from 'react-redux'
 import { User } from '../../../types/InitialState';
 
 interface Props {
-  header: string
-  content: string
-  openedBoxes: { [index: string]: boolean }
+  handle: (event: any) => void
+  // header: string
+  // content: string
+  // openedBoxes: { [index: string]: boolean }
 }
 
-function handle(event: any, userId: number) {
-  event.preventDefault()
-  courseService.joinTeachingInstance(event.target.courseKey.value, 420, false)
-}
-
-const JoinCourse = (props: any) => {
+const JoinCourse = (props: Props) => {
   return (
-    <div>
-      <form onSubmit={event => handle(event, props.userId)}>
+    <div key={Math.random() * 10000} >
+      <form onSubmit={event => props.handle(event)}>
         <div className="userCourseListPage-header">
           <label className="userCourseListPage-text">Lisää uusi kurssi:</label>
         </div>
