@@ -20,6 +20,7 @@ services:
       dockerfile: Dockerfile-test
     environment:
       - IS_BUILD=false
+      - CYPRESS_baseUrl=http://web
     networks:
       - joint_network
 networks:

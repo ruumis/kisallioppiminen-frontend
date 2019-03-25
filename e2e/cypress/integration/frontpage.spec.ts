@@ -1,8 +1,3 @@
-
-beforeEach(() => {
-  cy.visit('http://localhost:3000')
-})
-
 describe('Frontpage tests', () => {
   it('Username displayed on frontpage', () => {
     cy.contains('Hei, Jorma')
