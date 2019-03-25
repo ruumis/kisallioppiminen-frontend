@@ -11,6 +11,8 @@ services:
     command: yarn watch
     environment:
       - IS_BUILD=true
+    networks:
+      - joint_network
   test:
     build:
       context: .
@@ -18,3 +20,7 @@ services:
       dockerfile: Dockerfile-test
     environment:
       - IS_BUILD=false
+    networks:
+      - joint_network
+networks:
+  joint_network:
