@@ -24,14 +24,24 @@ export default function NewInstanceForm() {
     const submitForm = (event: FormEvent) => {
       event.preventDefault()
       const instance = {
-        "coursekey": courseKey,
-        "name": instanceName,
-        "startdate": startDate,
-        "enddate": endDate,
-        "coursematerial_name": selectedCourse.courseName,
-        "coursematerial_version": selectedVersion
+        coursekey: courseKey,
+        name: instanceName,
+        startdate: startDate,
+        enddate: endDate,
+        coursematerial_name: selectedCourse.courseName,
+        coursematerial_version: selectedVersion
       }
       console.log(instance)
+      clearForm()
+    }
+
+    const clearForm = () => {
+      setInstanceName('')
+      setSelectedCourse(pageState.courses[0])
+      setSelectedVersion(selectedCourse.courseContent[0].version)
+      setCourseKey('')
+      setStartDate(new Date().toISOString().split('T')[0])
+      setEndDate(new Date().toISOString().split('T')[0])
     }
 
     return (
@@ -45,11 +55,11 @@ export default function NewInstanceForm() {
               </tr>
               <tr>
                 <td>Kurssimateriaali</td>
-                <td><select onChange={e => courseSelectorListener(e.target.value)}>{addCourses(pageState.courses)}</select></td>
+                <td><select value={selectedCourse.courseName} onChange={e => courseSelectorListener(e.target.value)}>{addCourses(pageState.courses)}</select></td>
               </tr>
               <tr>
                 <td>Materiaalin versio</td>
-                <td><select onChange={e => setSelectedVersion(e.target.value)}>{addVersions(selectedCourse)}</select></td>
+                <td><select value={selectedVersion} onChange={e => setSelectedVersion(e.target.value)}>{addVersions(selectedCourse)}</select></td>
               </tr>
               <tr>
                 <td>Kurssiavain</td>
