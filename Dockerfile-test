@@ -8,6 +8,8 @@ COPY package-lock.json package.json /app/
 
 COPY . /app/
 
+RUN apt-get install netcat
+
 RUN sh ./scripts/waitForServer.sh
 
 RUN npm install
