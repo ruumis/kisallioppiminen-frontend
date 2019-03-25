@@ -16,4 +16,5 @@ services:
       context: .
       shm_size: 1G
       dockerfile: Dockerfile-test
+    environment:
       - IS_BUILD=false
