@@ -10,7 +10,5 @@ COPY . /app/
 
 RUN apt-get -y install netcat
 
-RUN sh ./scripts/waitForServer.sh
-
 RUN npm install
 RUN npm install -g typescript tslint
