@@ -8,7 +8,6 @@ services:
       - ./dist:/app/dist
     ports:
       - "8080:3000"
-    command: yarn watch
     environment:
       - IS_BUILD=true
   test:
