@@ -18,4 +18,4 @@ services:
       dockerfile: Dockerfile-test
     environment:
       - IS_BUILD=false
-      - CYPRESS_baseUrl=http://web:3000
+      - CYPRESS_baseUrl=http://web:8080
