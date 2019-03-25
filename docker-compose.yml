@@ -11,3 +11,9 @@ services:
     command: yarn watch
     environment:
       - IS_BUILD=true
+  test:
+    build:
+      context: .
+      shm_size: 1G
+      dockerfile: Dockerfile-test
+      - IS_BUILD=false
