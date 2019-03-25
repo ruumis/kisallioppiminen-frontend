@@ -7,17 +7,31 @@ export default function NewInstanceForm() {
   const form = ({ pageState }: { pageState: InitialState }) => {
 
     const [selectedCourse, setSelectedCourse] = useState(pageState.courses[0])
+    const [selectedVersion, setSelectedVersion] = useState(pageState.courses[0].courseContent[0].version)
+    const [instanceName, setInstanceName] = useState('')
+    const [courseKey, setCourseKey] = useState('')
+    const [startDate, setStartDate] = useState(new Date().toISOString().split('T')[0])
+    const [endDate, setEndDate] = useState(new Date().toISOString().split('T')[0])
 
-    const handleCourseSelectorChange = (selection: string) => {
+    const courseSelectorListener = (selection: string) => {
       const selected = pageState.courses.find(course => course.courseName === selection)
       if (selected !== undefined) {
         setSelectedCourse(selected)
+        setSelectedVersion(selected.courseContent[0].version)
       }
     }
 
     const submitForm = (event: FormEvent) => {
       event.preventDefault()
-      console.log("lomake lähetetty")
+      const instance = {
+        "coursekey": courseKey,
+        "name": instanceName,
+        "startdate": startDate,
+        "enddate": endDate,
+        "coursematerial_name": selectedCourse.courseName,
+        "coursematerial_version": selectedVersion
+      }
+      console.log(instance)
     }
 
     return (
@@ -27,27 +41,27 @@ export default function NewInstanceForm() {
             <tbody>
               <tr>
                 <td>Kurssin nimi</td>
-                <td><input type="text" name="instanceName"></input></td>
+                <td><input type="text" value={instanceName} onChange={e => setInstanceName(e.target.value)} ></input></td>
               </tr>
               <tr>
                 <td>Kurssimateriaali</td>
-                <td><select onChange={e => handleCourseSelectorChange(e.target.value)}>{addCourses(pageState.courses)}</select></td>
+                <td><select onChange={e => courseSelectorListener(e.target.value)}>{addCourses(pageState.courses)}</select></td>
               </tr>
               <tr>
                 <td>Materiaalin versio</td>
-                <td><select>{addVersions(selectedCourse)}</select></td>
+                <td><select onChange={e => setSelectedVersion(e.target.value)}>{addVersions(selectedCourse)}</select></td>
               </tr>
               <tr>
                 <td>Kurssiavain</td>
-                <td><input type="text" name="courseKey"></input></td>
+                <td><input type="text" value={courseKey} onChange={e => setCourseKey(e.target.value)}></input></td>
               </tr>
               <tr>
                 <td>Kurssi alkaa</td>
-                <td><input type="date" name="courseStart"></input></td>
+                <td><input type="date" value={startDate} onChange={e => setStartDate(e.target.value)}></input></td>
               </tr>
               <tr>
                 <td>Kurssi päättyy</td>
-                <td><input type="date" name="courseEnd"></input></td>
+                <td><input type="date" value={endDate} onChange={e => setEndDate(e.target.value)}></input></td>
               </tr>
               <tr>
                 <td><input type="submit" value="Luo kurssi"></input></td>
