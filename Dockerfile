@@ -10,5 +10,3 @@ COPY . /app/
 
 RUN npm install
 RUN npm install -g typescript tslint
-
-CMD ["yarn", "start"]

@@ -11,8 +11,6 @@ services:
     command: yarn watch
     environment:
       - IS_BUILD=true
-    networks:
-      - joint_network
   test:
     build:
       context: .
@@ -20,8 +18,4 @@ services:
       dockerfile: Dockerfile-test
     environment:
       - IS_BUILD=false
-      - CYPRESS_baseUrl=http://web
-    networks:
-      - joint_network
-networks:
-  joint_network:
+      - CYPRESS_baseUrl=web
