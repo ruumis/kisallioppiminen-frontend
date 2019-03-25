@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useState, FormEvent } from 'react'
 import { connect } from 'react-redux'
 import { InitialState, Course } from '../../../types/InitialState'
 
@@ -15,9 +15,14 @@ export default function NewInstanceForm() {
       }
     }
 
+    const submitForm = (event: FormEvent) => {
+      event.preventDefault()
+      console.log("lomake lähetetty")
+    }
+
     return (
       <div>
-        <form>
+        <form onSubmit={submitForm}>
           <table>
             <tbody>
               <tr>
