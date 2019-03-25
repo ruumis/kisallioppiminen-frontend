@@ -24,7 +24,6 @@ jobs:
       before_script:
         - docker-compose up
         - docker-compose run -d web npm run run-test
-        - sh ./scripts/waitForServer.sh
       script:
         - docker-compose run web npm run lint
         - docker-compose run test npm run test
