@@ -11,7 +11,7 @@ import { fetchOwnCourses as fetchOwnCoursesAction, joinTeachingInstance as joinT
 interface Props {
   user: User
   ownCourses: UserCourse[]
-  joinTeachingInstance: (courseKey: string, userId: number, teacher: boolean) => Promise<void>
+  joinTeachingInstance: (coursekey: string) => Promise<void>
   fetchOwnCourses: () => Promise<void>
   exercises: ExercisesState
 }
@@ -25,7 +25,7 @@ export function userCourseListPage() {
     ))
 
   const app = (props: Props) => {
-    const { user, ownCourses, joinTeachingInstance, fetchOwnCourses, exercises } = props
+    const { user, ownCourses, fetchOwnCourses, exercises } = props
 
     useEffect(() => {
       fetchOwnCourses()
@@ -34,7 +34,7 @@ export function userCourseListPage() {
     function handle(event: any) {
       event.preventDefault()
       console.log(user)
-      joinTeachingInstance(event.target.courseKey.value, user.id, false)
+      joinTeachingInstanceAction(event.target.courseKey.value)
     }
 
     const betterCourses = ownCourses.map(c => {
@@ -52,7 +52,6 @@ export function userCourseListPage() {
       return { ...c, exerciseNumbers: [] }
     })
 
-
     return (
       <div className="courseAdministrationPageContainer">
         <JoinTeachingInstance handle={handle} />
@@ -68,8 +67,8 @@ export function userCourseListPage() {
   })
 
   const mapDispatchToProps = (dispatch: ThunkDispatch<{}, {}, any>) => ({
-    joinTeachingInstance: async (courseKey: string, userId: number, teacher: boolean) => {
-      await dispatch(joinTeachingInstanceAction(courseKey, userId, teacher))
+    joinTeachingInstance: async (coursekey: string) => {
+      await dispatch(joinTeachingInstanceAction(coursekey))
     },
     fetchOwnCourses: async () => {
       await dispatch(fetchOwnCoursesAction())

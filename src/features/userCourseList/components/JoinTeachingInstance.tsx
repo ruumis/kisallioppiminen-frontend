@@ -5,9 +5,6 @@ import { User } from '../../../types/InitialState';
 
 interface Props {
   handle: (event: any) => void
-  // header: string
-  // content: string
-  // openedBoxes: { [index: string]: boolean }
 }
 
 const JoinCourse = (props: Props) => {

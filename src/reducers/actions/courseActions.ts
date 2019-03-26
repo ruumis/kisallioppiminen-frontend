@@ -14,10 +14,10 @@ export const setOwnCourses = (courses: any[]) => ({
   data: courses
 })
 
-export const joinTeachingInstance = (courseKey: string, userId: number, teacher: boolean): ThunkAction<Promise<any[]>, {}, {}, AnyAction> => {
+export const joinTeachingInstance = (coursekey: string): ThunkAction<Promise<any[]>, {}, {}, AnyAction> => {
   return async (dispatch) =>
     courseService
-      .joinTeachingInstance(courseKey, userId, teacher)
+      .joinTeachingInstance(coursekey)
       .then((courses: any[]) => {
         dispatch(setOwnCourses(courses))
         return courses
