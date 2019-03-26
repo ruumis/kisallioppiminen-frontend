@@ -22,7 +22,7 @@ jobs:
       install:
         - docker-compose build
         - docker-compose up
-        - docker-compose run -d web npm run run-test
+        - docker-compose run -d --use-aliases web npm run run-test
       before_script:
         - docker-compose run test sh ./scripts/waitForServer.sh
       script:
