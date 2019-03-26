@@ -7,7 +7,7 @@ export const resolveUri = () => {
   if (process.env.IS_BUILD === 'true') {
     return 'https://ko-interface.herokuapp.com'
   }
-  return 'https://ko-proxy-mock.herokuapp.com'
+  return 'https://localhost:8080'
 }
 
 export const resolveAuthUrl = () => {
