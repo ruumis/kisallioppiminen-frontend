@@ -21,12 +21,12 @@ jobs:
         - docker-compose --version
       install:
         - docker-compose build
-      before_script:
         - docker-compose up
-        - docker-compose run web npm run run-test
+        - docker-compose run -d web npm run run-test
+      before_script:
+        - docker-compose run test sh ./scripts/waitForServer.sh
       script:
         - docker-compose run web npm run lint
-        - docker-compose run test sh ./scripts/waitForServer.sh
         - docker-compose run test npm run test
         - docker-compose run web npm run build
       after_script:
