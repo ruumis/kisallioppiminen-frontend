@@ -1,13 +1,13 @@
 export const resolveUri = () => {
   if (typeof window !== 'undefined') {
     const host = window.location.host
-    return host === 'matikkaprojekti.github.io' ? 'https://ko-interface.herokuapp.com' : 'https://ko-proxy-mock.herokuapp.com/users/me'
+    return host === 'matikkaprojekti.github.io' ? 'https://ko-interface.herokuapp.com' : 'https://ko-proxy-mock.herokuapp.com'
   }
 
   if (process.env.IS_BUILD === 'true') {
     return 'https://ko-interface.herokuapp.com'
   }
-  return 'https://ko-proxy-mock.herokuapp.com/users/me'
+  return 'https://ko-proxy-mock.herokuapp.com'
 }
 
 export const resolveAuthUrl = () => {

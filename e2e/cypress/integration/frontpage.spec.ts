@@ -1,3 +1,7 @@
+beforeEach(() => {
+  cy.visit('/')
+})
+
 describe('Frontpage tests', () => {
   it('Username displayed on frontpage', () => {
     cy.contains('Hei, Jorma')
