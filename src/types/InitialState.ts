@@ -26,6 +26,7 @@ export interface Course {
 export interface CoursePageState {
   selectedCourseVersion: string | null
   ownCourses: UserCourse[]
+  teacherCourses: UserCourse[]
 }
 
 export interface ExercisesState {

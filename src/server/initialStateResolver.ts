@@ -53,7 +53,8 @@ export function resolveInitialState(path: string): { pageState: InitialState; co
     },
     coursePageState: {
       selectedCourseVersion: null,
-      ownCourses: []
+      ownCourses: [],
+      teacherCourses: []
     },
     exercises: {
       idToNumber,

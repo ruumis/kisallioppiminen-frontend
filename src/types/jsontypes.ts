@@ -10,6 +10,7 @@ export interface Student {
 
 export interface UserCourse {
   name: string
+  id: string
   coursekey: string
   owner_id: number
   version: string
