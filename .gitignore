@@ -1,7 +1,1 @@
-node_modules/
-.vscode/  
-dist/css/*.vscode\  
-dist/js/*
-yarn-error.log
-.env
-.DS_Store
+node_modules
