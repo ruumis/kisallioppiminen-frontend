@@ -165,7 +165,6 @@ export function courseAdministrationPage() {
       </Chapter>
     ))
 
-
   const mapStateToProps = ({ exercises }: { exercises: ExercisesState }) => {
     return { exercises }
   }
