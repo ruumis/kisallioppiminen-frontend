@@ -25,7 +25,7 @@ export function userCourseListPage() {
     ))
 
   const app = (props: Props) => {
-    const { user, ownCourses, fetchOwnCourses, exercises } = props
+    const { user, ownCourses, fetchOwnCourses, exercises, joinTeachingInstance } = props
 
     useEffect(() => {
       fetchOwnCourses()
@@ -33,10 +33,10 @@ export function userCourseListPage() {
 
     function handle(event: any) {
       event.preventDefault()
-      console.log(user)
-      joinTeachingInstanceAction(event.target.courseKey.value)
+      joinTeachingInstance(event.target.courseKey.value)
     }
 
+    console.log(ownCourses)
     const betterCourses = ownCourses.map(c => {
       if (exercises !== null && exercises.courseExercises !== null && exercises.idToNumber !== null && exercises.courseExercises[`${c.id} ${c.version}`] !== undefined) {
         const exerciseNumbers = exercises.courseExercises[`${c.id} ${c.version}`].map(e => exercises.idToNumber[e])

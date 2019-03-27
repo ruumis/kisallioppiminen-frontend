@@ -8,11 +8,10 @@ const HTTP = axios.create({
   withCredentials: true
 })
 
-const joinTeachingInstance = async (coursekey: string): Promise<any> => {
-  const joinTeachingInstanceObject = {
-    coursekey
-  }
-  const response = await HTTP.post(`${baseUrl}/teachinginstances/join/${coursekey}`, joinTeachingInstanceObject, getRequestConfig())
+const joinTeachingInstanceService = async (coursekey: string): Promise<any> => {
+  console.log('MENEEEE')
+  const response = await HTTP.patch(`${baseUrl}/teachinginstances/join`, { coursekey }, getRequestConfig())
+  console.log(response)
   return response.data
 }
 
@@ -22,4 +21,4 @@ const ownCourses = async (): Promise<any> => {
   return data
 }
 
-export default { joinTeachingInstance, ownCourses }
+export default { joinTeachingInstanceService, ownCourses }
