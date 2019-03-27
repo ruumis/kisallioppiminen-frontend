@@ -1,5 +1,4 @@
 node_modules/
-dist/
 .vscode/  
 dist/css/*.vscode\  
 dist/js/*
