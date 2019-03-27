@@ -22,3 +22,12 @@ export interface Exercise {
   id: string
   status: string
 }
+
+export interface TeachingInstance {
+  coursekey: string
+  name: string
+  startdate: string
+  enddate: string
+  coursematerial_name: string
+  coursematerial_version: string
+}

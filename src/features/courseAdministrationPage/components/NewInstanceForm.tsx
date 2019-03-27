@@ -1,5 +1,6 @@
 import React, { useState, FormEvent } from 'react'
 import { connect } from 'react-redux'
+import courseService from './../../../services/courseService'
 import { InitialState, Course } from '../../../types/InitialState'
 
 export default function NewInstanceForm() {
@@ -23,15 +24,24 @@ export default function NewInstanceForm() {
 
     const submitForm = (event: FormEvent) => {
       event.preventDefault()
+
+      const user_id = pageState.pageParams.user ? pageState.pageParams.user.id : 0
+
       const instance = {
         coursekey: courseKey,
         name: instanceName,
         startdate: startDate,
         enddate: endDate,
         coursematerial_name: selectedCourse.courseName,
-        coursematerial_version: selectedVersion
+        coursematerial_version: selectedVersion,
       }
+
+      console.log('lähetys:')
       console.log(instance)
+      console.log('vastaus:')
+
+      courseService.createTeachingInstance(instance)
+
       clearForm()
     }
 
