@@ -140,7 +140,7 @@ export function courseAdministrationPage() {
     })
 
     const displayForm = () =>
-      console.log(NewInstanceForm)
+      setOpen(!open)
 
     return (
       <div>
