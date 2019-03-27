@@ -5,3 +5,5 @@ dist/js/*
 yarn-error.log
 .env
 .DS_Store
+e2e/cypress/screenshots
+cypress/

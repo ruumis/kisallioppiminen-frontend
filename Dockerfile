@@ -8,7 +8,10 @@ COPY package-lock.json package.json /app/
 
 COPY . /app/
 
+RUN apk add --no-cache --virtual .gyp \
+        python \
+        make \
+        g++
+
 RUN npm install
 RUN npm install -g typescript tslint
-
-CMD ["yarn", "start"]

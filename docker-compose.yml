@@ -8,6 +8,15 @@ services:
       - ./dist:/app/dist
     ports:
       - "8080:3000"
-    command: yarn watch
     environment:
-      - IS_CI=true
+      - IS_BUILD=true
+  test:
+    build:
+      context: .
+      shm_size: 1G
+      dockerfile: Dockerfile-test
+    depends_on:
+      - web
+    environment:
+      - IS_BUILD=false
+      - CYPRESS_baseUrl=http://web:3000
