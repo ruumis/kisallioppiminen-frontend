@@ -1,5 +1,5 @@
 import React from 'react'
-import { InitialState, Course, CoursePageState } from '../../types/InitialState'
+import { InitialState, Course, CoursePageState, User } from '../../types/InitialState'
 import IdyllDocument from 'idyll-document'
 import * as components from 'idyll-components'
 import compiler, { Node } from 'idyll-compiler'
@@ -36,7 +36,8 @@ export function coursePage() {
     Math
   }
 
-  const mapStateToProps = (state: { pageState: InitialState; coursePageState: CoursePageState }) => ({
+  const mapStateToProps = (state: { userState: User; pageState: InitialState; coursePageState: CoursePageState }) => ({
+    userState: state.userState,
     pageState: state.pageState,
     coursePageState: state.coursePageState
   })

@@ -60,6 +60,7 @@
     "babel-plugin-react-transform": "2.0.0-beta1",
     "copy-webpack-plugin": "^4.6.0",
     "css-loader": "2.1.0",
+    "cypress": "^3.2.0",
     "extract-text-webpack-plugin": "4.0.0-beta.0",
     "nodemon": "1.18.9",
     "null-loader": "0.1.1",
@@ -73,6 +74,8 @@
     "start": "webpack --env.platform=web && webpack --env.platform=server && webpack --env.platform=styles && node ./dist/js/server",
     "watch": "nodemon",
     "build-web": "webpack --env.platform=web",
+    "run-test": "IS_BUILD=false webpack --env.platform=web && webpack --env.platform=server && webpack --env.platform=styles && node ./dist/js/server",
+    "test": "./node_modules/.bin/cypress run --record",
     "build-server": "webpack --env.platform=server",
     "lint": "tslint -c tslint.json 'src/**/*.ts?(x)'",
     "build": "./node_modules/.bin/ts-node ./scripts/buildStaticSite.ts && webpack --env.platform=static && webpack --env.platform=styles-static"
