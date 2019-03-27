@@ -3,8 +3,8 @@ import { connect } from 'react-redux'
 import Chapter from '../coursePage/components/Chapter'
 import Scoreboard from './components/Scoreboard'
 import { ExercisesState } from './../../types/InitialState'
-import { UserCourse } from '../../types/jsontypes'
 import NewInstanceForm from './components/NewInstanceForm'
+import { UserCourse, IdyllCourses } from '../../types/jsontypes'
 
 export function courseAdministrationPage() {
   // Replace courses below with a request to server once the server is running
@@ -18,27 +18,29 @@ export function courseAdministrationPage() {
       enddate: '2017-05-02',
       students: [
         {
-          user: 'Anthony',
+          firstname: 'Anthony',
+          lastname: 'Droptables',
           exercises: [
             {
-              id: '12a9f399-3b49-11e9-a38a-09f848b19644',
+              uuid: '12a9f399-3b49-11e9-a38a-09f848b19644',
               status: 'green'
             },
             {
-              id: '12a9f39a-3b49-11e9-a38a-09f848b19644',
+              uuid: '12a9f39a-3b49-11e9-a38a-09f848b19644',
               status: 'yellow'
             }
           ]
         },
         {
-          user: 'Bert',
+          firstname: 'Bert',
+          lastname: 'Droptables',
           exercises: [
             {
-              id: '12a9f399-3b49-11e9-a38a-09f848b19644',
+              uuid: '12a9f399-3b49-11e9-a38a-09f848b19644',
               status: 'red'
             },
             {
-              id: '12a9f39a-3b49-11e9-a38a-09f848b19644',
+              uuid: '12a9f39a-3b49-11e9-a38a-09f848b19644',
               status: 'red'
             }
           ]
@@ -54,27 +56,29 @@ export function courseAdministrationPage() {
       enddate: '2017-05-02',
       students: [
         {
-          user: 'Anthony',
+          firstname: 'Anthony',
+          lastname: 'Droptables',
           exercises: [
             {
-              id: '12a9f396-3b49-11e9-a38a-09f848b19644',
+              uuid: '12a9f396-3b49-11e9-a38a-09f848b19644',
               status: 'green'
             },
             {
-              id: '12a9f397-3b49-11e9-a38a-09f848b19644',
+              uuid: '12a9f397-3b49-11e9-a38a-09f848b19644',
               status: 'yellow'
             }
           ]
         },
         {
-          user: 'Bert',
+          firstname: 'Bert',
+          lastname: 'Droptables',
           exercises: [
             {
-              id: '12a9f398-3b49-11e9-a38a-09f848b19644',
+              uuid: '12a9f398-3b49-11e9-a38a-09f848b19644',
               status: 'red'
             },
             {
-              id: '12a9f397-3b49-11e9-a38a-09f848b19644',
+              uuid: '12a9f397-3b49-11e9-a38a-09f848b19644',
               status: 'green'
             }
           ]
@@ -90,27 +94,29 @@ export function courseAdministrationPage() {
       enddate: '2017-05-02',
       students: [
         {
-          user: 'Anthony',
+          firstname: 'Anthony',
+          lastname: 'Droptables',
           exercises: [
             {
-              id: '12a9cc85-3b49-11e9-a38a-09f848b19644',
+              uuid: '12a9cc85-3b49-11e9-a38a-09f848b19644',
               status: 'green'
             },
             {
-              id: '12a9cc86-3b49-11e9-a38a-09f848b19644',
+              uuid: '12a9cc86-3b49-11e9-a38a-09f848b19644',
               status: 'yellow'
             }
           ]
         },
         {
-          user: 'Bert',
+          firstname: 'Bert',
+          lastname: 'Droptables',
           exercises: [
             {
-              id: '12a9cc87-3b49-11e9-a38a-09f848b19644',
+              uuid: '12a9cc87-3b49-11e9-a38a-09f848b19644',
               status: 'red'
             },
             {
-              id: '12a9cc85-3b49-11e9-a38a-09f848b19644',
+              uuid: '12a9cc85-3b49-11e9-a38a-09f848b19644',
               status: 'yellow'
             }
           ]
@@ -128,7 +134,7 @@ export function courseAdministrationPage() {
       if (exercises !== null && exercises.courseExercises !== null && exercises.idToNumber !== null) {
         const exerciseNumbers = exercises.courseExercises[`${c.id} ${c.version}`].map(e => exercises.idToNumber[e])
 
-        const students = c.students.map(s => ({ ...s, exercises: s.exercises.map(ex => ({ ...ex, id: exercises.idToNumber[ex.id] })) }))
+        const students = c.students.map(s => ({ ...s, exercises: s.exercises.map(ex => ({ ...ex, uuid: exercises.idToNumber[ex.uuid] })) }))
 
         return {
           ...c,
@@ -139,8 +145,7 @@ export function courseAdministrationPage() {
       return { ...c, exerciseNumbers: [] }
     })
 
-    const displayForm = () =>
-      setOpen(!open)
+    const displayForm = () => setOpen(!open)
 
     return (
       <div>
@@ -149,7 +154,9 @@ export function courseAdministrationPage() {
         </div>
         <div className="courseAdministrationPageContainer">
           <div className="courseAdministrationPageContainer-heading">
-            <button className="newCourseButton" onClick={displayForm}>{buttonText}</button>
+            <button className="newCourseButton" onClick={displayForm}>
+              {buttonText}
+            </button>
             <h2>Kurssiesi tulostaulut:</h2>
           </div>
           {addCourses(betterCourses)}
@@ -158,8 +165,8 @@ export function courseAdministrationPage() {
     )
   }
 
-  const addCourses = (betterCourses: UserCourse[]) =>
-    betterCourses.map((course: UserCourse) => (
+  const addCourses = (betterCourses: IdyllCourses[]) =>
+    betterCourses.map((course: IdyllCourses) => (
       <Chapter key={`${course.id} ${course.version}`} header={course.name}>
         <Scoreboard course={course} />
       </Chapter>

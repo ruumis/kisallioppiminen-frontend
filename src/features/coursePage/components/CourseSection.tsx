@@ -1,8 +1,9 @@
 import React from 'react'
-import { InitialState, CoursePageState, User } from '../../../types/InitialState'
+import { InitialState, CoursePageState, User, Course } from '../../../types/InitialState'
 import { connect } from 'react-redux'
 import { mapChildren } from 'idyll-component-children'
 import { pageStateReducer } from '../../../reducers/pageStateReducer'
+import { UserCourse } from '../../../types/jsontypes'
 
 const CourseSection = (props: {
   sectionId: number
@@ -10,19 +11,16 @@ const CourseSection = (props: {
   children: any
   numeral: number
   user: User | null
-  coursePageState: CoursePageState
-  pageState: InitialState
+  ownCourses: UserCourse[]
+  courseId: string
+  courseVersion: string
+  allCourses: Course[]
 }) => {
   const exCount = { number: 0 }
+  const { ownCourses, user, courseId, courseVersion, allCourses } = props
   const showTrafficLight = () => {
-    const ownCourses = props.coursePageState.ownCourses
-    const user = props.user
-    const courseId = props.pageState.pageParams.pathParams.id
-    const courseVersion = props.pageState.pageParams.pathParams.version
-    const allCourses = props.pageState.courses
     const courseName = allCourses.filter(c => c.id === courseId)[0].courseName
-    const course = ownCourses.filter(c => c.name === courseName && c.version === courseVersion)
-    console.log('etsitään versio', courseVersion)
+    const course = ownCourses.filter(c => c.coursematerial_name === courseName && c.version === courseVersion)
     if (course.length === 0 || !user) {
       return null
     } else {
@@ -34,8 +32,7 @@ const CourseSection = (props: {
       const clone = React.cloneElement(c, {
         numeral: props.numeral,
         count: exCount,
-        user: props.user,
-        ownCourses: props.coursePageState.ownCourses,
+        ownCourses,
         coursekey: showTrafficLight()
       })
       return clone
@@ -49,7 +46,11 @@ const CourseSection = (props: {
 const mapStateToProps = (state: { pageState: InitialState; coursePageState: CoursePageState; user: User | null }) => ({
   courseTabId: Number(state.pageState.pageParams.pathParams.tabId),
   coursePageState: state.coursePageState,
-  pageState: state.pageState
+  user: state.pageState.pageParams.user,
+  ownCourses: state.coursePageState.ownCourses,
+  courseId: state.pageState.pageParams.pathParams.id,
+  courseVersion: state.pageState.pageParams.pathParams.version,
+  allCourses: state.pageState.courses
 })
 
 const ConnectedCourseSection = connect(mapStateToProps)(CourseSection)
