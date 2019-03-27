@@ -27,6 +27,7 @@ class Navigation extends React.Component<Props> {
   render() {
     const url = resolveAuthUrl()
     const { user } = this.props
+    console.log('aaa', user)
     return (
       <nav className="navigator">
         <ul>
@@ -69,8 +70,21 @@ class Navigation extends React.Component<Props> {
               <div className="dropdown">
                 {/*onClick={setUser()}*/}
                 <a className="navigator-link" href={url}>
+<<<<<<< HEAD
                   Kirjaudu sisään
                 </a>
+=======
+                  Kirjautuminen
+                </a>
+                <div className="dropdown-content">
+                  <Link className="dropdown-content-link" href="/courseAdmin">
+                    Kurssihallinta
+                  </Link>
+                  <Link className="dropdown-content-link" href="/omat">
+                    Omat kurssit
+                  </Link>
+                </div>
+>>>>>>> testing
               </div>
             </li>
           )}
