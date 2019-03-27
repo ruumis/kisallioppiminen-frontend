@@ -15,7 +15,7 @@ const joinTeachingInstanceService = async (coursekey: string): Promise<any> => {
 }
 
 const ownCourses = async (): Promise<any> => {
-  const { data } = await HTTP.get(`${baseUrl}/users/courses`)
+  const { data } = await HTTP.get(`${baseUrl}/teachinginstances?teacher=false`, getRequestConfig())
   console.log(data)
   return data
 }
