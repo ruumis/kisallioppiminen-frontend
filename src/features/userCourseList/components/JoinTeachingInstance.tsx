@@ -1,7 +1,4 @@
-import React, { useState } from 'react'
-import courseService from './../../../services/courseService'
-import { connect } from 'react-redux'
-import { User } from '../../../types/InitialState';
+import React from 'react'
 
 interface Props {
   handle: (event: any) => void
@@ -9,7 +6,7 @@ interface Props {
 
 const JoinCourse = (props: Props) => {
   return (
-    <div key={Math.random() * 10000} >
+    <div key={Math.random() * 10000}>
       <form onSubmit={event => props.handle(event)}>
         <div className="userCourseListPage-header">
           <label className="userCourseListPage-text">Lisää uusi kurssi:</label>
