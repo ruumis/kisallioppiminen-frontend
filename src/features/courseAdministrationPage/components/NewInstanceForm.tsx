@@ -25,8 +25,6 @@ export default function NewInstanceForm() {
     const submitForm = (event: FormEvent) => {
       event.preventDefault()
 
-      const user_id = pageState.pageParams.user ? pageState.pageParams.user.id : 0
-
       const instance = {
         coursekey: courseKey,
         name: instanceName,
