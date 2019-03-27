@@ -20,3 +20,4 @@ services:
     environment:
       - IS_BUILD=false
       - CYPRESS_baseUrl=http://web:3000
+      - CYPRESS_RECORD_KEY
