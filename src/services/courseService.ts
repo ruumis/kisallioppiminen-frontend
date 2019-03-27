@@ -14,7 +14,13 @@ const joinCourse = async (courseKey: string): Promise<any> => {
 }
 
 const ownCourses = async (): Promise<any> => {
-  const { data } = await HTTP.get(`${baseUrl}/teachinginstances`)
+  const { data } = await HTTP.get(`${baseUrl}/teachinginstances?teacher=false`)
+  console.log(data)
+  return data
+}
+
+const teacherCourses = async (): Promise<any> => {
+  const { data } = await HTTP.get(`${baseUrl}/teachinginstances?teacher=true`)
   console.log(data)
   return data
 }
@@ -33,4 +39,4 @@ const getRequestConfig = () => {
   }
 }
 
-export default { joinCourse, ownCourses, trafficlight }
+export default { joinCourse, ownCourses, trafficlight, teacherCourses }
