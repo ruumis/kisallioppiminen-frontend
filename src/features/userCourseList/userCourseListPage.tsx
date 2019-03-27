@@ -31,7 +31,7 @@ export function userCourseListPage() {
     }, [])
 
     const betterCourses = ownCourses.map(c => {
-      if (exercises !== null && exercises.courseExercises !== null && exercises.idToNumber !== null) {
+      if (exercises !== null && exercises.courseExercises !== null && exercises.idToNumber !== null && exercises.courseExercises[`${c.id} ${c.version}`] !== undefined) {
         const exerciseNumbers = exercises.courseExercises[`${c.id} ${c.version}`].map(e => exercises.idToNumber[e])
 
         const students = c.students.map(s => ({ ...s, exercises: s.exercises.map(ex => ({ ...ex, id: exercises.idToNumber[ex.id] })) }))
