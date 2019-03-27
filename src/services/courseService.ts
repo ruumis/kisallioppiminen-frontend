@@ -1,5 +1,6 @@
 import axios from 'axios'
 import { resolveUri } from '../utils/resolveUri'
+import { TeachingInstance } from '../types/jsontypes'
 
 const baseUrl = resolveUri()
 
@@ -14,9 +15,15 @@ const joinCourse = async (courseKey: string): Promise<any> => {
 }
 
 const ownCourses = async (): Promise<any> => {
-  const {data} = await HTTP.get(`${baseUrl}/users/courses`)
+  const { data } = await HTTP.get(`${baseUrl}/users/courses`)
   console.log(data)
   return data
 }
 
-export default { joinCourse, ownCourses }
+const createTeachingInstance = async (instance: TeachingInstance): Promise<any> => {
+  const response = await HTTP.post(`${baseUrl}/teachinginstances`, instance)
+  console.log(response)
+  return response.data
+}
+
+export default { joinCourse, ownCourses, createTeachingInstance }

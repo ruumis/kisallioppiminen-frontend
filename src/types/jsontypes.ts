@@ -16,3 +16,12 @@ export interface UserCourse {
   enddate: string
   students: Student[]
 }
+
+export interface TeachingInstance {
+  coursekey: string
+  name: string
+  startdate: string
+  enddate: string
+  coursematerial_name: string
+  coursematerial_version: string
+}
