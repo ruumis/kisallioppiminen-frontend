@@ -1,6 +1,5 @@
 import axios from 'axios'
 import { resolveUri } from '../utils/resolveUri'
-import { getRequestConfig } from '../utils/requestUtils'
 import { TeachingInstance } from '../types/jsontypes'
 
 const baseUrl = resolveUri()
@@ -27,4 +26,18 @@ const createTeachingInstance = async (instance: TeachingInstance): Promise<any> 
   return response.data
 }
 
-export default { joinTeachingInstanceService, ownCourses, createTeachingInstance }
+const trafficlight = async (courseKey: string, UUID: string, status: string): Promise<any> => {
+  const { data } = await HTTP.put(`${baseUrl}/trafficlights/${UUID}`, { courseKey, status }, getRequestConfig())
+  console.log(data)
+  return data
+}
+
+const getRequestConfig = () => {
+  return {
+    headers: {
+      Authorization: `Bearer ${typeof window !== 'undefined' ? window.localStorage.getItem('ko_token') : ''}`
+    }
+  }
+}
+
+export default { joinTeachingInstanceService, ownCourses, trafficlight, createTeachingInstance }

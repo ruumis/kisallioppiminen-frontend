@@ -27,7 +27,6 @@ class Navigation extends React.Component<Props> {
   render() {
     const url = resolveAuthUrl()
     const { user } = this.props
-    console.log('aaa', user)
     return (
       <nav className="navigator">
         <ul>
@@ -97,7 +96,6 @@ class Navigation extends React.Component<Props> {
 const setUser = () => {
   return () => {
     const foo = userService.login()
-    console.log(foo)
     return undefined
   }
 }

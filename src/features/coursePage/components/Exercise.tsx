@@ -12,7 +12,8 @@ const Exercise = (props: any) => {
         {props.header}
       </div>
       <div className={contentClassname}>
-        {props.children} <Trafficlights />
+        {props.children}
+        {props.coursekey ? <Trafficlights coursekey={props.coursekey} UUID={props.UUID} /> : null}
       </div>
     </div>
   )
