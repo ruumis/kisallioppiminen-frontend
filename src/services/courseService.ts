@@ -9,7 +9,7 @@ const HTTP = axios.create({
 })
 
 const joinTeachingInstanceService = async (coursekey: string): Promise<any> => {
-  const response = await HTTP.patch(`${baseUrl}/teachinginstances/join`, { coursekey }, getRequestConfig())
+  const response = await HTTP.patch(`${baseUrl}/teachinginstances`, { coursekey }, getRequestConfig())
   console.log(response)
   return response.data
 }
