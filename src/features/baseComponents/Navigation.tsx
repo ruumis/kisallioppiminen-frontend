@@ -12,6 +12,13 @@ interface Props {
   fetchUser: () => Promise<void>
 }
 
+const logout = () => {
+  console.warn('Logging out...')
+  localStorage.clear()
+
+  console.info('Done.')
+}
+
 class Navigation extends React.Component<Props> {
   componentDidMount() {
     this.props.fetchUser()
@@ -51,30 +58,22 @@ class Navigation extends React.Component<Props> {
                   <Link className="dropdown-content-link" href="/omat">
                     Omat kurssit
                   </Link>
-                  <Link className="dropdown-content-link" href="/">
+                  <a className="dropdown-content-link" onClick={() => logout()} href="/">
                     Kirjaudu ulos
-                  </Link>
+                  </a>
                 </div>
               </div>
             </li>
           ) : (
-              <li className="navigator-item">
-                <div className="dropdown">
-                  {/*onClick={setUser()}*/}
-                  <a className="navigator-link" href={url}>
-                    Kirjautuminen
-                  </a>
-                  <div className="dropdown-content">
-                    <Link className="dropdown-content-link" href="/courseAdmin">
-                      Kurssihallinta
-                  </Link>
-                    <Link className="dropdown-content-link" href="/omat">
-                      Omat kurssit
-                  </Link>
-                  </div>
-                </div>
-              </li>
-            )}
+            <li className="navigator-item">
+              <div className="dropdown">
+                {/*onClick={setUser()}*/}
+                <a className="navigator-link" href={url}>
+                  Kirjaudu sisään
+                </a>
+              </div>
+            </li>
+          )}
         </ul>
       </nav>
     )
