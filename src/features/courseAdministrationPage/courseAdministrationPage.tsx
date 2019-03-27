@@ -152,8 +152,8 @@ export function courseAdministrationPage() {
             <button className="newCourseButton" onClick={displayForm}>{buttonText}</button>
             <h2>Kurssiesi tulostaulut:</h2>
           </div>
+          {addCourses(betterCourses)}
         </div>
-        {addCourses(betterCourses)}
       </div>
     )
   }
@@ -164,6 +164,7 @@ export function courseAdministrationPage() {
         <Scoreboard course={course} />
       </Chapter>
     ))
+
 
   const mapStateToProps = ({ exercises }: { exercises: ExercisesState }) => {
     return { exercises }
