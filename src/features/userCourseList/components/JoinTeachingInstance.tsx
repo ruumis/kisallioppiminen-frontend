@@ -1,21 +1,13 @@
-import React, { useState } from 'react'
-import courseService from './../../../services/courseService'
+import React from 'react'
 
 interface Props {
-  header: string
-  content: string
-  openedBoxes: { [index: string]: boolean }
+  handle: (event: any) => void
 }
 
-function handle(event: any) {
-  event.preventDefault()
-  courseService.joinCourse(event.target.courseKey.value)
-}
-
-const JoinCourse = (props: any) => {
+const JoinCourse = (props: Props) => {
   return (
-    <div>
-      <form onSubmit={event => handle(event)}>
+    <div key={Math.random() * 10000}>
+      <form onSubmit={event => props.handle(event)}>
         <div className="userCourseListPage-header">
           <label className="userCourseListPage-text">Lisää uusi kurssi:</label>
         </div>
