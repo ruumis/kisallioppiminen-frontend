@@ -26,12 +26,15 @@ const teacherCourses = async (): Promise<any> => {
   return data
 }
 
+<<<<<<< HEAD
 const createTeachingInstance = async (instance: TeachingInstance): Promise<any> => {
   const response = await HTTP.post(`${baseUrl}/teachinginstances`, instance)
   console.log(response)
   return response.data
 }
 
+=======
+>>>>>>> 1c10ee868519c26feb98e3f1ceaf5a6bea30392b
 const trafficlight = async (courseKey: string, UUID: string, status: string): Promise<any> => {
   const { data } = await HTTP.put(`${baseUrl}/trafficlights/${UUID}`, { courseKey, status }, getRequestConfig())
   console.log(data)
@@ -46,4 +49,8 @@ const getRequestConfig = () => {
   }
 }
 
+<<<<<<< HEAD
 export default { joinTeachingInstanceService, createTeachingInstance, ownCourses, trafficlight, teacherCourses }
+=======
+export default { joinCourse, ownCourses, trafficlight, teacherCourses }
+>>>>>>> 1c10ee868519c26feb98e3f1ceaf5a6bea30392b

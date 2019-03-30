@@ -5,7 +5,11 @@ import Scoreboard from '../courseAdministrationPage/components/Scoreboard'
 import { UserCourse } from '../../types/jsontypes'
 import JoinTeachingInstance from './components/JoinTeachingInstance'
 import courseService from './../../services/courseService'
+<<<<<<< HEAD
 import { InitialState, CoursePageState, ExercisesState, Course, User } from '../../types/InitialState'
+=======
+import { InitialState, CoursePageState, ExercisesState, Course } from '../../types/InitialState'
+>>>>>>> 1c10ee868519c26feb98e3f1ceaf5a6bea30392b
 import { ThunkDispatch } from 'redux-thunk'
 import { fetchOwnCourses as fetchOwnCoursesAction, joinTeachingInstance as joinTeachingInstanceAction } from '../../reducers/actions/courseActions'
 

@@ -5,8 +5,11 @@ import courseService from '../../services/courseService'
 export const SELECT_COURSE_VERSION = 'SELECT_COURSE_VERSION'
 export const FETCH_OWN_COURSES = 'FETCH_OWN_COURSES'
 export const SET_OWN_COURSES = 'SET_OWN_COURSES'
+<<<<<<< HEAD
 export const JOIN_TEACHING_INSTANCE = 'JOIN_TEACHING_INSTANCE'
 export const ADD_TEACHING_INSTANCE = 'ADD_TEACHING_INSTANCE'
+=======
+>>>>>>> 1c10ee868519c26feb98e3f1ceaf5a6bea30392b
 export const FETCH_TEACHER_COURSES = 'FETCH_TEACHER_COURSES'
 export const SET_TEACHER_COURSES = 'SET_TEACHER_COURSES'
 
@@ -17,6 +20,7 @@ export const setOwnCourses = (courses: any[]) => ({
   data: courses
 })
 
+<<<<<<< HEAD
 export const addTeachingInstance = (course: any) => ({
   type: ADD_TEACHING_INSTANCE,
   data: course
@@ -30,6 +34,8 @@ export const joinTeachingInstance = (coursekey: string): ThunkAction<Promise<any
     })
 }
 
+=======
+>>>>>>> 1c10ee868519c26feb98e3f1ceaf5a6bea30392b
 export const setTeacherCourses = (courses: any[]) => ({
   type: SET_TEACHER_COURSES,
   data: courses

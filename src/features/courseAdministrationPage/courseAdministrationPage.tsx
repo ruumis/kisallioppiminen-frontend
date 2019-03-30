@@ -1,8 +1,15 @@
+<<<<<<< HEAD
 import React, { useState, useEffect } from 'react'
 import { connect } from 'react-redux'
 import Chapter from '../coursePage/components/Chapter'
 import Scoreboard from './components/Scoreboard'
 import NewInstanceForm from './components/NewInstanceForm'
+=======
+import React, { useEffect } from 'react'
+import { connect } from 'react-redux'
+import Chapter from '../coursePage/components/Chapter'
+import Scoreboard from './components/Scoreboard'
+>>>>>>> 1c10ee868519c26feb98e3f1ceaf5a6bea30392b
 import { ExercisesState, Course, CoursePageState, InitialState } from './../../types/InitialState'
 import { UserCourse, IdyllCourses } from '../../types/jsontypes'
 import courseService from '../../services/courseService'
@@ -129,10 +136,13 @@ export function courseAdministrationPage() {
   ]
 */
 
+<<<<<<< HEAD
   const [open, setOpen] = useState(false)
   const formClass = open ? 'newInstanceForm-visible' : 'newInstanceForm-hidden'
   const buttonText = open ? 'Sulje lomake' : 'Uusi kurssi'
 
+=======
+>>>>>>> 1c10ee868519c26feb98e3f1ceaf5a6bea30392b
   const app = ({
     exercises,
     allCourses,
