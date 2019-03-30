@@ -13,8 +13,8 @@ export default function Course(courseInfo: CourseInfo) {
   const { id, courseName, quickLinks, versions } = courseInfo
   const [selectedVersion, setSelectedVersion] = useState(versions[0].version)
 
-  const handleSelectorChange = (e: any) => {
-    setSelectedVersion(e.target.value)
+  const handleSelectorChange = (selection: string) => {
+    setSelectedVersion(selection)
   }
 
   return (
@@ -22,7 +22,7 @@ export default function Course(courseInfo: CourseInfo) {
       <Link href={`/courses/${id}/version/${selectedVersion}/tab/0`}>
         <h2 className="course-title">{courseName}</h2>
       </Link>
-      <select className="course-selector-box" defaultValue={versions[0].version} onChange={e => handleSelectorChange(e)}>
+      <select className="course-selector-box" defaultValue={versions[0].version} onChange={e => handleSelectorChange(e.target.value)}>
         {addVersions(versions)}
       </select>
       <ol className="course-parts">{createQuickLinks(quickLinks, id, selectedVersion)}</ol>

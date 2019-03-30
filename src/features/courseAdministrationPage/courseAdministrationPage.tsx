@@ -1,9 +1,10 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { connect } from 'react-redux'
 import Chapter from '../coursePage/components/Chapter'
 import Scoreboard from './components/Scoreboard'
 import { ExercisesState } from './../../types/InitialState'
 import { UserCourse } from '../../types/jsontypes'
+import NewInstanceForm from './components/NewInstanceForm'
 
 export function courseAdministrationPage() {
   // Replace courses below with a request to server once the server is running
@@ -118,6 +119,10 @@ export function courseAdministrationPage() {
     }
   ]
 
+  const [open, setOpen] = useState(false)
+  const formClass = open ? 'newInstanceForm-visible' : 'newInstanceForm-hidden'
+  const buttonText = open ? 'Sulje lomake' : 'Uusi kurssi'
+
   const app = ({ exercises }: { exercises: ExercisesState }) => {
     const betterCourses = courses.map(c => {
       if (exercises !== null && exercises.courseExercises !== null && exercises.idToNumber !== null) {
@@ -134,13 +139,21 @@ export function courseAdministrationPage() {
       return { ...c, exerciseNumbers: [] }
     })
 
+    const displayForm = () =>
+      setOpen(!open)
+
     return (
-      <div className="courseAdministrationPageContainer">
-        <div className="courseAdministrationPageContainer-heading">
-          <button className="newCourseButton">Uusi kurssi</button>
-          <h2>Kurssiesi tulostaulut:</h2>
+      <div>
+        <div className={formClass}>
+          <NewInstanceForm />
         </div>
-        {addCourses(betterCourses)}
+        <div className="courseAdministrationPageContainer">
+          <div className="courseAdministrationPageContainer-heading">
+            <button className="newCourseButton" onClick={displayForm}>{buttonText}</button>
+            <h2>Kurssiesi tulostaulut:</h2>
+          </div>
+          {addCourses(betterCourses)}
+        </div>
       </div>
     )
   }

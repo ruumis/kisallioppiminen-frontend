@@ -610,3 +610,17 @@ ul {
 .dropdown-content-link:hover {
   padding: 5px 5px;
   background-color: #c4da87; }
+
+.newInstanceForm-hidden {
+  display: none; }
+
+.newInstanceForm-visible {
+  background-color: #cccccc;
+  position: fixed;
+  margin: 0 auto; }
+
+.newInstanceForm-visible table {
+  border-spacing: 5px; }
+
+.newInstanceForm-visible tr {
+  height: 40px; }
