@@ -69,21 +69,8 @@ class Navigation extends React.Component<Props> {
               <div className="dropdown">
                 {/*onClick={setUser()}*/}
                 <a className="navigator-link" href={url}>
-<<<<<<< HEAD
                   Kirjaudu sisään
                 </a>
-=======
-                  Kirjautuminen
-                </a>
-                <div className="dropdown-content">
-                  <Link className="dropdown-content-link" href="/courseAdmin">
-                    Kurssihallinta
-                  </Link>
-                  <Link className="dropdown-content-link" href="/omat">
-                    Omat kurssit
-                  </Link>
-                </div>
->>>>>>> testing
               </div>
             </li>
           )}
@@ -96,6 +83,7 @@ class Navigation extends React.Component<Props> {
 const setUser = () => {
   return () => {
     const foo = userService.login()
+    console.log(foo)
     return undefined
   }
 }
