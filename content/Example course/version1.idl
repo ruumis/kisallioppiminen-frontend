@@ -84,6 +84,7 @@ Suorakulmion *pinta-ala* on samasta kärjestä alkavien sivujen pituuksien tulo 
 // Komponentilla voidaan luoda tehtävä. Tehtävissä on automaattinen numerointi. 
 // Open-parametri ei ole pakollinen, vaan voidaan lisätä mikäli halutaan tehtävän olevan 
 // valmiiksi auki. Exercise-komponentti sisältää myös UUID:n, joka lisätään scriptillä. 
+// Älä siis kirjoita tehtäviin UUID-kenttää manuaalisesti.
 [Exercise UUID:'12a9cc84-3b49-11e9-a38a-09f848b19644' header:'SUORAKULMION PINTA-ALA' open:true]
 
 Kansainvälisissä aikuisten jalkapallo-otteluissa kentän leveyden on oltava vähintään 64 m ja enintään 75 m. 
