@@ -1,9 +1,6 @@
 // CourseNumberer on komponentti jonka sisälle laitetaan koko kurssi, 
 // sen avulla tehdään kaikki automaattinen numerointi (esim. tehtävät ja kurssin osat)
 [CourseNumberer]
-// Komponentin sisään voidaan lisätä [CourseTab]-komponentteja, 
-// joilla luodaan linkkejä kurssin eri lukuihin. 
-// Linkit tulevat kurssimateriaalin yläpuolelle kaikilla kurssisivuilla. 
 
 // CourseSectionilla luodaan uusi luku. Luvut numeroitaan automaattisesti.
 [CourseSection header:'MAA3']
