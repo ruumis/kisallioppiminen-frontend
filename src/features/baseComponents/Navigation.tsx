@@ -83,7 +83,6 @@ class Navigation extends React.Component<Props> {
 const setUser = () => {
   return () => {
     const foo = userService.login()
-    console.log(foo)
     return undefined
   }
 }

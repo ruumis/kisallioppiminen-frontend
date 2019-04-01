@@ -3,11 +3,25 @@ export interface Scoreboard {
 }
 
 export interface Student {
-  user: string
+  lastname: string
+  firstname: string
   exercises: Exercise[]
 }
 
 export interface UserCourse {
+  name: string
+  id: string
+  coursekey: string
+  owner_id: number
+  version: string
+  coursematerial_name: string
+  startdate: string
+  enddate: string
+  students: Student[]
+  exerciseNumbers: string[]
+}
+
+export interface IdyllCourses {
   name: string
   coursekey: string
   id: string
@@ -19,7 +33,7 @@ export interface UserCourse {
 }
 
 export interface Exercise {
-  id: string
+  uuid: string
   status: string
 }
 

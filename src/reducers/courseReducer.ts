@@ -14,6 +14,11 @@ export const coursePageReducer = (state: CoursePageState | null = null, action: 
         return R.merge(state, { ownCourses: data })
       }
       break
+    case 'SET_TEACHER_COURSES':
+      if (state) {
+        return R.merge(state, { teacherCourses: data })
+      }
+      break
     case 'ADD_TEACHING_INSTANCE':
       if (state) {
         return R.merge(state, { ownCourses: [...state.ownCourses, data] })

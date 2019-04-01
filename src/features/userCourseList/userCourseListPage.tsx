@@ -4,7 +4,8 @@ import CourseWrapper from './components/CourseWrapper'
 import Scoreboard from '../courseAdministrationPage/components/Scoreboard'
 import { UserCourse } from '../../types/jsontypes'
 import JoinTeachingInstance from './components/JoinTeachingInstance'
-import { InitialState, CoursePageState, ExercisesState, User } from '../../types/InitialState'
+import courseService from './../../services/courseService'
+import { InitialState, CoursePageState, ExercisesState, Course, User } from '../../types/InitialState'
 import { ThunkDispatch } from 'redux-thunk'
 import { fetchOwnCourses as fetchOwnCoursesAction, joinTeachingInstance as joinTeachingInstanceAction } from '../../reducers/actions/courseActions'
 
@@ -14,12 +15,13 @@ interface Props {
   joinTeachingInstance: (coursekey: string) => Promise<void>
   fetchOwnCourses: () => Promise<void>
   exercises: ExercisesState
+  allCourses: Course[]
 }
 
 export function userCourseListPage() {
   const addCourses = (courses: UserCourse[]) =>
     courses.map(course => (
-      <CourseWrapper key={course.id} header={course.name} coursekey={course.coursekey} startdate={course.startdate} enddate={course.enddate}>
+      <CourseWrapper key={course.owner_id} header={course.name} coursekey={course.coursekey} startdate={course.startdate} enddate={course.enddate}>
         <Scoreboard course={course} />
       </CourseWrapper>
     ))
@@ -38,10 +40,16 @@ export function userCourseListPage() {
 
     console.log(ownCourses)
     const betterCourses = ownCourses.map(c => {
-      if (exercises !== null && exercises.courseExercises !== null && exercises.idToNumber !== null && exercises.courseExercises[`${c.id} ${c.version}`] !== undefined) {
-        const exerciseNumbers = exercises.courseExercises[`${c.id} ${c.version}`].map(e => exercises.idToNumber[e])
+      const courseId = props.allCourses.filter(c2 => c.coursematerial_name === c2.courseName)[0].id
+      if (
+        exercises !== null &&
+        exercises.courseExercises !== null &&
+        exercises.idToNumber !== null &&
+        exercises.courseExercises[`${courseId} ${c.version}`] !== undefined
+      ) {
+        const exerciseNumbers = exercises.courseExercises[`${courseId} ${c.version}`].map(e => exercises.idToNumber[e])
 
-        const students = c.students.map(s => ({ ...s, exercises: s.exercises.map(ex => ({ ...ex, id: exercises.idToNumber[ex.id] })) }))
+        const students = c.students.map(s => ({ ...s, exercises: s.exercises.map(ex => ({ ...ex, uuid: exercises.idToNumber[ex.uuid] })) }))
 
         return {
           ...c,
@@ -63,7 +71,8 @@ export function userCourseListPage() {
   const mapStateToProps = (state: { userState: User; pageState: InitialState; coursePageState: CoursePageState; exercises: ExercisesState }) => ({
     user: state.userState,
     ownCourses: state.coursePageState.ownCourses,
-    exercises: state.exercises
+    exercises: state.exercises,
+    allCourses: state.pageState.courses
   })
 
   const mapDispatchToProps = (dispatch: ThunkDispatch<{}, {}, any>) => ({

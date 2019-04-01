@@ -1,11 +1,14 @@
 import React, { useState } from 'react'
 import classnames from 'classnames'
 import { mapChildren } from 'idyll-component-children'
+import { User } from '../../../types/InitialState'
 
 interface Props {
   header: string
   content: string
   openedBoxes: { [index: string]: boolean }
+  user: User | null
+  coursekey: string | null
 }
 
 const Chapter = (props: any) => {
@@ -26,7 +29,9 @@ const Chapter = (props: any) => {
       if (c.type && c.type.name && c.type.name.toLowerCase() === 'exercise') {
         props.count.number++
         const clone = React.cloneElement(c, {
-          header: `Tehtävä ${props.numeral}.${props.count.number}: ${c.props.header}`
+          header: `Tehtävä ${props.numeral}.${props.count.number}: ${c.props.header}`,
+          user: props.user,
+          coursekey: props.coursekey
         })
         return clone
       }

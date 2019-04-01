@@ -1,14 +1,17 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import { connect } from 'react-redux'
 import Chapter from '../coursePage/components/Chapter'
 import Scoreboard from './components/Scoreboard'
-import { ExercisesState } from './../../types/InitialState'
-import { UserCourse } from '../../types/jsontypes'
 import NewInstanceForm from './components/NewInstanceForm'
+import { ExercisesState, Course, CoursePageState, InitialState } from './../../types/InitialState'
+import { UserCourse, IdyllCourses } from '../../types/jsontypes'
+import courseService from '../../services/courseService'
+import { ThunkDispatch } from 'redux-thunk'
+import { fetchTeacherCourses as fetchTeacherCoursesAction } from '../../reducers/actions/courseActions'
 
 export function courseAdministrationPage() {
   // Replace courses below with a request to server once the server is running
-  const courses = [
+  /*  const courses = [
     {
       name: 'MAY1: Lukujonot ja summat',
       coursekey: 'matikkaonkivaa',
@@ -18,27 +21,29 @@ export function courseAdministrationPage() {
       enddate: '2017-05-02',
       students: [
         {
-          user: 'Anthony',
+          firstname: 'Anthony',
+          lastname: 'Droptables',
           exercises: [
             {
-              id: '12a9f399-3b49-11e9-a38a-09f848b19644',
+              uuid: '12a9f399-3b49-11e9-a38a-09f848b19644',
               status: 'green'
             },
             {
-              id: '12a9f39a-3b49-11e9-a38a-09f848b19644',
+              uuid: '12a9f39a-3b49-11e9-a38a-09f848b19644',
               status: 'yellow'
             }
           ]
         },
         {
-          user: 'Bert',
+          firstname: 'Bert',
+          lastname: 'Droptables',
           exercises: [
             {
-              id: '12a9f399-3b49-11e9-a38a-09f848b19644',
+              uuid: '12a9f399-3b49-11e9-a38a-09f848b19644',
               status: 'red'
             },
             {
-              id: '12a9f39a-3b49-11e9-a38a-09f848b19644',
+              uuid: '12a9f39a-3b49-11e9-a38a-09f848b19644',
               status: 'red'
             }
           ]
@@ -54,27 +59,29 @@ export function courseAdministrationPage() {
       enddate: '2017-05-02',
       students: [
         {
-          user: 'Anthony',
+          firstname: 'Anthony',
+          lastname: 'Droptables',
           exercises: [
             {
-              id: '12a9f396-3b49-11e9-a38a-09f848b19644',
+              uuid: '12a9f396-3b49-11e9-a38a-09f848b19644',
               status: 'green'
             },
             {
-              id: '12a9f397-3b49-11e9-a38a-09f848b19644',
+              uuid: '12a9f397-3b49-11e9-a38a-09f848b19644',
               status: 'yellow'
             }
           ]
         },
         {
-          user: 'Bert',
+          firstname: 'Bert',
+          lastname: 'Droptables',
           exercises: [
             {
-              id: '12a9f398-3b49-11e9-a38a-09f848b19644',
+              uuid: '12a9f398-3b49-11e9-a38a-09f848b19644',
               status: 'red'
             },
             {
-              id: '12a9f397-3b49-11e9-a38a-09f848b19644',
+              uuid: '12a9f397-3b49-11e9-a38a-09f848b19644',
               status: 'green'
             }
           ]
@@ -90,27 +97,29 @@ export function courseAdministrationPage() {
       enddate: '2017-05-02',
       students: [
         {
-          user: 'Anthony',
+          firstname: 'Anthony',
+          lastname: 'Droptables',
           exercises: [
             {
-              id: '12a9cc85-3b49-11e9-a38a-09f848b19644',
+              uuid: '12a9cc85-3b49-11e9-a38a-09f848b19644',
               status: 'green'
             },
             {
-              id: '12a9cc86-3b49-11e9-a38a-09f848b19644',
+              uuid: '12a9cc86-3b49-11e9-a38a-09f848b19644',
               status: 'yellow'
             }
           ]
         },
         {
-          user: 'Bert',
+          firstname: 'Bert',
+          lastname: 'Droptables',
           exercises: [
             {
-              id: '12a9cc87-3b49-11e9-a38a-09f848b19644',
+              uuid: '12a9cc87-3b49-11e9-a38a-09f848b19644',
               status: 'red'
             },
             {
-              id: '12a9cc85-3b49-11e9-a38a-09f848b19644',
+              uuid: '12a9cc85-3b49-11e9-a38a-09f848b19644',
               status: 'yellow'
             }
           ]
@@ -118,20 +127,36 @@ export function courseAdministrationPage() {
       ]
     }
   ]
+*/
 
   const [open, setOpen] = useState(false)
   const formClass = open ? 'newInstanceForm-visible' : 'newInstanceForm-hidden'
   const buttonText = open ? 'Sulje lomake' : 'Uusi kurssi'
 
-  const app = ({ exercises }: { exercises: ExercisesState }) => {
-    const betterCourses = courses.map(c => {
+  const app = ({
+    exercises,
+    allCourses,
+    fetchTeacherCourses,
+    teacherCourses
+  }: {
+    exercises: ExercisesState
+    allCourses: Course[]
+    fetchTeacherCourses: () => Promise<void>
+    teacherCourses: UserCourse[]
+  }) => {
+    useEffect(() => {
+      fetchTeacherCourses()
+    }, [])
+    const betterCourses = teacherCourses.map(c => {
+      const courseId = allCourses.filter(c2 => c.coursematerial_name === c2.courseName)[0].id
       if (exercises !== null && exercises.courseExercises !== null && exercises.idToNumber !== null) {
-        const exerciseNumbers = exercises.courseExercises[`${c.id} ${c.version}`].map(e => exercises.idToNumber[e])
+        const exerciseNumbers = exercises.courseExercises[`${courseId} ${c.version}`].map(e => exercises.idToNumber[e])
 
-        const students = c.students.map(s => ({ ...s, exercises: s.exercises.map(ex => ({ ...ex, id: exercises.idToNumber[ex.id] })) }))
+        const students = c.students.map(s => ({ ...s, exercises: s.exercises.map(ex => ({ ...ex, uuid: exercises.idToNumber[ex.uuid] })) }))
 
         return {
           ...c,
+          id: courseId,
           exerciseNumbers,
           students
         }
@@ -139,8 +164,7 @@ export function courseAdministrationPage() {
       return { ...c, exerciseNumbers: [] }
     })
 
-    const displayForm = () =>
-      setOpen(!open)
+    const displayForm = () => setOpen(!open)
 
     return (
       <div>
@@ -149,7 +173,9 @@ export function courseAdministrationPage() {
         </div>
         <div className="courseAdministrationPageContainer">
           <div className="courseAdministrationPageContainer-heading">
-            <button className="newCourseButton" onClick={displayForm}>{buttonText}</button>
+            <button className="newCourseButton" onClick={displayForm}>
+              {buttonText}
+            </button>
             <h2>Kurssiesi tulostaulut:</h2>
           </div>
           {addCourses(betterCourses)}
@@ -165,11 +191,29 @@ export function courseAdministrationPage() {
       </Chapter>
     ))
 
-  const mapStateToProps = ({ exercises }: { exercises: ExercisesState }) => {
-    return { exercises }
+  const mapStateToProps = ({
+    exercises,
+    pageState,
+    coursePageState
+  }: {
+    exercises: ExercisesState
+    pageState: InitialState
+    allCourses: Course[]
+    coursePageState: CoursePageState
+  }) => {
+    return { exercises, allCourses: pageState.courses, teacherCourses: coursePageState.teacherCourses }
   }
 
-  const ConnectedCourseAdministrationPage = connect(mapStateToProps)(app)
+  const mapDispatchToProps = (dispatch: ThunkDispatch<{}, {}, any>) => ({
+    fetchTeacherCourses: async () => {
+      await dispatch(fetchTeacherCoursesAction())
+    }
+  })
+
+  const ConnectedCourseAdministrationPage = connect(
+    mapStateToProps,
+    mapDispatchToProps
+  )(app)
 
   return <ConnectedCourseAdministrationPage />
 }
