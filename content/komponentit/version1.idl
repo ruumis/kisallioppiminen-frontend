@@ -39,8 +39,8 @@ Tehtävän ohjeistus ja vastausvaihtoehdot...
 [/Exercise]
 [/Chapter]
 
-//Chapter with theorem and rationization...........................
-[Chapter header:'Chapter with theorem and rarionalization']
+//Chapter with theorem and proof...........................
+[Chapter header:'Chapter with theorem and proof']
 [Theorem header:'Teoreeman otsikko']
 Teoreeman sisältö
 [/Theorem]
