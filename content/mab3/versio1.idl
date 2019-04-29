@@ -20,7 +20,7 @@ Kolmion pinta-alan laskemiseksi tarvitaan sopimus siitä, mitä pinta-alalla yli
 [Definition header:'SUORAKULMION PINTA-ALA']
 
 Suorakulmion <em>pinta-ala</em> on samasta kärjestä alkavien sivujen pituuksien tulo; alla olevan kuvion merkinnöillä siis [Equation]ab[/Equation].
-[Picture imagesrc:'/img/mab3/suoraK04.png' /]
+[Picture imagesrc:'/content/img/mab3/suoraK04.png' /]
 [/Definition]
 
 [Exercise UUID:'26f3a0d0-69f7-11e9-9854-01ae2c5a485f' header:'Suorakulmion pinta-ala']
@@ -36,7 +36,7 @@ Piirrä mallikuva suurimmasta ja pienimmästä jalkapallokentästä. Merkitse ku
 <ol>
 <li> Mallikuvat:
 <br />
-[Picture imagesrc:'/img/mab3/MAB3kuva015.png' /]</li>
+[Picture imagesrc:'/content/img/mab3/MAB3kuva015.png' /]</li>
 <li> 
 Pinta-alojen erotus on [Equation]1\,850 \text{ m}^2[/Equation]. Suurimman kentän pinta-ala on [Equation]8\,250 \text{ m}^2[/Equation] ja pienimmän [Equation]6\,400 \text{ m}^2[/Equation].
 </li>
@@ -47,7 +47,7 @@ Pinta-alojen erotus on [Equation]1\,850 \text{ m}^2[/Equation]. Suurimman kentä
 Suorakulmion pinta-alan avulla saadaan pääteltyä, miten kolmion pinta-ala lasketaan. Seuraavissa tehtävissä tutkitaan kahta erilaista tapausta.
 
 [Exercise UUID:'26f3a0d1-69f7-11e9-9854-01ae2c5a485f' header:'Kolmion pinta-ala']
-[Picture imagesrc:'/img/mab3/suoraK17.png' /]
+[Picture imagesrc:'/content/img/mab3/suoraK17.png' /]
 <ol>
 <li> Piirrä yllä olevan kuvan kolmio vihkoosi ja täydennä se suorakulmioksi. </li>
 <li> Muodosta suorakulmion pinta-alan lauseke. </li>
@@ -57,7 +57,7 @@ Suorakulmion pinta-alan avulla saadaan pääteltyä, miten kolmion pinta-ala las
 <ol>
 <li>
 Kuva: <br />
-[Picture imagesrc:'/img/mab3/MAB3kuva001.png' /] </li>
+[Picture imagesrc:'/content/img/mab3/MAB3kuva001.png' /] </li>
 <li> 
 Suorakulmion pinta-ala on [Equation]ah[/Equation].
 </li>
@@ -70,7 +70,7 @@ Kolmion pinta-ala on puolet suorakulmion pinta-alasta eli
 [/Exercise]
 
 [Exercise UUID:'26f3a0d2-69f7-11e9-9854-01ae2c5a485f' header:'Kolmion pinta-ala']
-[Picture imagesrc:'/img/mab3/suoraK05.png' /]
+[Picture imagesrc:'/content/img/mab3/suoraK05.png' /]
 <ol>
 <li>
 Piirrä yllä olevan kuvan kolmio vihkoosi ja täydennä se suorakulmioksi.
@@ -82,7 +82,7 @@ Piirrä yllä olevan kuvan kolmio vihkoosi ja täydennä se suorakulmioksi.
 <ol>
 <li>
 Kuva: <br />
-[Picture imagesrc:'/img/mab3/MAB3kuva002.png' /]</li>
+[Picture imagesrc:'/content/img/mab3/MAB3kuva002.png' /]</li>
 <li> 
 Suorakulmion pinta-ala on sivujen pituuksien tulo [Equation]ah[/Equation].
 </li>
@@ -101,7 +101,7 @@ Edellisten tehtävien havainnot johtavat seuraavaan teoreemaan. Lue teoreema ja 
 [Theorem header:'KOLMION PINTA-ALA']
 Kolmion pinta-ala on puolet sen kannan ja korkeuden tulosta; alla olevan kuvion merkinnöillä
 [Equation display:true]\dfrac{ah}{2}[/Equation]
-[Picture imagesrc:'/img/mab3/suoraK05.png' /]
+[Picture imagesrc:'/content/img/mab3/suoraK05.png' /]
 [Proof]
 Perustelu: Kolmion korkeusjanan toinen päätepiste voi sijaita <br />
 1. kolmion sivun päätepisteessä <br />
@@ -110,7 +110,7 @@ Perustelu: Kolmion korkeusjanan toinen päätepiste voi sijaita <br />
 Kaksi ensimmäistä tapausta on jo käsitelty tehtävissä. Tutkitaan vielä kolmas tapaus.
 Jos kolmion korkeusjanan toinen päätepiste sijaitsee kolmion sivun jatkeella, voidaan kolmio täydentää alla olevan kuvan mukaisesti suorakulmaiseksi kolmioksi, jonka pinta-ala on
 [Equation display:true]\frac{(a+x)h}{2}.[/Equation]
-[Picture imagesrc:'/img/mab3/suoraK08.png' /]
+[Picture imagesrc:'/content/img/mab3/suoraK08.png' /]
 Alkuperäisen kolmion pinta-ala saadaan tästä vähentämällä pienemmän suorakulmaisen kolmion pinta-ala:
 [Equation display:true]\begin{align*}
 \frac{(a+x)h}{2} - \frac{xh}{2} &= \frac{ah + xh - xh}{2} \\
@@ -121,7 +121,7 @@ Alkuperäisen kolmion pinta-ala saadaan tästä vähentämällä pienemmän suor
 
 [Exercise UUID:'26f3a0d3-69f7-11e9-9854-01ae2c5a485f' header:'Kolmion pinta-ala']
 Harjakattoisen omakotitalon pituus on 10 m ja leveys 6 m. Ensimmäisen kerroksen korkeus on 3 m ja toisen kerroksen päätykolmioiden korkeus 2,5 m. Talo aiotaan maalata. Maalin menekiksi arvioidaan yksi litra 6,5 neliömetriä kohti. Tehtävänä on laskea, kuinka paljon maalia tarvitaan, jos talo maalataan kaksi kertaa (pohjamaalaus ja pintamaalaus). Ikkunoita ei laskelmassa oteta huomioon.
-[Picture imagesrc:'/img/mab3/talo.jpg' /]
+[Picture imagesrc:'/content/img/mab3/talo.jpg' /]
 <ol>
 <li> 
 Piirrä mallikuva talon päädystä ja talon sivuseinästä. Merkitse kuviin kaikki tiedossa olevat mitat.
@@ -134,7 +134,7 @@ Piirrä mallikuva talon päädystä ja talon sivuseinästä. Merkitse kuviin kai
 <ol>
 <li>
 Mallikuva: <br />
-[Picture imagesrc:'/img/mab3/MAB3kuva003.png' /]
+[Picture imagesrc:'/content/img/mab3/MAB3kuva003.png' /]
 </li>
 <li> Seinien kokonaispinta-ala on [Equation]111 \text{ m}^2[/Equation]. </li>
 <li> Maalia kannattaa ostaa noin 34-35 litraa (ikkunoita ei huomioitu laskelmassa, joten tulosta ei välttämättä tarvitse pyöristää ylöspäin). </li>
@@ -146,9 +146,9 @@ Palautetaan kappaleen lopuksi vielä mieleen joidenkin kulmien nimityksiä.
 
 [Definition header:'SUORA KULMA JA OIKOKULMA']
 <em>Suora kulma</em> tarkoittaa kulmaa, jonka suuruus on [Equation]90^\circ[/Equation].
-[Picture imagesrc:'/img/mab3/suoraK09.png' /]
+[Picture imagesrc:'/content/img/mab3/suoraK09.png' /]
 <em>Oikokulma</em> tarkoittaa kulmaa, jonka suuruus on [Equation]180^\circ[/Equation].
-[Picture imagesrc:'/img/mab3/suoraK10.png' /]
+[Picture imagesrc:'/content/img/mab3/suoraK10.png' /]
 [/Definition]
 
 On mahdollista perustella yleispätevästi, että kolmion kulmien summa on aina [Equation]180^\circ[/Equation]. Perusteluun syvennytään myöhemmin tässä luvussa, mutta tämä hyvin käyttökelpoinen tieto kannattaa painaa mieleen jo nyt. 
@@ -161,10 +161,10 @@ Kolmion kulmien summa on [Equation]180^\circ[/Equation].
 Päättele kulman [Equation]\alpha[/Equation] suuruus:
 <ol>
 <li> 
-[Picture imagesrc:'/img/mab3/MAB3kuva006.png' /] 
+[Picture imagesrc:'/content/img/mab3/MAB3kuva006.png' /] 
 </li>
 <li> 
-[Picture imagesrc:'/img/mab3/MAB3kuva007.png' /]  
+[Picture imagesrc:'/content/img/mab3/MAB3kuva007.png' /]  
 </li>
 </ol>
 [Answer]
@@ -182,7 +182,7 @@ Päättele kulman [Equation]\alpha[/Equation] suuruus:
 
 [Chapter header:'Kolmioiden yhdenmuotoisuus']
 Kolmioita voidaan luokitella niiden muodon mukaan. Esimerkiksi alla olevan kuvan kolmiot ovat eri kokoisia ja eri asennossa, mutta kuitenkin muodoltaan samanlaisia. Tällaisia kolmioita sanotaan <em>yhdenmuotoisiksi</em>.
-[Picture imagesrc:'/img/mab3/MAB3kuva008.png' /]
+[Picture imagesrc:'/content/img/mab3/MAB3kuva008.png' /]
 Tarkemmin kolmioiden yhdenmuotoisuus määritellään niin sanottujen <em>vastinkulmien</em> ja <em>vastinsivujen</em> avulla. Esimerkiksi yllä kulman [Equation]\textcolor{blue}{\sphericalangle BAC}[/Equation] vastinkulma on [Equation]\textcolor{blue}{\sphericalangle KJL}[/Equation], sillä ne molemmat ovat kolmioiden lyhimpien sivujen vastaisia kulmia. Sivun [Equation]\textcolor{magenta}{AB}[/Equation] vastinsivu on puolestaan [Equation]\textcolor{magenta}{JK}[/Equation], sillä ne ovat kolmioiden pisimmät sivut.
 
 [Exercise UUID:'26f3a0d5-69f7-11e9-9854-01ae2c5a485f' header:'Vastinkulmat ja vastinsivut']
@@ -215,7 +215,7 @@ on vakio. </li>
 
 Yhdenmuotoisissa kolmioissa vastinsivun pituuden suhde sivun pituuteen on siis aina sama riippumatta siitä, mitä kolmion sivua tarkastellaan. 
 
-[Picture imagesrc:'/img/mab3/MAB3kuva012.png' /]
+[Picture imagesrc:'/content/img/mab3/MAB3kuva012.png' /]
 
 Esimerkiksi yllä olevassa kuvassa kolmion [Equation]DEF[/Equation] sivun pituuden suhde kolmion [Equation]\textcolor{blue}{ABC}[/Equation] sivun pituuteen on aina 3:
 [Equation display:true]\begin{align*}
@@ -226,7 +226,7 @@ Esimerkiksi yllä olevassa kuvassa kolmion [Equation]DEF[/Equation] sivun pituud
 Kolmio [Equation]DEF[/Equation] saadaan siis kolmiosta [Equation]\textcolor{blue}{ABC}[/Equation] kasvattamalla kaikkien sivujen mitat kolminkertaisiksi.
 </p>  
 [Exercise UUID:'26f3a0d6-69f7-11e9-9854-01ae2c5a485f' header:'Yhdenmuotoiset kolmiot']
-[Picture imagesrc:'/img/mab3/MAB3kuva009.png' /]
+[Picture imagesrc:'/content/img/mab3/MAB3kuva009.png' /]
 <p>
 Yllä on näkyvissä kaksi kolmiota.
 </p>
@@ -258,7 +258,7 @@ Jos kolmiossa on kaksi kulmaa, jotka ovat yhtä suuret kuin toisen kolmion kaksi
 
 Tarkastellaan kahta suorakulmaista kolmiota, joissa on yhtä suuri terävä kulma [Equation]\alpha[/Equation]. Nämä kolmiot ovat yhdenmuotoiset KK-lauseen (teoreema 5) nojalla, koska niissä on kaksi yhtä suurta kulmaa: suora kulma sekä kulma [Equation]\alpha[/Equation].
 
-[Picture imagesrc:'/img/mab3/MAB3kuva020.png' /]
+[Picture imagesrc:'/content/img/mab3/MAB3kuva020.png' /]
 <p>
 Koska kolmiot ovat yhdenmuotoiset, on suhde
 [Equation display:true]\frac{\text{ vastinsivun pituus } }{\text{ sivun pituus } }[/Equation]
@@ -268,7 +268,7 @@ sama riippumatta siitä, mitä kolmion sivua tarkastellaan. Tästä seuraa, ett�
 <p>
 Kolmioiden yhdenmuotoisuutta voidaan hyödyntää monissa geometrisissa päättelyissä. Seuraava esimerkki havainnollistaa asiaa.
 </p>
-[Picture imagesrc:'/img/mab3/MAB3kuva010.png' /]
+[Picture imagesrc:'/content/img/mab3/MAB3kuva010.png' /]
 <p>
 Yllä olevassa kuvassa janat [Equation]AB[/Equation] ja [Equation]CD[/Equation] ovat yhdensuuntaisia eli [Equation]AB \parallel CD[/Equation]. Päätellään KK-lauseen (teoreema 3) avulla, että kolmiot [Equation]OAB[/Equation] ja [Equation]OCD[/Equation] ovat yhdenmuotoisia:
 </p>
@@ -279,7 +279,7 @@ Yllä olevassa kuvassa janat [Equation]AB[/Equation] ja [Equation]CD[/Equation] 
 
 Kolmioiden yhdenmuotoisuuden avulla voidaan päätellä kuvion osien pituuksia, jos osa niistä tunnetaan. Alla kuvatussa tilanteessa janan [Equation]OB[/Equation] pituus [Equation]x[/Equation] voidaan selvittää <a href="http://kisallioppiminen.fi/kurssit/mab2/luku3/">MAB2-kurssilta</a> tutun verrannon avulla.
 
-[Picture imagesrc:'/img/mab3/MAB3kuva011.png' /]
+[Picture imagesrc:'/content/img/mab3/MAB3kuva011.png' /]
 <p>
 Tarkastellaan kolmion [Equation]OAB[/Equation] sivuja ja niiden vastinsivuja kolmiossa [Equation]OCD[/Equation]. Kootaan tiedot taulukkoon:
 </p>
@@ -328,7 +328,7 @@ Sivun [Equation]OB[/Equation] pituus on siis
 [Equation display:true]\frac{20}{3} = 6\frac{2}{3}.[/Equation]
 
 [Exercise UUID:'26f3a0d7-69f7-11e9-9854-01ae2c5a485f' header:'Kolmioiden yhdenmuotoisuus']
-[Picture imagesrc:'/img/mab3/MAB3kuva013.png' /]
+[Picture imagesrc:'/content/img/mab3/MAB3kuva013.png' /]
 <p>
 Tarkastellaan edelleen yllä olevaa kuvaa, jossa kolmiot [Equation]OAB[/Equation] ja [Equation]OCD[/Equation] ovat yhdenmuotoisia. Selvitä sivun [Equation]AB[/Equation] pituus verrannon avulla samaan tapaan kuin edellä tehtiin.
 </p>
@@ -340,7 +340,7 @@ Sivun [Equation]AB[/Equation] pituus on [Equation]\dfrac{15}{4} = 3{,}75[/Equati
 [/Exercise]
 
 [Exercise UUID:'26f3a0d8-69f7-11e9-9854-01ae2c5a485f' header:'Kolmioiden yhdenmuotoisuus']
-[Picture imagesrc:'/img/mab3/suoraK24.png' /]
+[Picture imagesrc:'/content/img/mab3/suoraK24.png' /]
 <p>
 Yllä olevassa kuvassa janat [Equation]AB[/Equation] ja [Equation]CD[/Equation] ovat yhdensuuntaisia eli [Equation]AB \parallel CD[/Equation].
 </p>
@@ -390,7 +390,7 @@ Halutaan piirtää kolmio, jonka korkeus on kolminkertainen kantaan verrattuna j
 <p>
 <em>Tasakylkinen kolmio</em> tarkoittaa kolmiota, jossa on kaksi yhtä pitkää sivua. Symmetrian vuoksi tasakylkisen kolmion korkeusjana jakaa kannan kahteen yhtä pitkään osaan ja <em>kantakulmat</em> ovat yhtä suuret.
 <br />
-[Picture imagesrc:'/img/mab3/vinoK36.png' /]
+[Picture imagesrc:'/content/img/mab3/vinoK36.png' /]
 </p>
 <p>
 Tiedetään, että tasakylkisen kolmion kanta on puolet kolmion korkeudesta ja että kolmion pinta-ala on 27,0 cm[Equation]^2[/Equation]. Tehtävänä on määrittää kolmion kaikkien sivujen pituudet.
@@ -414,10 +414,10 @@ Päättele kulmien [Equation]\alpha[/Equation] ja [Equation]\beta[/Equation] suu
 </p>
 <ol>
 <li> 
-[Picture imagesrc:'/img/mab3/vinoK32.png' /] </li>
+[Picture imagesrc:'/content/img/mab3/vinoK32.png' /] </li>
 <li> Suorat [Equation]L_1[/Equation] ja [Equation]L_2[/Equation] ovat yhdensuuntaiset.
 <br />
-[Picture imagesrc:'/img/mab3/vinoK33.png' /] </li>
+[Picture imagesrc:'/content/img/mab3/vinoK33.png' /] </li>
 </ol>
 [Answer]
 <ol>
@@ -431,11 +431,11 @@ Päättele kulmien [Equation]\alpha[/Equation] ja [Equation]\beta[/Equation] suu
 <li>
 Päättele kulman [Equation]\alpha[/Equation] suuruus.
 <br />
-[Picture imagesrc:'/img/mab3/vinoK34.png' /] </li>
+[Picture imagesrc:'/content/img/mab3/vinoK34.png' /] </li>
 <li>
 Päättele kulmien [Equation]\beta[/Equation], [Equation]\gamma[/Equation] ja [Equation]\delta[/Equation] suuruudet
 <br />
-[Picture imagesrc:'/img/mab3/vinoK35.png' /] </li>
+[Picture imagesrc:'/content/img/mab3/vinoK35.png' /] </li>
 </ol>
 [Answer]
 <ol>
@@ -534,7 +534,7 @@ Seikkailijan pitää vuolaasti virtaava joki liu'ulla, joka on kiinnitetty 30 me
 Kun 2700 mm pitkän ja 50 mm paksun lattialistan toinen pää oli nurkassa samaan tapaan kuin alla olevassa kuvassa, jäi toinen pää vastapäiselle seinälle 35,0 cm korkeudelle. Tehtävänä on selvittää, miten paljon listaa pitää lyhentää.
 </p>
 <p>
-[Picture imagesrc:'/img/mab3/vinoK39.png' /]
+[Picture imagesrc:'/content/img/mab3/vinoK39.png' /]
 </p>
 <ol>
 <li> Piirrä tilanteesta mallikuva ja merkitse siihen kaikki tunnetut mitat.</li>
@@ -601,7 +601,7 @@ Autoilijoita saatetaan varoittaa jyrkästä mäestä liikennemerkillä. Merkiss�
 [Equation display:true]\frac{\text{ korkeuden muutos }}{\text{ vaakasuora siirtymä }}[/Equation]
 </p>
 <p>
-[Picture imagesrc:'/img/mab3/merkki.png' /]
+[Picture imagesrc:'/content/img/mab3/merkki.png' /]
 </p>
 <ol>
 <li> Selvitä mäen kaltevuuskulma asteina yllä olevan liikennemerkin tapauksessa. Muista piirtää mallikuva. </li>
@@ -639,7 +639,7 @@ Autoilijoita saatetaan varoittaa jyrkästä mäestä liikennemerkillä. Merkiss�
 Laske oheisen kuvan suorakulmaisen kolmion [Equation]ABC[/Equation] pinta‐alan tarkka arvo.
 </p>
 <p>
-[Picture imagesrc:'/img/mab3/tasoK02.png' /]
+[Picture imagesrc:'/content/img/mab3/tasoK02.png' /]
 </p>
 <p>
 (Pitkä K2013/4)
@@ -660,7 +660,7 @@ Laske oheisen kuvan suorakulmaisen kolmion [Equation]ABC[/Equation] pinta‐alan
 </ol>
 </p>
 <p>
-[Picture imagesrc:'/img/mab3/suoraK01.png' /]
+[Picture imagesrc:'/content/img/mab3/suoraK01.png' /]
 </p>
 <p>
 (Lyhyt K2015/4)
@@ -699,7 +699,7 @@ Laske oheisen kuvan suorakulmaisen kolmion [Equation]ABC[/Equation] pinta‐alan
 Tasakylkisen suorakulmaisen kolmion kateetin pituus on [Equation]a[/Equation]. Kolmion sisälle asetetaan kuvion mukaisesti pienempi tasakylkinen kolmio, jonka yksi kärki sijaitsee alkuperäisen kolmion hypotenuusalla. Lisäksi jana [Equation]AB[/Equation] on hypotenuusan suuntainen. Määritä pienemmän kolmion suurin mahdollinen pinta‐ala.
 </p>
 <p>
-[Picture imagesrc:'/img/mab3/vinoK01.png' /]
+[Picture imagesrc:'/content/img/mab3/vinoK01.png' /]
 </p>
 <p>
 (Pitkä S2015/7)
@@ -716,7 +716,7 @@ Tasakylkisen suorakulmaisen kolmion kateetin pituus on [Equation]a[/Equation]. K
 Alla olevassa kuviossa on silityslauta sivusta katsottuna. Siihen liittyvät mitat on merkitty kuvioon. Laske silityslaudan korkeus lattiasta.
 </p>
 <p>
-[Picture imagesrc:'/img/mab3/tasoK04.png' /]
+[Picture imagesrc:'/content/img/mab3/tasoK04.png' /]
 </p>
 <p>
 (Lyhyt S2015/5)
@@ -733,7 +733,7 @@ Alla olevassa kuviossa on silityslauta sivusta katsottuna. Siihen liittyvät mit
 Kuinka monta prosenttia alla olevan suorakulmion pinta-alasta on väritetty siniseksi?
 </p>
 <p>
-[Picture imagesrc:'/img/mab3/vinoK37.png' /]
+[Picture imagesrc:'/content/img/mab3/vinoK37.png' /]
 </p>
 [Answer]
 <p>
@@ -757,7 +757,7 @@ Vartiotornin korkeus on 15 metriä. Tornista 30 metrin etäisyydellä on 2,5 met
 Topi haluaa järjestää huoneensa uudelleen. Onko hänen mahdollista raahata 209 cm pitkä ja 106 cm leveä sänky huoneen 2,3 m pitkän päätyseinän vierestä toisen seinän viereen sänkyä kallistamatta?
 </p>
 <p>
-[Picture imagesrc:'/img/mab3/vinoK38.png' /]
+[Picture imagesrc:'/content/img/mab3/vinoK38.png' /]
 </p>
 [Answer]
 <p>
@@ -935,7 +935,7 @@ Edellisessä luvussa perehdyttiin kolmioiden geometriaan. Tässä kappaleessa hy
 
 [Exercise UUID:'26f3a0f5-69f7-11e9-9854-01ae2c5a485f' header:'SUUNNIKAS']
 <p>
-[Picture imagesrc:'/img/mab3/tasoK07.png' /]
+[Picture imagesrc:'/content/img/mab3/tasoK07.png' /]
 </p>
 <p>  Tehtävänä on johtaa lauseke suunnikkaan pinta-alalle.
 <ol>
@@ -950,7 +950,7 @@ Muodosta lauseke kummankin kolmion pinta-alalle ja laske suunnikkaan pinta-ala n
 [/Exercise]
 
 [Exercise UUID:'26f3a0f6-69f7-11e9-9854-01ae2c5a485f' header:'PUOLISUUNNIKAS']
-[Picture imagesrc:'/img/mab3/tasoK08.png' /]
+[Picture imagesrc:'/content/img/mab3/tasoK08.png' /]
 </p>
 <p>  Tehtävänä on johtaa lauseke puolisuunnikkaan pinta-alalle.
 <ol>
@@ -970,17 +970,17 @@ Edellisten tehtävien tulokset voidaan koota seuraavaksi teoreemaksi:
 <p>
 Suunnikkaan pinta-ala on sivun pituuden ja sivulle tai sivun jatkeelle piirretyn korkeuden tulo. Se saadaan myös kertomalla suunnikkaan sivujen pituuksien tulo niiden välisen kulman sinillä. Alla olevan kuvan merkinnöillä suunnikkaan pinta-ala on siis
 [Equation display:true]ah = ac\sin\beta[/Equation]
-[Picture imagesrc:'/img/mab3/tasoK09b.png' /]
+[Picture imagesrc:'/content/img/mab3/tasoK09b.png' /]
 <br />
 Puolisuunnikkaan pinta-ala on yhdensuuntaisten sivujen pituuksien keskiarvon ja korkeuden tulo eli alla olevan kuvan merkinnöillä
 [Equation display:true]\frac{a+b}{2}\cdot h[/Equation]
-[Picture imagesrc:'/img/mab3/tasoK10.png' /]
+[Picture imagesrc:'/content/img/mab3/tasoK10.png' /]
 </p>
 [Proof]
 <p>
 Perustelu: Teoreema on perusteltu yllä olevissa tehtävissä. Huomaa, että suunnikas ja puolisuunnikas voidaan aina jakaa kahdeksi kolmioksi, joiden korkeus on [Equation]h[/Equation]. Esimerkiksi
 <br />
-[Picture imagesrc:'/img/mab3/tasoK11.png' /]
+[Picture imagesrc:'/content/img/mab3/tasoK11.png' /]
 </p>
 [/Proof]
 [/Theorem]
@@ -1034,7 +1034,7 @@ Tässä tehtävässä jaetaan monikulmioita kolmioiksi lävistäjien avulla. Mon
 <li>
 Piirrä vihkoosi jokin mahdollisimman omituisen muotoinen nelikulmio. Voit katsoa ideoita alla olevista nelikulmioista.
 <br />
-[Picture imagesrc:'/img/mab3/tasoK17.png' /]
+[Picture imagesrc:'/content/img/mab3/tasoK17.png' /]
 </li>
 <li>
 Jaa piirtämäsi nelikulmio kahdeksi kolmioksi piirtämällä sille lävistäjä, joka on kokonaan nelikulmion sisällä. Päättele, mikä on nelikulmion kulmien summa.
@@ -1080,7 +1080,7 @@ Piirrä vihkoosi tasasivuinen kolmio, jonka sivun pituus on 5 cm, seuraavan ohje
 <li> piirrä vastaava ympyrä kuin edellisessä kohdassa, mutta vaihda keskipisteeksi janan toinen pää </li>
 <li> valitse toinen ympyröiden leikkauspisteistä kolmion kolmanneksi kärjeksi.</li>
 </ul>
-[Picture imagesrc:'/img/mab3/tasoK19.png' /]
+[Picture imagesrc:'/content/img/mab3/tasoK19.png' /]
 </li>
 <li>
 Päättele, miten suuria ovat tasasivuisen kolmion kulmat.
@@ -1099,7 +1099,7 @@ Päättele, miten suuria ovat tasasivuisen kolmion kulmat.
 <p>
 Alla on näkyvissä tasasivuinen kolmio [Equation]ABC[/Equation], jonka korkeusjana jakaa sen kahdeksi pienemmäksi suorakulmaiseksi kolmioksi.
 <br />
-[Picture imagesrc:'/img/mab3/tasoK21.png' /]
+[Picture imagesrc:'/content/img/mab3/tasoK21.png' /]
 </p>
 <ol>
 <li>
@@ -1123,7 +1123,7 @@ Vinkki: Pythagoraan lause.
 <p>
 Alla on näkyvissä tasasivuinen kolmio, jonka sivujen pituus on 2. Korkeusjana jakaa sen kahdeksi pienemmäksi suorakulmaiseksi kolmioksi.
 <br />
-[Picture imagesrc:'/img/mab3/tasoK20.png' /]
+[Picture imagesrc:'/content/img/mab3/tasoK20.png' /]
 </p>
 <ol>
 <li>
@@ -1157,7 +1157,7 @@ Säännöllinen monikulmio, jossa on neljä kulmaa, on nimeltään <em>neliö</e
 <p>
 Alla on näkyvissä neliö, jonka sivujen pituus on 1. Lävistäjä jakaa sen kahdeksi suorakulmaiseksi kolmioksi.
 <br />
-[Picture imagesrc:'/img/mab3/tasoK22.png' /]
+[Picture imagesrc:'/content/img/mab3/tasoK22.png' /]
 </p>
 <ol>
 <li>
@@ -1176,12 +1176,12 @@ Ratkaise kulman [Equation]\alpha[/Equation] suuruus esimerkiksi sopivan trigonom
 [/Exercise]
 
 Tasasivuisen kolmion ja neliön lisäksi muita säännöllisiä monikulmioita ovat säännöllinen viisikulmio, säännöllinen kuusikulmion ja niin edelleen.
-[Picture imagesrc:'/img/mab3/tasoK23.png' /]
+[Picture imagesrc:'/content/img/mab3/tasoK23.png' /]
 [/Chapter]
 
 [Chapter header:'Yhdenmuotoisuus']
 Kolmioita käsittelevässä luvussa määriteltiin, mitä tarkoitetaan yhdenmuotoisilla kolmioilla. Yhdenmuotoisuuden käsite voidaan laajentaa muihinkin tasokuvioihin. Kuviot, jotka saadaan toisistaan siirtämällä, kiertämällä, peilaamalla, suurentamalla tai pienentämällä, ovat yhdenmuotoiset.
-[Picture imagesrc:'/img/mab3/tasoK06.png' /]
+[Picture imagesrc:'/content/img/mab3/tasoK06.png' /]
 
 [Definition header:'KUVIOIDEN YHDENMUOTOISUUS JA MITTAKAAVA']
 <p>
@@ -1204,7 +1204,7 @@ Jos kuviot ovat yhdenmuotoiset, <em>yhdenmuotoisuussuhde</em> eli <em>mittakaava
 <li>
 Alla on näkyvissä tähti ja sen pienennös. Määritä kuvioiden yhdenmuotoisuussuhde.
 <br />
-[Picture imagesrc:'/img/mab3/tasoK12.png' /]
+[Picture imagesrc:'/content/img/mab3/tasoK12.png' /]
 </li>
 <li>
 Taiteilija maalasi samasta aiheesta sekä seinämaalauksen (freskon) että taulun. Molemmat olivat suorakulmion muotoisia. Seinämaalauksen leveys oli 6,87 m ja korkeus 3,55 m. Taulun leveys oli 128 cm ja korkeus 89 cm. Olivatko seinämaalaus ja taulu yhdenmuotoiset?
@@ -1304,7 +1304,7 @@ Tutkitaan seuraavaksi, miten yhdenmuotoisten kuvioiden pinta-alat liittyvät toi
 
 [Exercise UUID:'26f3a102-69f7-11e9-9854-01ae2c5a485f' header:'YHDENMUOTOISUUS']
 <p>
-[Picture imagesrc:'/img/mab3/tasoK13.png' /]
+[Picture imagesrc:'/content/img/mab3/tasoK13.png' /]
 <br />
 Tarkastellaan yllä olevia yhdenmuotoisia suorakulmioita.
 </p>
@@ -1378,11 +1378,11 @@ Tässä kappaleessa tutkitaan ympyrän geometrisia ominaisuuksia. Aloitetaan mä
 <p>
 Tason pisteet, jotka ovat vakioetäisyydellä kiinteästä pisteestä, muodostavat <em>ympyrän</em> eli <em>ympyräviivan</em>. Kiinteä piste on ympyrän <em>keskipiste</em> ja vakioetäisyys sen <em>säde</em>.
 <br />
-[Picture imagesrc:'/img/mab3/tasoK28.png' /]
+[Picture imagesrc:'/content/img/mab3/tasoK28.png' /]
 <br />
 <em>Jänne</em> on ympyrän kahden pisteen välinen jana. <em>Halkaisija</em> on ympyrän keskipisteen kautta kulkeva jänne.
 <br />
-[Picture imagesrc:'/img/mab3/tasoK29.png' /]
+[Picture imagesrc:'/content/img/mab3/tasoK29.png' /]
 </p>
 [/Definition]
 
@@ -1393,7 +1393,7 @@ Nimitystä ympyrä käytetään toisinaan myös ympyräviivan sisään jääväs
 <p>
 Ympyrän kehän pituutta voidaan arvioida säännöllisten monikulmioiden avulla piirtämällä monikulmiot sekä ympyrän sisä- että ulkopuolelle alla olevien kuvien mukaisesti. Mitä enemmän kulmia monikulmioissa on, sitä tarkemmin niiden piirit arvioivat ympyrän kehän pituutta.
 <br />
-[Picture imagesrc:'/img/mab3/tasoK30.png' /]
+[Picture imagesrc:'/content/img/mab3/tasoK30.png' /]
 <br />
 Tällä tavalla voidaan arvioida myös ympyrän kehän pituuden suhdetta ympyrän halkaisijaan. Tämä suhde ei riipu ympyrän koosta vaan on sama kaikilla ympyröillä. Kysymyksessä onkin yksi kuuluisimmista matemaattisista vakioista. Sitä merkitään kirjaimella [Equation]\pi[/Equation] (pii).
 </p>
@@ -1402,7 +1402,7 @@ Tällä tavalla voidaan arvioida myös ympyrän kehän pituuden suhdetta ympyrä
 <p>
 Luku [Equation]\pi[/Equation] on ympyrän kehän pituuden [Equation]p[/Equation] suhde halkaisijan pituuteen [Equation]d[/Equation]:
 [Equation display:true]\pi = \frac{p}{d}[/Equation]
-[Picture imagesrc:'/img/mab3/tasoK31.png' /]
+[Picture imagesrc:'/content/img/mab3/tasoK31.png' /]
 </p>
 [/Definition]
 
